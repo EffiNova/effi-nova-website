@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /_archiv_unscharfgeschaltet/
+Disallow: /extraktion/
+
+Sitemap: https://effi-nova.de/sitemap.xml

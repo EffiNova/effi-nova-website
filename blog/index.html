@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wissenshub – EffiNova Energieberatung</title>
+  <meta name="description" content="Praxiswissen rund um energetische Sanierung, Fördermittel, Wärmepumpe und mehr. Verständlich erklärt vom zertifizierten Energieberater.">
+  <link rel="canonical" href="https://effi-nova.de/blog/">
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="preload" href="../fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Sticky nav color inversion */
+    .nav-dark .nav-logo-green { display: none; }
+    .nav-dark .nav-logo-white { display: block; }
+    .nav-dark .nav-link { color: #FFFFFF; }
+    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
+    .nav-light .nav-logo-green { display: block; }
+    .nav-light .nav-logo-white { display: none; }
+    .nav-light .nav-link { color: #004225; }
+    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+
+    /* Category pill active state */
+    .cat-pill.active { background-color: #004225; color: #FFFFFF; }
+    .cat-pill:not(.active) { background-color: #F2EFE7; color: #004225; }
+
+    /* Card transitions:
+       Bundle all three properties in ONE transition declaration so no property loses its transition
+       due to CSS shorthand overwrites. Duration per property differs. */
+    .blog-card {
+      transition:
+        opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s ease;
+    }
+    .blog-card:hover { box-shadow: 0 12px 32px rgba(0,66,37,0.10); }
+
+    /* Card image zoom */
+    .blog-card img { transition: transform 0.6s ease; }
+    .blog-card:hover img { transform: scale(1.04); }
+
+    /* Fade-in state (no transition declared here — inherits from .blog-card) */
+    .fade-in { opacity: 0; transform: translateY(40px); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Settled: after fade-in completes, switch transform/shadow to a snappier duration for hover */
+    .blog-card.settled {
+      transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.35s ease;
+    }
+    .blog-card.settled:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,66,37,0.10); }
+
+    /* Search input focus */
+    .search-input:focus { outline: none; border-color: #004225; box-shadow: 0 0 0 3px rgba(0,66,37,0.1); }
+  </style>
+</head>
+<body class="bg-white text-effi-body">
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION (Same as Startseite)              -->
+  <!-- ============================================ -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-colors duration-300" style="height:77px;">
+    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="../" class="flex items-center gap-2 shrink-0">
+        <img src="../bilder/logos/Logo-A1.png" alt="EffiNova Logo" class="nav-logo-green h-12">
+        <img src="../bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="nav-logo-white h-12 hidden">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="../#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
+        <a href="../#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
+        <a href="../#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über mich</a>
+        <a href="../#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
+        <a href="./" class="nav-link text-[15px] font-semibold border-b-2 border-effi-green pb-0.5">Blog</a>
+      </div>
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
+      <a href="../#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
+      <a href="../#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
+      <a href="../#ubermich" class="block py-3 text-effi-green text-[15px]">Über mich</a>
+      <a href="../#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
+      <a href="./" class="block py-3 text-effi-green text-[15px] font-semibold">Blog</a>
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
+        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+      </a>
+    </div>
+  </nav>
+  <div style="height:77px;"></div>
+
+  <!-- ============================================ -->
+  <!-- HERO: Wissenshub + Featured                  -->
+  <!-- ============================================ -->
+  <section class="bg-effi-green text-white py-12 lg:py-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
+
+        <!-- LEFT: Intro + Search -->
+        <div>
+          <p class="text-effi-gold font-semibold text-sm tracking-widest uppercase mb-4">Wissenshub</p>
+          <h1 class="font-montserrat text-3xl md:text-5xl font-bold leading-tight mb-5">
+            Energetisch sanieren — verständlich erklärt
+          </h1>
+          <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+            Praxiswissen, Fördertipps und echte Einblicke aus über 100 Sanierungsprojekten. Damit Sie fundiert entscheiden können.
+          </p>
+
+          <!-- Search Bar -->
+          <div class="mt-8 max-w-lg">
+            <div class="relative">
+              <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-effi-body"></i>
+              <input type="text" id="blog-search" placeholder="Artikel durchsuchen …" class="search-input w-full pl-12 pr-5 py-4 rounded-2xl bg-white text-effi-green-dark text-[15px] border-2 border-transparent">
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Featured Card -->
+        <a href="energieausweis-online-vs-energieberater.html" class="blog-card block bg-effi-beige rounded-3xl overflow-hidden fade-in shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]" data-cat="energieausweis">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/energieausweis-online-vs-energieberater/energieausweis-online-vs-energieberater-1.png" alt="Energieausweis online vs. Energieberater" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Featured</span>
+              <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Energieausweis</span>
+            </div>
+            <h2 class="font-montserrat text-effi-green-dark text-xl md:text-2xl font-bold leading-snug mb-3">
+              Energieausweis online vs. beim Energieberater: Kosten, Qualität und was Käufer wirklich sehen
+            </h2>
+            <p class="text-effi-body text-[15px] leading-relaxed mb-4 line-clamp-2">
+              Energieausweis Kosten vergleichen: Online-Ausweise vs. Energieberater vor Ort. Erfahren Sie, wo die Unterschiede liegen und welche Option zu Ihrem Haus passt.
+            </p>
+            <div class="flex items-center gap-4 text-sm text-effi-body">
+              <span><i class="far fa-calendar-alt mr-1.5"></i> 7. April 2025</span>
+              <span><i class="far fa-clock mr-1.5"></i> 12 Min. Lesezeit</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CATEGORY FILTER                              -->
+  <!-- ============================================ -->
+  <section class="bg-effi-beige border-b border-effi-border">
+    <div class="max-w-[1440px] mx-auto px-5 py-5">
+      <div class="flex flex-wrap gap-3" id="category-filters">
+        <button class="cat-pill active rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200" data-cat="all">Alle Beiträge</button>
+        <button class="cat-pill rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200" data-cat="energieausweis">Energieausweis</button>
+        <button class="cat-pill rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200" data-cat="foerderung">Fördermittel</button>
+        <button class="cat-pill rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200" data-cat="sanierung">Sanierung</button>
+        <button class="cat-pill rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200" data-cat="waermepumpe">Wärmepumpe</button>
+        <button class="cat-pill rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200" data-cat="solar">Solar &amp; PV</button>
+        <button class="cat-pill rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200" data-cat="praxis">Aus der Praxis</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- ARTICLE GRID                                 -->
+  <!-- ============================================ -->
+  <section class="bg-effi-beige py-14 lg:py-20">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl md:text-3xl font-bold mb-10">Aktuelle Beiträge</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="article-grid">
+
+        <!-- Card 1: Schlechter Energieausweis -->
+        <a href="schlechter-energieausweis-loesungen.html" class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm fade-in" data-cat="energieausweis">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/schlechter-energieausweis-loesungen/schlechter-energieausweis-loesungen-1.png" alt="Schlechter Energieausweis Lösungen" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Energieausweis</span>
+            <h3 class="font-montserrat text-effi-green-dark text-lg font-bold mt-2 mb-3 leading-snug">
+              Schlechter Energieausweis beim Hausverkauf: Auswirkungen &amp; Lösungsansätze
+            </h3>
+            <p class="text-effi-body text-sm leading-relaxed mb-4">
+              So verbessern Sie schlechte Energieklassen vor dem Verkauf. Lösungsansätze, Förderungen und Preisabschläge im Überblick.
+            </p>
+            <div class="flex items-center gap-4 text-xs text-effi-body pt-4 border-t border-effi-border">
+              <span><i class="far fa-calendar-alt mr-1"></i> 7. April 2025</span>
+              <span><i class="far fa-clock mr-1"></i> 15 Min.</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2: Sanierung nach Energieausweis -->
+        <a href="sanierung-nach-energieausweis-kosten-sparpotenzial.html" class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm fade-in" data-cat="energieausweis">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/sanierung-nach-energieausweis-kosten-sparpotenzial/sanierung-nach-energieausweis-kosten-sparpotenzial-1.png" alt="Sanierung nach Energieausweis" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Energieausweis</span>
+            <h3 class="font-montserrat text-effi-green-dark text-lg font-bold mt-2 mb-3 leading-snug">
+              Sanierung nach schlechtem Energieausweis: Kosten sparen, Wohnwert steigern
+            </h3>
+            <p class="text-effi-body text-sm leading-relaxed mb-4">
+              Spart bis zu 50 % Energiekosten und steigert Immobilienwert um 23 %. Förderungen, ROI-Rechnung und Sanierungsfahrplan.
+            </p>
+            <div class="flex items-center gap-4 text-xs text-effi-body pt-4 border-t border-effi-border">
+              <span><i class="far fa-calendar-alt mr-1"></i> 7. April 2025</span>
+              <span><i class="far fa-clock mr-1"></i> 14 Min.</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: Verbrauchsausweis vs. Bedarfsausweis -->
+        <a href="energieausweis-verbrauchsausweis-bedarfsausweis-unterschied.html" class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm fade-in" data-cat="energieausweis">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/energieausweis-verbrauchsausweis-bedarfsausweis-unterschied/energieausweis-verbrauchsausweis-bedarfsausweis-unterschied-1.png" alt="Verbrauchsausweis vs. Bedarfsausweis" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Energieausweis</span>
+            <h3 class="font-montserrat text-effi-green-dark text-lg font-bold mt-2 mb-3 leading-snug">
+              Energieausweis richtig lesen: Verbrauchsausweis vs. Bedarfsausweis
+            </h3>
+            <p class="text-effi-body text-sm leading-relaxed mb-4">
+              Unterschiede, Kosten, Anforderungen und KfW-Förderung im Überblick. Welchen Ausweis brauchen Sie wirklich?
+            </p>
+            <div class="flex items-center gap-4 text-xs text-effi-body pt-4 border-t border-effi-border">
+              <span><i class="far fa-calendar-alt mr-1"></i> 7. April 2025</span>
+              <span><i class="far fa-clock mr-1"></i> 12 Min.</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4: Energieausweis Leitfaden -->
+        <a href="energieausweis-verstaendnis-leitfaden.html" class="blog-card bg-white rounded-2xl overflow-hidden shadow-sm fade-in" data-cat="energieausweis">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/energieausweis-verstaendnis-leitfaden/energieausweis-verstaendnis-leitfaden-1.png" alt="Energieausweis beantragen Leitfaden" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Energieausweis</span>
+            <h3 class="font-montserrat text-effi-green-dark text-lg font-bold mt-2 mb-3 leading-snug">
+              Energieausweis beantragen: Was er zeigt und warum Hausbesitzer ihn brauchen
+            </h3>
+            <p class="text-effi-body text-sm leading-relaxed mb-4">
+              Kosten, Ausweistypen, Pflichten und Schritt-für-Schritt-Anleitung für Hausbesitzer.
+            </p>
+            <div class="flex items-center gap-4 text-xs text-effi-body pt-4 border-t border-effi-border">
+              <span><i class="far fa-calendar-alt mr-1"></i> 7. April 2025</span>
+              <span><i class="far fa-clock mr-1"></i> 11 Min.</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- NEWSLETTER CTA                               -->
+  <!-- ============================================ -->
+  <section class="bg-effi-green py-16 lg:py-20">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-envelope-open-text text-effi-gold text-2xl"></i>
+        </div>
+        <h2 class="font-montserrat text-white text-2xl md:text-3xl font-bold mb-4">
+          Kein Fördertipp mehr verpassen
+        </h2>
+        <p class="text-white/70 text-[15px] leading-relaxed mb-8">
+          Alle 2 Wochen: Neue Artikel, Förderänderungen und Praxis-Einblicke — kompakt und direkt in Ihr Postfach. Kein Spam, jederzeit abmeldbar.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="Ihre E-Mail-Adresse" class="flex-1 px-5 py-4 rounded-xl text-[15px] text-effi-green-dark border-2 border-transparent focus:outline-none focus:border-effi-gold">
+          <button type="submit" class="bg-effi-gold text-effi-green-dark font-semibold px-6 py-4 rounded-xl text-[15px] hover:bg-[#d4b98a] transition-colors">
+            Anmelden
+          </button>
+        </form>
+        <p class="text-white/40 text-xs mt-4">Mit der Anmeldung stimmen Sie unserer Datenschutzerklärung zu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SIDEBAR-STYLE: Themenübersicht               -->
+  <!-- ============================================ -->
+  <section class="bg-white py-14 lg:py-20">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl md:text-3xl font-bold mb-10 text-center">Themen im Überblick</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+        <a href="#" class="group block bg-effi-beige rounded-2xl p-8 hover:bg-effi-green transition-colors duration-300">
+          <div class="w-12 h-12 bg-effi-green group-hover:bg-white/20 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <i class="fas fa-file-certificate text-white group-hover:text-white text-lg"></i>
+          </div>
+          <h3 class="font-montserrat text-effi-green-dark group-hover:text-white text-lg font-bold mb-2 transition-colors">Energieausweis</h3>
+          <p class="text-effi-body group-hover:text-white/70 text-sm leading-relaxed transition-colors">Bedarfs- vs. Verbrauchsausweis, Kosten, Pflichten und Beantragung.</p>
+          <span class="inline-block mt-4 text-effi-green group-hover:text-effi-gold text-sm font-semibold transition-colors">5 Beiträge <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+        </a>
+
+        <a href="#" class="group block bg-effi-beige rounded-2xl p-8 hover:bg-effi-green transition-colors duration-300">
+          <div class="w-12 h-12 bg-effi-green group-hover:bg-white/20 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <i class="fas fa-coins text-white text-lg"></i>
+          </div>
+          <h3 class="font-montserrat text-effi-green-dark group-hover:text-white text-lg font-bold mb-2 transition-colors">Fördermittel</h3>
+          <p class="text-effi-body group-hover:text-white/70 text-sm leading-relaxed transition-colors">BAFA, KfW, iSFP-Bonus — alle Zuschüsse und Kredite für Ihre Sanierung.</p>
+          <span class="inline-block mt-4 text-effi-green group-hover:text-effi-gold text-sm font-semibold transition-colors">Bald verfügbar <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+        </a>
+
+        <a href="#" class="group block bg-effi-beige rounded-2xl p-8 hover:bg-effi-green transition-colors duration-300">
+          <div class="w-12 h-12 bg-effi-green group-hover:bg-white/20 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <i class="fas fa-hard-hat text-white text-lg"></i>
+          </div>
+          <h3 class="font-montserrat text-effi-green-dark group-hover:text-white text-lg font-bold mb-2 transition-colors">Sanierung</h3>
+          <p class="text-effi-body group-hover:text-white/70 text-sm leading-relaxed transition-colors">Komplettsanierung, Einzelmaßnahmen, Reihenfolge und Kosten.</p>
+          <span class="inline-block mt-4 text-effi-green group-hover:text-effi-gold text-sm font-semibold transition-colors">Bald verfügbar <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+        </a>
+
+        <a href="#" class="group block bg-effi-beige rounded-2xl p-8 hover:bg-effi-green transition-colors duration-300">
+          <div class="w-12 h-12 bg-effi-green group-hover:bg-white/20 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <i class="fas fa-fan text-white text-lg"></i>
+          </div>
+          <h3 class="font-montserrat text-effi-green-dark group-hover:text-white text-lg font-bold mb-2 transition-colors">Wärmepumpe</h3>
+          <p class="text-effi-body group-hover:text-white/70 text-sm leading-relaxed transition-colors">Luft-Wasser, Erdwärme, Nachrüstung im Altbau — verständlich erklärt.</p>
+          <span class="inline-block mt-4 text-effi-green group-hover:text-effi-gold text-sm font-semibold transition-colors">Bald verfügbar <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+        </a>
+
+        <a href="#" class="group block bg-effi-beige rounded-2xl p-8 hover:bg-effi-green transition-colors duration-300">
+          <div class="w-12 h-12 bg-effi-green group-hover:bg-white/20 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <i class="fas fa-solar-panel text-white text-lg"></i>
+          </div>
+          <h3 class="font-montserrat text-effi-green-dark group-hover:text-white text-lg font-bold mb-2 transition-colors">Solar &amp; PV</h3>
+          <p class="text-effi-body group-hover:text-white/70 text-sm leading-relaxed transition-colors">Photovoltaik, Speicher, Einspeisevergütung und Wirtschaftlichkeit.</p>
+          <span class="inline-block mt-4 text-effi-green group-hover:text-effi-gold text-sm font-semibold transition-colors">Bald verfügbar <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+        </a>
+
+        <a href="#" class="group block bg-effi-beige rounded-2xl p-8 hover:bg-effi-green transition-colors duration-300">
+          <div class="w-12 h-12 bg-effi-green group-hover:bg-white/20 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+            <i class="fas fa-camera text-white text-lg"></i>
+          </div>
+          <h3 class="font-montserrat text-effi-green-dark group-hover:text-white text-lg font-bold mb-2 transition-colors">Aus der Praxis</h3>
+          <p class="text-effi-body group-hover:text-white/70 text-sm leading-relaxed transition-colors">Echte Projekte, Vorher/Nachher und Erfahrungsberichte.</p>
+          <span class="inline-block mt-4 text-effi-green group-hover:text-effi-gold text-sm font-semibold transition-colors">Bald verfügbar <i class="fas fa-arrow-right ml-1 text-xs"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA BAND                                     -->
+  <!-- ============================================ -->
+  <section class="bg-effi-cream py-14">
+    <div class="max-w-[1440px] mx-auto px-5 text-center">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl md:text-3xl font-bold mb-4">Bereit für den nächsten Schritt?</h2>
+      <p class="text-effi-body text-[15px] max-w-xl mx-auto mb-8">Sie haben Fragen zu Ihrem konkreten Projekt? Ich berate Sie persönlich — kostenlos und unverbindlich.</p>
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="inline-flex items-center gap-2 bg-effi-green text-white rounded-xl px-8 py-4 text-[15px] font-semibold hover:bg-effi-green-mid transition-colors">
+        <i class="fas fa-phone text-sm"></i>
+        Kostenlose Erstberatung anfragen
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="bg-effi-green-dark text-white/60 py-12">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <!-- Brand -->
+        <div>
+          <img src="../bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="h-10 mb-4">
+          <p class="text-sm leading-relaxed">Energieberatung aus einer Hand — von der Analyse bis zur Förderauszahlung.</p>
+        </div>
+        <!-- Links -->
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Seiten</h4>
+          <div class="space-y-2 text-sm">
+            <a href="../" class="block hover:text-white transition-colors">Startseite</a>
+            <a href="../#Leistungen" class="block hover:text-white transition-colors">Leistungen</a>
+            <a href="../#Prozess" class="block hover:text-white transition-colors">Prozess</a>
+            <a href="./" class="block hover:text-white transition-colors">Blog</a>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Kontakt</h4>
+          <div class="space-y-2 text-sm">
+            <p><i class="fas fa-envelope mr-2"></i>mail@effi-nova.de</p>
+            <p><i class="fas fa-map-marker-alt mr-2"></i>Region Hannover</p>
+          </div>
+          <div class="flex gap-4 mt-4">
+            <a href="#" class="text-white/60 hover:text-white text-lg transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white/60 hover:text-white text-lg transition-colors"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p>&copy; 2025 EffiNova Energieberatung. Alle Rechte vorbehalten.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Impressum</a>
+          <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT                                   -->
+  <!-- ============================================ -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Category filter
+    const pills = document.querySelectorAll('.cat-pill');
+    const cards = document.querySelectorAll('.blog-card');
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', function() {
+        pills.forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        const cat = this.dataset.cat;
+
+        cards.forEach(card => {
+          if (cat === 'all' || card.dataset.cat === cat) {
+            card.style.display = '';
+            // Re-trigger fade
+            card.classList.remove('visible');
+            setTimeout(() => card.classList.add('visible'), 50);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Search filter
+    const searchInput = document.getElementById('blog-search');
+    searchInput.addEventListener('input', function() {
+      const q = this.value.toLowerCase().trim();
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      // Reset category pills
+      if (q) {
+        pills.forEach(p => p.classList.remove('active'));
+      } else {
+        pills[0].classList.add('active');
+      }
+    });
+
+    // IntersectionObserver for fade-in
+    // Trigger the moment the card starts entering the viewport (single pixel visible),
+    // then the 1.1s glide-in plays WHILE the card continues scrolling into view.
+    // After the glide completes, add `settled` so hover transitions switch to the fast 0.35s.
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          setTimeout(() => entry.target.classList.add('settled'), 1200);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

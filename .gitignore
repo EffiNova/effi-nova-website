@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# System
+.DS_Store
+
+# Interne Arbeitsdateien (nicht ins Public-Repo)
+_archiv_unscharfgeschaltet/
+extraktion/
+referenz-screenshots/
+Partner Sliders/
+ZUSAMMENFASSUNG.md
+_copy-aenderungen.md
+sitemap.md
+
+# Font-Altlasten (wir nutzen nur Montserrat Variable)
+fonts/gobold.zip
+fonts/mont.css
+fonts/GoboldExtra1.otf
+fonts/GoboldExtra1.woff2
+fonts/Montserrat-300.woff2
+fonts/Montserrat-400.woff2
+fonts/Montserrat-500.woff2
+fonts/Montserrat-600.woff2
+fonts/Montserrat-700.woff2

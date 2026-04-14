@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Referenzen – Archiv (intern) | EffiNova</title>
+  <link rel="stylesheet" href="dist/output.css">
+  <link rel="preload" href="fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-effi-body">
+
+  <!-- Archiv-Hinweis -->
+  <div class="bg-effi-beige border-b border-effi-border">
+    <div class="max-w-[1440px] mx-auto px-5 py-3 text-sm text-effi-green">
+      <strong>Archiv (intern):</strong> Dieser Referenzen-Block wurde vorübergehend aus der Startseite entfernt, bis genügend Projekte vorliegen. Nicht verlinkt, <code>noindex</code>.
+      &nbsp;|&nbsp; <a href="index.html" class="underline hover:text-effi-green-mid">← zurück zur Startseite</a>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION: REFERENZEN                          -->
+  <!-- ============================================ -->
+  <section id="refer" class="bg-white">
+    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24">
+      <h2 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-12">
+        Referenzen
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
+        <!-- Left: Project Info -->
+        <div>
+          <span class="inline-block bg-effi-beige text-effi-green text-sm font-semibold px-3 py-1 rounded-full mb-4">Komplettsanierung in Köpenick</span>
+          <h3 class="text-effi-h3 text-xl font-bold mb-4">KfW Effizienzhaus</h3>
+          <p class="text-effi-body text-lg leading-8 mb-6">
+            Nach der Energieberatung samt Sanierungsfahrplan beantragten wir die Förderung der Maßnahmen und begleiteten alles bis zur Fertigstellung. Neben viel Einsparung und Werterhöhung gewann der Kunde auch neuen Wohnraum im Dachgeschoss dazu.
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-effi-body">
+              <i class="fas fa-check-circle text-effi-green"></i> Dachsanierung
+            </li>
+            <li class="flex items-center gap-2 text-effi-body">
+              <i class="fas fa-check-circle text-effi-green"></i> Außenwanddämmung
+            </li>
+            <li class="flex items-center gap-2 text-effi-body">
+              <i class="fas fa-check-circle text-effi-green"></i> Fenster- und Türtausch
+            </li>
+            <li class="flex items-center gap-2 text-effi-body">
+              <i class="fas fa-check-circle text-effi-green"></i> Wärmepumpe und Fußbodenheizung
+            </li>
+          </ul>
+        </div>
+        <!-- Right: Gallery – Vorher / Nachher -->
+        <div>
+          <div class="grid grid-cols-2 gap-2 mb-2">
+            <span class="text-xs text-effi-body font-semibold uppercase tracking-wider text-center">Vorher</span>
+            <span class="text-xs text-effi-body font-semibold uppercase tracking-wider text-center">Nachher</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <img src="bilder/referenzen/effi-3.webp" loading="lazy" decoding="async" alt="Vorher – Seitenansicht" class="rounded-lg w-full h-28 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+            <img src="bilder/referenzen/effi-7.webp" loading="lazy" decoding="async" alt="Nachher – Wärmepumpe" class="rounded-lg w-full h-28 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+            <img src="bilder/referenzen/effi-6.webp" loading="lazy" decoding="async" alt="Vorher – Dach und Fassade" class="rounded-lg w-full h-28 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+            <img src="bilder/referenzen/effi-8.webp" loading="lazy" decoding="async" alt="Nachher – Solaranlage" class="rounded-lg w-full h-28 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+            <img src="bilder/referenzen/effi-4.webp" loading="lazy" decoding="async" alt="Vorher – Gartenansicht" class="rounded-lg w-full h-28 object-cover cursor-pointer hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)">
+            <!-- Video thumbnail – bottom right -->
+            <div class="relative cursor-pointer group" onclick="openVideoLightbox()">
+              <img src="bilder/referenzen/effi-2.webp" loading="lazy" decoding="async" alt="Video – Komplettsanierung" class="rounded-lg w-full h-28 object-cover group-hover:opacity-90 transition-opacity">
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <i class="fas fa-play text-effi-green text-lg ml-1"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center" onclick="closeLightbox(event)">
+    <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-effi-gold transition-colors z-10" onclick="closeLightbox(event)">&times;</button>
+    <button id="lb-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:text-effi-gold transition-colors z-10 select-none" onclick="lbPrev(event)">&#8249;</button>
+    <div class="relative max-w-[90vw] max-h-[90vh]" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="Referenz-Bild" class="max-w-full max-h-[90vh] rounded-lg object-contain">
+      <div id="lb-play-btn" class="absolute inset-0 flex items-center justify-center hidden pointer-events-none">
+        <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+          <i class="fas fa-play text-effi-green text-3xl ml-1"></i>
+        </div>
+      </div>
+    </div>
+    <button id="lb-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:text-effi-gold transition-colors z-10 select-none" onclick="lbNext(event)">&#8250;</button>
+    <div id="lb-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm"></div>
+  </div>
+
+  <!-- Video Lightbox -->
+  <div id="video-lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center" onclick="closeVideoLightbox(event)">
+    <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-effi-gold transition-colors z-10" onclick="closeVideoLightbox(event)">&times;</button>
+    <div class="w-[90vw] max-w-4xl aspect-video" onclick="event.stopPropagation()">
+      <iframe id="video-iframe" src="" class="w-full h-full rounded-lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    const galleryImages = [
+      'bilder/referenzen/effi-3.webp',
+      'bilder/referenzen/effi-7.webp',
+      'bilder/referenzen/effi-6.webp',
+      'bilder/referenzen/effi-8.webp',
+      'bilder/referenzen/effi-4.webp',
+      'bilder/referenzen/effi-2.webp'
+    ];
+    let currentIdx = 0;
+    const videoIdx = galleryImages.length - 1;
+
+    function showImage(idx) {
+      currentIdx = (idx + galleryImages.length) % galleryImages.length;
+      document.getElementById('lightbox-img').src = galleryImages[currentIdx];
+      document.getElementById('lb-counter').textContent = (currentIdx + 1) + ' / ' + galleryImages.length;
+      const playBtn = document.getElementById('lb-play-btn');
+      if (currentIdx === videoIdx) playBtn.classList.remove('hidden');
+      else playBtn.classList.add('hidden');
+    }
+
+    function openLightbox(src) {
+      const idx = galleryImages.indexOf(src);
+      if (idx !== -1) currentIdx = idx;
+      const lb = document.getElementById('lightbox');
+      showImage(currentIdx);
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      if (event && event.target && event.target.closest && event.target.closest('#lightbox-img')) return;
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function lbPrev(e) { e && e.stopPropagation(); if (currentIdx === videoIdx) { /* noop */ } showImage(currentIdx - 1); }
+    function lbNext(e) { e && e.stopPropagation(); showImage(currentIdx + 1); }
+
+    function openVideoLightbox() {
+      const lb = document.getElementById('video-lightbox');
+      const iframe = document.getElementById('video-iframe');
+      iframe.src = 'about:blank';
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoLightbox(event) {
+      if (event && event.target && event.target.closest && event.target.closest('#video-iframe')) return;
+      const lb = document.getElementById('video-lightbox');
+      const iframe = document.getElementById('video-iframe');
+      iframe.src = '';
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbPrev(e);
+        if (e.key === 'ArrowRight') lbNext(e);
+      }
+    });
+  </script>
+</body>
+</html>

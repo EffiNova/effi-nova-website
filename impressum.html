@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | EffiNova GmbH</title>
+  <meta name="description" content="Impressum der EffiNova GmbH, Turmstr. 33, 10551 Berlin. Angaben gemäß § 5 TMG.">
+  <link rel="canonical" href="https://effi-nova.de/impressum.html">
+  <meta property="og:title" content="Impressum | EffiNova GmbH">
+  <meta property="og:description" content="Impressum der EffiNova GmbH, Turmstr. 33, 10551 Berlin. Angaben gemäß § 5 TMG.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://effi-nova.de/impressum.html">
+  <link rel="stylesheet" href="dist/output.css">
+  <link rel="preload" href="fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ===== Brand Font (self-hosted) ===== */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+           url('fonts/Montserrat-Variable.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+
+    /* Sticky nav color inversion */
+    .nav-logo { transition: filter 0.3s ease; }
+    .nav-dark .nav-logo { filter: brightness(0) invert(1); }
+    .nav-dark .nav-link { color: #FFFFFF; }
+    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
+    .nav-light .nav-link { color: #004225; }
+    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    /* Footer logo: always white on dark green bg */
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    /* Fade-in animation */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-white text-effi-body">
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION (Sticky)                          -->
+  <!-- ============================================ -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-colors duration-300" style="height:77px;">
+    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="nav-logo h-11 w-auto">
+      </a>
+      <!-- Nav Links (Desktop) -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
+        <a href="index.html#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
+        <a href="index.html#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über mich</a>
+        <a href="index.html#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
+        <a href="blog/index.html" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Blog</a>
+      </div>
+      <!-- CTA Button -->
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
+      </a>
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
+      <a href="index.html#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
+      <a href="index.html#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
+      <a href="index.html#ubermich" class="block py-3 text-effi-green text-[15px]">Über mich</a>
+      <a href="index.html#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
+      <a href="blog/index.html" class="block py-3 text-effi-green text-[15px]">Blog</a>
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
+        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+      </a>
+    </div>
+  </nav>
+
+  <!-- Spacer for fixed nav -->
+  <div style="height:77px;"></div>
+
+  <!-- ============================================ -->
+  <!-- SECTION: IMPRESSUM CONTENT                   -->
+  <!-- ============================================ -->
+  <section id="impressum" class="bg-white" data-nav-theme="light">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="max-w-4xl fade-in">
+        <h1 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight mb-8">
+          Impressum EffiNova GmbH
+        </h1>
+
+        <!-- Angaben gemäß § 5 TMG -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Angaben gemäß § 5 TMG
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          EffiNova GmbH<br>
+          Turmstr. 33<br>
+          10551 Berlin<br>
+          E-Mail: <a href="mailto:mail@effi-nova.de" class="text-effi-green underline hover:opacity-70">mail@effi-nova.de</a><br>
+          Telefon: <a href="tel:+491607517096" class="text-effi-green underline hover:opacity-70">0160 751 70 96</a><br>
+          Geschäftsführer: Henk Wenner
+        </p>
+
+        <!-- Umsatzsteuer -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Umsatzsteuer
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          Steuernummer beantragt<br>
+          Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: wird nachgereicht
+        </p>
+
+        <!-- Kundensupport -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Kundensupport
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          Montag–Freitag von 10–17 Uhr<br>
+          E-Mail: <a href="mailto:mail@effi-nova.de" class="text-effi-green underline hover:opacity-70">mail@effi-nova.de</a>
+        </p>
+
+        <!-- Presseanfragen -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Presseanfragen
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          E-Mail: <a href="mailto:mail@effi-nova.de" class="text-effi-green underline hover:opacity-70">mail@effi-nova.de</a>
+        </p>
+
+        <!-- Kooperationsanfragen -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Kooperationsanfragen
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          E-Mail: <a href="mailto:mail@effi-nova.de" class="text-effi-green underline hover:opacity-70">mail@effi-nova.de</a>
+        </p>
+
+        <!-- EU-Streitschlichtung -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          EU-Streitschlichtung
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" class="text-effi-green underline hover:opacity-70">https://ec.europa.eu/consumers/odr/</a>. Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        </p>
+
+        <!-- Verbraucherstreitbeilegung -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Verbraucherstreitbeilegung / Universalschlichtungsstelle
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+
+        <!-- Haftung für Inhalte -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Haftung für Inhalte
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+        </p>
+
+        <!-- Haftung für Links -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Haftung für Links
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+        </p>
+
+        <!-- Urheberrecht -->
+        <h2 class="text-effi-green text-2xl font-semibold mt-10 mb-4">
+          Urheberrecht
+        </h2>
+        <p class="text-effi-body text-base leading-7 mb-4">
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <!-- Tagline -->
+      <p class="text-lg mb-8 pb-8 border-b border-white/20">
+        Ganzheitliche Energieberatung – weil Ihre Immobilie mehr verdient als halbe Lösungen.
+      </p>
+      <!-- 4-Column Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Column 1: Logo -->
+        <div>
+          <img src="bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
+        </div>
+        <!-- Column 2: Leistungen -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice & Baubegleitung</li>
+            <li>KfW Förderservice & Baubegleitung</li>
+            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
+            <li>GEG-Nachweis, Energieausweis</li>
+          </ul>
+        </div>
+        <!-- Column 3: Unternehmen -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+            <li><a href="agb.html" class="hover:text-white transition-colors">AGB</a></li>
+            <li><a href="widerruf.html" class="hover:text-white transition-colors">Widerruf</a></li>
+          </ul>
+        </div>
+        <!-- Column 4: Kontakt -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT                                   -->
+  <!-- ============================================ -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Sticky nav color change based on section background
+    const nav = document.getElementById('main-nav');
+    const sections = document.querySelectorAll('[data-nav-theme]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+          const theme = entry.target.getAttribute('data-nav-theme');
+          if (theme === 'dark') {
+            nav.classList.remove('nav-light', 'bg-white/95');
+            nav.classList.add('nav-dark', 'bg-[#004225]/95');
+          } else {
+            nav.classList.remove('nav-dark', 'bg-[#004225]/95');
+            nav.classList.add('nav-light', 'bg-white/95');
+          }
+        }
+      });
+    }, { rootMargin: '-77px 0px -85% 0px', threshold: 0.1 });
+    sections.forEach(s => observer.observe(s));
+
+    // Fade-in on scroll
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+  </script>
+
+</body>
+</html>
