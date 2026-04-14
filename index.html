@@ -649,24 +649,35 @@
       });
     });
 
-    // Sticky nav color change based on section background
+    // Sticky nav color change based on section currently under the nav (works both scroll directions)
     const nav = document.getElementById('main-nav');
-    const sections = document.querySelectorAll('[data-nav-theme]');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-          const theme = entry.target.getAttribute('data-nav-theme');
-          if (theme === 'dark') {
-            nav.classList.remove('nav-light', 'bg-white/95');
-            nav.classList.add('nav-dark', 'bg-[#004225]/95');
-          } else {
-            nav.classList.remove('nav-dark', 'bg-[#004225]/95');
-            nav.classList.add('nav-light', 'bg-white/95');
-          }
-        }
-      });
-    }, { rootMargin: '-77px 0px -85% 0px', threshold: 0.1 });
-    sections.forEach(s => observer.observe(s));
+    const sections = Array.from(document.querySelectorAll('[data-nav-theme]'));
+    const NAV_H = 77;
+    function updateNavTheme() {
+      const probe = NAV_H + 1;
+      let current = null;
+      for (const s of sections) {
+        const r = s.getBoundingClientRect();
+        if (r.top <= probe && r.bottom > probe) { current = s; break; }
+      }
+      if (!current) return;
+      const theme = current.getAttribute('data-nav-theme');
+      if (theme === 'dark') {
+        nav.classList.remove('nav-light', 'bg-white/95');
+        nav.classList.add('nav-dark', 'bg-[#004225]/95');
+      } else {
+        nav.classList.remove('nav-dark', 'bg-[#004225]/95');
+        nav.classList.add('nav-light', 'bg-white/95');
+      }
+    }
+    let navTicking = false;
+    window.addEventListener('scroll', () => {
+      if (navTicking) return;
+      navTicking = true;
+      requestAnimationFrame(() => { updateNavTheme(); navTicking = false; });
+    }, { passive: true });
+    window.addEventListener('resize', updateNavTheme);
+    updateNavTheme();
 
     // Fade-in on scroll
     const fadeObserver = new IntersectionObserver((entries) => {
