@@ -769,11 +769,17 @@
         s.defer = true;
         document.head.appendChild(s);
 
-        // Trustmarkt setzt Inline-Styles per JS — wir ueberschreiben sie 3x in der Lade-Phase,
-        // danach NICHT mehr (sonst werden DevTools-Edits dauerhaft zurueckgesetzt)
-        setTimeout(forceLeftAlign, 100);
-        setTimeout(forceLeftAlign, 600);
-        setTimeout(forceLeftAlign, 1500);
+        // Trustmarkt setzt Inline-Styles per JS — wir ueberschreiben dauerhaft
+        var attempts = 0;
+        var enforce = setInterval(function () {
+          forceLeftAlign();
+          attempts++;
+          if (attempts > 30) clearInterval(enforce);
+        }, 200);
+        if (live && window.MutationObserver) {
+          var mo = new MutationObserver(forceLeftAlign);
+          mo.observe(live, { attributes: true, childList: true, subtree: true, attributeFilter: ['style', 'data-is-full-width'] });
+        }
       }
       window.loadTrustmarktWidget = loadTrustmarkt;
 
