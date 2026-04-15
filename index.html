@@ -737,6 +737,25 @@
       var SCRIPT_SRC = 'https://widget.trustmarkt.de/embed/v1/embed.js';
       var scriptLoaded = false;
 
+      var WIDGET_MAX_WIDTH = '260px';
+
+      function forceLeftAlign() {
+        var widget = document.querySelector('#trustmarkt-live .trustmarkt-widget');
+        if (!widget) return;
+        widget.style.setProperty('width', WIDGET_MAX_WIDTH, 'important');
+        widget.style.setProperty('max-width', WIDGET_MAX_WIDTH, 'important');
+        widget.style.setProperty('flex', '0 0 ' + WIDGET_MAX_WIDTH, 'important');
+        widget.style.setProperty('margin-left', '0', 'important');
+        widget.style.setProperty('margin-right', 'auto', 'important');
+        widget.removeAttribute('data-is-full-width');
+        var iframe = widget.querySelector('iframe');
+        if (iframe) {
+          iframe.style.setProperty('width', '100%', 'important');
+          iframe.style.setProperty('max-width', '100%', 'important');
+          iframe.style.setProperty('margin', '0', 'important');
+        }
+      }
+
       function loadTrustmarkt() {
         if (scriptLoaded) return;
         scriptLoaded = true;
@@ -749,6 +768,20 @@
         s.async = true;
         s.defer = true;
         document.head.appendChild(s);
+
+        // Trustmarkt setzt Inline-Styles per JS — wir ueberschreiben sie nachher mehrfach
+        var attempts = 0;
+        var enforce = setInterval(function () {
+          forceLeftAlign();
+          attempts++;
+          if (attempts > 30) clearInterval(enforce); // 30 * 200ms = 6s
+        }, 200);
+
+        // MutationObserver: jede Aenderung am Widget triggert Re-Apply
+        if (live && window.MutationObserver) {
+          var mo = new MutationObserver(forceLeftAlign);
+          mo.observe(live, { attributes: true, childList: true, subtree: true, attributeFilter: ['style', 'data-is-full-width'] });
+        }
       }
       window.loadTrustmarktWidget = loadTrustmarkt;
 
