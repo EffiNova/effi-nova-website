@@ -47,7 +47,18 @@
         enabled: true,
         readOnly: true
       },
-      functional: {},
+      functional: {
+        services: {
+          trustmarkt_widget: {
+            label: 'Trustmarkt Bewertungswidget',
+            onAccept: function () {
+              if (typeof window.loadTrustmarktWidget === 'function') {
+                window.loadTrustmarktWidget();
+              }
+            }
+          }
+        }
+      },
       analytics: {},
       marketing: {}
     },
