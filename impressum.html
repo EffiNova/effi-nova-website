@@ -11,6 +11,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://effi-nova.de/impressum.html">
   <link rel="stylesheet" href="dist/output.css">
+  <link rel="stylesheet" href="css/cookieconsent.css">
+  <link rel="stylesheet" href="css/cookie-consent-brand.css">
   <link rel="preload" href="fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
@@ -294,5 +296,10 @@
     document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
   </script>
 
+  <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
+    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+  </button>
+  <script defer src="js/cookieconsent.js"></script>
+  <script defer src="js/cookie-consent-config.js"></script>
 </body>
 </html>

@@ -1,0 +1,125 @@
+/* EffiNova – Cookie Consent Brand Overrides
+   Passt vanilla-cookieconsent v3 an Brand (effi-green/beige/gold, Montserrat, Glassmorphism) an. */
+
+#cc-main {
+  --cc-font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  --cc-bg: #ffffff;
+  --cc-primary-color: #004225;
+  --cc-secondary-color: #616161;
+
+  --cc-btn-primary-bg: #004225;
+  --cc-btn-primary-color: #ffffff;
+  --cc-btn-primary-border-color: #004225;
+  --cc-btn-primary-hover-bg: #035B2F;
+  --cc-btn-primary-hover-color: #ffffff;
+  --cc-btn-primary-hover-border-color: #035B2F;
+
+  --cc-btn-secondary-bg: #F2EFE7;
+  --cc-btn-secondary-color: #004225;
+  --cc-btn-secondary-border-color: #F2EFE7;
+  --cc-btn-secondary-hover-bg: #e6e1d4;
+  --cc-btn-secondary-hover-color: #004225;
+  --cc-btn-secondary-hover-border-color: #e6e1d4;
+
+  --cc-separator-border-color: rgba(0, 66, 37, 0.12);
+
+  --cc-toggle-on-bg: #004225;
+  --cc-toggle-off-bg: #92887A;
+  --cc-toggle-readonly-bg: #d9d5cb;
+  --cc-toggle-readonly-knob-bg: #ffffff;
+  --cc-toggle-on-knob-bg: #ffffff;
+  --cc-toggle-off-knob-bg: #ffffff;
+
+  --cc-cookie-category-block-bg: #F4EFD9;
+  --cc-cookie-category-block-border: rgba(0, 66, 37, 0.08);
+  --cc-cookie-category-block-hover-bg: #F2EFE7;
+  --cc-cookie-category-block-hover-border: rgba(0, 66, 37, 0.15);
+  --cc-cookie-category-expanded-block-bg: #F2EFE7;
+  --cc-cookie-category-expanded-block-hover-bg: #ece7d8;
+
+  --cc-overlay-bg: rgba(1, 51, 27, 0.35);
+  --cc-webkit-scrollbar-bg: rgba(0, 66, 37, 0.05);
+  --cc-webkit-scrollbar-bg-hover: rgba(0, 66, 37, 0.2);
+}
+
+/* Glassmorphism auf dem Cloud-Banner */
+#cc-main .cm--cloud {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 66, 37, 0.08);
+  box-shadow: 0 20px 50px -20px rgba(1, 51, 27, 0.25);
+  border-radius: 16px;
+}
+
+#cc-main .cm__title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+#cc-main .cm__btn,
+#cc-main .pm__btn {
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#cc-main .pm__section {
+  border-radius: 12px;
+}
+
+#cc-main .pm__body {
+  border-radius: 16px;
+}
+
+/* Fallback ohne backdrop-filter */
+@supports not (backdrop-filter: blur(14px)) {
+  #cc-main .cm--cloud {
+    background: #ffffff;
+  }
+}
+
+/* Sticky Floating-Button „Privatsphäre-Einstellungen" */
+.cc-revoke-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(0, 66, 37, 0.92);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 24px -8px rgba(1, 51, 27, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cc-revoke-btn:hover {
+  background: #035B2F;
+  transform: translateY(-1px);
+}
+
+.cc-revoke-btn i {
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .cc-revoke-btn {
+    bottom: 14px;
+    left: 14px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}

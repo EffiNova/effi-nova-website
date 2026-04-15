@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/cookieconsent.css">
+  <link rel="stylesheet" href="../css/cookie-consent-brand.css">
   <script>
     tailwind.config = {
       theme: {
@@ -596,5 +598,10 @@
     });
   </script>
 
+  <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
+    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+  </button>
+  <script defer src="../js/cookieconsent.js"></script>
+  <script defer src="../js/cookie-consent-config.js"></script>
 </body>
 </html>
