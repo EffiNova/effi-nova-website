@@ -49,27 +49,23 @@
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    /* Trustmarkt Widget hart linksbuendig — neutralisiert Script-Centering */
+    /* Trustmarkt Widget linksbuendig — Container auf natuerliche Widget-Breite begrenzen,
+       da iframe-Inhalt cross-origin zentriert und nicht von aussen styleable ist. */
     #trustmarkt-live {
       display: block !important;
       width: 100%;
-      text-align: left !important;
-    }
-    #trustmarkt-live .trustmarkt-widget,
-    #trustmarkt-live .trustmarkt-widget * {
-      text-align: left !important;
-      justify-content: flex-start !important;
-      align-items: flex-start !important;
-      margin-left: 0 !important;
     }
     #trustmarkt-live .trustmarkt-widget {
-      width: fit-content !important;
-      max-width: 100% !important;
+      width: 100% !important;
+      max-width: 480px !important;
+      margin-left: 0 !important;
       margin-right: auto !important;
+      justify-content: flex-start !important;
     }
-    #trustmarkt-live .trustmarkt-widget > * {
-      margin-right: auto !important;
-      float: none !important;
+    #trustmarkt-live .trustmarkt-widget iframe {
+      width: 100% !important;
+      max-width: 100% !important;
+      display: block !important;
     }
 
     /* Partner logo animation */
