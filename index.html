@@ -49,26 +49,27 @@
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    /* Trustmarkt Widget linksbuendig erzwingen — Container shrinkt auf Content-Breite */
+    /* Trustmarkt Widget hart linksbuendig — neutralisiert Script-Centering */
     #trustmarkt-live {
-      display: flex !important;
-      justify-content: flex-start !important;
+      display: block !important;
       width: 100%;
+      text-align: left !important;
+    }
+    #trustmarkt-live .trustmarkt-widget,
+    #trustmarkt-live .trustmarkt-widget * {
+      text-align: left !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      margin-left: 0 !important;
     }
     #trustmarkt-live .trustmarkt-widget {
       width: fit-content !important;
       max-width: 100% !important;
-      margin-left: 0 !important;
-      margin-right: auto !important;
-      text-align: left !important;
-    }
-    #trustmarkt-live .trustmarkt-widget * {
-      margin-left: 0 !important;
       margin-right: auto !important;
     }
-    #trustmarkt-live .trustmarkt-widget iframe {
-      display: block !important;
-      margin: 0 !important;
+    #trustmarkt-live .trustmarkt-widget > * {
+      margin-right: auto !important;
+      float: none !important;
     }
 
     /* Partner logo animation */
@@ -185,7 +186,7 @@
             </div>
             <div class="text-center">
               <div class="text-effi-green text-3xl font-bold font-montserrat">
-                <span class="counter" data-target="98">0</span>%
+                <span class="counter" data-target="96">0</span>%
               </div>
               <div class="text-effi-body text-sm mt-1">Kundenzufriedenheit</div>
             </div>
