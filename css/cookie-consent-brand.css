@@ -81,45 +81,49 @@
   }
 }
 
-/* Sticky Floating-Button „Privatsphäre-Einstellungen" */
+/* Sticky Floating-Button „Privatsphäre" — dezent, nur Icon, unten rechts */
 .cc-revoke-btn {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 16px;
+  right: 16px;
   z-index: 40;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  background: rgba(0, 66, 37, 0.92);
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: rgba(0, 66, 37, 0.6);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
-  font-family: 'Montserrat', system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  box-shadow: 0 8px 24px -8px rgba(1, 51, 27, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .cc-revoke-btn:hover {
-  background: #035B2F;
-  transform: translateY(-1px);
+  opacity: 1;
+  background: rgba(0, 66, 37, 0.9);
 }
 
 .cc-revoke-btn i {
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.cc-revoke-btn span {
+  display: none;
 }
 
 @media (max-width: 640px) {
   .cc-revoke-btn {
-    bottom: 14px;
-    left: 14px;
-    padding: 8px 12px;
-    font-size: 11px;
+    bottom: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+  .cc-revoke-btn i {
+    font-size: 12px;
   }
 }
