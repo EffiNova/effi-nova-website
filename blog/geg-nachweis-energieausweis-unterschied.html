@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEG-Nachweis vs. Energieausweis: Wo liegt der Unterschied — und wann brauchen Sie was? – EffiNova Wissenshub</title>
+  <meta name="description" content="GEG Nachweis und Energieausweis – verstehen Sie die Unterschiede. Wann brauchen Sie was? Kosten, Anforderungen und Szenarien klar erklärt.">
+  <link rel="canonical" href="https://effi-nova.de/blog/geg-nachweis-energieausweis-unterschied/">
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="../css/cookieconsent.css">
+  <link rel="stylesheet" href="../css/cookie-consent-brand.css">
+  <link rel="preload" href="../fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('../fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+           url('../fonts/Montserrat-Variable.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+
+    /* Nav (konsistent mit Hauptseite) */
+    .nav-logo { transition: filter 0.3s ease; }
+    .nav-dark .nav-logo { filter: brightness(0) invert(1); }
+    .nav-dark .nav-link { color: #FFFFFF; }
+    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
+    .nav-light .nav-link { color: #004225; }
+    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    .nav-dark { background-color: rgba(0, 66, 37, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav-light { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    @supports not (backdrop-filter: blur()) {
+      .nav-dark { background-color: rgba(0, 66, 37, 0.97) !important; }
+      .nav-light { background-color: rgba(255, 255, 255, 0.97) !important; }
+    }
+
+    /* Article prose styling */
+    .prose h2 { font-weight: 700; font-size: 1.5rem; color: #01331B; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-weight: 600; font-size: 1.25rem; color: #01331B; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose p { margin-bottom: 1.5rem; line-height: 1.85; color: #616161; font-size: 1.125rem; }
+    .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ul li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ol li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose strong { color: #01331B; font-weight: 600; }
+    .prose a { color: #004225; text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: #035B2F; }
+    .prose blockquote { border-left: 4px solid #C3A87A; padding: 1rem 1.5rem; background: #F2EFE7; border-radius: 0 0.75rem 0.75rem 0; margin: 1.5rem 0; }
+    .prose blockquote p { color: #004225; font-weight: 500; margin-bottom: 0; }
+    .prose img { border-radius: 1rem; margin: 2rem 0; }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+    .prose th { background: #F2EFE7; color: #01331B; font-weight: 600; padding: 0.75rem 1rem; text-align: left; }
+    .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E4D9; color: #616161; }
+
+    .info-box { background: #F2EFE7; border-left: 4px solid #004225; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .info-box p { margin-bottom: 0; }
+    .toc a { color: #004225; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    #reading-progress { transition: width 0.1s linear; }
+
+    /* FAQ Details/Summary styling */
+    .prose details { background-color: #F2EFE7; border: 1px solid #E8E4D9; border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1rem; cursor: pointer; }
+    .prose details summary { color: #004225; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+    .prose details summary::-webkit-details-marker { display: none; }
+    .prose details summary::after { content: '+'; font-size: 1.25rem; font-weight: 700; color: #004225; transition: transform 0.2s ease; }
+    .prose details[open] summary::after { content: '−'; }
+    .prose details summary:hover { color: #035B2F; }
+    .prose details[open] summary { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8E4D9; }
+    .prose details p { color: #616161; margin-bottom: 0; font-size: 1rem; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GEG-Nachweis vs. Energieausweis: Wo liegt der Unterschied — und wann brauchen Sie was?",
+    "author": {
+      "@type": "Person",
+      "name": "Henk Wenner",
+      "url": "https://effi-nova.de/#ubermich"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EffiNova Energieberatung",
+      "logo": { "@type": "ImageObject", "url": "https://effi-nova.de/bilder/logos/EffiNova_Logo_A3.webp" }
+    },
+    "datePublished": "2026-03-11",
+    "dateModified": "2026-03-11",
+    "image": "https://effi-nova.de/blog/images/geg-nachweis-energieausweis-unterschied/geg-nachweis-energieausweis-unterschied-1.webp",
+    "description": "GEG Nachweis und Energieausweis – verstehen Sie die Unterschiede. Wann brauchen Sie was? Kosten, Anforderungen und Szenarien klar erklärt."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kostet ein GEG-Nachweis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten für einen GEG-Nachweis liegen in der Regel zwischen 800 und 1.200 Euro, abhängig von der Gebäudegröße und -komplexität." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist ein GEG-Nachweis Pflicht?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja, ein GEG-Nachweis ist Pflicht bei Neubauten, wesentlichen Sanierungen von mehr als 25 % der Gebäudehülle und Erweiterungen von beheizten oder klimatisierten Räumen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wann brauche ich keinen GEG-Nachweis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sie benötigen keinen GEG-Nachweis bei kleineren Renovierungen, beim bloßen Austausch von Bauteilen ohne Erweiterung, bei Verkauf oder Vermietung von Bestandsgebäuden und bei Gebäuden unter 50 m² beheizter Fläche." }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich GEG-Nachweis und Energieausweis gleichzeitig erstellen lassen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja, das ist möglich und sinnvoll. Bei Neubauten und größeren Sanierungen können Sie beide Dokumente gemeinsam beauftragen. Dies spart Zeit und Kosten." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ersetzt der Bedarfsausweis den GEG-Nachweis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nein, der Bedarfsausweis ersetzt den GEG-Nachweis nicht. Ein Bedarfsausweis dient der Bewertung der Energieeffizienz für Käufer und Mieter. Der GEG-Nachweis hat eine andere Rechtsgrundlage und ist für die Baugenehmigung erforderlich." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-effi-body">
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent">
+    <div id="reading-progress" class="h-full bg-effi-gold" style="width:0%"></div>
+  </div>
+
+  <!-- NAVIGATION (konsistent mit Hauptseite) -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md shadow-md transition-colors duration-300" style="height:77px;">
+    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="../" class="flex items-center gap-2 shrink-0">
+        <img src="../bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="nav-logo h-11 w-auto">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="../#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
+        <a href="../#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
+        <a href="../#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über EffiNova</a>
+        <a href="../#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
+        <a href="./" class="nav-link text-[15px] font-semibold border-b-2 border-effi-green pb-0.5">Blog</a>
+      </div>
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
+      <a href="../#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
+      <a href="../#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
+      <a href="../#ubermich" class="block py-3 text-effi-green text-[15px]">Über EffiNova</a>
+      <a href="../#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
+      <a href="./" class="block py-3 text-effi-green text-[15px] font-semibold">Blog</a>
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
+        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+      </a>
+    </div>
+  </nav>
+  <div style="height:77px;"></div>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-effi-beige border-b border-effi-border">
+    <div class="max-w-[1440px] mx-auto px-5 py-3">
+      <nav class="text-xs text-effi-body">
+        <a href="../" class="hover:text-effi-green transition-colors">Startseite</a>
+        <span class="mx-2">/</span>
+        <a href="./" class="hover:text-effi-green transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-effi-green-dark font-medium">GEG-Nachweis vs. Energieausweis</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <section class="bg-white pt-10 pb-0 lg:pt-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Energieausweis</span>
+          <span class="text-effi-body text-xs"><i class="far fa-calendar-alt mr-1"></i> 11. März 2026</span>
+          <span class="text-effi-body text-xs"><i class="far fa-clock mr-1"></i> 9 Min. Lesezeit</span>
+        </div>
+        <h1 class="font-montserrat text-effi-green-dark text-3xl md:text-[2.75rem] font-bold leading-tight mb-6">
+          GEG-Nachweis vs. Energieausweis: Wo liegt der Unterschied — und wann brauchen Sie was?
+        </h1>
+        <p class="text-effi-body text-lg leading-relaxed mb-8">
+          Viele Hausbesitzer stehen vor derselben Frage: Was genau ist der Unterschied zwischen einem GEG-Nachweis und einem Energieausweis? Wann brauchen Sie welches Dokument — und warum akzeptiert die Bauaufsicht keinen Energieausweis als GEG-Nachweis? In diesem Leitfaden klären wir die Unterschiede, Kosten und Szenarien verständlich auf.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="max-w-5xl mx-auto px-5 pb-10">
+    <img src="images/geg-nachweis-energieausweis-unterschied/geg-nachweis-energieausweis-unterschied-1.webp" alt="Modernes Einfamilienhaus mit Energieausweis und GEG-Nachweis auf Holztisch im Vordergrund" class="w-full rounded-2xl object-cover aspect-[21/9]" loading="eager">
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <article class="bg-white pb-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="grid lg:grid-cols-[1fr_240px] gap-10 max-w-5xl mx-auto">
+
+        <!-- Main content -->
+        <div class="prose">
+
+          <!-- Table of Contents -->
+          <div class="bg-effi-beige rounded-2xl p-6 mb-10 toc">
+            <h4 class="font-montserrat text-effi-green-dark text-sm font-bold uppercase tracking-wider mb-3">Inhaltsverzeichnis</h4>
+            <ol class="space-y-2 text-sm list-decimal pl-4">
+              <li><a href="#kurz-erklaert-geg-nachweis">Kurz erklärt: Was ist ein GEG-Nachweis?</a></li>
+              <li><a href="#kurz-erklaert-energieausweis">Kurz erklärt: Was ist ein Energieausweis?</a></li>
+              <li><a href="#geg-nachweis-vs-energieausweis-unterschiede">Die 5 entscheidenden Unterschiede</a></li>
+              <li><a href="#haeufige-verwechslung">Häufige Verwechslung</a></li>
+              <li><a href="#wann-welches-dokument">Entscheidungshilfe: Wann welches Dokument?</a></li>
+              <li><a href="#so-kommen-sie-an-ihren-geg-nachweis">So kommen Sie an Ihren GEG-Nachweis</a></li>
+              <li><a href="#faq">Häufig gestellte Fragen</a></li>
+            </ol>
+          </div>
+
+          <h2 id="kurz-erklaert-geg-nachweis">Kurz erklärt: Was ist ein GEG-Nachweis?</h2>
+
+          <p>Der GEG-Nachweis ist ein öffentlich-rechtliches Dokument, das die Erfüllung der Anforderungen des Gebäudeenergiegesetzes (GEG) nachweist. Es basiert auf dem früheren EnEV-Nachweis und wurde mit der Einführung des GEG im Jahr 2020 neu benannt. Der Nachweis muss zwingend mit dem Bauantrag eingereicht werden und wird von der zuständigen Bauaufsicht überprüft.</p>
+
+          <p>Der GEG-Nachweis ist erforderlich bei:</p>
+          <ul>
+            <li><strong>Neubauten:</strong> Alle neuen Gebäude mit einer beheizten oder klimatisierten Nutzfläche über 50 m²</li>
+            <li><strong>Wesentliche Sanierungen:</strong> Wenn mehr als 25 Prozent der Gebäudehülle erneuert werden</li>
+            <li><strong>Erweiterungen:</strong> Wenn beheizte oder klimatisierte Räume hinzukommen</li>
+          </ul>
+
+          <p>Historisch betrachtet hatte jede Novelle des Energierechts einen anderen Namen. Die EnEV 2014 kannte noch den „EnEV-Nachweis" – seit 2020 heißt das Dokument gemäß des Gebäudeenergiegesetzes einfach „GEG-Nachweis".</p>
+
+          <img src="images/geg-nachweis-energieausweis-unterschied/geg-nachweis-energieausweis-unterschied-2.webp" alt="Nahaufnahme von Wärmedämmung an Hausfassade – Mineralwolle und Dämmplatten für GEG-Nachweis" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="kurz-erklaert-energieausweis">Kurz erklärt: Was ist ein Energieausweis?</h2>
+
+          <p>Der Energieausweis ist ein Dokument zur Bewertung der Energieeffizienz eines Gebäudes und richtet sich primär an Käufer, Mieter und andere Interessenten. Er zeigt auf einen Blick, wie effizient ein Gebäude mit Energie umgeht. Es gibt zwei Varianten des Energieausweises:</p>
+
+          <p><strong>1. Der Verbrauchsausweis</strong> – basiert auf echten Verbrauchsdaten der letzten drei Jahre (Heizkosten-Abrechnungen). Er ist kostengünstiger (ab ca. 50–120 Euro) und lässt sich schnell ausstellen, gibt aber keinen Aufschluss über die Bauqualität.</p>
+
+          <p><strong>2. Der Bedarfsausweis</strong> – berechnet den theoretischen Energiebedarf auf Basis der Gebäudeeigenschaften (Dämmung, Fenster, Heizanlage, Baumaterial). Er kostet mehr (ab ca. 300–700 Euro), ist aber aussagekräftiger für die langfristige Effizienz, da er nicht vom individuellen Verhalten abhängt.</p>
+
+          <p>Der Energieausweis ist gültig für 10 Jahre und wird benötigt bei:</p>
+          <ul>
+            <li>Verkauf von Immobilien</li>
+            <li>Vermietung oder Verpachtung</li>
+            <li>Neubau (zusätzlich zum GEG-Nachweis)</li>
+            <li>Großflächige Sanierungen (je nach Bundesland unterschiedlich)</li>
+          </ul>
+
+          <h2 id="geg-nachweis-vs-energieausweis-unterschiede">GEG-Nachweis vs. Energieausweis — die 5 entscheidenden Unterschiede</h2>
+
+          <p>Die beiden Dokumente unterscheiden sich in mehreren grundlegenden Punkten. Folgende Tabelle zeigt die wesentlichsten Unterschiede:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Kriterium</th>
+                <th>GEG-Nachweis</th>
+                <th>Energieausweis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Zweck</strong></td>
+                <td>Nachweisen der Einhaltung von Baurecht</td>
+                <td>Information für Käufer, Mieter, Interessenten</td>
+              </tr>
+              <tr>
+                <td><strong>Rechtsgrundlage</strong></td>
+                <td>Gebäudeenergiegesetz (GEG)</td>
+                <td>Energieeinsparverordnung (EnEV) bzw. GEG</td>
+              </tr>
+              <tr>
+                <td><strong>Pflichtanlass</strong></td>
+                <td>Neubau, Sanierung >25 %, Bauantrag</td>
+                <td>Verkauf, Vermietung, Neubau, Sanierung</td>
+              </tr>
+              <tr>
+                <td><strong>Berechnungsmethode</strong></td>
+                <td>DIN 18599 (detailliert, gebäudespezifisch)</td>
+                <td>Vereinfachte Verfahren (Bedarfs- oder Verbrauchsmethode)</td>
+              </tr>
+              <tr>
+                <td><strong>Aussteller</strong></td>
+                <td>Qualifizierte Energieberater, Ingenieure, Architekten</td>
+                <td>Energieberater, Architekten, Heizungsbauer (teilweise)</td>
+              </tr>
+              <tr>
+                <td><strong>Kosten</strong></td>
+                <td>ca. 800–1.200 Euro</td>
+                <td>Verbrauch: 50–120 Euro | Bedarf: 300–700 Euro</td>
+              </tr>
+              <tr>
+                <td><strong>Gültigkeit</strong></td>
+                <td>Unbegrenzt (keine Verfallsdatum)</td>
+                <td>10 Jahre</td>
+              </tr>
+              <tr>
+                <td><strong>Adressat</strong></td>
+                <td>Bauaufsicht, Behörden</td>
+                <td>Makler, Käufer, Mieter, Öffentlichkeit</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Unser Tipp:</strong> <a href="energieausweis-verstehen-leitfaden/">Energieausweis verstehen: Was bedeutet Ihre Effizienzklasse?</a> – Erfahren Sie, wie Sie die Effizienzklasse richtig interpretieren und was sie für Ihren Hausverkauf bedeutet.</p>
+          </div>
+
+          <h2 id="haeufige-verwechslung">Häufige Verwechslung: Warum der Energieausweis kein GEG-Nachweis ist</h2>
+
+          <p>Es ist eine weit verbreitete Verwechslung unter Hausbesitzern und Bauherren: Viele denken, dass ein Energieausweis als Nachweis für die Baugenehmigung ausreicht. Das ist ein Irrtum, der zu ernsthaften Problemen führen kann.</p>
+
+          <p>Die Bauaufsicht akzeptiert einen Energieausweis <strong>nicht als Ersatz für den GEG-Nachweis</strong>. Der Grund ist einfach: Der Energieausweis ist ein Transparenzdokument für den Markt (Käufer und Mieter), während der GEG-Nachweis ein Baurecht-Dokument ist. Der GEG-Nachweis muss nach der präziseren DIN 18599 berechnet werden und wird von der Bauaufsicht vor Baubeginn überprüft.</p>
+
+          <p>Was passiert, wenn Sie nur einen Energieausweis haben, aber einen GEG-Nachweis brauchen?</p>
+          <ul>
+            <li>Die Baugenehmigung wird verweigert oder ist ungültig</li>
+            <li>Sie dürfen nicht mit dem Bau beginnen</li>
+            <li>Im schlimmsten Fall droht eine Ordnungswidrigkeit mit Geldbuße</li>
+            <li>Eine nachträgliche Legalisierung ist aufwendig und kostspielig</li>
+          </ul>
+
+          <p>Deshalb ist es wichtig, die richtige Anforderung für Ihre Situation zu klären, bevor Sie einen Energieberater beauftragen.</p>
+
+          <img src="images/geg-nachweis-energieausweis-unterschied/geg-nachweis-energieausweis-unterschied-3.webp" alt="Szenarien: Wann Sie welches Dokument benötigen – GEG-Nachweis vs. Energieausweis" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="wann-welches-dokument">Wann brauchen Sie welches Dokument? — Entscheidungshilfe</h2>
+
+          <p>Um Klarheit zu schaffen, haben wir die fünf häufigsten Szenarien für Sie zusammengefasst:</p>
+
+          <h3>Szenario 1: Neubau</h3>
+          <p>Sie benötigen <strong>GEG-Nachweis + Energieausweis</strong>. Der GEG-Nachweis ist für die Baugenehmigung zwingend erforderlich. Der Energieausweis wird nach Fertigstellung benötigt, falls Sie das Gebäude später verkaufen oder vermieten möchten. Beauftragen Sie beide Dokumente zusammen – das spart Zeit und Kosten.</p>
+
+          <h3>Szenario 2: Hausverkauf (Bestandsgebäude)</h3>
+          <p>Sie benötigen <strong>nur Energieausweis</strong>. Der Verkäufer muss einen gültigen Energieausweis vorlegen – dies ist gesetzlich vorgeschrieben. Wählen Sie den Verbrauchsausweis (günstig, schnell) oder Bedarfsausweis (aussagekräftig), je nachdem, wie modern das Gebäude ist.</p>
+
+          <h3>Szenario 3: Größere Sanierung mit Bauantrag</h3>
+          <p>Sie benötigen <strong>GEG-Nachweis + ggf. neuer Energieausweis</strong>. Wenn Sie einen Bauantrag für eine wesentliche Sanierung (>25 % der Hülle) stellen, ist der GEG-Nachweis Pflicht. Ein neuer Energieausweis wird sinnvoll, um die verbesserte Energieeffizienz zu dokumentieren.</p>
+
+          <h3>Szenario 4: Heizungstausch nach GEG 2024</h3>
+          <p>Sie benötigen <strong>Erfüllungserklärung (65%-EE-Nachweis)</strong>. Beim Austausch von Heizungsanlagen müssen Sie nachweisen, dass die neue Heizung zu mindestens 65 % erneuerbare Energien nutzt oder in ein Wärmenetz eingebunden ist. Dies ist ein spezieller Nachweis, kein klassischer GEG-Nachweis oder Energieausweis.</p>
+
+          <h3>Szenario 5: Vermietung</h3>
+          <p>Sie benötigen <strong>nur Energieausweis</strong>. Bei der Neuvermietung oder Pachtung muss ein Energieausweis vorgelegt werden. Ein GEG-Nachweis ist für bestehende Mietgebäude nicht erforderlich, es sei denn, Sie führen eine wesentliche Sanierung durch.</p>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Unser Tipp:</strong> <a href="energieausweis-verbrauchsausweis-bedarfsausweis-unterschied/">Energieausweis richtig lesen: Verbrauchsausweis vs. Bedarfsausweis</a> – Finden Sie heraus, welche Variante für Ihre Immobilie sinnvoller ist und was die Unterschiede bedeuten.</p>
+          </div>
+
+          <h2 id="so-kommen-sie-an-ihren-geg-nachweis">So kommen Sie an Ihren GEG-Nachweis</h2>
+
+          <p>Wenn Sie einen GEG-Nachweis benötigen, folgen Sie diesen Schritten:</p>
+
+          <p><strong>Schritt 1: Energieberater beauftragen</strong><br>
+          Suchen Sie einen qualifizierten Energieberater, Ingenieur oder Architekten. Die Person muss in der „Liste der Fachkundigen" eingetragen sein, die von der DENA (Deutsche Energie-Agentur) oder Kammern gepflegt wird. Nicht jeder Energieberater darf einen GEG-Nachweis ausstellen.</p>
+
+          <p><strong>Schritt 2: Unterlagen bereitstellen</strong><br>
+          Bereiten Sie folgende Dokumente vor:</p>
+          <ul>
+            <li>Detaillierte Architektur- und Baupläne</li>
+            <li>Spezifikationen aller Bauteile (Fenster, Dämmung, Heizanlage, Lüftung)</li>
+            <li>Informationen zu Energieversorgung und Wärmeerzeugung</li>
+            <li>Grundflächendaten und Orientierung des Gebäudes</li>
+          </ul>
+
+          <p><strong>Schritt 3: Nachweis erstellen lassen</strong><br>
+          Der Energieberater berechnet den Nachweis nach DIN 18599. Dies dauert typischerweise 3–4 Wochen, abhängig von der Gebäudekomplexität und der Verfügbarkeit aller Unterlagen.</p>
+
+          <p><strong>Schritt 4: Mit Bauantrag einreichen</strong><br>
+          Der GEG-Nachweis muss vor oder spätestens mit dem Bauantrag bei der zuständigen Bauaufsicht eingereicht werden. Ohne diesen Nachweis erfolgt keine Baugenehmigung.</p>
+
+          <p><strong>Wer darf den GEG-Nachweis erstellen?</strong></p>
+          <p>Laut GEG sind folgende Fachleute befugt:</p>
+          <ul>
+            <li>Architekten mit berufsrechtlicher Qualifikation</li>
+            <li>Ingenieure (Hoch- oder Tiefbau, spezialisiert auf Energieeffizienz)</li>
+            <li>Qualifizierte Energieberater (müssen vom BAFA oder einer Kammer zertifiziert sein)</li>
+          </ul>
+
+          <p><strong>Typische Kosten und Zeitrahmen</strong></p>
+          <ul>
+            <li><strong>Kosten:</strong> 800–1.200 Euro (abhängig von Gebäudegröße und -komplexität)</li>
+            <li><strong>Bearbeitungszeit:</strong> 3–4 Wochen nach Eingang aller Unterlagen</li>
+            <li><strong>Zusätzliche Kosten:</strong> Für spezielle Beratung oder Optimierungen können weitere Gebühren anfallen</li>
+          </ul>
+
+          <img src="images/geg-nachweis-energieausweis-unterschied/geg-nachweis-energieausweis-unterschied-4.webp" alt="Prozess zur Erstellung eines GEG-Nachweises – Schritte und Anforderungen" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Unser Tipp:</strong> <a href="energieausweis-online-vs-energieberater/">Energieausweis online vs. beim Energieberater</a> – Erfahren Sie, wann ein Online-Energieausweis sinnvoll ist und wann Sie einen persönlichen Energieberater brauchen.</p>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+
+          <details>
+            <summary>Was kostet ein GEG-Nachweis?</summary>
+            <p>Die Kosten für einen GEG-Nachweis liegen in der Regel zwischen 800 und 1.200 Euro, abhängig von der Gebäudegröße und -komplexität. Der Nachweis muss von einem qualifizierten Energieberater, Ingenieur oder Architekten erstellt werden und erfordert detaillierte Gebäudedaten sowie technische Berechnungen nach der DIN 18599. Für kleinere Gebäude können die Kosten auch darunter liegen, für sehr komplexe Bauten können sie höher ausfallen.</p>
+          </details>
+
+          <details>
+            <summary>Ist ein GEG-Nachweis Pflicht?</summary>
+            <p>Ja, ein GEG-Nachweis ist Pflicht bei Neubauten, wesentlichen Sanierungen von mehr als 25 Prozent der Gebäudehülle und Erweiterungen von beheizten oder klimatisierten Räumen. Der Nachweis muss mit dem Bauantrag eingereicht werden und wird von der Bauaufsicht überprüft. Ohne GEG-Nachweis erfolgt keine Baugenehmigung. Für bestehende Gebäude, die Sie verkaufen oder vermieten möchten, ist statt des GEG-Nachweises der Energieausweis erforderlich.</p>
+          </details>
+
+          <details>
+            <summary>Wann brauche ich keinen GEG-Nachweis?</summary>
+            <p>Sie benötigen keinen GEG-Nachweis bei kleineren Renovierungen und Instandhaltungen ohne Bauantrag, beim bloßen Austausch von Bauteilen ohne Erweiterung beheizter Fläche, beim Verkauf oder Vermietung von Bestandsgebäuden (hier ist nur der Energieausweis nötig) und bei Gebäuden mit weniger als 50 m² beheizter oder klimatisierter Nutzfläche. Auch unter Denkmalschutz stehende Gebäude können Ausnahmen haben – fragen Sie Ihre Denkmalschutzbehörde.</p>
+          </details>
+
+          <details>
+            <summary>Kann ich GEG-Nachweis und Energieausweis gleichzeitig erstellen lassen?</summary>
+            <p>Ja, das ist möglich und aus wirtschaftlicher Sicht sinnvoll. Bei Neubauten und größeren Sanierungen können Sie beide Dokumente gemeinsam beauftragen. Dies spart Zeit und Kosten, da viele Daten sich überschneiden und nur einmalig erfasst werden müssen. Der GEG-Nachweis ist für die Genehmigung erforderlich, der Energieausweis für spätere Verkauf oder Vermietung. Viele Energieberater bieten Kombiangebote an, die günstiger sind als beide Dokumente einzeln.</p>
+          </details>
+
+          <details>
+            <summary>Ersetzt der Bedarfsausweis den GEG-Nachweis?</summary>
+            <p>Nein, der Bedarfsausweis ersetzt den GEG-Nachweis nicht. Ein Bedarfsausweis ist eine Variante des Energieausweises (neben dem Verbrauchsausweis) und dient der Bewertung der Energieeffizienz für Käufer und Mieter. Der GEG-Nachweis hat eine andere Rechtsgrundlage und ist für die Baugenehmigung erforderlich. Sie benötigen oft beide Dokumente: den GEG-Nachweis für die Bauaufsicht und den Bedarfsausweis später für den Immobilienwechsel.</p>
+          </details>
+
+        </div>
+
+        <!-- Sidebar (Desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-effi-beige rounded-2xl p-5 text-center">
+              <div class="w-16 h-16 bg-effi-green rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-white font-montserrat font-bold text-lg">HW</span>
+              </div>
+              <p class="font-montserrat text-effi-green-dark text-sm font-bold">Henk Wenner</p>
+              <p class="text-xs text-effi-body mt-1">Zertifizierter Energieberater<br>EffiNova Energieberatung</p>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Teilen</p>
+              <div class="flex gap-2">
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-link"></i></a>
+              </div>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Verwandte Artikel</p>
+              <div class="space-y-3">
+                <a href="energieausweis-verbrauchsausweis-bedarfsausweis-unterschied/" class="block text-sm text-effi-green hover:underline leading-snug">Verbrauchsausweis vs. Bedarfsausweis: Die Unterschiede</a>
+                <a href="energieausweis-online-vs-energieberater/" class="block text-sm text-effi-green hover:underline leading-snug">Energieausweis: Online oder beim Energieberater?</a>
+                <a href="schlechter-energieausweis-loesungen/" class="block text-sm text-effi-green hover:underline leading-snug">Schlechter Energieausweis? So verbessern Sie Ihre Effizienzklasse</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA AFTER ARTICLE -->
+  <section class="bg-effi-green py-14">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="font-montserrat text-white text-2xl font-bold mb-4">Sie sind unsicher, welches Dokument Sie brauchen?</h2>
+      <p class="text-white/70 text-[15px] mb-8">Unsere zertifizierten Energieberater klären mit Ihnen, ob ein GEG-Nachweis, ein Energieausweis oder beide erforderlich sind — und erstellen beide Dokumente zuverlässig und zeitnah.</p>
+      <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-8 py-4 text-[15px] font-semibold hover:bg-effi-beige transition-colors">
+        <i class="fas fa-phone text-sm"></i>
+        Kostenlose Erstberatung anfragen
+      </a>
+    </div>
+  </section>
+
+  <!-- MORE ARTICLES -->
+  <section class="bg-effi-beige py-14">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl font-bold mb-8">Weitere Beiträge</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="energieausweis-verstaendnis-leitfaden/" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/energieausweis-verstaendnis-leitfaden/energieausweis-verstaendnis-leitfaden-1.webp" alt="Energieausweis verstehen" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Energieausweis</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Energieausweis verstehen: Was bedeutet Ihre Effizienzklasse?</h3>
+          </div>
+        </a>
+        <a href="sanierung-nach-energieausweis-kosten-sparpotenzial/" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/sanierung-nach-energieausweis-kosten-sparpotenzial/sanierung-nach-energieausweis-kosten-sparpotenzial-1.webp" alt="Sanierung nach Energieausweis" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Sanierung</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Sanierung nach Energieausweis: Kosten und Sparpotenzial</h3>
+          </div>
+        </a>
+        <a href="energieausweis-online-vs-energieberater/" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/energieausweis-online-vs-energieberater/energieausweis-online-vs-energieberater-1.webp" alt="Energieausweis online vs. Energieberater" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Energieausweis</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Energieausweis online vs. beim Energieberater</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (konsistent mit Hauptseite) -->
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <img src="../bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice & Baubegleitung</li>
+            <li>KfW Förderservice & Baubegleitung</li>
+            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
+            <li>GEG-Nachweis, Energieausweis</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="../impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="../datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Reading progress bar
+    window.addEventListener('scroll', function() {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = Math.min((window.scrollY / docHeight) * 100, 100);
+      document.getElementById('reading-progress').style.width = progress + '%';
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
+    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+  </button>
+  <script defer src="../js/cookieconsent.js"></script>
+  <script defer src="../js/cookie-consent-config.js"></script>
+</body>
+</html>

@@ -75,6 +75,16 @@
 
     /* Progress bar */
     #reading-progress { transition: width 0.1s linear; }
+
+    /* FAQ Details/Summary styling */
+    .prose details { background-color: #F2EFE7; border: 1px solid #E8E4D9; border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1rem; cursor: pointer; }
+    .prose details summary { color: #004225; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+    .prose details summary::-webkit-details-marker { display: none; }
+    .prose details summary::after { content: '+'; font-size: 1.25rem; font-weight: 700; color: #004225; transition: transform 0.2s ease; }
+    .prose details[open] summary::after { content: '−'; }
+    .prose details summary:hover { color: #035B2F; }
+    .prose details[open] summary { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8E4D9; }
+    .prose details p { color: #616161; margin-bottom: 0; font-size: 1rem; }
   </style>
 
   <!-- Schema.org Article -->
@@ -480,35 +490,49 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-effi-green-dark text-white/60 py-12">
-    <div class="max-w-[1440px] mx-auto px-5">
-      <div class="grid md:grid-cols-3 gap-10 mb-10">
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <img src="../bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="h-10 mb-4">
-          <p class="text-sm leading-relaxed">Energieberatung aus einer Hand — von der Analyse bis zur Förderauszahlung.</p>
+          <img src="../bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
         </div>
         <div>
-          <h4 class="text-white font-semibold text-sm mb-4">Seiten</h4>
-          <div class="space-y-2 text-sm">
-            <a href="../" class="block hover:text-white transition-colors">Startseite</a>
-            <a href="../#Leistungen" class="block hover:text-white transition-colors">Leistungen</a>
-            <a href="./" class="block hover:text-white transition-colors">Blog</a>
-          </div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice &amp; Baubegleitung</li>
+            <li>KfW Förderservice &amp; Baubegleitung</li>
+            <li>Raumweise Heizlast &amp; hydraulischer Abgleich</li>
+            <li><a href="./" class="hover:text-white transition-colors">GEG-Nachweis, Energieausweis</a></li>
+          </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold text-sm mb-4">Kontakt</h4>
-          <div class="space-y-2 text-sm">
-            <p><i class="fas fa-envelope mr-2"></i>mail@effi-nova.de</p>
-            <p><i class="fas fa-map-marker-alt mr-2"></i>Region Hannover</p>
-          </div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="../impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="../datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+            <li><a href="../agb.html" class="hover:text-white transition-colors">AGB</a></li>
+            <li><a href="../widerruf.html" class="hover:text-white transition-colors">Widerruf</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-        <p>&copy; 2025 EffiNova Energieberatung. Alle Rechte vorbehalten.</p>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-white transition-colors">Impressum</a>
-          <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
-        </div>
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
       </div>
     </div>
   </footer>

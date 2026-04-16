@@ -64,6 +64,16 @@
     .toc a { color: #004225; text-decoration: none; }
     .toc a:hover { text-decoration: underline; }
     #reading-progress { transition: width 0.1s linear; }
+
+    /* FAQ Details/Summary styling */
+    .prose details { background-color: #F2EFE7; border: 1px solid #E8E4D9; border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1rem; cursor: pointer; }
+    .prose details summary { color: #004225; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+    .prose details summary::-webkit-details-marker { display: none; }
+    .prose details summary::after { content: '+'; font-size: 1.25rem; font-weight: 700; color: #004225; transition: transform 0.2s ease; }
+    .prose details[open] summary::after { content: '−'; }
+    .prose details summary:hover { color: #035B2F; }
+    .prose details[open] summary { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8E4D9; }
+    .prose details p { color: #616161; margin-bottom: 0; font-size: 1rem; }
   </style>
 
   <script type="application/ld+json">
