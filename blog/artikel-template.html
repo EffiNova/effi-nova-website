@@ -3,56 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAFA-Förderung 2025: Was sich ändert – EffiNova Wissenshub</title>
-  <meta name="description" content="Alle BAFA-Förderprogramme 2025 im Überblick. Erfahren Sie, welche Zuschüsse für Ihre Sanierung verfügbar sind und wie Sie bis zu 70 % Förderung sichern.">
-  <link rel="canonical" href="https://effi-nova.de/blog/bafa-foerderung-2025/">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>{{TITEL}} – EffiNova Wissenshub</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="https://effi-nova.de/blog/{{SLUG}}/">
+  <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="../css/cookieconsent.css">
   <link rel="stylesheet" href="../css/cookie-consent-brand.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'effi-green': '#004225',
-            'effi-green-mid': '#035B2F',
-            'effi-green-dark': '#01331B',
-            'effi-beige': '#F2EFE7',
-            'effi-cream': '#F4EFD9',
-            'effi-body': '#92887A',
-            'effi-h3': '#616161',
-            'effi-border': '#E8E4D9',
-            'effi-gold': '#C3A87A',
-          },
-          fontFamily: {
-            'montserrat': ['Montserrat', 'sans-serif'],
-            'inter': ['Inter', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <link rel="preload" href="../fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    * { font-family: 'Inter', sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
-    html { scroll-behavior: smooth; }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('../fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+           url('../fonts/Montserrat-Variable.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
 
-    .nav-dark .nav-logo-green { display: none; }
-    .nav-dark .nav-logo-white { display: block; }
+    * { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+
+    /* Nav (konsistent mit Hauptseite) */
+    .nav-logo { transition: filter 0.3s ease; }
+    .nav-dark .nav-logo { filter: brightness(0) invert(1); }
     .nav-dark .nav-link { color: #FFFFFF; }
     .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
-    .nav-light .nav-logo-green { display: block; }
-    .nav-light .nav-logo-white { display: none; }
     .nav-light .nav-link { color: #004225; }
     .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    .nav-dark { background-color: rgba(0, 66, 37, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav-light { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    @supports not (backdrop-filter: blur()) {
+      .nav-dark { background-color: rgba(0, 66, 37, 0.97) !important; }
+      .nav-light { background-color: rgba(255, 255, 255, 0.97) !important; }
+    }
 
     /* Article prose styling */
-    .prose h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; color: #01331B; margin-top: 2.5rem; margin-bottom: 1rem; }
-    .prose h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.25rem; color: #01331B; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose h2 { font-weight: 700; font-size: 1.5rem; color: #01331B; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-weight: 600; font-size: 1.25rem; color: #01331B; margin-top: 2rem; margin-bottom: 0.75rem; }
     .prose p { margin-bottom: 1.5rem; line-height: 1.85; color: #616161; font-size: 1.125rem; }
     .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
     .prose ul li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
@@ -64,25 +55,22 @@
     .prose blockquote { border-left: 4px solid #C3A87A; padding: 1rem 1.5rem; background: #F2EFE7; border-radius: 0 0.75rem 0.75rem 0; margin: 1.5rem 0; }
     .prose blockquote p { color: #004225; font-weight: 500; margin-bottom: 0; }
     .prose img { border-radius: 1rem; margin: 2rem 0; }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+    .prose th { background: #F2EFE7; color: #01331B; font-weight: 600; padding: 0.75rem 1rem; text-align: left; }
+    .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E4D9; color: #616161; }
 
-    /* Info box */
     .info-box { background: #F2EFE7; border-left: 4px solid #004225; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
     .info-box p { margin-bottom: 0; }
-
-    /* Table of Contents */
     .toc a { color: #004225; text-decoration: none; }
     .toc a:hover { text-decoration: underline; }
-
-    /* Progress bar */
     #reading-progress { transition: width 0.1s linear; }
   </style>
 
-  <!-- Schema.org Article -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "BAFA-Förderung 2025: Was sich ändert und wie Sie das Maximum rausholen",
+    "headline": "{{TITEL}}",
     "author": {
       "@type": "Person",
       "name": "Henk Wenner",
@@ -91,12 +79,12 @@
     "publisher": {
       "@type": "Organization",
       "name": "EffiNova Energieberatung",
-      "logo": { "@type": "ImageObject", "url": "https://effi-nova.de/bilder/logos/Logo-A1.png" }
+      "logo": { "@type": "ImageObject", "url": "https://effi-nova.de/bilder/logos/EffiNova_Logo_A3.webp" }
     },
-    "datePublished": "2025-03-15",
-    "dateModified": "2025-03-15",
-    "image": "https://effi-nova.de/bilder/prozess/5-Foerderung-und-Gutachten-Energieberatung-scaled.webp",
-    "description": "Alle BAFA-Förderprogramme 2025 im Überblick."
+    "datePublished": "{{DATUM_ISO}}",
+    "dateModified": "{{DATUM_ISO}}",
+    "image": "https://effi-nova.de/blog/images/{{SLUG}}/{{SLUG}}-1.webp",
+    "description": "{{META_DESCRIPTION}}"
   }
   </script>
 </head>
@@ -107,22 +95,22 @@
     <div id="reading-progress" class="h-full bg-effi-gold" style="width:0%"></div>
   </div>
 
-  <!-- NAVIGATION -->
-  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-colors duration-300" style="height:77px;">
+  <!-- NAVIGATION (konsistent mit Hauptseite) -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md shadow-md transition-colors duration-300" style="height:77px;">
     <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
-      <a href="../#hero" class="flex items-center gap-2 shrink-0">
-        <img src="../bilder/logos/Logo-A1.png" alt="EffiNova Logo" class="nav-logo-green h-12">
-        <img src="../bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="nav-logo-white h-12 hidden">
+      <a href="../" class="flex items-center gap-2 shrink-0">
+        <img src="../bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="nav-logo h-11 w-auto">
       </a>
       <div class="hidden md:flex items-center gap-8">
         <a href="../#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
         <a href="../#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
-        <a href="../#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über mich</a>
+        <a href="../#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über EffiNova</a>
         <a href="../#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
         <a href="./" class="nav-link text-[15px] font-semibold border-b-2 border-effi-green pb-0.5">Blog</a>
       </div>
       <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
-        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
       </a>
       <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
         <i class="fas fa-bars"></i>
@@ -131,7 +119,7 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
       <a href="../#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
       <a href="../#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
-      <a href="../#ubermich" class="block py-3 text-effi-green text-[15px]">Über mich</a>
+      <a href="../#ubermich" class="block py-3 text-effi-green text-[15px]">Über EffiNova</a>
       <a href="../#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
       <a href="./" class="block py-3 text-effi-green text-[15px] font-semibold">Blog</a>
       <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
@@ -149,7 +137,7 @@
         <span class="mx-2">/</span>
         <a href="./" class="hover:text-effi-green transition-colors">Blog</a>
         <span class="mx-2">/</span>
-        <span class="text-effi-green-dark font-medium">BAFA-Förderung 2025</span>
+        <span class="text-effi-green-dark font-medium">{{BREADCRUMB_KURZTITEL}}</span>
       </nav>
     </div>
   </div>
@@ -158,30 +146,29 @@
   <section class="bg-white pt-10 pb-0 lg:pt-16">
     <div class="max-w-[1440px] mx-auto px-5">
       <div class="max-w-4xl mx-auto">
-      <div class="flex items-center gap-3 mb-5">
-        <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fördermittel</span>
-        <span class="text-effi-body text-xs"><i class="far fa-calendar-alt mr-1"></i> 15. März 2025</span>
-        <span class="text-effi-body text-xs"><i class="far fa-clock mr-1"></i> 8 Min. Lesezeit</span>
-      </div>
-      <h1 class="font-montserrat text-effi-green-dark text-3xl md:text-[2.75rem] font-bold leading-tight mb-6">
-        BAFA-Förderung 2025: Was sich ändert und wie Sie das Maximum rausholen
-      </h1>
-      <p class="text-effi-body text-lg leading-relaxed mb-8">
-        Die Förderlandschaft hat sich zum Jahreswechsel erneut verändert. In diesem Leitfaden zeige ich Ihnen, welche Zuschüsse aktuell verfügbar sind, welche Fehler die meisten Eigentümer machen — und wie wir gemeinsam bis zu 70 % Förderung sichern.
-      </p>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">{{KATEGORIE}}</span>
+          <span class="text-effi-body text-xs"><i class="far fa-calendar-alt mr-1"></i> {{DATUM_DE}}</span>
+          <span class="text-effi-body text-xs"><i class="far fa-clock mr-1"></i> {{LESEZEIT}} Min. Lesezeit</span>
+        </div>
+        <h1 class="font-montserrat text-effi-green-dark text-3xl md:text-[2.75rem] font-bold leading-tight mb-6">
+          {{TITEL}}
+        </h1>
+        <p class="text-effi-body text-lg leading-relaxed mb-8">
+          {{INTRO_TEXT}}
+        </p>
       </div>
     </div>
   </section>
 
   <!-- HERO IMAGE -->
   <div class="max-w-5xl mx-auto px-5 pb-10">
-    <img src="../bilder/prozess/5-Foerderung-und-Gutachten-Energieberatung-scaled.webp" alt="BAFA Förderung Energieberatung" class="w-full rounded-2xl object-cover aspect-[21/9]">
+    <img src="images/{{SLUG}}/{{SLUG}}-1.webp" alt="{{HERO_ALT}}" class="w-full rounded-2xl object-cover aspect-[21/9]" loading="eager">
   </div>
 
   <!-- ARTICLE BODY -->
   <article class="bg-white pb-16">
     <div class="max-w-[1440px] mx-auto px-5">
-
       <div class="grid lg:grid-cols-[1fr_240px] gap-10 max-w-5xl mx-auto">
 
         <!-- Main content -->
@@ -191,54 +178,38 @@
           <div class="bg-effi-beige rounded-2xl p-6 mb-10 toc">
             <h4 class="font-montserrat text-effi-green-dark text-sm font-bold uppercase tracking-wider mb-3">Inhaltsverzeichnis</h4>
             <ol class="space-y-2 text-sm list-decimal pl-4">
-              <li><a href="#ueberblick">Die wichtigsten Änderungen im Überblick</a></li>
-              <li><a href="#programme">Welche Programme gibt es 2025?</a></li>
-              <li><a href="#fehler">Die 5 häufigsten Fehler bei der Antragstellung</a></li>
-              <li><a href="#maximum">So sichern Sie die maximale Förderung</a></li>
-              <li><a href="#fazit">Fazit und nächster Schritt</a></li>
+              <!-- {{TOC_ITEMS}} -->
+              <li><a href="#abschnitt-1">Abschnitt 1</a></li>
+              <li><a href="#abschnitt-2">Abschnitt 2</a></li>
+              <li><a href="#fazit">Fazit</a></li>
             </ol>
           </div>
 
-          <h2 id="ueberblick">1. Die wichtigsten Änderungen im Überblick</h2>
-          <p>
-            Hier steht Ihr Artikelinhalt. Dieser Bereich ist als Platzhalter angelegt — sobald Sie den Artikeltext liefern, ersetze ich diesen Content mit dem echten Inhalt. Die Typografie, Abstände und Farben sind bereits auf den Brand Style Guide abgestimmt.
-          </p>
+          <!-- {{ARTIKEL_INHALT}} -->
+          <h2 id="abschnitt-1">1. Abschnittstitel</h2>
+          <p>Absatztext hier. Die Typografie, Abstände und Farben sind auf den Brand Style Guide abgestimmt.</p>
 
           <div class="info-box">
-            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Gut zu wissen:</strong> Infoboxen wie diese heben wichtige Hinweise, Definitionen oder Praxis-Tipps hervor.</p>
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Gut zu wissen:</strong> Infoboxen heben wichtige Hinweise hervor.</p>
           </div>
 
-          <h2 id="programme">2. Welche Programme gibt es 2025?</h2>
-          <p>
-            Platzhalter für den Abschnitt zu den aktuellen BAFA- und KfW-Programmen. Hier können Tabellen, Aufzählungen und Vergleiche stehen.
-          </p>
+          <h2 id="abschnitt-2">2. Zweiter Abschnitt</h2>
+          <p>Weiterer Absatztext.</p>
+
+          <img src="images/{{SLUG}}/{{SLUG}}-2.webp" alt="{{BILD2_ALT}}" class="w-full rounded-2xl" loading="lazy" decoding="async">
 
           <blockquote>
-            <p>„Zitate oder besonders wichtige Aussagen werden in diesem Format dargestellt — mit dem EffiNova-Goldton als Akzent."</p>
+            <p>"Zitate oder besonders wichtige Aussagen werden in diesem Format dargestellt."</p>
           </blockquote>
 
-          <h2 id="fehler">3. Die 5 häufigsten Fehler bei der Antragstellung</h2>
-          <p>
-            Platzhalter für den Fehler-Abschnitt. Hier können nummerierte Listen und konkrete Beispiele stehen.
-          </p>
-
-          <h2 id="maximum">4. So sichern Sie die maximale Förderung</h2>
-          <p>
-            Platzhalter für den Strategie-Abschnitt. Hier kommt der wertvollste Teil des Artikels — die konkrete Handlungsanleitung.
-          </p>
-
-          <h2 id="fazit">5. Fazit und nächster Schritt</h2>
-          <p>
-            Platzhalter für das Fazit mit klarem Call-to-Action.
-          </p>
+          <h2 id="fazit">3. Fazit</h2>
+          <p>Fazit mit klarem Call-to-Action.</p>
 
         </div>
 
         <!-- Sidebar (Desktop) -->
         <aside class="hidden lg:block">
           <div class="sticky top-24 space-y-6">
-
-            <!-- Author Card -->
             <div class="bg-effi-beige rounded-2xl p-5 text-center">
               <div class="w-16 h-16 bg-effi-green rounded-full flex items-center justify-center mx-auto mb-3">
                 <span class="text-white font-montserrat font-bold text-lg">HW</span>
@@ -246,8 +217,6 @@
               <p class="font-montserrat text-effi-green-dark text-sm font-bold">Henk Wenner</p>
               <p class="text-xs text-effi-body mt-1">Zertifizierter Energieberater<br>EffiNova Energieberatung</p>
             </div>
-
-            <!-- Share -->
             <div class="bg-effi-beige rounded-2xl p-5">
               <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Teilen</p>
               <div class="flex gap-2">
@@ -257,29 +226,26 @@
                 <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-link"></i></a>
               </div>
             </div>
-
-            <!-- Related -->
             <div class="bg-effi-beige rounded-2xl p-5">
               <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Verwandte Artikel</p>
               <div class="space-y-3">
-                <a href="#" class="block text-sm text-effi-green hover:underline leading-snug">KfW-Kredit für die Sanierung: Schritt-für-Schritt</a>
-                <a href="#" class="block text-sm text-effi-green hover:underline leading-snug">Energieausweis: Verbrauch oder Bedarf?</a>
+                <!-- {{VERWANDTE_ARTIKEL}} -->
+                <a href="#" class="block text-sm text-effi-green hover:underline leading-snug">Verwandter Artikel 1</a>
+                <a href="#" class="block text-sm text-effi-green hover:underline leading-snug">Verwandter Artikel 2</a>
               </div>
             </div>
-
           </div>
         </aside>
 
       </div>
-
     </div>
   </article>
 
   <!-- CTA AFTER ARTICLE -->
   <section class="bg-effi-green py-14">
     <div class="max-w-3xl mx-auto px-5 text-center">
-      <h2 class="font-montserrat text-white text-2xl font-bold mb-4">Sie möchten Ihre Förderung sichern?</h2>
-      <p class="text-white/70 text-[15px] mb-8">Ich prüfe kostenlos, welche Förderprogramme für Ihr Projekt in Frage kommen.</p>
+      <h2 class="font-montserrat text-white text-2xl font-bold mb-4">{{CTA_HEADLINE}}</h2>
+      <p class="text-white/70 text-[15px] mb-8">{{CTA_TEXT}}</p>
       <a href="https://perspectivefunnel.co/69bd5ab78da687d010ea2565/69bd5ed9161fad91284bc4c8/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-8 py-4 text-[15px] font-semibold hover:bg-effi-beige transition-colors">
         <i class="fas fa-phone text-sm"></i>
         Kostenlose Erstberatung anfragen
@@ -292,67 +258,62 @@
     <div class="max-w-[1440px] mx-auto px-5">
       <h2 class="font-montserrat text-effi-green-dark text-2xl font-bold mb-8">Weitere Beiträge</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- {{WEITERE_ARTIKEL_CARDS}} -->
         <a href="#" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
           <div class="overflow-hidden aspect-[16/10]">
-            <img src="../bilder/referenzen/effi-7.webp" alt="Wärmepumpe" class="w-full h-full object-cover">
+            <img src="../bilder/referenzen/effi-7.webp" alt="Placeholder" class="w-full h-full object-cover" loading="lazy" decoding="async">
           </div>
           <div class="p-5">
-            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
-            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Wärmepumpe nachrüsten im Altbau</h3>
-          </div>
-        </a>
-        <a href="#" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
-          <div class="overflow-hidden aspect-[16/10]">
-            <img src="../bilder/referenzen/effi-8.webp" alt="Sanierung" class="w-full h-full object-cover">
-          </div>
-          <div class="p-5">
-            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Sanierung</span>
-            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Komplettsanierung vs. Einzelmaßnahmen</h3>
-          </div>
-        </a>
-        <a href="#" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
-          <div class="overflow-hidden aspect-[16/10]">
-            <img src="../bilder/referenzen/effi-2.webp" alt="Praxis" class="w-full h-full object-cover">
-          </div>
-          <div class="p-5">
-            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Aus der Praxis</span>
-            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Vom Energieschleuder zum Effizienzhaus</h3>
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Kategorie</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Artikeltitel hier</h3>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-effi-green-dark text-white/60 py-12">
-    <div class="max-w-[1440px] mx-auto px-5">
-      <div class="grid md:grid-cols-3 gap-10 mb-10">
+  <!-- FOOTER (konsistent mit Hauptseite) -->
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <img src="../bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="h-10 mb-4">
-          <p class="text-sm leading-relaxed">Energieberatung aus einer Hand — von der Analyse bis zur Förderauszahlung.</p>
+          <img src="../bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
         </div>
         <div>
-          <h4 class="text-white font-semibold text-sm mb-4">Seiten</h4>
-          <div class="space-y-2 text-sm">
-            <a href="../" class="block hover:text-white transition-colors">Startseite</a>
-            <a href="../#Leistungen" class="block hover:text-white transition-colors">Leistungen</a>
-            <a href="./" class="block hover:text-white transition-colors">Blog</a>
-          </div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice & Baubegleitung</li>
+            <li>KfW Förderservice & Baubegleitung</li>
+            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
+            <li>GEG-Nachweis, Energieausweis</li>
+          </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold text-sm mb-4">Kontakt</h4>
-          <div class="space-y-2 text-sm">
-            <p><i class="fas fa-envelope mr-2"></i>mail@effi-nova.de</p>
-            <p><i class="fas fa-map-marker-alt mr-2"></i>Region Hannover</p>
-          </div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="../impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="../datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-        <p>&copy; 2025 EffiNova Energieberatung. Alle Rechte vorbehalten.</p>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-white transition-colors">Impressum</a>
-          <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
-        </div>
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
       </div>
     </div>
   </footer>
@@ -362,24 +323,26 @@
     document.getElementById('mobile-menu-btn').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
 
     // Reading progress bar
     window.addEventListener('scroll', function() {
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = window.scrollY;
-      const progress = Math.min((scrolled / docHeight) * 100, 100);
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = Math.min((window.scrollY / docHeight) * 100, 100);
       document.getElementById('reading-progress').style.width = progress + '%';
     });
 
     // Smooth scroll for TOC links
-    document.querySelectorAll('.toc a').forEach(link => {
+    document.querySelectorAll('.toc a').forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        var target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          const offset = 100;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
         }
       });
     });
