@@ -77,7 +77,14 @@ effi-nova-migration/
 ├── impressum.html                — Pflichtangaben § 5 TMG
 ├── datenschutz.html              — DSGVO-Datenschutzerklärung
 ├── referenzen-archiv.html        — Referenzen
-├── blog/                         — Blogartikel (relativer CSS-Pfad: ../dist/output.css)
+├── blog/                         — Blog-Bereich
+│   ├── index.html                — Blog-Übersichtsseite (CSS-Pfad: ../dist/output.css)
+│   ├── artikel-template.html     — Basis-Template (Pfade: ../)
+│   └── energieausweis/           — Themenordner Energieausweis
+│       ├── artikel-template.html — Template für dieses Thema (Pfade: absolute /)
+│       ├── images/               — Bilder pro Artikel (Unterordner je Slug)
+│       └── *.html                — Artikel-Dateien
+│   (Weitere Themenordner: foerdermittel/, sanierung/, waermepumpe/, solar/, praxis/)
 ├── bilder/                       — Alle Assets (WebP Primärformat, PNG/JPG Fallback)
 ├── fonts/                        — Self-hosted Schriften (Montserrat-Variable.woff2)
 ├── _archiv_unscharfgeschaltet/   — NICHT LIVE!
