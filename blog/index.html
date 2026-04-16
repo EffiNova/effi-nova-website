@@ -443,24 +443,31 @@
     const pills = document.querySelectorAll('.cat-pill');
     const cards = document.querySelectorAll('.blog-card');
 
-    pills.forEach(pill => {
-      pill.addEventListener('click', function() {
-        pills.forEach(p => p.classList.remove('active'));
-        this.classList.add('active');
-        const cat = this.dataset.cat;
+    function filterByCategory(cat) {
+      pills.forEach(function(p) {
+        p.classList.remove('active');
+        if (p.dataset.cat === cat) p.classList.add('active');
+      });
+      cards.forEach(function(card) {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = '';
+          card.classList.remove('visible');
+          setTimeout(function() { card.classList.add('visible'); }, 50);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
 
-        cards.forEach(card => {
-          if (cat === 'all' || card.dataset.cat === cat) {
-            card.style.display = '';
-            // Re-trigger fade
-            card.classList.remove('visible');
-            setTimeout(() => card.classList.add('visible'), 50);
-          } else {
-            card.style.display = 'none';
-          }
-        });
+    pills.forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        filterByCategory(this.dataset.cat);
       });
     });
+
+    // URL-Parameter ?cat=energieausweis → Kategorie automatisch aktivieren
+    var urlCat = new URLSearchParams(window.location.search).get('cat');
+    if (urlCat) filterByCategory(urlCat);
 
     // Search filter
     const searchInput = document.getElementById('blog-search');
