@@ -6,8 +6,9 @@
 (function () {
   if (!window.CookieConsent) return;
 
-  // Pfad-Präfix: von /blog/ eine Ebene hoch, sonst leer
-  var basePath = location.pathname.indexOf('/blog/') !== -1 ? '../' : '';
+  // Pfad-Präfix: für jede Verzeichnisebene ein "../", damit Links ins Root zeigen
+  var depth = location.pathname.replace(/\/[^/]*$/, '').split('/').filter(Boolean).length;
+  var basePath = depth > 0 ? new Array(depth + 1).join('../') : '';
   var linkDatenschutz = basePath + 'datenschutz.html';
   var linkImpressum = basePath + 'impressum.html';
 
