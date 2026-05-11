@@ -13,6 +13,20 @@
   var linkImpressum = basePath + 'impressum.html';
 
   /**
+   * Liefert die Cookie-Domain für die Consent-Speicherung.
+   * Auf der Live-Domain wird der Cookie auf `.effi-nova.de` gesetzt, damit die
+   * Einwilligung über alle Subdomains hinweg geteilt wird (Hauptwebsite + Funnel).
+   * Auf Localhost / Preview-Domains bleibt der Cookie hostname-spezifisch.
+   */
+  function consentCookieDomain() {
+    var host = location.hostname;
+    if (host === 'effi-nova.de' || host.indexOf('.effi-nova.de') === host.length - '.effi-nova.de'.length) {
+      return '.effi-nova.de';
+    }
+    return host;
+  }
+
+  /**
    * Google Consent Mode v2 — Update-Funktion
    * Mappt Cookie-Banner-Kategorien auf Google Consent-Typen
    */
@@ -58,7 +72,7 @@
 
     cookie: {
       name: 'effinova_consent',
-      domain: location.hostname,
+      domain: consentCookieDomain(),
       path: '/',
       sameSite: 'Lax',
       expiresAfterDays: 182
