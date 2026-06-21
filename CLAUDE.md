@@ -7,7 +7,8 @@ Diese Datei wird von Claude Code automatisch beim Start gelesen. Sie erklärt al
 **Statische Website für EffiNova GmbH**, Berlin, Energieberatung und energetische Sanierungsberatung.
 
 - **Live-URL:** https://effi-nova.de
-- **Deployment:** GitHub Pages (automatisch bei `git push`)
+- **Deployment:** Cloudflare Pages (mit dem GitHub-Repo verbunden — automatischer Deploy bei `git push`)
+- **Hosting-Architektur:** Website (effi-nova.de) **und** Funnel (funnel.effi-nova.de) laufen auf **Cloudflare Pages**; DNS über Cloudflare. Der **All-Inkl-Webspace** dient **nur noch für E-Mail** (mail@/kontakt@effi-nova.de) — er liefert **keine** Live-Website aus.
 - **Repository:** effi-nova-website
 
 ## Tech-Stack
@@ -21,7 +22,7 @@ Diese Datei wird von Claude Code automatisch beim Start gelesen. Sie erklärt al
   - Watch-Modus: `npm run watch:css`
 - **Montserrat Variable Font** — self-hosted (fonts/Montserrat-Variable.woff2), keine Google Fonts CDN
 - **Font Awesome 6.5.1** — via Cloudflare cdnjs (einzige externe CSS-Ressource)
-- **Deployment:** GitHub Pages (automatisch, kein Build-Server nötig)
+- **Deployment:** Cloudflare Pages (serviert die committeten statischen Dateien; automatischer Deploy bei `git push`)
 
 ## Farben (Brand Guide Sektion 03)
 
@@ -52,7 +53,7 @@ Diese sind in `tailwind.config.js` als Custom Colors konfiguriert → immer übe
 
 **WICHTIG:** Bei JEDER Änderung an HTML-Tailwind-Klassen oder `tailwind.config.js` MUSS der Befehl `npm run build:css` ausgeführt werden, bevor committet wird.
 
-**Warum?** Tailwind CSS CLI generiert das finale `dist/output.css` nur, wenn der Build-Befehl läuft. GitHub Pages nutzt diese Datei direkt — neue Klassen sind nicht im Output-Stylesheet enthalten, wenn der Build fehlt.
+**Warum?** Tailwind CSS CLI generiert das finale `dist/output.css` nur, wenn der Build-Befehl läuft. Cloudflare Pages serviert diese Datei direkt — neue Klassen sind nicht im Output-Stylesheet enthalten, wenn der Build fehlt.
 
 ```bash
 npm run build:css
@@ -255,7 +256,7 @@ git diff --stat
    git push
    ```
 
-   → GitHub Pages deployed automatisch innerhalb von ~1-2 Minuten.
+   → Cloudflare Pages deployed automatisch innerhalb von ~1-2 Minuten.
 
 ## Nützliche NPM-Befehle
 
