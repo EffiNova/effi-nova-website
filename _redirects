@@ -1,0 +1,7 @@
+# Cloudflare Pages Redirects
+# Pfade sind case-sensitiv. Haeufige Gross-/Schreibvarianten der Rechtsseiten
+# auf die tatsaechliche Datei umleiten, damit manuell getippte URLs funktionieren.
+/AGB        /agb.html        301
+/Agb        /agb.html        301
+/WIDERRUF   /widerruf.html   301
+/Widerruf   /widerruf.html   301
