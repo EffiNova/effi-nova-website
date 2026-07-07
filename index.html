@@ -576,6 +576,40 @@
   </section>
 
   <!-- ============================================ -->
+  <!-- SECTION: BEWERTUNGEN / TRUST (Trustmarkt)    -->
+  <!-- ============================================ -->
+  <section id="bewertungen" class="bg-white" data-nav-theme="light">
+    <div class="max-w-[1000px] mx-auto px-5 py-16 lg:py-24 text-center">
+      <h2 class="text-effi-green text-3xl md:text-[40px] font-semibold leading-tight mb-3 fade-in">
+        Das sagen unsere Kunden
+      </h2>
+      <p class="text-effi-body text-lg leading-8 max-w-2xl mx-auto mb-10 fade-in">
+        Unabhängig verifizierte Kundenbewertungen — geprüft und veröffentlicht über Expertenmarkt.
+      </p>
+      <!-- Trustmarkt / Expertenmarkt Bewertungswidget (consent-gesteuert) -->
+      <div id="trustmarkt-wrapper" class="flex justify-center fade-in">
+        <!-- Aktive Widget-Variante (initial hidden, wird nach funktionalem Consent eingeblendet) -->
+        <div id="trustmarkt-live" class="hidden w-full flex justify-center">
+          <div class="trustmarkt-widget" data-company-id="B681ZqJ0n6Le0jOYv9Xe" data-widget-id="yonPpB3Er4MNvObdXYzN" style="min-height: 168px;"><a rel="dofollow" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" aria-label="Expertenmarkt Profil von EffiNova GmbH"></a></div>
+        </div>
+        <!-- Platzhalter ohne Consent (Glasmorphism mit deckendem Fallback-Background) -->
+        <div id="trustmarkt-placeholder" class="w-full max-w-xl backdrop-blur-sm bg-effi-beige/70 border border-effi-green/15 rounded-2xl px-6 py-6 flex flex-col sm:flex-row items-center gap-4" style="min-height: 168px;">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-effi-green/10 flex items-center justify-center">
+            <i class="fas fa-shield-alt text-effi-green text-xl"></i>
+          </div>
+          <div class="flex-1 text-center sm:text-left">
+            <div class="text-effi-green font-semibold text-base mb-1">Unsere Bewertungen bei Expertenmarkt</div>
+            <p class="text-effi-body text-sm leading-snug">Unabhängig verifizierte Kundenbewertungen. Das Widget wird von Trustmarkt geladen — dafür ist Ihre Einwilligung erforderlich.</p>
+          </div>
+          <button type="button" id="trustmarkt-consent-btn" class="flex-shrink-0 bg-effi-green text-white rounded-xl px-5 py-3 text-sm font-semibold hover:bg-effi-green-mid transition-colors">
+            Bewertungen anzeigen
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
   <!-- SECTION: STATEMENT / CLAIM                   -->
   <!-- ============================================ -->
   <section class="bg-effi-beige" data-nav-theme="light">
@@ -731,6 +765,55 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+    // Trustmarkt-Widget: Script erst nach funktionalem Consent laden (zentriert, kein Force-Left noetig)
+    (function () {
+      var SCRIPT_SRC = 'https://widget.trustmarkt.de/embed/v1/embed.js';
+      var scriptLoaded = false;
+
+      function loadTrustmarkt() {
+        if (scriptLoaded) return;
+        scriptLoaded = true;
+        var live = document.getElementById('trustmarkt-live');
+        var placeholder = document.getElementById('trustmarkt-placeholder');
+        if (placeholder) placeholder.classList.add('hidden');
+        if (live) live.classList.remove('hidden');
+        var s = document.createElement('script');
+        s.src = SCRIPT_SRC;
+        s.async = true;
+        s.defer = true;
+        document.head.appendChild(s);
+      }
+      window.loadTrustmarktWidget = loadTrustmarkt;
+
+      function checkAndLoad() {
+        if (window.CookieConsent && typeof window.CookieConsent.acceptedCategory === 'function'
+            && window.CookieConsent.acceptedCategory('functional')) {
+          loadTrustmarkt();
+        }
+      }
+
+      // Button-Click: funktionalen Consent ergaenzen und Widget laden
+      var btn = document.getElementById('trustmarkt-consent-btn');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          if (window.CookieConsent && typeof window.CookieConsent.acceptCategory === 'function') {
+            var current = window.CookieConsent.getUserPreferences();
+            var accepted = (current && current.acceptedCategories) || [];
+            if (accepted.indexOf('functional') === -1) accepted.push('functional');
+            window.CookieConsent.acceptCategory(accepted);
+          }
+          loadTrustmarkt();
+        });
+      }
+
+      // Initial-Check + Event-Hooks fuer CookieConsent
+      window.addEventListener('cc:onConsent', checkAndLoad);
+      window.addEventListener('cc:onChange', checkAndLoad);
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(checkAndLoad, 300);
+      });
+    })();
 
     // Animated counters
     let countersStarted = false;
