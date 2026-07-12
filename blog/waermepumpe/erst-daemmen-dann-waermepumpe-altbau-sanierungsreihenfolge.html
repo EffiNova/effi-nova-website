@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Consent Mode v2 — defaults (deny all, update via cookie banner) -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PMHB9VRW');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erst dämmen, dann Wärmepumpe — oder umgekehrt? Was Altbau-Besitzer wirklich wissen müssen – EffiNova Wissenshub</title>
+  <meta name="description" content="Wärmepumpe für Altbau ohne Fußbodenheizung: Erst dämmen oder sofort einbauen? Entscheidungsmatrix nach Baujahr und Energieklasse — plus Förder-Timing: Heizungsförderung sinkt ab 02/2027, BAFA-Dämmförderung bleibt.">
+  <link rel="canonical" href="https://effi-nova.de/blog/waermepumpe/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge.html">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="/css/cookieconsent.css">
+  <link rel="stylesheet" href="/css/cookie-consent-brand.css">
+  <link rel="preload" href="/fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+           url('/fonts/Montserrat-Variable.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+
+    /* Nav (konsistent mit Hauptseite) */
+    .nav-dark .nav-logo-green { display: none; }
+    .nav-dark .nav-logo-white { display: block; }
+    .nav-light .nav-logo-green { display: block; }
+    .nav-light .nav-logo-white { display: none; }
+    .nav-dark .nav-link { color: #FFFFFF; }
+    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
+    .nav-light .nav-link { color: #004225; }
+    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    .nav-dark { background-color: rgba(0, 66, 37, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav-light { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    @supports not (backdrop-filter: blur()) {
+      .nav-dark { background-color: rgba(0, 66, 37, 0.97) !important; }
+      .nav-light { background-color: rgba(255, 255, 255, 0.97) !important; }
+    }
+
+    /* Article prose styling */
+    .prose h2 { font-weight: 700; font-size: 1.5rem; color: #01331B; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-weight: 600; font-size: 1.25rem; color: #01331B; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose p { margin-bottom: 1.5rem; line-height: 1.85; color: #616161; font-size: 1.125rem; }
+    .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ul li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ol li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose strong { color: #01331B; font-weight: 600; }
+    .prose a { color: #004225; text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: #035B2F; }
+    .prose blockquote { border-left: 4px solid #C3A87A; padding: 1rem 1.5rem; background: #F2EFE7; border-radius: 0 0.75rem 0.75rem 0; margin: 1.5rem 0; }
+    .prose blockquote p { color: #004225; font-weight: 500; margin-bottom: 0; }
+    .prose img { border-radius: 1rem; margin: 2rem 0; }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+    .prose th { background: #F2EFE7; color: #01331B; font-weight: 600; padding: 0.75rem 1rem; text-align: left; }
+    .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E4D9; color: #616161; }
+
+    .info-box { background: #F2EFE7; border-left: 4px solid #004225; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .info-box p { margin-bottom: 0; }
+    .toc a { color: #004225; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    #reading-progress { transition: width 0.1s linear; }
+
+    /* FAQ Details/Summary styling */
+    .prose details { background-color: #F2EFE7; border: 1px solid #E8E4D9; border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1rem; cursor: pointer; }
+    .prose details summary { color: #004225; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+    .prose details summary::-webkit-details-marker { display: none; }
+    .prose details summary::after { content: '+'; font-size: 1.25rem; font-weight: 700; color: #004225; transition: transform 0.2s ease; }
+    .prose details[open] summary::after { content: '−'; }
+    .prose details summary:hover { color: #035B2F; }
+    .prose details[open] summary { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8E4D9; }
+    .prose details p { color: #616161; margin-bottom: 0; font-size: 1rem; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Erst dämmen, dann Wärmepumpe — oder umgekehrt? Was Altbau-Besitzer wirklich wissen müssen",
+    "author": {
+      "@type": "Person",
+      "name": "Henk Wenner",
+      "url": "https://effi-nova.de/#ubermich"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EffiNova Energieberatung",
+      "logo": { "@type": "ImageObject", "url": "https://effi-nova.de/bilder/logos/EffiNova_Logo_A3.webp" }
+    },
+    "image": "https://effi-nova.de/blog/waermepumpe/images/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge-1.webp",
+    "description": "Wärmepumpe für Altbau ohne Fußbodenheizung: Erst dämmen oder sofort einbauen? Entscheidungsmatrix nach Baujahr und Energieklasse — plus Förder-Timing: Heizungsförderung sinkt ab 02/2027, BAFA-Dämmförderung bleibt."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ist eine Wärmepumpe ohne Fußbodenheizung im Altbau sinnvoll?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Eine fehlende Flächenheizung ist kein Ausschlusskriterium. Entscheidend ist die Vorlauftemperatur, mit der Ihre Heizkörper auskommen. Fraunhofer-Feldtests belegen Jahresarbeitszahlen von 3,0 bis 3,5 in Altbauten mit Heizkörpern, sofern der hydraulische Abgleich stimmt und die Heizflächen ausreichend groß sind. Eine Wärmepumpe für den Altbau ohne Fußbodenheizung arbeitet damit zuverlässig und wirtschaftlich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Wärmepumpe eignet sich für einen Altbau ohne Fußbodenheizung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wer die vorhandenen Heizkörper weiter nutzen will, fährt meist mit einer Luft-Wasser-Wärmepumpe mit dem Kältemittel R290 (Propan) gut: Diese Geräte erreichen Vorlauftemperaturen bis 70 bis 75 Grad und arbeiten auch mit Bestandsheizkörpern zuverlässig. Eine Alternative ist die Luft-Luft-Wärmepumpe (Multisplit): Sie beheizt die Räume direkt über Innengeräte, braucht gar keinen Wasserkreis und wird über KfW 458 zu denselben Sätzen gefördert, sofern das Gerät in der BAFA-Liste förderfähiger Wärmepumpen steht – Warmwasser wird dann separat gelöst. Erdwärmepumpen sind effizienter, durch die nötige Bohrung aber deutlich teurer und nicht auf jedem Grundstück umsetzbar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann man eine Wärmepumpe mit normalen Heizkörpern betreiben?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Mit hydraulischem Abgleich und angepasster Heizkurve funktionieren viele Bestandsheizkörper bei 50 bis 55 Grad Vorlauftemperatur problemlos. Ein vollständiger Tausch ist selten nötig. Lediglich einzelne unterdimensionierte Räume müssen gegebenenfalls mit größeren oder Niedertemperatur-Heizkörpern nachgerüstet werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "In welchen Häusern scheitert die Wärmepumpe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Problematisch wird es für eine Luft-Wasser-Wärmepumpe, wenn der Heizwärmebedarf — als grobe Orientierung — über 150 bis 200 Kilowattstunden pro Quadratmeter und Jahr liegt und die Heizkörper auch bei 55 Grad Vorlauf einzelne Räume nicht warm bekommen. In solchen Fällen ist eine vorherige Teildämmung — etwa von Dach und Kellerdecke — die wirtschaftlichere Grundlage, bevor die Wärmepumpe einzieht. Alternativ ermöglicht eine Luft-Luft-Wärmepumpe den sofortigen Wechsel: Sie beheizt die Räume direkt über Innengeräte, braucht keinen Hochtemperatur-Wasserkreis und wird genauso gefördert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet eine Wärmepumpe für ein Einfamilienhaus ohne Fußbodenheizung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Investition liegt meist zwischen 12.000 und 20.000 Euro inklusive Einbau. Bei der maximalen Förderquote von bis zu 80 Prozent (für Förderanträge ab dem 21. Juli 2026) kann der Eigenanteil auf rund 2.400 bis 4.000 Euro sinken; beim Standardsatz von 46 Prozent aus Grund- und Klimageschwindigkeitsbonus liegt er bei rund 6.500 bis 10.800 Euro. Hinzu kommen je nach Aufwand der hydraulische Abgleich und mögliche Anpassungen an einzelnen Heizkörpern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Verliere ich Förderung, wenn ich zuerst dämme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei der Dämmung selbst nicht: Die BAFA-Förderung für Dämmmaßnahmen (15 Prozent, plus 5 Prozentpunkte iSFP-Bonus) ist von der Reform der Heizungsförderung unabhängig und kennt keine Degressionsstufen. Bei der späteren Heizungsförderung kann sich Warten dagegen auswirken: Ab dem 1. Februar 2027 sinken der Klimageschwindigkeitsbonus halbjährlich um 4 Prozentpunkte und der Deckel der förderfähigen Kosten um je 750 Euro — im Standardfall schrumpft der maximale Zuschuss von 12.880 Euro auf 11.445 Euro ab Februar 2027 und 10.070 Euro ab August 2027. Die Grundförderung von 30 Prozent sowie Einkommens- und Familienboni bleiben bestehen. Genau deshalb gehört das Timing des Heizungstauschs in den Sanierungsfahrplan: Wer zuerst dämmt, legt den Heizungstausch möglichst vor die nächste Degressionsstufe."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-white text-effi-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMHB9VRW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent">
+    <div id="reading-progress" class="h-full bg-effi-gold" style="width:0%"></div>
+  </div>
+
+  <!-- NAVIGATION (konsistent mit Hauptseite) -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md shadow-md transition-colors duration-300" style="height:77px;">
+    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="/#hero" class="flex items-center gap-2 shrink-0">
+        <img src="/bilder/logos/Logo-A1.png" alt="EffiNova Logo" class="nav-logo-green h-12">
+          <img src="/bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="nav-logo-white h-12 hidden">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
+        <a href="/#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
+        <a href="/#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über mich</a>
+        <a href="/#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
+        <a href="/blog/" class="nav-link text-[15px] font-semibold border-b-2 border-effi-green pb-0.5">Blog</a>
+      </div>
+      <a href="https://funnel.effi-nova.de/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
+      <a href="/#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
+      <a href="/#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
+      <a href="/#ubermich" class="block py-3 text-effi-green text-[15px]">Über mich</a>
+      <a href="/#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
+      <a href="/blog/" class="block py-3 text-effi-green text-[15px] font-semibold">Blog</a>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
+        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+      </a>
+    </div>
+  </nav>
+  <div style="height:77px;"></div>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-effi-beige border-b border-effi-border">
+    <div class="max-w-[1440px] mx-auto px-5 py-3">
+      <nav class="text-xs text-effi-body">
+        <a href="/" class="hover:text-effi-green transition-colors">Startseite</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-effi-green transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-effi-green-dark font-medium">Erst dämmen oder Wärmepumpe?</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <section class="bg-white pt-10 pb-0 lg:pt-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Wärmepumpe</span>
+          <span class="text-effi-body text-xs"><i class="far fa-clock mr-1"></i> 9 Min. Lesezeit</span>
+        </div>
+        <h1 class="font-montserrat text-effi-green-dark text-3xl md:text-[2.75rem] font-bold leading-tight mb-6">
+          Erst dämmen, dann Wärmepumpe — oder umgekehrt? Was Altbau-Besitzer wirklich wissen müssen
+        </h1>
+        <p class="text-effi-body text-lg leading-relaxed mb-8">
+          Soll erst die Gebäudehülle gedämmt oder direkt die neue Heizung eingebaut werden? Diese Reihenfolge entscheidet im Altbau über tausende Euro an Investition, Betriebskosten und Förderung. Wir zeigen Ihnen, welche Strategie zu Ihrem Haus passt — und worauf es bei einer Wärmepumpe für den Altbau ohne Fußbodenheizung wirklich ankommt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="max-w-5xl mx-auto px-5 pb-10">
+    <img src="images/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge-1.webp" alt="Altbau-Mehrfamilienhaus komplett eingerüstet und mit durchgehender Fassadendämmung aus grauen Dämmplatten während der energetischen Sanierung" class="w-full rounded-2xl object-cover aspect-[21/9]" loading="eager">
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <article class="bg-white pb-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="grid lg:grid-cols-[1fr_240px] gap-10 max-w-5xl mx-auto">
+
+        <!-- Main content -->
+        <div class="prose">
+
+          <!-- Table of Contents -->
+          <div class="bg-effi-beige rounded-2xl p-6 mb-10 toc">
+            <h4 class="font-montserrat text-effi-green-dark text-sm font-bold uppercase tracking-wider mb-3">Inhaltsverzeichnis</h4>
+            <ol class="space-y-2 text-sm list-decimal pl-4">
+              <li><a href="#was-verglichen-wird">Was hier verglichen wird — und warum die Reihenfolge Geld kostet</a></li>
+              <li><a href="#kurzprofil-strategien">Kurzprofil der zwei Strategien</a></li>
+              <li><a href="#vergleich-kriterien">Vergleich nach Kriterien</a></li>
+              <li><a href="#entscheidungsmatrix">Entscheidungsmatrix — welche Strategie passt?</a></li>
+              <li><a href="#fazit">Fazit — und wie wir beides koordinieren</a></li>
+            </ol>
+          </div>
+
+          <div class="info-box">
+            <h3 class="text-effi-green-dark font-bold text-sm uppercase tracking-wider mb-2">Das Wichtigste in Kürze</h3>
+            <ul class="space-y-1 text-sm">
+              <li class="text-effi-green-dark"><strong>Reihenfolge ist gebäudeabhängig:</strong> Bei Häusern vor 1978 mit Energieklasse F oder G dämmen Sie zuerst; ab Baujahr 1984 mit Klasse D oder E ist der sofortige Wärmepumpen-Einbau mit schrittweiser Dämmung sinnvoll.</li>
+              <li class="text-effi-green-dark"><strong>Keine Fußbodenheizung nötig:</strong> Entscheidend ist die Vorlauftemperatur, nicht die Flächenheizung — mit hydraulischem Abgleich kommen viele Bestandsheizkörper bei 50 bis 55 Grad aus.</li>
+              <li class="text-effi-green-dark"><strong>Vorlauftemperatur steuert die Effizienz:</strong> Jede Absenkung um 10 Grad hebt die Jahresarbeitszahl um rund 0,5 Punkte; gedämmt sind 3,5 und mehr realistisch statt 2,8 bis 3,0 im unsanierten Zustand.</li>
+              <li class="text-effi-green-dark"><strong>Kosten und Förderung:</strong> Die Wärmepumpe kostet meist 12.000 bis 20.000 Euro, gefördert für Förderanträge ab dem 21. Juli 2026 mit bis zu 80 Prozent; günstige Dämmung von Keller- und oberster Geschossdecke spart schon 15 bis 25 Prozent Heizwärmebedarf.</li>
+              <li class="text-effi-green-dark"><strong>Pflicht statt Kür:</strong> Heizlastberechnung und hydraulischer Abgleich sind bei jeder Strategie die Grundlage einer wirtschaftlichen Anlage — sonst droht eine überdimensionierte, taktende Wärmepumpe.</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-circle-info mr-2 text-effi-gold"></i>Stand der Angaben (12. Juli 2026):</strong> Bundestag und Bundesrat haben am 10. Juli 2026 das neue Gebäudemodernisierungsgesetz (GModG) beschlossen, und die reformierten KfW-Förderbedingungen gelten laut BMWE und KfW für neue Anträge ab dem 21. Juli 2026. Das Gesetz ist jedoch noch nicht verkündet und die geänderte Förderrichtlinie noch nicht im Bundesanzeiger veröffentlicht – alle Zahlen geben den aktuellen Stand des Wissens wieder, ohne Gewähr. Die Förderung steht außerdem unter dem Vorbehalt verfügbarer Bundesmittel; ein Rechtsanspruch besteht nicht. Welche Konditionen für Ihr Vorhaben konkret gelten, prüfen wir gern tagesaktuell für Sie.</p>
+          </div>
+
+          <h2 id="was-verglichen-wird">Was hier verglichen wird — und warum die Reihenfolge mehr Geld kostet als gedacht</h2>
+          <p>Die alte Gasheizung läuft noch, aber die nächste Reparatur steht bevor — und im Kopf vieler Eigentümer kreist dieselbe Frage: Erst die Fassade dämmen und dann eine moderne Heizung einbauen, oder die Wärmepumpe jetzt sofort, die Dämmung später? Eine Wärmepumpe für den Altbau ohne Fußbodenheizung gilt vielen als riskant, dabei liegt das eigentliche Risiko meist nicht in der Technik, sondern in der falschen Reihenfolge der Maßnahmen.</p>
+          <p>Genau hier setzen wir an. Anders als die meisten Ratgeber, die nur fragen, ob eine Wärmepumpe ohne Flächenheizung überhaupt funktioniert, vergleichen wir zwei konkrete Sanierungsstrategien gegeneinander. Auf der einen Seite steht der sofortige Einbau der Wärmepumpe mit anschließender, schrittweiser Dämmung. Auf der anderen Seite die klassische Reihenfolge: erst die Gebäudehülle ertüchtigen, dann die Heizung. Beide Wege führen zum Ziel — aber sie unterscheiden sich deutlich bei Investitionshöhe, Effizienz und Förderung.</p>
+          <p>Die Antwort, welcher Weg der richtige ist, hängt fast vollständig vom Gebäudetyp ab. Baujahr, energetischer Zustand und die Größe der vorhandenen Heizkörper geben die Richtung vor. Ein Haus von 1965 mit ungedämmten Außenwänden braucht eine andere Strategie als ein Reihenhaus von 1992. Wer das ignoriert und einfach loslegt, riskiert eine überdimensionierte Anlage, verschenkte Fördergelder oder enttäuschende Heizkosten. In den folgenden Abschnitten ordnen wir beide Strategien ein und geben Ihnen eine klare Entscheidungsmatrix an die Hand.</p>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Gut zu wissen:</strong> Der schnellste Eignungstest ist der sogenannte 55-Grad-Test: Stellen Sie die Vorlauftemperatur Ihrer bestehenden Heizung an einem kalten Tag auf 55 Grad. Werden alle Räume warm, ist Ihr Haus ohne weitere Dämmung für eine Luft-Wasser-Wärmepumpe tauglich. Für eine Luft-Luft-Wärmepumpe, die die Räume direkt über Innengeräte beheizt, spielt der Test keine Rolle.</p>
+          </div>
+
+          <h2 id="kurzprofil-strategien">Kurzprofil der zwei Strategien</h2>
+          <p>Bevor wir die Strategien Punkt für Punkt vergleichen, lohnt sich ein klarer Blick darauf, was sie konkret bedeuten — und für welche Häuser sie typischerweise gedacht sind. Die Wahl entscheidet sich weniger an einer pauschalen Regel als an Baujahr und energetischem Zustand Ihres Gebäudes.</p>
+
+          <h3>Strategie 1: Wärmepumpe sofort, Dämmung schrittweise</h3>
+          <p>Bei dieser Strategie wird die Wärmepumpe zuerst installiert, die Dämmung von Dach, Fassade und Fenstern folgt über die nächsten Jahre. Der große Vorteil: Sie ersetzen Ihre fossile Heizung sofort, sichern sich die aktuelle Förderung und senken von Beginn an den CO2-Ausstoß. Die Anlage wird dabei auf den künftigen, nach der geplanten Dämmung erwarteten Wärmebedarf ausgelegt. Die Übergangszeit mit höherem Bedarf überbrückt der integrierte Heizstab. Sinnvoll ist dieser Weg vor allem bei Gebäuden ab Baujahr 1984 und Energieklasse D oder E, deren Hülle bereits einen Grundzustand mitbringt.</p>
+
+          <h3>Strategie 2: Erst dämmen, dann Wärmepumpe</h3>
+          <p>Hier wird zuerst die Gebäudehülle ertüchtigt, anschließend die Heizung getauscht. Der Grund ist technisch eindeutig: Nach der Dämmung lässt sich die benötigte Heizleistung korrekt berechnen. Eine Anlage, die für ein ungedämmtes Haus ausgelegt wurde, läuft nach der Dämmung im Teillastbetrieb und verliert an Effizienz. Diese Reihenfolge empfehlen wir besonders bei Gebäuden vor Baujahr 1978 mit Energieklasse F oder G, deren Wärmeverluste so hoch sind, dass eine Wärmepumpe ohne Vordämmung unwirtschaftlich liefe.</p>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Gut zu wissen:</strong> Die günstigsten Dämmmaßnahmen mit dem besten Verhältnis von Kosten zu Wirkung sind die Kellerdecke und die oberste Geschossdecke. Beide zusammen kosten oft 3.000 bis 6.500 Euro und senken den Heizwärmebedarf um 15 bis 25 Prozent — ohne Gerüst und ohne lange Bauphase.</p>
+          </div>
+
+          <h2 id="vergleich-kriterien">Vergleich nach Kriterien</h2>
+          <p>Welche Strategie sich rechnet, zeigt sich erst im direkten Vergleich der entscheidenden Faktoren. Wir betrachten vier Dimensionen: die Kosten, die Effizienz, die Förderung und die Risiken. Gerade beim Einsatz einer Wärmepumpe im Altbau ohne Flächenheizung machen diese Punkte den Unterschied zwischen einer wirtschaftlichen und einer enttäuschenden Anlage aus.</p>
+
+          <h3>Kosten: Investition und Betrieb</h3>
+          <p>Die reine Wärmepumpe kostet im Einfamilienhaus meist zwischen 12.000 und 20.000 Euro inklusive Einbau. Dämmmaßnahmen kommen je nach Umfang hinzu — von 3.000 Euro für Kellerdecke und oberste Geschossdecke bis zu 25.000 Euro und mehr für eine komplette Fassadendämmung. Bei Strategie 1 verteilen Sie diese Kosten über mehrere Jahre, bei Strategie 2 fallen sie gebündelt zu Beginn an. Entscheidend für die Betriebskosten ist die Effizienz: Eine gut auf das gedämmte Gebäude abgestimmte Anlage spart über die Lebensdauer mehrere tausend Euro gegenüber einer überdimensionierten.</p>
+
+          <h3>Effizienz: Wie Dämmung die Wärmepumpe besser macht</h3>
+          <p>Der zentrale Hebel ist die Vorlauftemperatur. Jede Senkung um 10 Grad hebt die Jahresarbeitszahl um rund 0,5 Punkte. Ein ungedämmtes Haus braucht hohe Vorlauftemperaturen, eine gedämmte Hülle kommt mit niedrigeren aus. In der Praxis erreichen Luft-Wasser-Wärmepumpen in unsanierten Altbauten mit Heizkörpern Jahresarbeitszahlen um 2,8 bis 3,0; nach gezielter Dämmung sind 3,5 und mehr realistisch. Der Fraunhofer-ISE-Feldtest bestätigt: Auch in unsanierten und teilsanierten Bestandsgebäuden laufen Wärmepumpen mit Heizkörpern im Schnitt bei einer Jahresarbeitszahl um 3,4 — vorausgesetzt, die Heizkörper sind groß genug.</p>
+
+          <img src="images/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge-2.webp" alt="Gleichmäßig und sauber an der Hauswand montierte Dämmplatten der Fassadendämmung mit sichtbaren Tellerdübeln" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h3>Förderung: Die Reihenfolge beeinflusst die Höhe</h3>
+          <p>Die Wärmepumpe wird für Förderanträge ab dem 21. Juli 2026 über die KfW mit 30 Prozent Grundförderung gefördert, ergänzt um 16 Prozent Klimageschwindigkeitsbonus (sinkt erstmals zum 1. Februar 2027 und danach halbjährlich um je 4 Prozentpunkte) sowie einen dreistufigen Einkommensbonus von 40, 30 oder 10 Prozent (bei einem zu versteuernden Haushaltsjahreseinkommen bis 30.000, 40.000 beziehungsweise 50.000 Euro; lebt mindestens ein minderjähriges Kind im Haushalt, sinkt das anzusetzende Einkommen um einmalig 10.000 Euro) — kombinierbar, aber bei maximal 80 Prozent gedeckelt. Der frühere Effizienzbonus von 5 Prozent für Geräte mit natürlichem Kältemittel wie R290 entfällt; solche Geräte bleiben technisch die richtige Wahl, bringen aber keinen Förderaufschlag mehr. Förderfähig sind bis zu 28.000 Euro für die erste Wohneinheit (sinkt erstmals zum 1. Februar 2027 schrittweise), der maximale Zuschuss liegt damit bei 22.400 Euro. Dämmmaßnahmen laufen separat über die BAFA mit 15 Prozent. Wer vorab einen individuellen Sanierungsfahrplan erstellen lässt, erhält auf die BAFA-geförderten Dämmmaßnahmen zusätzlich 5 Prozentpunkte iSFP-Bonus — nicht auf die Wärmepumpe selbst. Genau diese Planung macht Strategie 2 finanziell oft attraktiver, weil sie Dämmung und Heizungstausch sinnvoll verzahnt und die volle Bonusstruktur ausschöpft.</p>
+
+          <h3 id="daemmen-foerderung-verpassen">Erst dämmen — und dabei die sinkende Heizungsförderung verpassen?</h3>
+          <p>Diese Sorge treibt gerade viele Eigentümer um, und sie verdient eine ehrliche Antwort. Ja, die Degression belohnt einen frühen Heizungstausch: Wer den Förderantrag bis zum 31. Januar 2027 stellt, erhält im Standardfall 46 Prozent (30 Prozent Grundförderung plus 16 Prozent Klimageschwindigkeitsbonus) auf bis zu 28.000 Euro förderfähige Kosten, also bis zu 12.880 Euro Zuschuss. Ab dem 1. Februar 2027 sinkt der Satz auf 42 Prozent bei 27.250 Euro Deckel (11.445 Euro), ab dem 1. August 2027 auf 38 Prozent bei 26.500 Euro (10.070 Euro). Einkommens- und Familienboni kommen unverändert hinzu, wo die Voraussetzungen erfüllt sind.</p>
+          <p>Aber — und das ist der entscheidende Punkt: Eine falsche Reihenfolge kostet oft mehr als eine Degressionsstufe. Wer nur wegen des Stichtags eine Wärmepumpe auf das ungedämmte Haus auslegt und danach dämmt, bekommt eine überdimensionierte, taktende Anlage mit schlechter Jahresarbeitszahl — und zahlt den Fehler über Jahre in Form höherer Stromkosten und schnelleren Verschleißes. Die 1.435 Euro Zuschuss-Differenz zwischen den ersten beiden Stufen sind schnell aufgezehrt, wenn die Anlage dauerhaft ineffizient läuft.</p>
+          <p>Der Ausweg ist kein Entweder-oder, sondern ein Etappenplan mit klarer Terminierung: schnelle, günstige Dämmschritte wie Kellerdecke und oberste Geschossdecke zuerst, den Heizungstausch bewusst vor eine der Degressionsstufen gelegt — sauber ausgelegt auf den dann erreichten Zustand. Wo die alte Heizung noch durchhält, kann auch eine Hybridlösung als Brücke dienen, bis die Hülle so weit ist. Und ein beruhigender Fakt zum Schluss: Die Dämmförderung läuft über die BAFA mit 15 Prozent plus 5 Prozentpunkten iSFP-Bonus — sie ist von der Degression der Heizungsförderung nicht betroffen. Wer zuerst dämmt, verliert bei der Dämmung selbst also nichts.</p>
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Der dritte Weg, wenn Luft-Wasser am unsanierten Haus scheitert:</strong> Scheitert eine Luft-Wasser-Wärmepumpe an der hohen Vorlauftemperatur des ungedämmten Hauses, ist die Luft-Luft-Wärmepumpe (Multisplit) oft der Weg, jetzt zu wechseln, ohne erst komplett zu dämmen: Sie gibt die Wärme direkt über Innengeräte in den Raum ab und braucht keinen Hochtemperatur-Wasserkreis – der 55-Grad-Test entscheidet hier also nicht über die Machbarkeit. Gefördert wird sie über KfW 458 wie jede andere Wärmepumpe, sofern das Gerät in der BAFA-Liste förderfähiger Wärmepumpen steht und als Heizung dient; Warmwasser wird separat gelöst, etwa über eine Brauchwasser-Wärmepumpe. Die Dämmung bleibt trotzdem sinnvoll, denn sie senkt den Verbrauch jeder Heizung – sie diktiert dann aber nicht mehr den Zeitpunkt des Heizungstauschs.</p>
+          </div>
+
+          <h3>Risiken: Was bei falscher Reihenfolge schiefgeht</h3>
+          <p>Das größte Risiko ist eine überdimensionierte Anlage. Wird die Wärmepumpe für das ungedämmte Haus ausgelegt und später gedämmt, taktet sie zu häufig, verschleißt schneller und verliert an Effizienz. Umgekehrt droht bei zu hohem Wärmebedarf ohne Vordämmung ein Dauerbetrieb mit hoher Vorlauftemperatur und entsprechend hohen Stromkosten. In beiden Fällen gilt: Eine fundierte Heizlastberechnung und ein hydraulischer Abgleich sind nicht optional, sondern die Grundlage jeder wirtschaftlichen Lösung.</p>
+
+          <div class="bg-effi-green rounded-2xl p-6 my-8 text-center">
+            <p class="font-montserrat text-lg font-bold mb-2" style="color:#ffffff">Sanierungsfahrplan mit Förder-Timing: Wir rechnen beide Wege durch</p>
+            <p class="text-sm mb-4" style="color:rgba(255,255,255,0.90)">EffiNova ermittelt anhand von Baujahr, Zustand und Heizlast die richtige Reihenfolge — und terminiert den Heizungstausch so, dass Sie keine Förderstufe unnötig verschenken.</p>
+            <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-6 py-3 text-sm font-semibold no-underline hover:bg-effi-beige transition-colors" style="text-decoration:none;color:#004225"><i class="fas fa-phone text-sm"></i> Kostenlose Ersteinschätzung</a>
+          </div>
+
+          <h2 id="entscheidungsmatrix">Entscheidungsmatrix — welche Strategie passt für Ihren Altbau?</h2>
+          <p>Statt einer pauschalen Faustregel hilft eine Einordnung nach Baujahr und energetischem Zustand. Die folgende Matrix fasst zusammen, welche Reihenfolge sich für welchen Gebäudetyp bewährt hat. Sie ersetzt keine individuelle Beratung, gibt Ihnen aber eine belastbare erste Orientierung.</p>
+
+          <table>
+            <thead>
+              <tr><th>Baujahr / Energieklasse</th><th>Empfohlene Strategie</th><th>Begründung</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Vor 1978, Klasse F/G</td><td>Erst dämmen</td><td>Sehr hohe Wärmeverluste — ohne Vordämmung läuft die Wärmepumpe unwirtschaftlich</td></tr>
+              <tr><td>1978–1995, Klasse D/E</td><td>Wärmepumpe + schrittweise Dämmung oder Hybrid</td><td>Solider Grundzustand; Auslegung auf künftigen Bedarf möglich</td></tr>
+              <tr><td>Nach 1995, Klasse C/D</td><td>Wärmepumpe sofort</td><td>Gute Hülle, niedrige Vorlauftemperaturen meist ohne Zusatzmaßnahmen erreichbar</td></tr>
+              <tr><td>Ölheizung kurz vor Ausfall</td><td>Wärmepumpe sofort + Dämmplan parallel</td><td>Versorgungssicherheit hat Vorrang; Dämmung folgt nach iSFP</td></tr>
+            </tbody>
+          </table>
+
+          <p>Für Häuser vor 1978 mit den schlechtesten Energieklassen ist die Sache meist klar: Erst sorgt die Dämmung dafür, dass der Wärmebedarf in einen Bereich sinkt, in dem die Wärmepumpe effizient arbeitet. Bei Gebäuden der mittleren Baualtersklasse ist der direkte Einbau mit kluger Auslegung auf den späteren, gedämmten Zustand der pragmatischere Weg. Häuser ab Mitte der Neunziger bringen oft schon alles mit, was es braucht. Und wenn die alte Ölheizung kurz vor dem Aus steht, hat die Versorgungssicherheit Vorrang — dann installieren wir die Wärmepumpe sofort und legen den Dämmplan parallel an.</p>
+
+          <p><strong>Unser Tipp:</strong> Bevor Sie sich festlegen, lohnt der Blick auf die Grundsatzfrage. In unserem Hauptartikel <a href="https://effi-nova.de/blog/waermepumpe/waermepumpe-altbau-lohnt-sich.html">erfahren Sie, ob sich eine Wärmepumpe im Altbau überhaupt lohnt</a> und welche Voraussetzungen Ihr Gebäude mitbringen sollte.</p>
+
+          <p><strong>Unser Tipp:</strong> Ob Ihr Haus ohne Vordämmung bereits wärmepumpentauglich ist, klären Sie schnell mit unserem Beitrag <a href="https://effi-nova.de/blog/waermepumpe/waermepumpe-altbau-eignung-selbstcheck.html">Selbstcheck zur Wärmepumpen-Eignung im Altbau</a> — inklusive 55-Grad-Test und Checkliste zum Durchgehen.</p>
+
+          <h2 id="fazit">Fazit — und wie wir beides koordinieren</h2>
+          <p>Die ehrliche Empfehlung lautet: Bei Altbauten vor 1978 mit schlechter Energiebilanz führt fast immer der Weg über die Dämmung zuerst. Bei jüngeren Gebäuden mit solidem Grundzustand spricht dagegen viel für den sofortigen Einbau der Wärmepumpe, klug ausgelegt auf den künftigen Bedarf. Was bei beiden Strategien gilt: Ohne saubere Heizlastberechnung und hydraulischen Abgleich bleibt jede Anlage hinter ihren Möglichkeiten zurück. Diese Schritte sind die Pflicht, nicht die Kür – die raumweise Heizlastberechnung fertigen wir bei EffiNova an und prüfen auch Ihr Angebot vor der Unterschrift auf Förderfähigkeit.</p>
+          <p>Der Vorteil, wenn alles aus einer Hand kommt: Dämmung, Heizungstausch und Förderanträge greifen ineinander, statt sich gegenseitig auszubremsen. Wir bei EffiNova planen die Reihenfolge so, dass Sie die volle Förderung ausschöpfen, die Wärmepumpe optimal dimensioniert wird und kein Schritt den nächsten blockiert. So wird aus einer Reihe von Einzelmaßnahmen ein stimmiger Sanierungsfahrplan, der zu Ihrem Haus und Ihrem Budget passt.</p>
+
+          <p><strong>Unser Tipp:</strong> Wie sich die Reihenfolge konkret auf Ihre Förderhöhe auswirkt, lesen Sie Schritt für Schritt in unserem Beitrag zum <a href="https://effi-nova.de/blog/waermepumpe/waermepumpe-altbau-foerderung-beantragen.html">Beantragen der Wärmepumpen-Förderung im Altbau</a>. Die Antragstellung übernehmen wir auf Wunsch komplett für Sie.</p>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Gut zu wissen:</strong> Für die KfW-Förderung muss die Wärmepumpe eine rechnerisch ermittelte Jahresarbeitszahl von mindestens 3,0 erreichen — nachzuweisen in der Planung (nach VDI 4650), nicht erst im späteren Betrieb. Im unsanierten Altbau gelingt das nur mit gezielter Auslegung — ein weiterer Grund, Dämmung und Heizungsauslegung gemeinsam zu denken.</p>
+          </div>
+
+          <img src="images/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge/erst-daemmen-dann-waermepumpe-altbau-sanierungsreihenfolge-3.webp" alt="Gusseiserner Bestandsheizkörper unter dem Fenster in einem Altbau-Zimmer mit Holzdielen" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h3>Häufige Fragen</h3>
+          <details>
+            <summary>Ist eine Wärmepumpe ohne Fußbodenheizung im Altbau sinnvoll?</summary>
+            <p>Ja. Eine fehlende Flächenheizung ist kein Ausschlusskriterium. Entscheidend ist die Vorlauftemperatur, mit der Ihre Heizkörper auskommen. Fraunhofer-Feldtests belegen Jahresarbeitszahlen von 3,0 bis 3,5 in Altbauten mit Heizkörpern, sofern der hydraulische Abgleich stimmt und die Heizflächen ausreichend groß sind. Eine Wärmepumpe für den Altbau ohne Fußbodenheizung arbeitet damit zuverlässig und wirtschaftlich.</p>
+          </details>
+          <details>
+            <summary>Welche Wärmepumpe eignet sich für einen Altbau ohne Fußbodenheizung?</summary>
+            <p>Wer die vorhandenen Heizkörper weiter nutzen will, fährt meist mit einer Luft-Wasser-Wärmepumpe mit dem Kältemittel R290 (Propan) gut: Diese Geräte erreichen Vorlauftemperaturen bis 70 bis 75 Grad und arbeiten auch mit Bestandsheizkörpern zuverlässig. Eine Alternative ist die Luft-Luft-Wärmepumpe (Multisplit): Sie beheizt die Räume direkt über Innengeräte, braucht gar keinen Wasserkreis und wird über KfW 458 zu denselben Sätzen gefördert, sofern das Gerät in der BAFA-Liste förderfähiger Wärmepumpen steht – Warmwasser wird dann separat gelöst. Erdwärmepumpen sind effizienter, durch die nötige Bohrung aber deutlich teurer und nicht auf jedem Grundstück umsetzbar.</p>
+          </details>
+          <details>
+            <summary>Kann man eine Wärmepumpe mit normalen Heizkörpern betreiben?</summary>
+            <p>Ja. Mit hydraulischem Abgleich und angepasster Heizkurve funktionieren viele Bestandsheizkörper bei 50 bis 55 Grad Vorlauftemperatur problemlos. Ein vollständiger Tausch ist selten nötig. Lediglich einzelne unterdimensionierte Räume müssen gegebenenfalls mit größeren oder Niedertemperatur-Heizkörpern nachgerüstet werden.</p>
+          </details>
+          <details>
+            <summary>In welchen Häusern scheitert die Wärmepumpe?</summary>
+            <p>Problematisch wird es für eine Luft-Wasser-Wärmepumpe, wenn der Heizwärmebedarf — als grobe Orientierung — über 150 bis 200 Kilowattstunden pro Quadratmeter und Jahr liegt und die Heizkörper auch bei 55 Grad Vorlauf einzelne Räume nicht warm bekommen. In solchen Fällen ist eine vorherige Teildämmung — etwa von Dach und Kellerdecke — die wirtschaftlichere Grundlage, bevor die Wärmepumpe einzieht. Alternativ ermöglicht eine Luft-Luft-Wärmepumpe den sofortigen Wechsel: Sie beheizt die Räume direkt über Innengeräte, braucht keinen Hochtemperatur-Wasserkreis und wird genauso gefördert.</p>
+          </details>
+          <details>
+            <summary>Was kostet eine Wärmepumpe für ein Einfamilienhaus ohne Fußbodenheizung?</summary>
+            <p>Die Investition liegt meist zwischen 12.000 und 20.000 Euro inklusive Einbau. Bei der maximalen Förderquote von bis zu 80 Prozent (für Förderanträge ab dem 21. Juli 2026) kann der Eigenanteil auf rund 2.400 bis 4.000 Euro sinken; beim Standardsatz von 46 Prozent aus Grund- und Klimageschwindigkeitsbonus liegt er bei rund 6.500 bis 10.800 Euro. Hinzu kommen je nach Aufwand der hydraulische Abgleich und mögliche Anpassungen an einzelnen Heizkörpern.</p>
+          </details>
+          <details>
+            <summary>Verliere ich Förderung, wenn ich zuerst dämme?</summary>
+            <p>Bei der Dämmung selbst nicht: Die BAFA-Förderung für Dämmmaßnahmen (15 Prozent, plus 5 Prozentpunkte iSFP-Bonus) ist von der Reform der Heizungsförderung unabhängig und kennt keine Degressionsstufen. Bei der späteren Heizungsförderung kann sich Warten dagegen auswirken: Ab dem 1. Februar 2027 sinken der Klimageschwindigkeitsbonus halbjährlich um 4 Prozentpunkte und der Deckel der förderfähigen Kosten um je 750 Euro — im Standardfall schrumpft der maximale Zuschuss von 12.880 Euro auf 11.445 Euro ab Februar 2027 und 10.070 Euro ab August 2027. Die Grundförderung von 30 Prozent sowie Einkommens- und Familienboni bleiben bestehen. Genau deshalb gehört das Timing des Heizungstauschs in den Sanierungsfahrplan: Wer zuerst dämmt, legt den Heizungstausch möglichst vor die nächste Degressionsstufe.</p>
+          </details>
+
+        </div>
+
+        <!-- Sidebar (Desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-effi-beige rounded-2xl p-5 text-center">
+              <div class="w-16 h-16 bg-effi-green rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-white font-montserrat font-bold text-lg">HW</span>
+              </div>
+              <p class="font-montserrat text-effi-green-dark text-sm font-bold">Henk Wenner</p>
+              <p class="text-xs text-effi-body mt-1">Zertifizierter Energieberater<br>EffiNova Energieberatung</p>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Teilen</p>
+              <div class="flex gap-2">
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-link"></i></a>
+              </div>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Verwandte Artikel</p>
+              <div class="space-y-3">
+                <a href="waermepumpe-altbau-lohnt-sich.html" class="block text-sm text-effi-green hover:underline leading-snug">Lohnt sich eine Wärmepumpe im Altbau?</a>
+                <a href="waermepumpe-altbau-eignung-selbstcheck.html" class="block text-sm text-effi-green hover:underline leading-snug">Wärmepumpe Altbau: Eignungs-Selbstcheck</a>
+                <a href="luft-luft-vs-luft-wasser-waermepumpe-altbau.html" class="block text-sm text-effi-green hover:underline leading-snug">Luft-Luft vs. Luft-Wasser-Wärmepumpe</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA AFTER ARTICLE -->
+  <section class="bg-effi-green py-14">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="font-montserrat text-white text-2xl font-bold mb-4">Sanierungsfahrplan mit Förder-Timing für Ihren Altbau</h2>
+      <p class="text-white/70 text-[15px] mb-8">Unsere zertifizierten Energieberater rechnen beide Wege für Ihr Gebäude durch — Heizlast, Dämmung, Wärmepumpe und die Degressionsstichtage der Förderung als stimmiger Fahrplan, aus einer Hand.</p>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-8 py-4 text-[15px] font-semibold hover:bg-effi-beige transition-colors">
+        <i class="fas fa-phone text-sm"></i>
+        Kostenlose Erstberatung anfragen
+      </a>
+    </div>
+  </section>
+
+  <!-- MORE ARTICLES -->
+  <section class="bg-effi-beige py-14">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl font-bold mb-8">Weitere Beiträge</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="waermepumpe-altbau-lohnt-sich.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Wärmepumpe im Altbau" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Lohnt sich eine Wärmepumpe im Altbau?</h3>
+          </div>
+        </a>
+        <a href="waermepumpe-altbau-finanzierung-kfw-kredit.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="KfW-Kredit Wärmepumpe Altbau" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Wärmepumpe Altbau finanzieren mit KfW-Kredit</h3>
+          </div>
+        </a>
+        <a href="waermepumpe-altbau-kosten-foerderung-berechnen.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Kosten und Förderung berechnen" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Wärmepumpe Altbau: Kosten und Förderung berechnen</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (konsistent mit Hauptseite) -->
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <img src="/bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice & Baubegleitung</li>
+            <li>KfW Förderservice & Baubegleitung</li>
+            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
+            <li>GEG-Nachweis, Energieausweis</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Reading progress bar
+    window.addEventListener('scroll', function() {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = Math.min((window.scrollY / docHeight) * 100, 100);
+      document.getElementById('reading-progress').style.width = progress + '%';
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
+    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+  </button>
+  <script defer src="/js/cookieconsent.js"></script>
+  <script defer src="/js/cookie-consent-config.js"></script>
+  <script defer src="/js/gtm-button-tracking.js"></script>
+</body>
+</html>

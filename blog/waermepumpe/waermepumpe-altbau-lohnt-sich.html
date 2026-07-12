@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Consent Mode v2 — defaults (deny all, update via cookie banner) -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PMHB9VRW');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wärmepumpe im Altbau: Wann sie sich lohnt — auch nach der Förderkürzung – EffiNova Wissenshub</title>
+  <meta name="description" content="Lohnt sich die Wärmepumpe im Altbau nach der Förderkürzung noch? Kosten, neue Fördersätze ab 21.07.2026 (30–80 %), JAZ-Werte und ehrliche Entscheidungshilfe.">
+  <link rel="canonical" href="https://effi-nova.de/blog/waermepumpe/waermepumpe-altbau-lohnt-sich.html">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="/css/cookieconsent.css">
+  <link rel="stylesheet" href="/css/cookie-consent-brand.css">
+  <link rel="preload" href="/fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+           url('/fonts/Montserrat-Variable.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+
+    /* Nav (konsistent mit Hauptseite) */
+    .nav-dark .nav-logo-green { display: none; }
+    .nav-dark .nav-logo-white { display: block; }
+    .nav-light .nav-logo-green { display: block; }
+    .nav-light .nav-logo-white { display: none; }
+    .nav-dark .nav-link { color: #FFFFFF; }
+    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
+    .nav-light .nav-link { color: #004225; }
+    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    .nav-dark { background-color: rgba(0, 66, 37, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav-light { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    @supports not (backdrop-filter: blur()) {
+      .nav-dark { background-color: rgba(0, 66, 37, 0.97) !important; }
+      .nav-light { background-color: rgba(255, 255, 255, 0.97) !important; }
+    }
+
+    /* Article prose styling */
+    .prose h2 { font-weight: 700; font-size: 1.5rem; color: #01331B; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-weight: 600; font-size: 1.25rem; color: #01331B; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose p { margin-bottom: 1.5rem; line-height: 1.85; color: #616161; font-size: 1.125rem; }
+    .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ul li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ol li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose strong { color: #01331B; font-weight: 600; }
+    .prose a { color: #004225; text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: #035B2F; }
+    .prose blockquote { border-left: 4px solid #C3A87A; padding: 1rem 1.5rem; background: #F2EFE7; border-radius: 0 0.75rem 0.75rem 0; margin: 1.5rem 0; }
+    .prose blockquote p { color: #004225; font-weight: 500; margin-bottom: 0; }
+    .prose img { border-radius: 1rem; margin: 2rem 0; }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+    .prose th { background: #F2EFE7; color: #01331B; font-weight: 600; padding: 0.75rem 1rem; text-align: left; }
+    .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E4D9; color: #616161; }
+
+    .info-box { background: #F2EFE7; border-left: 4px solid #004225; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .info-box p { margin-bottom: 0; }
+    .toc a { color: #004225; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    #reading-progress { transition: width 0.1s linear; }
+
+    /* FAQ Details/Summary styling */
+    .prose details { background-color: #F2EFE7; border: 1px solid #E8E4D9; border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1rem; cursor: pointer; }
+    .prose details summary { color: #004225; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+    .prose details summary::-webkit-details-marker { display: none; }
+    .prose details summary::after { content: '+'; font-size: 1.25rem; font-weight: 700; color: #004225; transition: transform 0.2s ease; }
+    .prose details[open] summary::after { content: '−'; }
+    .prose details summary:hover { color: #035B2F; }
+    .prose details[open] summary { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8E4D9; }
+    .prose details p { color: #616161; margin-bottom: 0; font-size: 1rem; }
+  </style>
+
+  <!-- Schema.org BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Wärmepumpe im Altbau: Wann sie sich lohnt — und wann nicht",
+    "description": "Lohnt sich die Wärmepumpe im Altbau nach der Förderkürzung noch? Kosten, neue Fördersätze ab 21.07.2026 (30–80 %), JAZ-Werte und ehrliche Entscheidungshilfe.",
+    "url": "https://effi-nova.de/blog/waermepumpe/waermepumpe-altbau-lohnt-sich.html",
+    "author": {"@type": "Organization", "name": "EffiNova", "url": "https://effi-nova.de"},
+    "publisher": {"@type": "Organization", "name": "EffiNova Energieberatung", "url": "https://effi-nova.de", "logo": {"@type": "ImageObject", "url": "https://effi-nova.de/bilder/logos/EffiNova_Logo_A3.webp"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://effi-nova.de/blog/waermepumpe/waermepumpe-altbau-lohnt-sich.html"},
+    "image": "https://effi-nova.de/blog/waermepumpe/images/waermepumpe-altbau-lohnt-sich/waermepumpe-altbau-lohnt-sich-1.webp",
+    "keywords": ["wärmepumpe altbau", "wärmepumpe im altbau", "altbau wärmepumpe", "wärmepumpe altbau lohnt sich", "JAZ wärmepumpe", "hybridheizung altbau"]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Ist eine Wärmepumpe im Altbau wirklich sinnvoll?", "acceptedAnswer": {"@type": "Answer", "text": "Eine Wärmepumpe im Altbau ist dann sinnvoll, wenn die Vorlauftemperatur des Heizsystems unter 55 °C liegt und das Gebäude ausreichend gedämmt ist. Bei Baujahren ab 1995 oder kernsanierten Häusern ist das häufig der Fall. Bei unsanierten Altbauten vor 1978 sollten zuerst Dämmmaßnahmen umgesetzt werden."}},
+      {"@type": "Question", "name": "In welchen Häusern scheitert die Wärmepumpe?", "acceptedAnswer": {"@type": "Answer", "text": "Wärmepumpen arbeiten unwirtschaftlich in Gebäuden mit Vorlauftemperaturen dauerhaft über 70 °C, also typischerweise in unsanierten Altbauten vor 1978 mit kleinen, alten Heizkörpern. Auch fehlende Stellfläche oder ein sehr geringer Jahresheizwärmebedarf unter 8.000 kWh können gegen den Einbau sprechen."}},
+      {"@type": "Question", "name": "Welche Wärmepumpe ist für Altbauten geeignet?", "acceptedAnswer": {"@type": "Answer", "text": "Im Altbau kommen vor allem zwei Systeme infrage: Die Luft-Luft-Wärmepumpe heizt die Räume direkt über Innengeräte – ganz ohne die Vorlauftemperatur-Hürde eines Wasserkreises – und ist mit rund 10.000–20.000 € (Orientierung Einfamilienhaus) oft die wirtschaftlichere Wahl; Warmwasser wird separat gelöst, z. B. mit einer Brauchwasser-Wärmepumpe für 2.500–5.000 €. Die Luft-Wasser-Wärmepumpe (ca. 27.000–40.000 € installiert) ist sinnvoll, wenn die vorhandenen Heizkörper und die Hydraulik weiter genutzt und das Warmwasser integriert werden sollen. Sole-Wasser-Wärmepumpen erreichen höhere JAZ-Werte, brauchen aber ausreichende Grundstücksfläche. Beide Luft-Systeme werden über KfW 458 gleichermaßen gefördert."}},
+      {"@type": "Question", "name": "Welche Häuser sind nicht für eine Wärmepumpe geeignet?", "acceptedAnswer": {"@type": "Answer", "text": "Gebäude mit dauerhaft über 70 °C Vorlauftemperatur sind nicht optimal geeignet – vor allem unsanierte Altbauten vor 1978. Denkmalgeschützte Häuser erfordern eine individuelle Beratung."}},
+      {"@type": "Question", "name": "Wie hoch ist die Förderung für eine Wärmepumpe im Altbau 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Für Förderanträge ab dem 21. Juli 2026 gilt nach aktuellem Stand: Über die BEG gibt es einen Grundzuschuss von 30 %; beantragt wird der Heizungstausch-Zuschuss über das KfW-Portal (Programm 458). Mit Klimageschwindigkeitsbonus (16 %, ab Februar 2027 schrittweise sinkend), gestaffeltem Einkommensbonus (40, 30 oder 10 %) und Familienzuschlag sind laut KfW bis zu 80 % möglich. Die förderfähigen Kosten sind im Einfamilienhaus auf 28.000 € gedeckelt (ab Februar 2027 schrittweise sinkend) – die maximale Fördersumme beträgt damit 22.400 €; bei Mehrfamilienhäusern gilt eine Staffelung je Wohneinheit. Der Antrag wird vor Beginn des Vorhabens gestellt – Grundlage ist ein Vertrag mit aufschiebender Bedingung."}},
+      {"@type": "Question", "name": "Wird die Wärmepumpe 2026 noch gefördert?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Auch nach der Reform vom Juli 2026 wird der Heizungstausch weiter bezuschusst: Für Anträge ab dem 21. Juli 2026 gibt es nach aktuellem Stand 30 % Grundförderung für alle, mit Klimageschwindigkeits-, Einkommensbonus und Familienzuschlag je nach Situation zwischen 30 und 80 % der förderfähigen Kosten. Ab Februar 2027 sinken Klimageschwindigkeitsbonus und förderfähiger Höchstbetrag allerdings schrittweise – wer ohnehin plant, sichert sich mit einem früheren Antrag die höheren Konditionen. Den Ablauf Schritt für Schritt erklärt unser Beitrag zum Beantragen der Wärmepumpen-Förderung."}}
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-effi-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMHB9VRW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent">
+    <div id="reading-progress" class="h-full bg-effi-gold" style="width:0%"></div>
+  </div>
+
+  <!-- NAVIGATION (konsistent mit Hauptseite) -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md shadow-md transition-colors duration-300" style="height:77px;">
+    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="/#hero" class="flex items-center gap-2 shrink-0">
+        <img src="/bilder/logos/Logo-A1.png" alt="EffiNova Logo" class="nav-logo-green h-12">
+          <img src="/bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="nav-logo-white h-12 hidden">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
+        <a href="/#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
+        <a href="/#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über mich</a>
+        <a href="/#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
+        <a href="/blog/" class="nav-link text-[15px] font-semibold border-b-2 border-effi-green pb-0.5">Blog</a>
+      </div>
+      <a href="https://funnel.effi-nova.de/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
+      <a href="/#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
+      <a href="/#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
+      <a href="/#ubermich" class="block py-3 text-effi-green text-[15px]">Über mich</a>
+      <a href="/#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
+      <a href="/blog/" class="block py-3 text-effi-green text-[15px] font-semibold">Blog</a>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
+        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+      </a>
+    </div>
+  </nav>
+  <div style="height:77px;"></div>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-effi-beige border-b border-effi-border">
+    <div class="max-w-[1440px] mx-auto px-5 py-3">
+      <nav class="text-xs text-effi-body">
+        <a href="/" class="hover:text-effi-green transition-colors">Startseite</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-effi-green transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-effi-green-dark font-medium">Wärmepumpe im Altbau</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <section class="bg-white pt-10 pb-0 lg:pt-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Wärmepumpe</span>
+          <span class="text-effi-body text-xs"><i class="far fa-clock mr-1"></i> 12 Min. Lesezeit</span>
+        </div>
+        <h1 class="font-montserrat text-effi-green-dark text-3xl md:text-[2.75rem] font-bold leading-tight mb-6">
+          Wärmepumpe im Altbau: Wann sie sich lohnt — und wann nicht
+        </h1>
+        <p class="text-effi-body text-lg leading-relaxed mb-8">
+          „Wärmepumpe im Altbau? Funktioniert nicht." – diesen Satz hören wir oft. Er ist genauso falsch wie das Gegenteil, das viele Anbieter versprechen: dass jede Wärmepumpe überall passt. Die Wahrheit liegt dazwischen, und sie hängt an wenigen, klar messbaren Faktoren. Dieser Leitfaden zeigt Ihnen ehrlich, wann sich der Umstieg in Ihrem Altbau lohnt, wann Sie besser warten – und welche Lösung zu welchem Gebäude passt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="max-w-5xl mx-auto px-5 pb-10">
+    <img src="images/waermepumpe-altbau-lohnt-sich/waermepumpe-altbau-lohnt-sich-1.webp" alt="Verputzter Altbau im Wohngebiet mit moderner Wärmepumpen-Außeneinheit neben dem Haus" class="w-full rounded-2xl object-cover aspect-[21/9]" loading="eager">
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <article class="bg-white pb-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="grid lg:grid-cols-[1fr_240px] gap-10 max-w-5xl mx-auto">
+
+        <!-- Main content -->
+        <div class="prose">
+
+          <!-- Table of Contents -->
+          <div class="bg-effi-beige rounded-2xl p-6 mb-10 toc">
+            <h4 class="font-montserrat text-effi-green-dark text-sm font-bold uppercase tracking-wider mb-3">Inhaltsverzeichnis</h4>
+            <ol class="space-y-2 text-sm list-decimal pl-4">
+              <li><a href="#ehrlich">Ehrliche Einschätzung statt Verkaufsversprechen</a></li>
+              <li><a href="#lohnt">Wann sich eine Wärmepumpe im Altbau lohnt</a></li>
+              <li><a href="#lohnt-nicht">Wann sie sich (noch) nicht lohnt</a></li>
+              <li><a href="#kosten">Was eine Wärmepumpe im Altbau wirklich kostet</a></li>
+              <li><a href="#hybrid">Hybridlösung als kluger Zwischenweg</a></li>
+              <li><a href="#matrix">Entscheidungsmatrix für Ihr Gebäude</a></li>
+              <li><a href="#faq">Häufige Fragen</a></li>
+              <li><a href="#fazit">Fazit: Unser ehrliches Urteil</a></li>
+            </ol>
+          </div>
+
+          <div class="info-box">
+            <h3 class="text-effi-green-dark font-bold text-sm uppercase tracking-wider mb-2">Das Wichtigste in Kürze</h3>
+            <ul class="space-y-1 text-sm">
+              <li class="text-effi-green-dark"><strong>Vorlauftemperatur:</strong> Nicht das Baujahr entscheidet, sondern die Vorlauftemperatur Ihrer Heizung. Liegt sie unter 55 °C, läuft die Wärmepumpe wirtschaftlich.</li>
+              <li class="text-effi-green-dark"><strong>JAZ:</strong> Ab einer Jahresarbeitszahl von 3,5 ist die Wärmepumpe der Gasheizung klar überlegen; unter 3,0 kippt die Rechnung.</li>
+              <li class="text-effi-green-dark"><strong>Kosten &amp; Ersparnis (Einfamilienhaus):</strong> Diese Werte gelten für Einfamilienhäuser und können sich von Haus zu Haus extrem unterscheiden. Als grobe Orientierung: Gesamtkosten 10.000–60.000 € je nach System, jährliche Ersparnis gegenüber Gas 500–1.400 €.</li>
+              <li class="text-effi-green-dark"><strong>Zwei Wege zur Wärmepumpe:</strong> Neben der Luft-Wasser-Wärmepumpe (ca. 27.000–40.000 € installiert) ist im Altbau oft die Luft-Luft-Wärmepumpe die wirtschaftlichere Wahl (ca. 10.000–20.000 €, Warmwasser separat +2.500–5.000 €) – beide werden über KfW 458 gleichermaßen gefördert. Alle €-Werte: Orientierung fürs Einfamilienhaus.</li>
+              <li class="text-effi-green-dark"><strong>Förderung:</strong> Für Förderanträge ab dem 21. Juli 2026 sind über die BEG nach aktuellem Stand bis zu 80 % möglich – im Einfamilienhaus maximal 22.400 € Zuschuss (förderfähige Kosten auf 28.000 € gedeckelt, ab Februar 2027 schrittweise sinkend). Bei Mehrfamilienhäusern ist der Deckel gestaffelt und muss individuell berechnet werden – er lässt sich nicht einfach mit der Zahl der Wohneinheiten multiplizieren. Der Antrag wird vor Beginn des Vorhabens gestellt; Grundlage ist ein Vertrag mit aufschiebender Bedingung.</li>
+              <li class="text-effi-green-dark"><strong>Vorlauf über 55 °C:</strong> Dann lohnt sich zuerst die Ertüchtigung der Heizflächen (größere oder zusätzliche Heizkörper), eine Hybridlösung als Brücke – oder eine Luft-Luft-Wärmepumpe, die keinen Hochtemperatur-Wasserkreis braucht.</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-circle-info mr-2 text-effi-gold"></i>Stand der Angaben (12. Juli 2026):</strong> Bundestag und Bundesrat haben am 10. Juli 2026 das neue Gebäudemodernisierungsgesetz (GModG) beschlossen, und die reformierten KfW-Förderbedingungen gelten laut BMWE und KfW für neue Anträge ab dem 21. Juli 2026. Das Gesetz ist jedoch noch nicht verkündet und die geänderte Förderrichtlinie noch nicht im Bundesanzeiger veröffentlicht – alle Zahlen geben den aktuellen Stand des Wissens wieder, ohne Gewähr. Die Förderung steht außerdem unter dem Vorbehalt verfügbarer Bundesmittel; ein Rechtsanspruch besteht nicht. Welche Konditionen für Ihr Vorhaben konkret gelten, prüfen wir gern tagesaktuell für Sie.</p>
+          </div>
+
+          <h2 id="ehrlich">Warum ehrliche Einschätzung hier mehr wert ist als Verkaufsversprechen</h2>
+
+          <p>Rund um die Wärmepumpe im Altbau kursieren zwei Lager. Das eine verspricht den problemlosen „1:1-Tausch" der alten Gasheizung gegen eine Wärmepumpe – ein Nachmittag Arbeit, fertig. Das andere warnt pauschal, Wärmepumpen seien für Altbauten ungeeignet. Beide Aussagen sind in dieser Form falsch und kosten Hausbesitzer im Zweifel Tausende Euro.</p>
+
+          <p>Wir bei EffiNova haben kein Interesse daran, Ihnen eine Anlage zu verkaufen, die in Ihrem Haus schlecht läuft. Eine unwirtschaftlich arbeitende Wärmepumpe ist für beide Seiten ein Problem: Sie zahlen hohe Stromrechnungen, und wir verlieren einen Kunden, der uns weiterempfiehlt. Deshalb beginnt jede seriöse Einschätzung mit der Frage, ob – und unter welchen Bedingungen – sich der Umstieg rechnet.</p>
+
+          <h3>Die Wahrheit über den „1:1-Tausch"</h3>
+
+          <p>Eine alte Gas- oder Ölheizung erzeugt Vorlauftemperaturen von oft 65 bis 75 °C. Bei diesen Temperaturen werden auch kleine, alte Heizkörper warm genug. Eine Wärmepumpe dagegen arbeitet umso effizienter, je niedriger die Vorlauftemperatur ist. Tauschen Sie den Wärmeerzeuger einfach aus, ohne das Heizsystem anzupassen, läuft die Wärmepumpe dauerhaft am oberen Leistungslimit – mit schlechter Effizienz, hohen Stromkosten und im schlimmsten Fall kalten Räumen an Frosttagen. Genau das ist der „1:1-Tausch", der schiefgeht.</p>
+
+          <p>Der Hebel liegt fast nie an der Wärmepumpe selbst, sondern an ihrem Umfeld: an den Heizflächen, an der Dämmung und an einer sauberen Heizlastberechnung. Wer diese Stellschrauben kennt, kann eine Wärmepumpe selbst in vielen unsanierten Altbauten sinnvoll betreiben.</p>
+
+          <h3>Für wen dieser Leitfaden gemacht ist</h3>
+
+          <p>Dieser Artikel richtet sich an Eigentümerinnen und Eigentümer von Bestandsgebäuden, die vor der Frage stehen: Soll ich meine Heizung auf eine Wärmepumpe umstellen – oder lohnt sich das in meinem Haus nicht? Sie müssen dafür kein Technik-Experte sein. Wir erklären die wenigen Kennzahlen, auf die es ankommt, und geben Ihnen am Ende eine Entscheidungsmatrix an die Hand, mit der Sie Ihr Gebäude grob einordnen können. Ob sich der Umstieg für Ihr Gebäude konkret lohnt, prüfen wir auf Wunsch gern persönlich für Sie.</p>
+
+          <h2 id="lohnt">Wann sich eine Wärmepumpe im Altbau lohnt</h2>
+
+          <p>Eine Wärmepumpe lohnt sich im Altbau immer dann, wenn sie die benötigte Wärme mit niedriger Vorlauftemperatur und einer guten Jahresarbeitszahl bereitstellen kann. Vier Anzeichen sprechen klar dafür.</p>
+
+          <h3>Vorlauftemperatur unter 55 °C – die wichtigste Weiche</h3>
+
+          <p>Die Vorlauftemperatur ist die Temperatur des Heizwassers, das zu Ihren Heizkörpern oder zur Fußbodenheizung fließt. Sie ist der mit Abstand wichtigste Faktor. Als Faustregel gilt: Kommt Ihr Haus an kalten Tagen mit einer Vorlauftemperatur von 55 °C oder weniger aus, ist eine Wärmepumpe wirtschaftlich betreibbar. Unter 45 °C – etwa mit Fußbodenheizung – arbeitet sie sogar exzellent.</p>
+
+          <p>Den groben Test können Sie selbst machen: Stellen Sie die Vorlauftemperatur Ihrer bestehenden Heizung an einem kalten Wintertag so weit herunter, bis es in den Räumen gerade noch behaglich warm wird. Bleiben Sie dabei unter 55 °C, ist das ein sehr gutes Zeichen. Die belastbare Aussage liefert allerdings erst eine raumweise Heizlastberechnung – die Grundlage jeder seriösen Planung.</p>
+
+          <h3>Gut gedämmte Gebäude: Baujahr ab 1995 oder kernsaniert</h3>
+
+          <p>Häuser, die ab Mitte der 1990er-Jahre gebaut wurden, erfüllen meist bereits einen brauchbaren Dämmstandard. Wurde ein älteres Gebäude zwischenzeitlich kernsaniert – also Fassade, Dach, Fenster und oft auch die Heizflächen erneuert – gilt dasselbe. In solchen Häusern ist der Wärmebedarf so weit gesunken, dass moderate Vorlauftemperaturen ausreichen. Hier ist die Wärmepumpe in der Regel ohne weitere Vorarbeiten die richtige Wahl.</p>
+
+          <h3>Teilsanierte Altbauten mit großen Heizkörpern</h3>
+
+          <p>Auch ältere Häuser, die nur teilsaniert sind, sind oft besser geeignet als gedacht. Entscheidend ist die Größe der Heizflächen: Große, alte Gussheizkörper oder nachträglich eingebaute Niedertemperatur-Heizkörper geben auch bei niedriger Vorlauftemperatur genug Wärme ab. Wurden zusätzlich das Dach gedämmt und die Fenster getauscht, lässt sich die nötige Vorlauftemperatur häufig unter die kritische 55-°C-Marke drücken. In vielen dieser Fälle reicht es, einzelne unterdimensionierte Heizkörper zu tauschen, statt das ganze Haus zu sanieren.</p>
+
+          <img src="images/waermepumpe-altbau-lohnt-sich/waermepumpe-altbau-lohnt-sich-2.webp" alt="Moderne Luft-Wasser-Wärmepumpen-Außeneinheit mit gedämmten Leitungen an einer verputzten Hauswand" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h3>JAZ ≥ 3,5: Der Wirtschaftlichkeitswert, den Sie kennen sollten</h3>
+
+          <p>Die Jahresarbeitszahl (JAZ) gibt an, wie viele Kilowattstunden Wärme die Wärmepumpe aus einer Kilowattstunde Strom erzeugt. Eine JAZ von 3,5 bedeutet: Aus 1 kWh Strom werden 3,5 kWh Wärme. Je höher die JAZ, desto günstiger heizen Sie.</p>
+
+          <p>Als Wirtschaftlichkeitsschwelle gilt: Ab einer JAZ von 3,5 spielt die Wärmepumpe ihre Stärken voll aus und ist der Gasheizung in den laufenden Kosten klar überlegen. Eine gut geplante Luft-Wasser-Wärmepumpe erreicht diesen Wert in geeigneten Altbauten zuverlässig; mit Erdwärme (Sole-Wasser) liegt die JAZ oft noch höher. Welche JAZ in Ihrem Haus realistisch ist, hängt direkt von der Vorlauftemperatur ab – der Kreis schließt sich.</p>
+
+          <h3>Der oft übersehene Weg: Luft-Luft-Wärmepumpe</h3>
+
+          <p>Wenn über die Wärmepumpe im Altbau gesprochen wird, ist fast immer die Luft-Wasser-Variante gemeint – dabei gibt es einen zweiten, oft günstigeren Weg: die Luft-Luft-Wärmepumpe (Multisplit). Sie heizt die Räume direkt über Innengeräte und umgeht die Vorlauftemperatur-Hürde komplett, weil kein 55–70-°C-Wasserkreis nötig ist. Fürs Einfamilienhaus liegt sie installiert bei etwa 10.000–20.000 € statt 27.000–40.000 € (Orientierungswerte) – ehrlicherweise muss das Warmwasser separat gelöst werden, etwa mit einer Brauchwasser-Wärmepumpe für 2.500–5.000 €, die vorhandenen Heizkörper bleiben ungenutzt, und die Innengeräte sind sichtbar. Gefördert wird sie über KfW 458 genauso wie eine Luft-Wasser-Wärmepumpe, sofern das Gerät auf der BAFA-Liste förderfähiger Wärmepumpen steht und als Heizung die alte Anlage ersetzt. Den vollständigen Vergleich beider Systeme finden Sie in unserem Beitrag <a href="/blog/waermepumpe/luft-luft-vs-luft-wasser-waermepumpe-altbau.html">Luft-Luft- vs. Luft-Wasser-Wärmepumpe im Altbau</a>.</p>
+
+          <div class="bg-effi-green rounded-2xl p-6 my-8 text-center">
+            <p class="font-montserrat text-lg font-bold mb-2" style="color:#ffffff">Rechnet sich die Wärmepumpe bei den neuen Fördersätzen für Ihr Haus?</p>
+            <p class="text-sm mb-4" style="color:rgba(255,255,255,0.90)">Ehrliche Ersteinschätzung: EffiNova prüft mit Heizlastberechnung und Vor-Ort-Begehung, ob sich der Umstieg zu den ab 21. Juli geltenden Konditionen für Ihr Gebäude rechnet.</p>
+            <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-6 py-3 text-sm font-semibold no-underline hover:bg-effi-beige transition-colors" style="text-decoration:none;color:#004225"><i class="fas fa-phone text-sm"></i> Kostenlose Ersteinschätzung</a>
+          </div>
+
+          <h2 id="lohnt-nicht">Wann sich eine Wärmepumpe (noch) nicht lohnt</h2>
+
+          <p>Ehrlichkeit gehört dazu: In manchen Gebäuden ist der direkte Umstieg auf eine Wärmepumpe heute keine gute Idee. Das heißt nicht „nie" – aber „noch nicht" oder „nicht ohne Vorarbeiten".</p>
+
+          <h3>Vorlauftemperatur dauerhaft über 55 °C ohne ertüchtigte Heizflächen</h3>
+
+          <p>Braucht Ihr Haus an normalen Wintertagen dauerhaft mehr als 55 °C Vorlauftemperatur, um warm zu werden, läuft eine Wärmepumpe in diesem Zustand ineffizient – mit großem Temperaturhub, sinkender Jahresarbeitszahl und entsprechend hohen Stromkosten. Dann lohnt es sich, zuerst die Heizflächen zu ertüchtigen: größere oder zusätzliche Heizkörper und, wo nötig, gezielte Dämmung, um die benötigte Vorlauftemperatur unter 55 °C zu senken. Erst danach arbeitet die Wärmepumpe wirtschaftlich. Bei sehr hohen Werten von über etwa 70 °C ist ohne diese Vorarbeiten keine gute JAZ erreichbar.</p>
+
+          <h3>Unsanierter Altbau vor 1978 ohne Investitionsbereitschaft</h3>
+
+          <p>Gebäude, die vor 1978 und damit vor der ersten Wärmeschutzverordnung errichtet wurden und seither nicht energetisch ertüchtigt sind, verlieren viel Wärme über Wände, Dach und Fenster. In solchen Häusern ist nicht die Wärmepumpe das Problem, sondern die ungebremsten Wärmeverluste. Wer hier nicht bereit ist, parallel in Dämmung oder zumindest größere Heizkörper zu investieren, wird mit einer reinen Wärmepumpe nicht glücklich.</p>
+
+          <img src="images/waermepumpe-altbau-lohnt-sich/waermepumpe-altbau-lohnt-sich-3-v2.webp" alt="Verputzter Altbau mit Baugerüst in der Sanierung, moderne Wärmepumpen-Außeneinheit am Sockel" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h3>Sehr kleines Budget und kein Sanierungsplan</h3>
+
+          <p>Eine Wärmepumpe ist eine Investition, die sich über Jahre auszahlt – nicht über Nacht. Wer ein sehr kleines Budget hat, keine Förderung in Anspruch nehmen kann oder will und keinen Plan für die nächsten Schritte hat, fährt mit einer überstürzten Anlage schlecht. In diesem Fall ist es sinnvoller, zunächst einen Sanierungsfahrplan erstellen zu lassen und die Maßnahmen geordnet anzugehen.</p>
+
+          <h3>JAZ unter 3,0: Wenn der Strom teurer wird als das Gas</h3>
+
+          <p>Die klare Wirtschaftlichkeitsgrenze liegt bei einer JAZ von 3,0. Fällt die Jahresarbeitszahl darunter, kippt die Rechnung: Der teurere Strom macht den Effizienzvorteil zunichte, und die Wärmepumpe heizt unter Umständen teurer als eine moderne Gasheizung. Eine JAZ unter 3,0 ist daher das wichtigste Warnsignal – und der Grund, warum die ehrliche Heizlastberechnung vor dem Kauf so entscheidend ist.</p>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-triangle-exclamation mr-2 text-effi-gold"></i>Häufigste Fehlerquelle:</strong> In fast allen problematischen Fällen fehlte eine raumweise Heizlastberechnung. Ohne sie wird die Wärmepumpe „nach Gefühl" oder nach der alten Heizungsleistung ausgelegt – meist zu groß und mit zu hoher Vorlauftemperatur. Das Ergebnis ist genau die schlechte JAZ, vor der alle warnen.</p>
+          </div>
+
+          <h2 id="kosten">Der Kostenfaktor: Was eine Wärmepumpe im Altbau wirklich kostet</h2>
+
+          <p>Die Kosten schwanken stark, weil im Altbau fast immer Begleitmaßnahmen dazukommen. Statt einer einzelnen Zahl ist eine ehrliche Spanne hilfreicher.</p>
+
+          <h3>Gesamtkosten realistisch: 10.000 bis 60.000 €</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Realistische Spanne (vor Förderung)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Luft-Luft-Wärmepumpe (Multisplit, Ganzhaus)*</td>
+                <td>10.000 – 20.000 €</td>
+              </tr>
+              <tr>
+                <td>Luft-Wasser-Wärmepumpe (komplett installiert)</td>
+                <td>27.000 – 40.000 €</td>
+              </tr>
+              <tr>
+                <td>Sole-Wasser-Wärmepumpe (mit Erdbohrung/Kollektor)</td>
+                <td>25.000 – 45.000 €</td>
+              </tr>
+              <tr>
+                <td>Begleitende Maßnahmen bei wasserführenden Systemen (größere Heizkörper, hydraulischer Abgleich, Pufferspeicher)</td>
+                <td>3.000 – 12.000 €</td>
+              </tr>
+              <tr>
+                <td>Optionale Teilsanierung (Dämmung, Fenster)</td>
+                <td>individuell</td>
+              </tr>
+              <tr>
+                <td><strong>Realistische Gesamtspanne</strong></td>
+                <td><strong>10.000 – 60.000 €</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="text-sm">* Alle Werte: Orientierung fürs Einfamilienhaus (Marktniveau 2026). Bei der Luft-Luft-Wärmepumpe kommt die Warmwasser-Bereitung separat hinzu – z. B. eine Brauchwasser-Wärmepumpe für 2.500–5.000 €.</p>
+
+          <p>Die untere Spanne erreicht vor allem die Luft-Luft-Lösung, die ohne Wasserkreis auskommt; bei der Luft-Wasser-Wärmepumpe kommen zum installierten Gerät im Altbau meist noch Begleitmaßnahmen hinzu. Die obere Spanne betrifft anspruchsvolle Altbauten mit Erdwärme und zusätzlicher Teilsanierung.</p>
+
+          <h3>Förderung: bis zu 80 % über die BEG</h3>
+
+          <p>Die gute Nachricht: Der Staat trägt einen erheblichen Teil. Für Förderanträge ab dem 21. Juli 2026 setzt sich der Heizungstausch-Zuschuss über die Bundesförderung für effiziente Gebäude (BEG) – beantragt wird er im KfW-Portal (Programm 458) – nach aktuellem Stand laut KfW und BMWE so zusammen:</p>
+
+          <ul>
+            <li><strong>Grundförderung: 30 %</strong> – für jeden, der eine alte Heizung gegen eine Wärmepumpe tauscht.</li>
+            <li><strong>Klimageschwindigkeitsbonus: +16 %</strong> – für Selbstnutzer beim Austausch einer funktionstüchtigen Öl-, Kohle-, Gasetagen- oder Nachtspeicherheizung; Gas- und Biomasse-Zentralheizungen zählen ab 20 Jahren Alter. Der Bonus sinkt erstmals zum 1. Februar 2027 und danach halbjährlich um 4 Prozentpunkte.</li>
+            <li><strong>Einkommensbonus: +40, +30 oder +10 %</strong> – für selbstnutzende Eigentümer, gestaffelt nach dem zu versteuernden Haushaltseinkommen: 40 % bis 30.000 €, 30 % bis 40.000 €, 10 % bis 50.000 € pro Jahr.</li>
+            <li><strong>Familienzuschlag (neu):</strong> Lebt mindestens ein minderjähriges Kind im Haushalt, wird das anzusetzende Einkommen einmalig um 10.000 € reduziert – Familien erreichen so leichter eine höhere Stufe des Einkommensbonus.</li>
+          </ul>
+
+          <p>Der frühere Effizienzbonus von 5 % für Wärmepumpen mit natürlichem Kältemittel entfällt für neue Anträge ersatzlos. Geräte mit natürlichen Kältemitteln wie R290 bleiben technisch dennoch eine sinnvolle Wahl – einen zusätzlichen Förderbonus gibt es dafür aber nicht mehr.</p>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>So rechnet sich die Förderung:</strong> Die Boni sind auf insgesamt <strong>maximal 80 %</strong> gedeckelt, die förderfähigen Kosten im Einfamilienhaus auf 28.000 € (sinkt erstmals zum 1. Februar 2027). Die maximale Fördersumme beträgt damit <strong>22.400 €</strong>. Rechenbeispiel: Bei einem 35.000-€-Projekt sind 28.000 € förderfähig; mit 30 % Grundförderung plus 16 % Klimageschwindigkeitsbonus (46 %) ergibt das <strong>12.880 € Zuschuss</strong> und 22.120 € Eigenanteil – im Best Case von 80 % sind es 22.400 € Zuschuss und 12.600 € Eigenanteil. Wichtig: Lassen Sie das Angebot vor der Unterschrift auf Förderfähigkeit prüfen (das übernehmen wir bei EffiNova für Sie), schließen Sie dann den Liefer-/Leistungsvertrag <strong>mit aufschiebender Bedingung</strong> und stellen Sie erst danach den Antrag – wer vor der Antragstellung mit dem Einbau beginnt, verliert den Anspruch.</p>
+          </div>
+
+          <h3>Laufende Kosten: Strom vs. Gas</h3>
+
+          <p>Ein Rechenbeispiel für ein typisches Einfamilienhaus mit rund 20.000 kWh Jahresheizwärmebedarf:</p>
+
+          <ul>
+            <li><strong>Gasheizung:</strong> rund 22.000 kWh Gasbezug bei etwa 12 ct/kWh ergeben ca. <strong>2.640 € pro Jahr</strong> – Tendenz steigend durch den CO₂-Preis.</li>
+            <li><strong>Wärmepumpe (JAZ 3,5):</strong> rund 5.700 kWh Strom bei etwa 25 ct/kWh im Wärmepumpentarif ergeben ca. <strong>1.430 € pro Jahr</strong>.</li>
+          </ul>
+
+          <p>Das entspricht einer Ersparnis von rund 1.200 € jährlich. Je nach Strompreis, Gaspreis und erreichter JAZ liegt die realistische Einsparung zwischen <strong>500 und 1.400 € pro Jahr</strong>. Sinkt die JAZ Richtung 3,0, schrumpft der Vorteil – fällt sie darunter, kehrt er sich um.</p>
+
+          <h3>Amortisation: Wann rechnet sich die Investition?</h3>
+
+          <p>Nach Abzug der Förderung bleibt bei einem 35.000-€-Projekt (davon 28.000 € förderfähig) mit 46 % Förderung – also 12.880 € Zuschuss – ein Eigenanteil von rund 22.120 €. Bei 1.200 € Ersparnis pro Jahr ist dieser Betrag in etwa 18 bis 19 Jahren wieder hereingeholt. Unter günstigen Bedingungen – maximale Förderung von 80 % (Eigenanteil dann 12.600 €), gute JAZ, steigende Gaspreise – ist die Amortisation in <strong>rund 9 bis 11 Jahren</strong> möglich. Realistisch sollten Sie für die meisten Altbauten mit <strong>10 bis 20 Jahren</strong> rechnen, je nachdem, welche Boni greifen und ob Begleitmaßnahmen nötig sind. Über die Lebensdauer von 20 Jahren und mehr betrachtet arbeitet eine gut geplante Anlage dennoch günstiger als jede fossile Heizung.</p>
+
+          <h3>Lohnt sich die Wärmepumpe nach der Förderkürzung noch?</h3>
+
+          <p>Die ehrliche Antwort: Ja — wenn Vorlauftemperatur und Jahresarbeitszahl stimmen. Die Reform hat die Förderung gekürzt, aber nicht gestrichen: Statt der alten Konditionen gilt für Anträge ab dem 21. Juli 2026 im Standardfall der Satz von 46 % (30 % Grundförderung plus 16 % Klimageschwindigkeitsbonus) auf höchstens 28.000 € förderfähige Kosten — also <strong>12.880 € Zuschuss</strong>. Bei einem 35.000-€-Projekt bleiben damit 22.120 € Eigenanteil; bei 1.200 € jährlicher Ersparnis gegenüber Gas trägt sich die Anlage weiterhin über ihre Lebensdauer. An der Grundrechnung ändert die Kürzung also nichts: Liegt die Vorlauftemperatur unter 55 °C und die JAZ über 3,5, rechnet sich der Umstieg auch zu den neuen Sätzen — liegt sie darüber, hätte er sich auch zu den alten nicht gerechnet. Wichtig für die Planung: Die Förderung sinkt ab dem 1. Februar 2027 schrittweise weiter — den vollständigen Degressions-Fahrplan und den Antragsweg zeigt unser Beitrag zum <a href="/blog/waermepumpe/waermepumpe-altbau-foerderung-beantragen.html">Beantragen der Wärmepumpen-Förderung</a>.</p>
+
+          <h3>Keine Pflicht mehr durch das GModG — warum die Wirtschaftlichkeit trotzdem dafür spricht</h3>
+
+          <p>Mit dem am 10. Juli 2026 von Bundestag und Bundesrat beschlossenen Gebäudemodernisierungsgesetz (GModG) entfällt die 65-Prozent-Vorgabe für erneuerbare Energien — es gilt künftig freie Heizungswahl (das Gesetz ist allerdings noch nicht verkündet). Niemand muss also auf eine Wärmepumpe umsteigen. Genau deshalb lohnt der nüchterne Blick auf die Zahlen: Der CO₂-Preis verteuert Gas und Öl Jahr für Jahr weiter, die Wärmepumpe heizt bei guter JAZ mit deutlichem Kostenvorteil beim Strom, und der Staat bezuschusst den Umstieg weiterhin mit 30 bis 80 % der förderfähigen Kosten. Wer sich heute für die Wärmepumpe entscheidet, tut das nicht wegen einer Pflicht — sondern weil die Wirtschaftlichkeitsrechnung in geeigneten Gebäuden schlicht für sie spricht.</p>
+
+          <h2 id="hybrid">Hybridlösung als kluger Zwischenweg</h2>
+
+          <p>Zwischen „Wärmepumpe sofort" und „erst komplett sanieren" gibt es einen oft übersehenen dritten Weg: die Hybridheizung. Für viele Altbauten ist sie nicht der Kompromiss, sondern die wirtschaftlich beste Lösung.</p>
+
+          <h3>Was eine Hybridheizung ist</h3>
+
+          <p>Eine Hybridheizung kombiniert eine Wärmepumpe mit einem zweiten Wärmeerzeuger – meist einer (oft bereits vorhandenen) Gas- oder Ölheizung. Die Wärmepumpe übernimmt den Großteil des Jahres die Heizarbeit bei niedrigen Vorlauftemperaturen. Nur an den wenigen sehr kalten Tagen, an denen hohe Vorlauftemperaturen gefragt sind, springt der zweite Erzeuger ein. So arbeitet die Wärmepumpe immer in ihrem effizienten Bereich.</p>
+
+          <h3>Für wen die Hybridlösung die bessere Wahl ist</h3>
+
+          <p>Die Hybridheizung ist ideal für Gebäude im Übergangsbereich – also Häuser, deren Vorlauftemperatur an den meisten Tagen bei 55 °C liegt, an Frosttagen aber Richtung 70 °C steigt. Genau in dieser Lücke spielt sie ihre Stärke aus: Sie holen den Großteil der Effizienzgewinne ab, ohne das Risiko kalter Räume an Extremtagen. Auch wer eine noch funktionstüchtige Heizung weiternutzen und die Sanierung über Jahre strecken möchte, fährt mit der Hybridlösung gut.</p>
+
+          <h3>Kosten und Förderung</h3>
+
+          <p>Eine Hybridlösung liegt mit rund <strong>15.000 – 25.000 €</strong> häufig unter einer reinen Wärmepumpenlösung mit umfangreichen Begleitmaßnahmen. Wird die Wärmepumpe im Hybridsystem über die BEG gefördert, gelten dieselben Fördersätze wie oben – gefördert wird dabei nur der Wärmepumpen-Anteil, der die technischen Anforderungen erfüllen muss; der fossile Kessel selbst ist nicht förderfähig. Für viele Eigentümer ist das der pragmatische Einstieg in die Wärmewende, ohne sich finanziell zu übernehmen.</p>
+
+          <img src="images/waermepumpe-altbau-lohnt-sich/waermepumpe-altbau-lohnt-sich-4.webp" alt="Gemütliches Altbau-Wohnzimmer mit altem Gussheizkörper unterm Fenster und Holzparkett" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="matrix">Entscheidungsmatrix — welche Lösung passt zu Ihrem Gebäude?</h2>
+
+          <p>Ordnen Sie Ihr Haus grob in eine der vier Kategorien ein. Die Matrix ersetzt keine Heizlastberechnung, gibt Ihnen aber eine ehrliche erste Richtung.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Gebäudetyp</th>
+                <th>Vorlauftemperatur</th>
+                <th>Unsere Empfehlung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Altbau vor 1978, unsaniert</td>
+                <td>über 70 °C</td>
+                <td>Erst sanieren bzw. Heizflächen vergrößern, dann Wärmepumpe – oder Luft-Luft-Wärmepumpe prüfen: Sie braucht keinen Hochtemperatur-Wasserkreis</td>
+              </tr>
+              <tr>
+                <td>Baujahr 1978–1994, teilgedämmt</td>
+                <td>55–70 °C</td>
+                <td>Hybridlösung, Luft-Luft-Wärmepumpe oder Luft-Wasser-Wärmepumpe nach gezielter Teilsanierung</td>
+              </tr>
+              <tr>
+                <td>Baujahr ab 1995 oder kernsaniert</td>
+                <td>bis 55 °C</td>
+                <td>Wärmepumpe direkt sinnvoll – meist ohne Vorarbeiten</td>
+              </tr>
+              <tr>
+                <td>Gründerzeit / Denkmalschutz</td>
+                <td>variabel</td>
+                <td>Fachberatung zwingend – individuelle Lösung statt Pauschalurteil</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="faq">Häufige Fragen</h2>
+
+          <details>
+            <summary>Ist eine Wärmepumpe im Altbau wirklich sinnvoll?</summary>
+            <p>Eine Wärmepumpe im Altbau ist dann sinnvoll, wenn die Vorlauftemperatur des Heizsystems unter 55 °C liegt und das Gebäude ausreichend gedämmt ist. Bei Baujahren ab 1995 oder kernsanierten Häusern ist das häufig der Fall. Bei unsanierten Altbauten vor 1978 sollten zuerst Dämmmaßnahmen umgesetzt werden.</p>
+          </details>
+
+          <details>
+            <summary>In welchen Häusern scheitert die Wärmepumpe?</summary>
+            <p>Wärmepumpen arbeiten unwirtschaftlich in Gebäuden mit Vorlauftemperaturen dauerhaft über 70 °C, also typischerweise in unsanierten Altbauten vor 1978 mit kleinen, alten Heizkörpern. Auch fehlende Stellfläche oder ein sehr geringer Jahresheizwärmebedarf unter 8.000 kWh können gegen den Einbau sprechen.</p>
+          </details>
+
+          <details>
+            <summary>Welche Wärmepumpe ist für Altbauten geeignet?</summary>
+            <p>Im Altbau kommen vor allem zwei Systeme infrage: Die Luft-Luft-Wärmepumpe heizt die Räume direkt über Innengeräte – ganz ohne die Vorlauftemperatur-Hürde eines Wasserkreises – und ist mit rund 10.000–20.000 € (Orientierung Einfamilienhaus) oft die wirtschaftlichere Wahl; Warmwasser wird separat gelöst, z. B. mit einer Brauchwasser-Wärmepumpe für 2.500–5.000 €. Die Luft-Wasser-Wärmepumpe (ca. 27.000–40.000 € installiert) ist sinnvoll, wenn die vorhandenen Heizkörper und die Hydraulik weiter genutzt und das Warmwasser integriert werden sollen. Sole-Wasser-Wärmepumpen erreichen höhere JAZ-Werte, brauchen aber ausreichende Grundstücksfläche. Beide Luft-Systeme werden über KfW 458 gleichermaßen gefördert.</p>
+          </details>
+
+          <details>
+            <summary>Welche Häuser sind nicht für eine Wärmepumpe geeignet?</summary>
+            <p>Gebäude mit dauerhaft über 70 °C Vorlauftemperatur sind nicht optimal geeignet – vor allem unsanierte Altbauten vor 1978. Denkmalgeschützte Häuser erfordern eine individuelle Beratung.</p>
+          </details>
+
+          <details>
+            <summary>Wie hoch ist die Förderung für eine Wärmepumpe im Altbau 2026?</summary>
+            <p>Für Förderanträge ab dem 21. Juli 2026 gilt nach aktuellem Stand: Über die BEG gibt es einen Grundzuschuss von 30 %; beantragt wird der Heizungstausch-Zuschuss über das KfW-Portal (Programm 458). Mit Klimageschwindigkeitsbonus (16 %, ab Februar 2027 schrittweise sinkend), gestaffeltem Einkommensbonus (40, 30 oder 10 %) und Familienzuschlag sind laut KfW bis zu 80 % möglich. Die förderfähigen Kosten sind im Einfamilienhaus auf 28.000 € gedeckelt (ab Februar 2027 schrittweise sinkend) – die maximale Fördersumme beträgt damit 22.400 €; bei Mehrfamilienhäusern gilt eine Staffelung je Wohneinheit. Der Antrag wird vor Beginn des Vorhabens gestellt – Grundlage ist ein Vertrag mit aufschiebender Bedingung.</p>
+          </details>
+
+          <details>
+            <summary>Wird die Wärmepumpe 2026 noch gefördert?</summary>
+            <p>Ja. Auch nach der Reform vom Juli 2026 wird der Heizungstausch weiter bezuschusst: Für Anträge ab dem 21. Juli 2026 gibt es nach aktuellem Stand 30 % Grundförderung für alle, mit Klimageschwindigkeits-, Einkommensbonus und Familienzuschlag je nach Situation zwischen 30 und 80 % der förderfähigen Kosten. Ab Februar 2027 sinken Klimageschwindigkeitsbonus und förderfähiger Höchstbetrag allerdings schrittweise – wer ohnehin plant, sichert sich mit einem früheren Antrag die höheren Konditionen. Den Ablauf Schritt für Schritt erklärt unser Beitrag zum Beantragen der Wärmepumpen-Förderung.</p>
+          </details>
+
+          <h2 id="fazit">Fazit: Unser ehrliches Urteil — und wie EffiNova hilft</h2>
+
+          <p>Die Wärmepumpe im Altbau lohnt sich – aber nicht überall und nicht ohne Plan. Entscheidend ist nicht das Baujahr auf dem Papier, sondern die Vorlauftemperatur, die Ihr Haus tatsächlich braucht, und die daraus folgende Jahresarbeitszahl. Liegt die Vorlauftemperatur unter 55 °C und die JAZ über 3,5, ist der Umstieg klar wirtschaftlich. Im Übergangsbereich ist die Hybridlösung oft die klügere Wahl, und bei unsanierten Häusern lohnt sich zuerst die Ertüchtigung der Heizflächen oder Dämmung.</p>
+
+          <p>Die mit Abstand häufigste Fehlerquelle ist eine fehlende, saubere Heizlastberechnung. Sie ist die Grundlage dafür, dass Ihre Wärmepumpe richtig dimensioniert wird, mit niedriger Vorlauftemperatur läuft und die versprochene Effizienz auch erreicht.</p>
+
+          <blockquote>
+            <p>„Nicht das Baujahr entscheidet, ob sich eine Wärmepumpe im Altbau lohnt – sondern die Vorlauftemperatur und eine ehrliche Heizlastberechnung."</p>
+          </blockquote>
+
+          <p>Genau hier setzen wir an: EffiNova erstellt für Ihr Gebäude die raumweise Heizlastberechnung, prüft die nötige Vorlauftemperatur und sagt Ihnen ehrlich, ob sich eine Wärmepumpe, eine Hybridlösung oder zunächst eine Sanierung rechnet – inklusive vollständigem Fördermittel-Check. So treffen Sie Ihre Entscheidung auf Basis von Zahlen, nicht von Versprechen.</p>
+
+        </div>
+
+        <!-- Sidebar (Desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-24 space-y-6">
+
+            <!-- Author Card -->
+            <div class="bg-effi-beige rounded-2xl p-5 text-center">
+              <div class="w-16 h-16 bg-effi-green rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-white font-montserrat font-bold text-lg">HW</span>
+              </div>
+              <p class="font-montserrat text-effi-green-dark text-sm font-bold">Henk Wenner</p>
+              <p class="text-xs text-effi-body mt-1">Zertifizierter Energieberater<br>EffiNova Energieberatung</p>
+            </div>
+
+            <!-- Share -->
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Teilen</p>
+              <div class="flex gap-2">
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-link"></i></a>
+              </div>
+            </div>
+
+            <!-- Related -->
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Verwandte Artikel</p>
+              <div class="space-y-3">
+                <a href="waermepumpe-altbau-eignung-selbstcheck.html" class="block text-sm text-effi-green hover:underline leading-snug">Eignet sich mein Altbau für eine Wärmepumpe?</a>
+                <a href="waermepumpe-altbau-kosten-foerderung-berechnen.html" class="block text-sm text-effi-green hover:underline leading-snug">Gesamtkosten realistisch berechnen</a>
+                <a href="waermepumpe-altbau-foerderung-beantragen.html" class="block text-sm text-effi-green hover:underline leading-snug">Förderung richtig beantragen</a>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA AFTER ARTICLE -->
+  <section class="bg-effi-green py-14">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="font-montserrat text-white text-2xl font-bold mb-4">Rechnet sich die Wärmepumpe bei den neuen Fördersätzen für Ihr Haus?</h2>
+      <p class="text-white/70 text-[15px] mb-8">Ehrliche Ersteinschätzung statt Verkaufsversprechen: Wir prüfen mit raumweiser Heizlastberechnung und Vor-Ort-Begehung, ob sich der Umstieg für Ihr Gebäude rechnet — inklusive Fördermittel-Check mit den ab 21. Juli 2026 geltenden Sätzen.</p>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-8 py-4 text-[15px] font-semibold hover:bg-effi-beige transition-colors">
+        <i class="fas fa-phone text-sm"></i>
+        Kostenlose Ersteinschätzung anfragen
+      </a>
+    </div>
+  </section>
+
+  <!-- MORE ARTICLES -->
+  <section class="bg-effi-beige py-14">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl font-bold mb-8">Weitere Beiträge</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="waermepumpe-altbau-eignung-selbstcheck.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/waermepumpe-altbau-eignung-selbstcheck/waermepumpe-altbau-eignung-selbstcheck-1.webp" alt="Selbstcheck: eignet sich der Altbau für eine Wärmepumpe" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Eignet sich mein Altbau für eine Wärmepumpe?</h3>
+          </div>
+        </a>
+        <a href="waermepumpe-altbau-kosten-foerderung-berechnen.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/waermepumpe-altbau-kosten-foerderung-berechnen/waermepumpe-altbau-kosten-foerderung-berechnen-1.webp" alt="Gesamtkosten einer Wärmepumpe im Altbau berechnen" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Kosten</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Gesamtkosten realistisch berechnen</h3>
+          </div>
+        </a>
+        <a href="waermepumpe-altbau-foerderung-beantragen.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="images/waermepumpe-altbau-foerderung-beantragen/waermepumpe-altbau-foerderung-beantragen-1.webp" alt="Förderung für eine Wärmepumpe im Altbau beantragen" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Förderung</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Förderung richtig beantragen</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (konsistent mit Hauptseite) -->
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <img src="/bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice & Baubegleitung</li>
+            <li>KfW Förderservice & Baubegleitung</li>
+            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
+            <li>GEG-Nachweis, Energieausweis</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Reading progress bar
+    window.addEventListener('scroll', function() {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = Math.min((window.scrollY / docHeight) * 100, 100);
+      document.getElementById('reading-progress').style.width = progress + '%';
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
+    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+  </button>
+  <script defer src="/js/cookieconsent.js"></script>
+  <script defer src="/js/cookie-consent-config.js"></script>
+  <script defer src="/js/gtm-button-tracking.js"></script>
+</body>
+</html>
