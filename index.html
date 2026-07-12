@@ -180,12 +180,32 @@
             </li>
           </ul>
           <!-- CTA Buttons -->
-          <div class="flex flex-wrap gap-4 mb-10">
+          <div class="flex flex-wrap gap-4 mb-6">
             <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-effi-green text-white rounded-xl px-6 py-3 text-base font-semibold hover:opacity-90 transition-opacity">
-              kostenloses Beratungsgespräch
+              Jetzt unverbindliches Erstgespräch buchen
             </a>
           </div>
-          <!-- Stats Bar (animated counters) + Expertenwidget in einer Zeile -->
+          <!-- Trustmarkt / Expertenmarkt Bewertungswidget (consent-gesteuert) — direkt im Hero -->
+          <div id="trustmarkt-wrapper" class="mb-8 flex justify-center lg:justify-start">
+            <!-- Aktive Widget-Variante (nach funktionalem Consent eingeblendet) -->
+            <div id="trustmarkt-live" class="hidden w-full max-w-sm">
+              <div class="trustmarkt-widget" data-company-id="B681ZqJ0n6Le0jOYv9Xe" data-widget-id="yonPpB3Er4MNvObdXYzN" style="height: 168px;"><a rel="dofollow" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" aria-label="Expertenmarkt Profil von EffiNova GmbH"></a></div>
+            </div>
+            <!-- Platzhalter ohne Consent -->
+            <div id="trustmarkt-placeholder" class="w-full max-w-sm backdrop-blur-sm bg-white/60 border border-effi-green/15 rounded-2xl px-5 py-4 flex items-center gap-3">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-effi-green/10 flex items-center justify-center">
+                <i class="fas fa-star text-effi-gold"></i>
+              </div>
+              <div class="flex-1 text-left">
+                <div class="text-effi-green font-semibold text-sm">Bewertungen bei Expertenmarkt</div>
+                <p class="text-effi-body text-xs leading-snug">Widget von Trustmarkt — Ihre Einwilligung nötig.</p>
+              </div>
+              <button type="button" id="trustmarkt-consent-btn" class="flex-shrink-0 bg-effi-green text-white rounded-lg px-3.5 py-2 text-xs font-semibold hover:bg-effi-green-mid transition-colors whitespace-nowrap">
+                Anzeigen
+              </button>
+            </div>
+          </div>
+          <!-- Stats Bar (animated counters) -->
           <div class="flex flex-wrap gap-8 items-center" id="stats-bar">
             <div class="text-center">
               <div class="text-effi-green text-3xl font-bold font-montserrat">
@@ -572,40 +592,6 @@
       <a href="https://funnel.effi-nova.de/" class="inline-block bg-effi-beige text-effi-green border-2 border-effi-green rounded-xl px-8 py-3 text-base font-semibold hover:opacity-90 transition-opacity fade-in">
         Jetzt kostenloses Gespräch vereinbaren
       </a>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: BEWERTUNGEN / TRUST (Trustmarkt)    -->
-  <!-- ============================================ -->
-  <section id="bewertungen" class="bg-white" data-nav-theme="light">
-    <div class="max-w-[1000px] mx-auto px-5 py-16 lg:py-24 text-center">
-      <h2 class="text-effi-green text-3xl md:text-[40px] font-semibold leading-tight mb-3 fade-in">
-        Das sagen unsere Kunden
-      </h2>
-      <p class="text-effi-body text-lg leading-8 max-w-2xl mx-auto mb-10 fade-in">
-        Unabhängig verifizierte Kundenbewertungen — geprüft und veröffentlicht über Expertenmarkt.
-      </p>
-      <!-- Trustmarkt / Expertenmarkt Bewertungswidget (consent-gesteuert) -->
-      <div id="trustmarkt-wrapper" class="flex justify-center fade-in">
-        <!-- Aktive Widget-Variante (initial hidden, wird nach funktionalem Consent eingeblendet) -->
-        <div id="trustmarkt-live" class="hidden w-full flex justify-center">
-          <div class="trustmarkt-widget" data-company-id="B681ZqJ0n6Le0jOYv9Xe" data-widget-id="yonPpB3Er4MNvObdXYzN" style="min-height: 168px;"><a rel="dofollow" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" aria-label="Expertenmarkt Profil von EffiNova GmbH"></a></div>
-        </div>
-        <!-- Platzhalter ohne Consent (Glasmorphism mit deckendem Fallback-Background) -->
-        <div id="trustmarkt-placeholder" class="w-full max-w-xl backdrop-blur-sm bg-effi-beige/70 border border-effi-green/15 rounded-2xl px-6 py-6 flex flex-col sm:flex-row items-center gap-4" style="min-height: 168px;">
-          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-effi-green/10 flex items-center justify-center">
-            <i class="fas fa-shield-alt text-effi-green text-xl"></i>
-          </div>
-          <div class="flex-1 text-center sm:text-left">
-            <div class="text-effi-green font-semibold text-base mb-1">Unsere Bewertungen bei Expertenmarkt</div>
-            <p class="text-effi-body text-sm leading-snug">Unabhängig verifizierte Kundenbewertungen. Das Widget wird von Trustmarkt geladen — dafür ist Ihre Einwilligung erforderlich.</p>
-          </div>
-          <button type="button" id="trustmarkt-consent-btn" class="flex-shrink-0 bg-effi-green text-white rounded-xl px-5 py-3 text-sm font-semibold hover:bg-effi-green-mid transition-colors">
-            Bewertungen anzeigen
-          </button>
-        </div>
-      </div>
     </div>
   </section>
 
