@@ -23,3 +23,6 @@ fonts/Montserrat-400.woff2
 fonts/Montserrat-500.woff2
 fonts/Montserrat-600.woff2
 fonts/Montserrat-700.woff2
+
+# Blog: JPG-Zwischenstände der Bildgenerierung (ausgeliefert wird .webp)
+blog/*/images/**/*.jpg

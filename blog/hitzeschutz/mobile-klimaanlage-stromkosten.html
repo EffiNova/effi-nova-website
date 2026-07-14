@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Consent Mode v2 — defaults (deny all, update via cookie banner) -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5XCJZ369');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Klimaanlage: Stromkosten und wann sie sich nicht lohnt – EffiNova Wissenshub</title>
+  <meta name="description" content="Was kostet eine mobile Klimaanlage wirklich? kWh und Euro pro Stunde, Tag und Saison — plus 10-Jahres-Vergleich mit Split und Luft-Luft-Wärmepumpe.">
+  <link rel="canonical" href="https://effi-nova.de/blog/hitzeschutz/mobile-klimaanlage-stromkosten.html">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="/css/cookieconsent.css">
+  <link rel="stylesheet" href="/css/cookie-consent-brand.css">
+  <link rel="preload" href="/fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+           url('/fonts/Montserrat-Variable.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+
+    /* Nav (konsistent mit Hauptseite) */
+    .nav-dark .nav-logo-green { display: none; }
+    .nav-dark .nav-logo-white { display: block; }
+    .nav-light .nav-logo-green { display: block; }
+    .nav-light .nav-logo-white { display: none; }
+    .nav-dark .nav-link { color: #FFFFFF; }
+    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
+    .nav-light .nav-link { color: #004225; }
+    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    .nav-dark { background-color: rgba(0, 66, 37, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav-light { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    @supports not (backdrop-filter: blur()) {
+      .nav-dark { background-color: rgba(0, 66, 37, 0.97) !important; }
+      .nav-light { background-color: rgba(255, 255, 255, 0.97) !important; }
+    }
+
+    /* Article prose styling */
+    .prose h2 { font-weight: 700; font-size: 1.5rem; color: #01331B; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-weight: 600; font-size: 1.25rem; color: #01331B; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose p { margin-bottom: 1.5rem; line-height: 1.85; color: #616161; font-size: 1.125rem; }
+    .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ul li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ol li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose strong { color: #01331B; font-weight: 600; }
+    .prose a { color: #004225; text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: #035B2F; }
+    .prose blockquote { border-left: 4px solid #C3A87A; padding: 1rem 1.5rem; background: #F2EFE7; border-radius: 0 0.75rem 0.75rem 0; margin: 1.5rem 0; }
+    .prose blockquote p { color: #004225; font-weight: 500; margin-bottom: 0; }
+    .prose img { border-radius: 1rem; margin: 2rem 0; }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+    .prose th { background: #F2EFE7; color: #01331B; font-weight: 600; padding: 0.75rem 1rem; text-align: left; }
+    .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E4D9; color: #616161; }
+
+    .info-box { background: #F2EFE7; border-left: 4px solid #004225; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .info-box p { margin-bottom: 0; }
+    .toc a { color: #004225; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    #reading-progress { transition: width 0.1s linear; }
+
+    /* FAQ Details/Summary styling */
+    .prose details { background-color: #F2EFE7; border: 1px solid #E8E4D9; border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1rem; cursor: pointer; }
+    .prose details summary { color: #004225; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+    .prose details summary::-webkit-details-marker { display: none; }
+    .prose details summary::after { content: '+'; font-size: 1.25rem; font-weight: 700; color: #004225; transition: transform 0.2s ease; }
+    .prose details[open] summary::after { content: '−'; }
+    .prose details summary:hover { color: #035B2F; }
+    .prose details[open] summary { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8E4D9; }
+    .prose details p { color: #616161; margin-bottom: 0; font-size: 1rem; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Mobile Klimaanlage: Was sie wirklich an Strom kostet — und wann sie sich nicht lohnt",
+    "author": {
+      "@type": "Person",
+      "name": "Henk Wenner",
+      "url": "https://effi-nova.de/#ubermich"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EffiNova Energieberatung",
+      "logo": { "@type": "ImageObject", "url": "https://effi-nova.de/bilder/logos/EffiNova_Logo_A3.webp" }
+    },
+    "datePublished": "2026-07-13",
+    "dateModified": "2026-07-13",
+    "image": "https://effi-nova.de/blog/hitzeschutz/images/mobile-klimaanlage-stromkosten/mobile-klimaanlage-stromkosten-1.webp",
+    "description": "Was kostet eine mobile Klimaanlage wirklich? kWh und Euro pro Stunde, Tag und Saison — plus 10-Jahres-Vergleich mit Split und Luft-Luft-Wärmepumpe."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Sind Klimaanlagen Stromfresser?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das kommt auf die Bauart an. Ein mobiles Monoblock-Gerät zieht im Betrieb typischerweise rund 1,0 bis 1,5 Kilowatt und ist damit einer der leistungshungrigsten Verbraucher im Haushalt. Ein fest installiertes Splitgerät kommt für dieselbe Kühlwirkung mit rund 0,3 bis 0,8 Kilowatt aus. Der Verbrauch pro Saison bleibt in deutschen Wohnungen dennoch überschaubar, weil die Geräte nur an wenigen Wochen im Jahr laufen. Teuer wird es vor allem dann, wenn ein Monoblock über viele Stunden täglich gegen ein dauerhaft gekipptes Fenster ankämpft."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viel Strom braucht eine Klimaanlage pro Tag?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bei sechs Betriebsstunden an einem heißen Tag rechnen Sie mit rund 7 Kilowattstunden für ein mobiles Monoblock-Gerät und rund 3 Kilowattstunden für ein Splitgerät. Bei einem angenommenen Strompreis von 35 Cent je Kilowattstunde sind das etwa 2,50 Euro gegenüber etwa 1,05 Euro pro Tag. Die Werte schwanken je nach Raumgröße, Dämmung, Sonneneinstrahlung und eingestellter Zieltemperatur deutlich."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet es, wenn die Klimaanlage den ganzen Tag läuft?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Läuft ein Monoblock 24 Stunden durch, kommen bei einer angenommenen mittleren Leistungsaufnahme von 1,2 Kilowatt rund 29 Kilowattstunden zusammen. Bei 35 Cent je Kilowattstunde entspricht das gut 10 Euro an einem einzigen Tag. Ein Splitgerät läge bei denselben Annahmen bei rund 12 Kilowattstunden, also etwa 4,20 Euro. Dauerbetrieb ist damit der teuerste Fehler, den man beim Kühlen machen kann."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie berechne ich den Stromverbrauch meiner Klimaanlage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Formel lautet: Leistungsaufnahme in Kilowatt mal Betriebsstunden mal Strompreis je Kilowattstunde. Die Leistungsaufnahme finden Sie auf dem Typenschild oder im Datenblatt, meist als Eingangsleistung in Watt. Wichtig: Verwechseln Sie sie nicht mit der Kühlleistung, die deutlich höher angegeben ist. Genauer wird es über den SEER-Wert des Geräts, der die Kühlleistung ins Verhältnis zum Stromeinsatz über eine ganze Saison setzt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist eine Luft-Luft-Wärmepumpe förderfähig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Eine Luft-Luft-Wärmepumpe wird über die Heizungsförderung der KfW (Programm 458) genauso gefördert wie andere Wärmepumpen, wenn sie tatsächlich als Heizung dient. Voraussetzung sind unter anderem die Aufnahme des Geräts in die einschlägige Liste förderfähiger Anlagen, die Einhaltung der geforderten SCOP-Mindestwerte und ein Schallleistungspegel deutlich unterhalb des Grenzwerts. Ein reines Kühlgerät ohne Heizfunktion ist dagegen nicht förderfähig. Wir prüfen vor Ihrer Vertragsunterschrift, ob das konkrete Angebot die Anforderungen erfüllt."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-effi-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XCJZ369"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent">
+    <div id="reading-progress" class="h-full bg-effi-gold" style="width:0%"></div>
+  </div>
+
+  <!-- NAVIGATION (konsistent mit Hauptseite) -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md shadow-md transition-colors duration-300" style="height:77px;">
+    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="/#hero" class="flex items-center gap-2 shrink-0">
+        <img src="/bilder/logos/Logo-A1.png" alt="EffiNova Logo" class="nav-logo-green h-12">
+        <img src="/bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="nav-logo-white h-12 hidden">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
+        <a href="/#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
+        <a href="/#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über mich</a>
+        <a href="/#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
+        <a href="/blog/" class="nav-link text-[15px] font-semibold border-b-2 border-effi-green pb-0.5">Blog</a>
+      </div>
+      <a href="https://funnel.effi-nova.de/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
+      <a href="/#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
+      <a href="/#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
+      <a href="/#ubermich" class="block py-3 text-effi-green text-[15px]">Über mich</a>
+      <a href="/#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
+      <a href="/blog/" class="block py-3 text-effi-green text-[15px] font-semibold">Blog</a>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
+        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+      </a>
+    </div>
+  </nav>
+  <div style="height:77px;"></div>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-effi-beige border-b border-effi-border">
+    <div class="max-w-[1440px] mx-auto px-5 py-3">
+      <nav class="text-xs text-effi-body">
+        <a href="/" class="hover:text-effi-green transition-colors">Startseite</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-effi-green transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-effi-green-dark font-medium">Mobile Klimaanlage Stromkosten</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <section class="bg-white pt-10 pb-0 lg:pt-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hitzeschutz</span>
+          <span class="text-effi-body text-xs"><i class="far fa-clock mr-1"></i> 8 Min. Lesezeit</span>
+        </div>
+        <h1 class="font-montserrat text-effi-green-dark text-3xl md:text-[2.75rem] font-bold leading-tight mb-6">
+          Mobile Klimaanlage: Was sie wirklich an Strom kostet — und wann sie sich nicht lohnt
+        </h1>
+        <p class="text-effi-body text-lg leading-relaxed mb-8">
+          Der Baumarkt-Monoblock für 400 Euro wirkt im Hochsommer wie die vernünftige Lösung: sofort verfügbar, kein Handwerker, kein Papierkram. Der Kaufpreis erzählt aber nur die halbe Geschichte. Die andere Hälfte steht auf Ihrer Stromrechnung — und sie fällt je nach Bauart um den Faktor drei bis fünf unterschiedlich aus. Wir rechnen in diesem Vergleich offen durch, was Kühlen pro Stunde, pro Hitzetag und pro Sommer kostet, und stellen erstmals die Frage, die in keinem Ratgeber beantwortet wird: Was zahlen Sie über zehn Jahre wirklich — und wann lohnt sich gar keine Klimaanlage?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="max-w-5xl mx-auto px-5 pb-10">
+    <img src="images/mobile-klimaanlage-stromkosten/mobile-klimaanlage-stromkosten-1.webp" alt="Mobile Klimaanlage im Wohnzimmer – die Stromkosten hängen vom Gerätetyp ab" class="w-full rounded-2xl object-cover aspect-[21/9]" loading="eager">
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <article class="bg-white pb-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="grid lg:grid-cols-[1fr_240px] gap-10 max-w-5xl mx-auto">
+
+        <!-- Main content -->
+        <div class="prose">
+
+          <!-- Table of Contents -->
+          <div class="bg-effi-beige rounded-2xl p-6 mb-10 toc">
+            <h4 class="font-montserrat text-effi-green-dark text-sm font-bold uppercase tracking-wider mb-3">Inhaltsverzeichnis</h4>
+            <ol class="space-y-2 text-sm list-decimal pl-4">
+              <li><a href="#vier-optionen">Die vier Optionen im Kurzprofil</a></li>
+              <li><a href="#effizienzproblem-monoblock">Das Effizienzproblem des Monoblocks</a></li>
+              <li><a href="#stromkosten-rechnen">Stromkosten pro Sommer: Rechenbeispiele zum Nachrechnen</a></li>
+              <li><a href="#anschaffung-installation">Anschaffung und Installation: die ganze Rechnung</a></li>
+              <li><a href="#zehn-jahres-vergleich">Zehn-Jahres-Vergleich: Monoblock gegen Luft-Luft-Wärmepumpe</a></li>
+              <li><a href="#wann-keine-klimaanlage">Wann sich gar keine Klimaanlage lohnt</a></li>
+              <li><a href="#fazit">Fazit</a></li>
+              <li><a href="#faq">Häufige Fragen</a></li>
+            </ol>
+          </div>
+
+          <div class="info-box">
+            <h3 class="text-effi-green-dark font-bold text-sm uppercase tracking-wider mb-2">Das Wichtigste in Kürze</h3>
+            <ul class="space-y-1 text-sm">
+              <li class="text-effi-green-dark"><strong>Kernaussage:</strong> Mobil ist beim Kühlen fast immer die teuerste Art, eine Kilowattstunde Kälte zu erzeugen — der niedrige Kaufpreis wird über den Betrieb zurückgezahlt.</li>
+              <li class="text-effi-green-dark"><strong>Verbrauch:</strong> Monoblock rund 1,0 bis 1,5 kWh pro Stunde, Splitgerät rund 0,3 bis 0,8 kWh — für dieselbe Kühlwirkung das Drei- bis Fünffache.</li>
+              <li class="text-effi-green-dark"><strong>Ursache:</strong> Der Abluftschlauch am gekippten Fenster erzeugt Unterdruck, warme Außenluft strömt permanent nach. Das Gerät kühlt gegen sich selbst an.</li>
+              <li class="text-effi-green-dark"><strong>Ehrlich gesagt:</strong> Wer nur an wenigen Tagen im Jahr kühlt, fährt mit Ventilator oder Monoblock über zehn Jahre günstiger als mit jeder Festinstallation.</li>
+              <li class="text-effi-green-dark"><strong>Der Hebel:</strong> Erst wenn die Anlage im Winter mitheizt, dreht sich die Rechnung. Eine Luft-Luft-Wärmepumpe wird als Heizung über die KfW gefördert — ein reines Kühlgerät nicht.</li>
+              <li class="text-effi-green-dark"><strong>Alle Förderangaben:</strong> Stand 13. Juli 2026, ohne Gewähr – Details in der Hinweisbox am Ende des Beitrags.</li>
+            </ul>
+          </div>
+
+          <h2 id="vier-optionen">1. Die vier Optionen im Kurzprofil</h2>
+          <p>Bevor wir rechnen, sortieren wir das Feld. Vier Techniken konkurrieren um dieselbe Aufgabe, und sie funktionieren grundlegend verschieden.</p>
+          <p>Der <strong>Ventilator</strong> kühlt streng genommen gar nicht. Er bewegt Luft, die den Schweiß auf der Haut schneller verdunsten lässt — Sie fühlen sich kühler, die Raumtemperatur bleibt gleich. Genau das ist sein Vorteil: Er braucht kaum Strom, weil er kaum Arbeit verrichtet.</p>
+          <p>Das <strong>mobile Monoblock-Klimagerät</strong> steckt komplett in einem Gehäuse. Es entzieht der Raumluft Wärme und schiebt sie durch einen dicken Schlauch nach draußen. Kaufpreis und Aufwand sind niedrig, der Wirkungsgrad ist es leider auch.</p>
+          <p>Die <strong>Split-Klimaanlage</strong> teilt sich auf: Der lärmende, wärmeerzeugende Kompressor sitzt außen, im Raum hängt nur das leise Innengerät. Die Montage übernimmt ein Fachbetrieb — dafür arbeitet die Anlage erheblich effizienter und kühlt spürbar schneller.</p>
+          <p>Die <strong>Luft-Luft-Wärmepumpe</strong> ist technisch dasselbe Splitgerät, nur mit umkehrbarem Kältekreis: Im Sommer transportiert sie Wärme nach draußen, im Winter holt sie Wärme von draußen herein und heizt damit. Diese Doppelnutzung ist der einzige Grund, warum sich eine Festinstallation über zehn Jahre überhaupt rechnen kann.</p>
+
+          <h2 id="effizienzproblem-monoblock">2. Das Effizienzproblem des Monoblocks: gekipptes Fenster inklusive</h2>
+          <p>Der Konstruktionsfehler des Monoblocks ist kein Herstellerversagen, sondern Physik. Das Gerät bläst warme Abluft nach draußen. Diese Luft muss irgendwo herkommen — und sie kommt aus dem Raum. Dadurch entsteht im Zimmer ein leichter Unterdruck, und durch jede Ritze, jeden Türspalt und vor allem durch den Fensterspalt rund um den Abluftschlauch strömt heiße Außenluft nach. Das Gerät kühlt also unentwegt Luft, die es sich selbst hereinholt.</p>
+          <p>In Zahlen macht sich das im SEER-Wert bemerkbar, der Kühlleistung und Stromeinsatz über eine ganze Saison ins Verhältnis setzt. Mobile Monoblöcke liegen typischerweise bei einem SEER von rund 2,5 bis 4, gute Splitgeräte bei 5 bis 9. Für dieselbe gefühlte Abkühlung braucht der Monoblock damit ungefähr das Drei- bis Fünffache an Strom.</p>
+          <p>Auch beim Tempo ist der Unterschied deutlich. Die Stiftung Warentest hat Monoblöcke mit Abluftschlauch zuletzt aus dem regulären Prüfparcours genommen, weil sie schlicht zu wenig energieeffizient arbeiten; ein Splitgerät bringt einen kleinen Raum in wenigen Minuten auf Zieltemperatur, ein Monoblock braucht dafür ein Vielfaches an Zeit — und Zeit ist hier direkt Stromverbrauch.</p>
+          <p>Eine Fensterabdichtung aus Stoff oder Schaumstoff hilft und ist bei jedem Monoblock Pflicht. Sie beseitigt den Unterdruck aber nicht, sie verkleinert nur die Nachströmfläche. Rechnen Sie mit einer spürbaren Verbesserung, nicht mit einer Verwandlung in ein Splitgerät.</p>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-lightbulb mr-2 text-effi-gold"></i>Gut zu wissen:</strong> Stellen Sie die Zieltemperatur nicht unter 26 Grad und höchstens fünf bis sechs Grad unter die Außentemperatur — das Umweltbundesamt empfiehlt sogar nur drei bis vier Grad Differenz. Jedes Grad mehr Differenz kostet überproportional Strom — und belastet bei 15 Grad Sprung zwischen draußen und drinnen zusätzlich den Kreislauf.</p>
+          </div>
+
+          <h2 id="stromkosten-rechnen">3. Stromkosten pro Sommer: Rechenbeispiele, die Sie nachrechnen können</h2>
+          <p>Die Formel ist simpel: <strong>Leistungsaufnahme in Kilowatt × Betriebsstunden × Strompreis je Kilowattstunde.</strong> Die Leistungsaufnahme steht auf dem Typenschild — verwechseln Sie sie nicht mit der Kühlleistung, die deutlich höher angegeben wird.</p>
+          <p>Beim Strompreis kommt es darauf an, welchen Vertrag Sie haben. Verivox weist für Juli 2026 einen durchschnittlichen Haushaltspreis von rund 31 Cent je Kilowattstunde aus, Bestandsverträge inklusive aller Steuern und Abgaben liegen häufig darüber, Neuverträge deutlich darunter. <strong>Wir rechnen im Folgenden mit 35 Cent je Kilowattstunde</strong> — das ist eine Annahme, keine Prognose. Schauen Sie auf Ihre letzte Abrechnung und ersetzen Sie den Wert durch Ihren eigenen.</p>
+          <p>Als Nutzungsprofil setzen wir an: <strong>30 Kühltage pro Sommer mit je 6 Betriebsstunden, also 180 Betriebsstunden pro Saison.</strong> Auch das ist eine Annahme. Deutschland verzeichnete im Mittel der Jahre 1991 bis 2020 rund 8,9 heiße Tage über 30 Grad pro Jahr, Tendenz steigend — gekühlt wird aber auch an schwülen 27-Grad-Tagen.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Gerätetyp</th>
+                <th>Leistung (Rechenwert)</th>
+                <th>Pro Hitzetag (6 h)</th>
+                <th>Pro Saison (180 h)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ventilator</strong></td>
+                <td>0,05 kW</td>
+                <td>0,3 kWh ≈ 0,11 €</td>
+                <td>9 kWh ≈ 3 €</td>
+              </tr>
+              <tr>
+                <td><strong>Mobiler Monoblock</strong></td>
+                <td>1,2 kW (Spanne 1,0–1,5)</td>
+                <td>7,2 kWh ≈ 2,52 €</td>
+                <td>216 kWh ≈ 76 €</td>
+              </tr>
+              <tr>
+                <td><strong>Split-Klimaanlage</strong></td>
+                <td>0,5 kW (Spanne 0,3–0,8)</td>
+                <td>3,0 kWh ≈ 1,05 €</td>
+                <td>90 kWh ≈ 32 €</td>
+              </tr>
+              <tr>
+                <td><strong>Luft-Luft-Wärmepumpe</strong></td>
+                <td>wie Split beim Kühlen</td>
+                <td>3,0 kWh ≈ 1,05 €</td>
+                <td>90 kWh ≈ 32 € (plus Heizbetrieb)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><em>Modellrechnung, Annahmen offen: 35 ct/kWh, 180 Betriebsstunden pro Saison, ein Raum. Die Verbrauchsspannen sind eigene Modellwerte auf Basis typischer Leistungsaufnahmen und keine Messwerte. Ihr realer Verbrauch hängt an Raumgröße, Dämmung, Zieltemperatur und Nutzungsdauer und kann deutlich abweichen.</em></p>
+          <p>Zwei ehrliche Einordnungen dazu. Erstens: 76 Euro Strom pro Sommer ruinieren niemanden. Das Problem ist nicht der Absolutbetrag, sondern das Verhältnis von Kosten zu Kühlwirkung — Sie zahlen mehr als das Doppelte für weniger Komfort. Zweitens: Wer im Dauerbetrieb kühlt, landet schnell woanders. 24 Stunden Monoblock sind rund 29 Kilowattstunden, also gut 10 Euro. An einem Tag.</p>
+
+          <img src="images/mobile-klimaanlage-stromkosten/mobile-klimaanlage-stromkosten-2.webp" alt="Abluftschlauch der mobilen Klimaanlage in einer Fensterabdichtung am gekippten Fenster" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="anschaffung-installation">4. Anschaffung und Installation: die ganze Rechnung statt nur der Stromrechnung</h2>
+          <p>Ein <strong>Monoblock</strong> kostet je nach Kühlleistung und Ausstattung meist einige hundert Euro und ist sofort einsatzbereit. Dafür ist er laut — der Kompressor steht im Wohnraum —, schwach bei größeren Räumen und im Verhältnis zur gelieferten Kälte teuer im Betrieb. Die Lebensdauer eines gelegentlich genutzten Baumarktgeräts liegt erfahrungsgemäß eher bei einigen Jahren als bei Jahrzehnten.</p>
+          <p>Eine <strong>Split-Klimaanlage</strong> für einen Raum liegt inklusive Fachmontage üblicherweise im Bereich von rund 1.800 bis 3.500 Euro, Multisplit-Lösungen für mehrere Räume deutlich darüber. Der Grund für den Preisunterschied ist nicht Willkür: Beim Verbinden von Innen- und Außengerät wird ein Kältekreislauf geschlossen. Arbeiten daran dürfen aus gutem Grund nur zertifizierte Fachbetriebe ausführen — Kältemittel sind klimawirksam und teils brennbar. Selbstinstallation ist keine Sparoption, sondern schlicht unzulässig.</p>
+          <p>Beide Systeme verursachen laufende Nebenkosten, die gern unter den Tisch fallen: Filterreinigung, bei Splitanlagen eine regelmäßige Prüfung durch den Fachbetrieb. Wir setzen dafür in der Modellrechnung <strong>100 Euro pro Jahr</strong> an — eine Annahme, die je nach Anlage und Wartungsintervall auch höher liegen kann.</p>
+          <p>Für <strong>Mieter</strong> gilt eine eigene Logik: Ein Außengerät bedeutet einen baulichen Eingriff in die Fassade und braucht die Zustimmung des Vermieters. Ohne diese Erlaubnis bleiben realistisch nur Ventilator und Monoblock.</p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/hitzeschutz/klimaanlage-mietwohnung-erlaubt.html">Was in der Mietwohnung erlaubt ist und wann Sie eine Genehmigung brauchen</a></p>
+
+          <div class="bg-effi-green rounded-2xl p-6 my-8 text-center">
+            <p class="font-montserrat text-lg font-bold mb-2" style="color:#ffffff">Lohnt sich eine Luft-Luft-Wärmepumpe für Ihr Gebäude?</p>
+            <p class="text-sm mb-4" style="color:rgba(255,255,255,0.90)">Wir rechnen Ihre Heizlast raumweise durch und prüfen Angebote vor der Unterschrift auf Förderfähigkeit — herstellerneutral und mit ehrlichen Zahlen.</p>
+            <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-6 py-3 text-sm font-semibold no-underline hover:bg-effi-beige transition-colors" style="text-decoration:none;color:#004225"><i class="fas fa-phone text-sm"></i> Kostenlose Ersteinschätzung</a>
+          </div>
+
+          <h2 id="zehn-jahres-vergleich">5. Zehn-Jahres-Vergleich: Monoblock gegen Luft-Luft-Wärmepumpe</h2>
+          <p>Jetzt die Rechnung, die sonst niemand aufmacht. Wir vergleichen über zehn Jahre — lang genug, dass sich die Investition verteilt, kurz genug, dass die Zahlen greifbar bleiben. Alle Annahmen stehen offen darunter, damit Sie sie durch Ihre eigenen ersetzen können.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Position (10 Jahre)</th>
+                <th>Monoblock</th>
+                <th>Split (nur Kühlen)</th>
+                <th>Luft-Luft-Wärmepumpe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anschaffung inkl. Montage</td>
+                <td>800 € (Gerät + 1 Ersatz)</td>
+                <td>2.500 €</td>
+                <td>12.000 €</td>
+              </tr>
+              <tr>
+                <td>Förderung (KfW 458)</td>
+                <td>—</td>
+                <td>— (nicht förderfähig)</td>
+                <td>− 5.520 €</td>
+              </tr>
+              <tr>
+                <td>Strom Kühlen</td>
+                <td>760 €</td>
+                <td>315 €</td>
+                <td>315 €</td>
+              </tr>
+              <tr>
+                <td>Wartung / Instandhaltung</td>
+                <td>—</td>
+                <td>1.000 €</td>
+                <td>1.000 €</td>
+              </tr>
+              <tr>
+                <td>Ersparnis Heizen</td>
+                <td>—</td>
+                <td>—</td>
+                <td>− 3.000 €</td>
+              </tr>
+              <tr>
+                <td><strong>Summe über 10 Jahre</strong></td>
+                <td><strong>rund 1.560 €</strong></td>
+                <td><strong>rund 3.815 €</strong></td>
+                <td><strong>rund 4.795 €</strong></td>
+              </tr>
+              <tr>
+                <td>Was Sie dafür bekommen</td>
+                <td>1 Raum, laut, langsam</td>
+                <td>1 Raum, leise, schnell</td>
+                <td>ganze Wohnung kühlen <em>und</em> heizen</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><em>Modellrechnung, Annahmen offen: Strompreis 35 ct/kWh · 180 Kühlstunden pro Saison · Monoblock 1,2 kW, Split und Wärmepumpe 0,5 kW · Wartung 100 €/Jahr bei Festinstallationen · Investition Luft-Luft-Wärmepumpe 12.000 € als Heizungslösung · Förderung 46 % (30 % Grundförderung + 16 % Klimageschwindigkeitsbonus) für Anträge ab 21. Juli 2026 · angenommene Heizkostenersparnis 300 €/Jahr gegenüber einer alten Gasheizung – je nach Ausgangszustand, Gebäude und Nutzungsverhalten kann sie deutlich höher oder niedriger ausfallen; eine Zusage ist damit nicht verbunden. Keine Preissteigerung, keine Zinseffekte berücksichtigt.</em></p>
+          <p>Das Ergebnis ist unbequem und deshalb wichtig: <strong>Rein auf die Kühlung bezogen, ist der Monoblock über zehn Jahre die günstigste Klimatisierung.</strong> Er kostet Sie in diesem Szenario rund 1.560 Euro. Wer also nur an einer Handvoll Tagen pro Jahr das Schlafzimmer herunterkühlen will, sollte kein Geld in eine Festinstallation stecken. Punkt.</p>
+          <p>Die Rechnung kippt an einer anderen Stelle — und zwar dort, wo die Klimaanlage aufhört, eine Klimaanlage zu sein. <strong>Die Luft-Luft-Wärmepumpe ist in erster Linie eine Heizung.</strong> Sie senkt im Winter Ihre Heizkosten, und dafür gibt es Förderung. Der entscheidende Punkt, den unsere Tabelle noch gar nicht enthält: Wenn Ihre alte Heizung ohnehin in den nächsten Jahren ersetzt werden muss, entfällt der Investitionsposten fast vollständig aus dieser Rechnung — Sie hätten das Geld sowieso ausgegeben. <strong>Die Kühlfunktion kommt dann praktisch gratis obendrauf.</strong> Genau dann, und eigentlich nur dann, ist die Festinstallation die klar bessere Wahl.</p>
+          <p>Zur Förderung: Eine Luft-Luft-Wärmepumpe wird über die Heizungsförderung der KfW (Programm 458) genauso gefördert wie jede andere Wärmepumpe, sofern sie tatsächlich als Heizung dient, das Gerät in der Liste förderfähiger Anlagen geführt wird, die geforderten SCOP-Werte erreicht und der Schallleistungspegel deutlich unter dem Grenzwert liegt. Für Anträge ab dem 21. Juli 2026 gelten 30 Prozent Grundförderung für alle, dazu für Selbstnutzer 16 Prozent Klimageschwindigkeitsbonus und je nach zu versteuerndem Haushaltseinkommen 40, 30 oder 10 Prozent Einkommensbonus. Die förderfähigen Kosten sind für die erste Wohneinheit auf 28.000 Euro begrenzt. Die Obergrenze der Förderquote hängt vom zu versteuernden Haushaltseinkommen ab und liegt bei 70 beziehungsweise 80 Prozent der förderfähigen Kosten – bei 80 Prozent sind das höchstens 22.400 Euro Zuschuss. Welcher Wert für Ihr Vorhaben gilt, prüfen wir individuell und tagesaktuell. Ein reines Kühlgerät ohne Heizfunktion ist nicht förderfähig.</p>
+          <p>Der Antragsweg ist dabei eine häufige Fehlerquelle. Richtig ist: Angebot einholen, das Angebot <em>vor</em> der Unterschrift auf Förderfähigkeit prüfen lassen, den Vertrag mit aufschiebender Bedingung schließen, dann die Bestätigung zum Antrag durch einen Energieeffizienz-Experten erstellen lassen, den Antrag stellen, die Zusage abwarten — und erst danach umsetzen.</p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/waermepumpe/luft-luft-vs-luft-wasser-waermepumpe-altbau.html">Luft-Luft oder Luft-Wasser im Altbau: welches System wann passt</a></p>
+
+          <img src="images/mobile-klimaanlage-stromkosten/mobile-klimaanlage-stromkosten-3.webp" alt="Außeneinheit einer Luft-Luft-Wärmepumpe auf Bodenplatte an einem verputzten Einfamilienhaus" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="wann-keine-klimaanlage">6. Wann sich gar keine Klimaanlage lohnt</h2>
+          <p>Eine Klimaanlage bekämpft ein Symptom. Sie fragt nicht, warum die Wohnung heiß ist — sie pumpt die Wärme nur wieder hinaus, die vorher hineingekommen ist. In vielen Wohnungen ist genau das der Denkfehler.</p>
+          <p>Der weitaus größte Hebel liegt außen am Fenster. Sonnenlicht, das die Scheibe passiert hat, ist im Raum gefangen; Rollläden, Raffstores oder Markisen halten die Energie ab, bevor sie eindringt. Innenliegende Vorhänge können das prinzipbedingt nicht leisten. Dazu kommt richtiges Lüften — nachts und in den frühen Morgenstunden, tagsüber alles dicht — und im Dachgeschoss die Dämmung der obersten Geschossdecke, die oft die eigentliche Ursache beseitigt.</p>
+          <p>Für die verbleibenden wirklich heißen Nächte ist der Ventilator die unterschätzteste Lösung überhaupt. Drei Euro Stromkosten pro Sommer, kein Handwerker, kein Vermieter, den man fragen muss.</p>
+          <p>Drei Warnsignale sprechen klar gegen den Kauf eines Klimageräts: ein ungedämmtes Dachgeschoss, in dem jedes Gerät gegen eine unter der Sonne aufgeheizte Decke anarbeitet; die Absicht, den Abluftschlauch dauerhaft durch ein gekipptes Fenster zu führen; und ein Gerät, das für die Raumgröße erkennbar zu schwach dimensioniert ist und deshalb ständig auf Volllast läuft.</p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/hitzeschutz/wohnung-kuehlen-ohne-klimaanlage.html">Alle Maßnahmen zum Kühlen ohne Klimaanlage, sortiert von 0 Euro bis Förderung</a></p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/hitzeschutz/hitzeschutz-fenster-vergleich.html">Hitzeschutz am Fenster im Vergleich: was außen, innen und in der Verglasung wirklich wirkt</a></p>
+
+          <h2 id="fazit">7. Fazit</h2>
+          <p>Mobil ist beim Kühlen fast immer die teuerste Art, eine Kilowattstunde Kälte zu erzeugen. Der Monoblock kauft sich seinen niedrigen Anschaffungspreis mit dem Drei- bis Fünffachen an Strom je Kühlwirkung zurück — und liefert dabei weniger Komfort, mehr Lärm und ein dauerhaft gekipptes Fenster dazu.</p>
+          <p>Die Entscheidungshilfe passt trotzdem in drei Sätze. Kühlen Sie nur an wenigen Tagen im Jahr, bleiben Sie beim Ventilator oder einem gut abgedichteten Monoblock — jede Festinstallation wäre über zehn Jahre teurer. Kühlen Sie jeden Sommer, sind Eigentümer und steht Ihre Heizung ohnehin zur Erneuerung an, ist die förderfähige Luft-Luft-Wärmepumpe die klar bessere Investition, weil sie im Winter mitarbeitet. Und als Mieter setzen Sie zuerst auf Verschattung und Lüftungsdisziplin, bevor Sie über Technik nachdenken.</p>
+          <p>Ob sich eine Luft-Luft-Wärmepumpe für Ihr Gebäude rechnet, hängt an Ihrer Heizlast, Ihrem Gebäudezustand und Ihrem Förderanspruch. Genau das rechnen wir für Sie durch — raumweise, herstellerneutral und mit Zahlen, die Sie nachvollziehen können. Und wir prüfen das Angebot Ihres Handwerkers auf Förderfähigkeit, bevor Sie unterschreiben.</p>
+
+          <img src="images/mobile-klimaanlage-stromkosten/mobile-klimaanlage-stromkosten-4.webp" alt="Innengerät einer Luft-Luft-Wärmepumpe – kühlt im Sommer, heizt im Winter" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="faq">Häufige Fragen</h2>
+
+          <details>
+            <summary>Sind Klimaanlagen Stromfresser?</summary>
+            <p>Das kommt auf die Bauart an. Ein mobiles Monoblock-Gerät zieht im Betrieb typischerweise rund 1,0 bis 1,5 Kilowatt und ist damit einer der leistungshungrigsten Verbraucher im Haushalt. Ein fest installiertes Splitgerät kommt für dieselbe Kühlwirkung mit rund 0,3 bis 0,8 Kilowatt aus. Der Verbrauch pro Saison bleibt in deutschen Wohnungen dennoch überschaubar, weil die Geräte nur an wenigen Wochen im Jahr laufen. Teuer wird es vor allem dann, wenn ein Monoblock über viele Stunden täglich gegen ein dauerhaft gekipptes Fenster ankämpft.</p>
+          </details>
+
+          <details>
+            <summary>Wie viel Strom braucht eine Klimaanlage pro Tag?</summary>
+            <p>Bei sechs Betriebsstunden an einem heißen Tag rechnen Sie mit rund 7 Kilowattstunden für ein mobiles Monoblock-Gerät und rund 3 Kilowattstunden für ein Splitgerät. Bei einem angenommenen Strompreis von 35 Cent je Kilowattstunde sind das etwa 2,50 Euro gegenüber etwa 1,05 Euro pro Tag. Die Werte schwanken je nach Raumgröße, Dämmung, Sonneneinstrahlung und eingestellter Zieltemperatur deutlich.</p>
+          </details>
+
+          <details>
+            <summary>Was kostet es, wenn die Klimaanlage den ganzen Tag läuft?</summary>
+            <p>Läuft ein Monoblock 24 Stunden durch, kommen bei einer angenommenen mittleren Leistungsaufnahme von 1,2 Kilowatt rund 29 Kilowattstunden zusammen. Bei 35 Cent je Kilowattstunde entspricht das gut 10 Euro an einem einzigen Tag. Ein Splitgerät läge bei denselben Annahmen bei rund 12 Kilowattstunden, also etwa 4,20 Euro. Dauerbetrieb ist damit der teuerste Fehler, den man beim Kühlen machen kann.</p>
+          </details>
+
+          <details>
+            <summary>Wie berechne ich den Stromverbrauch meiner Klimaanlage?</summary>
+            <p>Die Formel lautet: Leistungsaufnahme in Kilowatt mal Betriebsstunden mal Strompreis je Kilowattstunde. Die Leistungsaufnahme finden Sie auf dem Typenschild oder im Datenblatt, meist als Eingangsleistung in Watt. Wichtig: Verwechseln Sie sie nicht mit der Kühlleistung, die deutlich höher angegeben ist. Genauer wird es über den SEER-Wert des Geräts, der die Kühlleistung ins Verhältnis zum Stromeinsatz über eine ganze Saison setzt.</p>
+          </details>
+
+          <details>
+            <summary>Ist eine Luft-Luft-Wärmepumpe förderfähig?</summary>
+            <p>Ja. Eine Luft-Luft-Wärmepumpe wird über die Heizungsförderung der KfW (Programm 458) genauso gefördert wie andere Wärmepumpen, wenn sie tatsächlich als Heizung dient. Voraussetzung sind unter anderem die Aufnahme des Geräts in die einschlägige Liste förderfähiger Anlagen, die Einhaltung der geforderten SCOP-Mindestwerte und ein Schallleistungspegel deutlich unterhalb des Grenzwerts. Ein reines Kühlgerät ohne Heizfunktion ist dagegen nicht förderfähig. Wir prüfen vor Ihrer Vertragsunterschrift, ob das konkrete Angebot die Anforderungen erfüllt.</p>
+          </details>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-circle-info mr-2 text-effi-gold"></i>Stand der Angaben (13. Juli 2026):</strong> Alle Rechenbeispiele in diesem Beitrag sind Modellrechnungen mit offengelegten Annahmen und keine Zusagen. Strompreise, Geräte- und Montagekosten schwanken erheblich; die reformierten KfW-Förderbedingungen gelten laut BMWE und KfW für neue Anträge ab dem 21. Juli 2026, die geänderte Förderrichtlinie ist jedoch noch nicht im Bundesanzeiger veröffentlicht. Alle Angaben geben den aktuellen Stand des Wissens wieder, ohne Gewähr. Die Förderung steht zudem unter dem Vorbehalt verfügbarer Bundesmittel; ein Rechtsanspruch besteht nicht. Welche Konditionen für Ihr Vorhaben konkret gelten, prüfen wir gern tagesaktuell für Sie.</p>
+          </div>
+
+        </div>
+
+        <!-- Sidebar (Desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-effi-beige rounded-2xl p-5 text-center">
+              <div class="w-16 h-16 bg-effi-green rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-white font-montserrat font-bold text-lg">HW</span>
+              </div>
+              <p class="font-montserrat text-effi-green-dark text-sm font-bold">Henk Wenner</p>
+              <p class="text-xs text-effi-body mt-1">Zertifizierter Energieberater<br>EffiNova Energieberatung</p>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Teilen</p>
+              <div class="flex gap-2">
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-link"></i></a>
+              </div>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Verwandte Artikel</p>
+              <div class="space-y-3">
+                <a href="/blog/hitzeschutz/wohnung-kuehlen-ohne-klimaanlage.html" class="block text-sm text-effi-green hover:underline leading-snug">Wohnung kühlen ohne Klimaanlage: Alle Maßnahmen von 0 € bis Förderung</a>
+                <a href="/blog/hitzeschutz/klimaanlage-mietwohnung-erlaubt.html" class="block text-sm text-effi-green hover:underline leading-snug">Klimaanlage in der Mietwohnung: Was ist erlaubt?</a>
+                <a href="/blog/hitzeschutz/hitzeschutz-fenster-vergleich.html" class="block text-sm text-effi-green hover:underline leading-snug">Hitzeschutz am Fenster im Vergleich</a>
+                <a href="/blog/waermepumpe/luft-luft-vs-luft-wasser-waermepumpe-altbau.html" class="block text-sm text-effi-green hover:underline leading-snug">Luft-Luft oder Luft-Wasser: Wärmepumpe im Altbau</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA AFTER ARTICLE -->
+  <section class="bg-effi-green py-14">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="font-montserrat text-white text-2xl font-bold mb-4">Kühlen und Heizen mit einer Anlage — rechnet sich das bei Ihnen?</h2>
+      <p class="text-white/70 text-[15px] mb-8">Wir ermitteln Ihre raumweise Heizlast, ordnen Ihren Förderanspruch ein und prüfen Handwerkerangebote auf Förderfähigkeit, bevor Sie unterschreiben. Ehrlich auch dann, wenn sich die Investition für Sie nicht lohnt.</p>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-8 py-4 text-[15px] font-semibold hover:bg-effi-beige transition-colors">
+        <i class="fas fa-phone text-sm"></i>
+        Kostenlose Erstberatung anfragen
+      </a>
+    </div>
+  </section>
+
+  <!-- MORE ARTICLES -->
+  <section class="bg-effi-beige py-14">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl font-bold mb-8">Weitere Beiträge</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/blog/hitzeschutz/wohnung-kuehlen-ohne-klimaanlage.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Wohnung kühlen ohne Klimaanlage" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Sanierung</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Wohnung kühlen ohne Klimaanlage: Alle Maßnahmen von 0 € bis Förderung</h3>
+          </div>
+        </a>
+        <a href="/blog/hitzeschutz/klimaanlage-mietwohnung-erlaubt.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Klimaanlage in der Mietwohnung" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Sanierung</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Klimaanlage in der Mietwohnung: Was ist erlaubt?</h3>
+          </div>
+        </a>
+        <a href="/blog/waermepumpe/luft-luft-vs-luft-wasser-waermepumpe-altbau.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Luft-Luft oder Luft-Wasser Wärmepumpe im Altbau" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Luft-Luft oder Luft-Wasser: Wärmepumpe im Altbau</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (konsistent mit Hauptseite) -->
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <img src="/bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice & Baubegleitung</li>
+            <li>KfW Förderservice & Baubegleitung</li>
+            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
+            <li>GEG-Nachweis, Energieausweis</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Reading progress bar
+    window.addEventListener('scroll', function() {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = Math.min((window.scrollY / docHeight) * 100, 100);
+      document.getElementById('reading-progress').style.width = progress + '%';
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
+    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+  </button>
+  <script defer src="/js/cookieconsent.js"></script>
+  <script defer src="/js/cookie-consent-config.js"></script>
+  <script defer src="/js/gtm-button-tracking.js"></script>
+  <script defer src="/js/cta-link-decorator.js"></script>
+</body>
+</html>
