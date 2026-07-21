@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Consent Mode v2 — defaults (deny all, update via cookie banner) -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5XCJZ369');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wärmepumpe kühlen: Aktive und passive Kühlung im Vergleich – EffiNova Wissenshub</title>
+  <meta name="description" content="Wärmepumpe kühlen im Sommer: aktive und passive Kühlung im Vergleich – Funktion, Kühlleistung, Kosten und ob eine Wärmepumpe die Klimaanlage ersetzt.">
+  <link rel="canonical" href="https://effi-nova.de/blog/waermepumpe/waermepumpe-kuehlen-aktiv-passiv.html">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="/css/cookieconsent.css">
+  <link rel="stylesheet" href="/css/cookie-consent-brand.css">
+  <link rel="preload" href="/fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+           url('/fonts/Montserrat-Variable.woff2') format('woff2');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { font-family: 'Montserrat', system-ui, sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+
+    /* Nav (konsistent mit Hauptseite) */
+    .nav-dark .nav-logo-green { display: none; }
+    .nav-dark .nav-logo-white { display: block; }
+    .nav-light .nav-logo-green { display: block; }
+    .nav-light .nav-logo-white { display: none; }
+    .nav-dark .nav-link { color: #FFFFFF; }
+    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
+    .nav-light .nav-link { color: #004225; }
+    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    .nav-dark { background-color: rgba(0, 66, 37, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav-light { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .logo-invert { filter: brightness(0) invert(1); }
+
+    @supports not (backdrop-filter: blur()) {
+      .nav-dark { background-color: rgba(0, 66, 37, 0.97) !important; }
+      .nav-light { background-color: rgba(255, 255, 255, 0.97) !important; }
+    }
+
+    /* Article prose styling */
+    .prose h2 { font-weight: 700; font-size: 1.5rem; color: #01331B; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-weight: 600; font-size: 1.25rem; color: #01331B; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose p { margin-bottom: 1.5rem; line-height: 1.85; color: #616161; font-size: 1.125rem; }
+    .prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ul li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose ol li { margin-bottom: 0.5rem; color: #616161; line-height: 1.8; font-size: 1.125rem; }
+    .prose strong { color: #01331B; font-weight: 600; }
+    .prose a { color: #004225; text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: #035B2F; }
+    .prose blockquote { border-left: 4px solid #C3A87A; padding: 1rem 1.5rem; background: #F2EFE7; border-radius: 0 0.75rem 0.75rem 0; margin: 1.5rem 0; }
+    .prose blockquote p { color: #004225; font-weight: 500; margin-bottom: 0; }
+    .prose img { border-radius: 1rem; margin: 2rem 0; }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+    .prose th { background: #F2EFE7; color: #01331B; font-weight: 600; padding: 0.75rem 1rem; text-align: left; }
+    .prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E4D9; color: #616161; }
+
+    .info-box { background: #F2EFE7; border-left: 4px solid #004225; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .info-box p { margin-bottom: 0; }
+    .toc a { color: #004225; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    #reading-progress { transition: width 0.1s linear; }
+
+    /* FAQ Details/Summary styling */
+    .prose details { background-color: #F2EFE7; border: 1px solid #E8E4D9; border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-bottom: 1rem; cursor: pointer; }
+    .prose details summary { color: #004225; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+    .prose details summary::-webkit-details-marker { display: none; }
+    .prose details summary::after { content: '+'; font-size: 1.25rem; font-weight: 700; color: #004225; transition: transform 0.2s ease; }
+    .prose details[open] summary::after { content: '−'; }
+    .prose details summary:hover { color: #035B2F; }
+    .prose details[open] summary { margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8E4D9; }
+    .prose details p { color: #616161; margin-bottom: 0; font-size: 1rem; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Wärmepumpe kühlen: Aktive und passive Kühlung im Vergleich",
+    "author": {
+      "@type": "Person",
+      "name": "Henk Wenner",
+      "url": "https://effi-nova.de/#ubermich"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "EffiNova Energieberatung",
+      "logo": { "@type": "ImageObject", "url": "https://effi-nova.de/bilder/logos/EffiNova_Logo_A3.webp" }
+    },
+    "datePublished": "2026-07-15",
+    "dateModified": "2026-07-15",
+    "image": "https://effi-nova.de/blog/waermepumpe/images/waermepumpe-kuehlen-aktiv-passiv/waermepumpe-kuehlen-aktiv-passiv-1.webp",
+    "description": "Wärmepumpe kühlen im Sommer: aktive und passive Kühlung im Vergleich – Funktion, Kühlleistung, Kosten und ob eine Wärmepumpe die Klimaanlage ersetzt."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kann jede Wärmepumpe kühlen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nein. Kühlen kann eine Wärmepumpe nur, wenn sie dafür ausgelegt ist. Die passive Kühlung (Natural Cooling) ist ausschließlich mit Sole/Wasser- und Wasser/Wasser-Wärmepumpen möglich, weil sie das kühle Erdreich oder Grundwasser als Wärmesenke nutzen. Die aktive Kühlung über den umgekehrten Kältekreis beherrschen reversible Luft/Wasser-Wärmepumpen ebenso wie Sole/Wasser-Geräte – die verbreitete Aussage, aktive Kühlung sei nur mit Luftwärmepumpen möglich, stimmt nicht. Entscheidend ist, dass die Anlage die Kühlfunktion technisch mitbringt und dass im Gebäude eine geeignete Wärmeübergabe wie eine Flächenheizung vorhanden ist. Reine Heizgeräte ohne Kältekreis-Umkehr lassen sich nicht nachträglich zum Kühlen bewegen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Um wie viel Grad kühlt eine Wärmepumpe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das lässt sich nicht pauschal beziffern, weil es an System, Gebäude und Außentemperatur hängt. Hersteller nennen für die sanfte Flächenkühlung häufig eine Absenkung von rund 2 bis 3 Grad, verschiedene Portale sprechen je nach Quelle und Anlage von 3 bis 8 Grad. Wichtig ist die Erwartungshaltung: Eine Wärmepumpe temperiert den Raum angenehm herunter, sie entfeuchtet die Luft aber nicht aktiv wie eine Klimaanlage und erzeugt keinen kühlen Luftzug. Aktive Kühlung liefert dabei mehr und besser regelbare Kühlleistung als passive Kühlung, verbraucht dafür aber deutlich mehr Strom. An extremen Hitzetagen stößt vor allem die passive Kühlung an ihre Grenzen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet das Kühlen mit der Wärmepumpe im Sommer an Strom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Spannen sind groß und hängen von Anlage, Gebäude, Nutzung und Sommerverlauf ab. Als grobe Orientierung für ein Einfamilienhaus liegen die jährlichen Stromkosten der passiven Kühlung oft im Bereich von etwa 50 bis 100 Euro, weil nur die Umwälzpumpe läuft und der Verdichter weitgehend aus bleibt. Die aktive Kühlung bewegt sich je nach Quelle grob zwischen 300 und 600 Euro pro Saison, weil der Verdichter arbeitet. Das sind Näherungswerte ohne Zusage. Wer eine Photovoltaikanlage betreibt, kann die aktive Kühlung im Sommer weitgehend mit selbst erzeugtem Strom decken, weil Kühlbedarf und Solarertrag zeitlich zusammenfallen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ersetzt eine Wärmepumpe die Klimaanlage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In den meisten Fällen nicht vollständig. Eine wassergeführte Flächenkühlung über die Wärmepumpe temperiert die Räume sanft und gleichmäßig, sie entfeuchtet die Luft aber nicht aktiv und erreicht nicht die schnelle, kräftige Kühlung eines Klimageräts. Dafür arbeitet sie leise, ohne Zugluft und deutlich effizienter, und sie nutzt eine ohnehin vorhandene Anlage mit. Für ein angenehmes Grundniveau an heißen Tagen reicht das in gut gedämmten Gebäuden meist aus. Wer dagegen einzelne Räume schnell auf ein niedriges Niveau herunterkühlen oder aktiv entfeuchten möchte, etwa ein Schlafzimmer in Tropennächten, für den bleibt ein Klimagerät die durchsetzungsstärkere, aber stromhungrigere Lösung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wird die Kühlfunktion der Wärmepumpe gefördert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine eigene Förderung nur für die Kühlfunktion gibt es nicht. Gefördert wird die Wärmepumpe als Heizung im Rahmen des Heizungstauschs über die KfW-Heizungsförderung (Programm 458). Für Anträge ab dem 21. Juli 2026 gelten die reformierten Konditionen: 30 Prozent Grundförderung, für Selbstnutzer ein Klimageschwindigkeitsbonus von 16 Prozent und ein einkommensabhängiger Bonus von 40, 30 oder 10 Prozent, gedeckelt bei 70 beziehungsweise 80 Prozent der förderfähigen Kosten. Ob die geförderte Anlage zusätzlich kühlen kann, ist eine reine Ausstattungsfrage und ändert an der Förderhöhe nichts. Welche Sätze für Ihr Vorhaben gelten, hängt am Antragsdatum – das prüfen wir individuell und tagesaktuell."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-effi-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XCJZ369"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent">
+    <div id="reading-progress" class="h-full bg-effi-gold" style="width:0%"></div>
+  </div>
+
+  <!-- NAVIGATION (konsistent mit Hauptseite) -->
+  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md shadow-md transition-colors duration-300" style="height:77px;">
+    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
+      <a href="/#hero" class="flex items-center gap-2 shrink-0">
+        <img src="/bilder/logos/Logo-A1.png" alt="EffiNova Logo" class="nav-logo-green h-12">
+        <img src="/bilder/logos/EffiNova_head-logo.webp" alt="EffiNova Logo" class="nav-logo-white h-12 hidden">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
+        <a href="/#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
+        <a href="/#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über mich</a>
+        <a href="/#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
+        <a href="/blog/" class="nav-link text-[15px] font-semibold border-b-2 border-effi-green pb-0.5">Blog</a>
+      </div>
+      <a href="https://funnel.effi-nova.de/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
+        <i class="fas fa-phone text-sm"></i>
+        Beratung anfragen
+      </a>
+      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
+      <a href="/#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
+      <a href="/#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
+      <a href="/#ubermich" class="block py-3 text-effi-green text-[15px]">Über mich</a>
+      <a href="/#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
+      <a href="/blog/" class="block py-3 text-effi-green text-[15px] font-semibold">Blog</a>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
+        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+      </a>
+    </div>
+  </nav>
+  <div style="height:77px;"></div>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-effi-beige border-b border-effi-border">
+    <div class="max-w-[1440px] mx-auto px-5 py-3">
+      <nav class="text-xs text-effi-body">
+        <a href="/" class="hover:text-effi-green transition-colors">Startseite</a>
+        <span class="mx-2">/</span>
+        <a href="/blog/" class="hover:text-effi-green transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-effi-green-dark font-medium">Wärmepumpe kühlen</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <section class="bg-white pt-10 pb-0 lg:pt-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="bg-effi-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Wärmepumpe</span>
+          <span class="text-effi-body text-xs"><i class="far fa-clock mr-1"></i> 12 Min. Lesezeit</span>
+        </div>
+        <h1 class="font-montserrat text-effi-green-dark text-3xl md:text-[2.75rem] font-bold leading-tight mb-6">
+          Wärmepumpe kühlen: Aktive und passive Kühlung im Vergleich
+        </h1>
+        <p class="text-effi-body text-lg leading-relaxed mb-8">
+          Wenn im Hochsommer die Räume nicht mehr abkühlen, richtet sich der Blick oft auf die Klimaanlage – dabei steht die Lösung bei vielen Häusern längst im Keller oder im Garten. Denn eine moderne Wärmepumpe kann im Sommer nicht nur heizen, sondern in vielen Fällen auch kühlen. Wie gut das gelingt, hängt an zwei grundverschiedenen Verfahren: der aktiven und der passiven Kühlung. Dieser Vergleich zeigt, wie beide funktionieren, für welche Anlage sich welche eignet, was sie kosten – und wo ihre ehrlichen Grenzen liegen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="max-w-5xl mx-auto px-5 pb-10">
+    <img src="images/waermepumpe-kuehlen-aktiv-passiv/waermepumpe-kuehlen-aktiv-passiv-1.webp" alt="Moderne Wärmepumpe als Außeneinheit vor einem Wohnhaus im Sommer – eine Wärmepumpe kann heizen und kühlen" class="w-full rounded-2xl object-cover aspect-[21/9]" loading="eager">
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <article class="bg-white pb-16">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <div class="grid lg:grid-cols-[1fr_240px] gap-10 max-w-5xl mx-auto">
+
+        <!-- Main content -->
+        <div class="prose">
+
+          <!-- Table of Contents -->
+          <div class="bg-effi-beige rounded-2xl p-6 mb-10 toc">
+            <h4 class="font-montserrat text-effi-green-dark text-sm font-bold uppercase tracking-wider mb-3">Inhaltsverzeichnis</h4>
+            <ol class="space-y-2 text-sm list-decimal pl-4">
+              <li><a href="#einleitung-kuehlen-sommer">Kann Ihre Wärmepumpe im Sommer auch kühlen?</a></li>
+              <li><a href="#kurz-erklaert">Kurz erklärt – wie die Wärmepumpe kühlt</a></li>
+              <li><a href="#aktive-kuehlung">Aktive Kühlung im Profil</a></li>
+              <li><a href="#passive-kuehlung">Passive Kühlung im Profil</a></li>
+              <li><a href="#aktiv-gegen-passiv">Aktiv gegen passiv – die Vergleichstabelle</a></li>
+              <li><a href="#voraussetzung-flaechenheizung">Voraussetzung Flächenheizung</a></li>
+              <li><a href="#taupunkt-kondenswasser">Taupunkt und Kondenswasser</a></li>
+              <li><a href="#kosten">Kosten – Aufpreis, Nachrüstung, Strom</a></li>
+              <li><a href="#waermepumpe-gegen-klimaanlage">Wärmepumpe gegen Klimaanlage</a></li>
+              <li><a href="#foerderung-photovoltaik">Förderung und Kombination mit PV</a></li>
+              <li><a href="#fazit">Fazit – für wen sich welche Kühlart lohnt</a></li>
+              <li><a href="#faq">Häufige Fragen</a></li>
+            </ol>
+          </div>
+
+          <div class="info-box">
+            <h3 class="text-effi-green-dark font-bold text-sm uppercase tracking-wider mb-2">Das Wichtigste in Kürze</h3>
+            <ul class="space-y-1 text-sm">
+              <li class="text-effi-green-dark"><strong>Zwei Verfahren:</strong> Passive Kühlung (Natural Cooling) funktioniert nur mit Sole/Wasser- und Wasser/Wasser-Wärmepumpen; aktive Kühlung läuft über den umgekehrten Kältekreis und ist auch mit Luft/Wasser-Wärmepumpen möglich.</li>
+              <li class="text-effi-green-dark"><strong>Kein Ersatz für die Klimaanlage:</strong> Die Wärmepumpe temperiert sanft und entfeuchtet nicht aktiv. Die Absenkung liegt je nach Quelle, System und Gebäude grob zwischen 2–3 und 3–8 Grad.</li>
+              <li class="text-effi-green-dark"><strong>Voraussetzung Flächenheizung:</strong> Kühlen geht über Fußboden-, Wand- oder Deckenheizung sowie Gebläsekonvektoren. Klassische Heizkörper scheiden aus – zu kleine Fläche, Kondensatgefahr.</li>
+              <li class="text-effi-green-dark"><strong>Taupunkt ist der kritische Punkt:</strong> Die Vorlauftemperatur darf im Kühlbetrieb nicht unter den Taupunkt der Raumluft fallen, sonst bildet sich Kondenswasser; sie wird deshalb meist um 18 Grad gehalten. Ein Taupunktwächter regelt das.</li>
+              <li class="text-effi-green-dark"><strong>Stromkosten:</strong> Passive Kühlung ist sehr sparsam (grob 50–100 Euro pro Jahr fürs EFH), aktive Kühlung deutlich teurer (grob 300–600 Euro pro Saison) – alles Orientierungswerte mit großer Streuung.</li>
+              <li class="text-effi-green-dark"><strong>Förderung:</strong> Es gibt keine separate Förderung für die Kühlfunktion – gefördert wird nur die Wärmepumpe selbst über die KfW 458. Alle Förderangaben Stand 15. Juli 2026, ohne Gewähr – Details in der Hinweisbox am Ende.</li>
+            </ul>
+          </div>
+
+          <h2 id="einleitung-kuehlen-sommer">Einleitung – Kann Ihre Wärmepumpe im Sommer auch kühlen?</h2>
+          <p>Die kurze Antwort lautet: oft ja, aber nicht automatisch. Ob eine Wärmepumpe im Sommer kühlt, entscheidet sich an drei Faktoren – am Wärmepumpentyp, an der vorhandenen Wärmeübergabe im Gebäude und daran, ob die Anlage die Kühlfunktion technisch mitbringt. Ein Gerät, das nur zum Heizen ausgelegt ist, lässt sich nicht per Software zum Kühlen überreden. Umgekehrt bringt eine für den Kühlbetrieb vorbereitete Anlage einen Sommernutzen mit, der im Kaufpreis vieler Systeme fast unbemerkt mitläuft.</p>
+          <p>Wichtig ist die richtige Erwartung. Wer sich vom Umschalten in den Kühlmodus die Wucht eines Klimageräts verspricht, wird zunächst enttäuscht sein. Die Wärmepumpe nimmt der Wohnung die Spitzen der Hitze und hält ein angenehmes Grundniveau, sie erzeugt aber keinen kalten Luftzug und trocknet die Luft nicht aktiv. Genau in dieser sanften, leisen und effizienten Arbeitsweise liegt zugleich ihr großer Vorzug: Sie nutzt eine ohnehin vorhandene Anlage, arbeitet ohne störende Zugluft und verbraucht in der passiven Variante nur einen Bruchteil des Stroms einer Klimaanlage.</p>
+          <p>Für die Entscheidung sollten Sie deshalb zwei Fragen trennen. Erstens: Welches Kühlverfahren ist mit Ihrer Anlage überhaupt möglich – aktiv, passiv oder beides? Zweitens: Wie hoch ist Ihr tatsächlicher Kühlbedarf, und rechtfertigt er den Aufpreis oder den Mehrverbrauch? Dieser Beitrag geht beide Fragen der Reihe nach durch und stellt am Ende eine ehrliche Einordnung gegen die Klimaanlage. Wenn ohnehin ein Heizungstausch ansteht, lohnt es sich besonders, die Kühlfrage gleich mitzudenken – denn nachträglich wird sie im Bestand deutlich aufwendiger.</p>
+
+          <h2 id="kurz-erklaert">Kurz erklärt – wie die Wärmepumpe kühlt</h2>
+          <p>Eine Wärmepumpe verschiebt Wärme von einem Ort zum anderen. Im Winter entzieht sie der Außenluft, dem Erdreich oder dem Grundwasser Wärme und hebt sie auf ein zum Heizen nutzbares Temperaturniveau. Beim Kühlen dreht sich die Richtung um: Nun wird dem Gebäude Wärme entzogen und nach draußen abgeführt. Wohin diese Wärme wandert und ob dafür der stromhungrige Verdichter arbeiten muss, unterscheidet die beiden Verfahren.</p>
+          <p>Bei der <strong>passiven Kühlung</strong>, oft „Natural Cooling" genannt, dient das kühle Erdreich oder das Grundwasser als Wärmesenke. Das Wasser der Flächenheizung gibt seine Wärme über einen Wärmetauscher an den kühlen Sole- oder Grundwasserkreis ab. Der Verdichter bleibt dabei weitgehend aus, es läuft im Wesentlichen nur die Umwälzpumpe. Das ist die energetisch sparsamste Form der Raumkühlung überhaupt – setzt aber eine Erdsonde, einen Erdkollektor oder einen Brunnen voraus.</p>
+          <p>Bei der <strong>aktiven Kühlung</strong> kehrt die Wärmepumpe ihren Kältekreis um und arbeitet im Prinzip wie ein Kühlschrank: Der Verdichter läuft, und die Anlage schafft die Wärme aktiv aus dem Gebäude. Dieses Verfahren beherrschen reversible Luft/Wasser-Wärmepumpen ebenso wie Sole/Wasser-Geräte. Die häufig zu lesende Behauptung, aktive Kühlung sei nur mit Luftwärmepumpen möglich, ist falsch und sollte Sie nicht in die Irre führen. Die aktive Kühlung liefert mehr und besser regelbare Kühlleistung, verbraucht dafür aber deutlich mehr Strom. In beiden Fällen gilt: Die kühle Fläche im Raum – meist der Fußboden – nimmt die Wärme der Raumluft auf und die Wärmepumpe transportiert sie ab.</p>
+
+          <h2 id="aktive-kuehlung">Aktive Kühlung im Profil</h2>
+          <p>Die aktive Kühlung nutzt denselben Kältekreisprozess wie der Heizbetrieb, nur in umgekehrter Richtung. Ein Umschaltventil dreht den Kreislauf, sodass der Verdichter dem Heizwasser Wärme entzieht und sie über den Außenwärmetauscher an die Umgebung abgibt. Das gekühlte Wasser fließt anschließend durch die Flächenheizung und nimmt dort die Raumwärme auf. Weil der Verdichter aktiv arbeitet, lässt sich die Kühlleistung gezielt regeln und auf ein niedrigeres Temperaturniveau bringen, als es die passive Variante schafft.</p>
+          <p>Der große Vorteil liegt in dieser Durchsetzungskraft. Selbst an heißen Tagen kann die aktive Kühlung ein spürbares Grundniveau an Behaglichkeit halten und reagiert schneller auf steigende Raumtemperaturen. Möglich ist sie sowohl mit Luft/Wasser- als auch mit Sole/Wasser-Wärmepumpen, sofern das Gerät als reversible Ausführung ausgelegt ist. Gerade bei Luft/Wasser-Anlagen, die in Neubau und Bestand am häufigsten verbaut werden, ist die aktive Kühlung damit die praktisch relevanteste Kühloption überhaupt.</p>
+          <p>Der Preis dafür ist der Stromverbrauch. Weil der Verdichter läuft, liegt die aktive Kühlung energetisch deutlich über der passiven – auch wenn sie im Vergleich zu einem mobilen Klimagerät noch günstig arbeitet. Ein zweiter Punkt betrifft die Regelung: Damit im Kühlbetrieb kein Kondenswasser entsteht, muss die Vorlauftemperatur sauber über dem Taupunkt gehalten werden. Aktiv gekühlte Anlagen brauchen dafür einen zuverlässigen Taupunktwächter, der die Kühlung bei zu hoher Raumluftfeuchte drosselt. Wer eine Luft/Wasser-Wärmepumpe plant und den Sommernutzen mitnehmen will, sollte die reversible Ausführung deshalb von Anfang an einplanen.</p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/waermepumpe/luft-luft-vs-luft-wasser-waermepumpe-altbau.html">Luft-Luft vs. Luft-Wasser Wärmepumpe im Altbau: welcher Systemtyp zu Ihrem Gebäude passt</a> – der Vergleich ordnet auch die Kühloptionen der beiden Bauarten ein.</p>
+
+          <img src="images/waermepumpe-kuehlen-aktiv-passiv/waermepumpe-kuehlen-aktiv-passiv-2.webp" alt="Schemadarstellung des umgekehrten Kältekreises einer Wärmepumpe im aktiven Kühlbetrieb" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="passive-kuehlung">Passive Kühlung im Profil</h2>
+          <p>Die passive Kühlung, im Fachjargon Natural Cooling genannt, ist das energetisch eleganteste Verfahren – und zugleich das mit den engsten Voraussetzungen. Sie funktioniert ausschließlich mit Sole/Wasser- und Wasser/Wasser-Wärmepumpen, weil sie eine dauerhaft kühle natürliche Wärmesenke braucht. Das Erdreich in einigen Metern Tiefe und das Grundwasser halten übers Jahr eine weitgehend konstante Temperatur im Bereich von etwa 8 bis 12 Grad. Diese Kälte reicht aus, um dem Heizwasser der Flächenheizung im Sommer Wärme zu entziehen.</p>
+          <p>Der Clou: Der Verdichter, das energiehungrigste Bauteil, bleibt dabei weitgehend aus. Es läuft im Wesentlichen nur die Umwälzpumpe, die das Wasser zwischen Erdsonde beziehungsweise Brunnen und Flächenheizung im Kreis führt. Über einen Wärmetauscher gibt der Heizkreis seine aufgenommene Raumwärme an den kühlen Sole- oder Grundwasserkreis ab. Daraus ergibt sich ein sehr niedriger Stromverbrauch – passive Kühlung ist damit die sparsamste Form der Raumkühlung, die im Wohngebäude zur Verfügung steht.</p>
+          <p>Die Kehrseite ist die begrenzte Leistung. Weil die passive Kühlung allein von der natürlichen Temperaturdifferenz lebt, kann sie die Raumtemperatur nur moderat absenken. Als Orientierung nennen viele Quellen eine Absenkung im Bereich weniger Grad; die konkrete Wirkung hängt stark von Gebäude, Dämmung und Auslegung ab. An extremen Hitzetagen und in schlecht gedämmten Häusern stößt das Verfahren an seine Grenzen, weil der kühle Untergrund die anfallende Wärme nicht schnell genug aufnimmt. Für ein angenehmes Grundklima in einem gut gedämmten Haus ist die passive Kühlung dagegen ideal – sie arbeitet nahezu geräuschlos, praktisch nebenbei und zu Betriebskosten, die kaum ins Gewicht fallen. Wer ohnehin über eine Erdwärmepumpe nachdenkt, sollte die Natural-Cooling-Option deshalb unbedingt einplanen.</p>
+
+          <h2 id="aktiv-gegen-passiv">Aktiv gegen passiv – die Vergleichstabelle</h2>
+          <p>Beide Verfahren haben ihre Berechtigung, sie lösen aber unterschiedliche Aufgaben. Die passive Kühlung punktet mit minimalen Betriebskosten und maximaler Effizienz, bleibt in der Leistung aber bescheiden und ist an eine Erdwärme- oder Grundwasseranlage gebunden. Die aktive Kühlung liefert mehr Kühlleistung und ist mit fast jeder reversiblen Wärmepumpe möglich, verbraucht dafür aber merklich mehr Strom. Die folgende Übersicht stellt die wichtigsten Kriterien nebeneinander.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Kriterium</th>
+                <th>Aktive Kühlung</th>
+                <th>Passive Kühlung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Prinzip</td>
+                <td>Umgekehrter Kältekreis, Verdichter läuft</td>
+                <td>Natural Cooling, Verdichter weitgehend aus, nur Umwälzpumpe</td>
+              </tr>
+              <tr>
+                <td>Geeignete WP-Typen</td>
+                <td>Luft/Wasser- und Sole/Wasser-Wärmepumpen (reversibel)</td>
+                <td>Nur Sole/Wasser- und Wasser/Wasser-Wärmepumpen</td>
+              </tr>
+              <tr>
+                <td>Kühlleistung</td>
+                <td>Höher, gezielt regelbar</td>
+                <td>Moderat, von der natürlichen Temperaturdifferenz begrenzt</td>
+              </tr>
+              <tr>
+                <td>Effizienz / Stromverbrauch</td>
+                <td>Deutlich höherer Verbrauch, da Verdichter arbeitet</td>
+                <td>Sehr effizient, minimaler Strombedarf</td>
+              </tr>
+              <tr>
+                <td>Stromkosten (EFH-Orientierung)</td>
+                <td>Grob 300–600 € pro Saison</td>
+                <td>Grob 50–100 € pro Jahr</td>
+              </tr>
+              <tr>
+                <td>Aktive Entfeuchtung</td>
+                <td>Nein (sanfte Flächenkühlung, keine Klimaanlagen-Entfeuchtung)</td>
+                <td>Nein</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Die Werte sind Orientierungsgrößen mit erheblicher Streuung – die realen Kosten hängen von Anlage, Gebäude, Nutzung und Sommerverlauf ab. Eine belastbare Einordnung ergibt sich erst aus der konkreten Auslegung Ihres Gebäudes. Genau hier setzt eine Fachplanung an: Sie klärt, welches Verfahren mit Ihrer Anlage möglich ist und welchen Nutzen es realistisch bringt.</p>
+
+          <div class="bg-effi-green rounded-2xl p-6 my-8 text-center"><p class="font-montserrat text-lg font-bold mb-2" style="color:#ffffff">Soll Ihre neue Wärmepumpe im Sommer mitkühlen?</p><p class="text-sm mb-4" style="color:rgba(255,255,255,0.90)">Wir prüfen, welches Kühlverfahren zu Ihrem Gebäude passt, übernehmen die raumweise Heizlastberechnung und prüfen Ihr Angebot vor der Unterschrift auf Förderfähigkeit.</p><a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-6 py-3 text-sm font-semibold no-underline hover:bg-effi-beige transition-colors" style="text-decoration:none;color:#004225"><i class="fas fa-phone text-sm"></i> Kostenlose Ersteinschätzung</a></div>
+
+          <h2 id="voraussetzung-flaechenheizung">Voraussetzung Flächenheizung – warum Heizkörper ausscheiden</h2>
+          <p>Kühlen mit der Wärmepumpe funktioniert nur, wenn im Gebäude eine große, kühle Fläche zur Verfügung steht, an der die warme Raumluft ihre Wärme abgeben kann. In der Praxis übernimmt das die Flächenheizung: Fußboden-, Wand- oder Deckenheizung. Statt im Winter das Wasser mit rund 30 bis 35 Grad in die Flächen zu schicken, läuft im Sommer gekühltes Wasser durch dieselben Rohre. Die großzügige Fläche sorgt dafür, dass schon eine geringe Temperaturdifferenz genügt, um dem Raum spürbar Wärme zu entziehen.</p>
+          <p>Alternativ eignen sich <strong>Gebläsekonvektoren</strong> (Fan Coils). Diese Geräte kombinieren einen wassergeführten Wärmetauscher mit einem Ventilator und geben die Kühlung aktiv an die Raumluft ab. Sie erreichen eine höhere und schnellere Kühlleistung als die stille Flächenkühlung, sind dafür aber hörbar und verbrauchen zusätzlichen Strom für das Gebläse. In einzelnen, besonders stark aufgeheizten Räumen können sie eine sinnvolle Ergänzung sein.</p>
+          <p>Klassische <strong>Heizkörper scheiden zum Kühlen aus</strong>, und zwar aus zwei Gründen. Erstens ist ihre Fläche viel zu klein: Ein Heizkörper ist darauf ausgelegt, mit hoher Vorlauftemperatur viel Wärme auf wenig Fläche abzugeben – zum Kühlen bräuchte er die umgekehrte Logik. Zweitens droht Kondensat: Weil das kalte Wasser sich auf eine kleine, kompakte Metallfläche konzentriert, würde deren Oberfläche schnell unter den Taupunkt fallen, und es bildete sich Tauwasser am Heizkörper und darunter. Deshalb ist eine Flächenheizung – oder ersatzweise ein für den Kühlbetrieb ausgelegter Gebläsekonvektor – die technische Grundbedingung für das Kühlen mit der Wärmepumpe. Im Neubau ist sie ohnehin Standard; im Bestand entscheidet sie mit darüber, ob sich der Kühlbetrieb überhaupt realisieren lässt.</p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/waermepumpe/waermepumpe-altbau-lohnt-sich.html">Wärmepumpe im Altbau: wann sie sich rechnet und welches System passt</a> – dort erfahren Sie, worauf es beim Verteilsystem im Bestand ankommt.</p>
+
+          <h2 id="taupunkt-kondenswasser">Taupunkt und Kondenswasser – der wichtigste Praxisaspekt</h2>
+          <p>Der entscheidende Punkt beim Kühlen mit der Wärmepumpe ist unsichtbar, aber folgenreich: der Taupunkt. Er beschreibt jene Temperatur, bei der die Luft ihren Wasserdampf nicht mehr halten kann und Feuchtigkeit auskondensiert. Sinkt die Oberflächentemperatur einer gekühlten Fläche unter diesen Taupunkt, schlägt sich Wasser nieder – im Fußboden bedeutet das feuchte Stellen, im schlimmsten Fall Schäden am Bodenaufbau und ein Nährboden für Schimmel.</p>
+          <p>Wo der Taupunkt liegt, hängt von Raumtemperatur und Luftfeuchte ab. Bei 25 Grad Raumtemperatur und 55 Prozent relativer Luftfeuchte liegt er bei rund 15 Grad, bei höherer Feuchte entsprechend höher. In der Praxis hält man die Vorlauftemperatur im Kühlbetrieb deshalb sicherheitshalber im Bereich um 18 Grad und selten darunter – je nach Raumluftfeuchte. Damit erklärt sich auch die begrenzte Kühlleistung der Flächenkühlung: Man darf schlicht nicht beliebig kalt fahren.</p>
+          <p>Absichern lässt sich das über einen <strong>Taupunktwächter</strong> beziehungsweise einen Feuchtefühler. Diese Sensoren messen Temperatur und Luftfeuchte im Raum, berechnen daraus den aktuellen Taupunkt und heben die Vorlauftemperatur an oder drosseln die Kühlung, sobald es kritisch wird. Eine ordentlich geplante Kühlfunktion bringt eine solche Regelung serienmäßig mit – sie ist kein optionales Extra, sondern die Voraussetzung für einen schadensfreien Betrieb. Wichtig ist außerdem das Nutzerverhalten: Wer bei laufender Kühlung Fenster und Türen weit öffnet, holt feuchte Sommerluft herein, treibt den Taupunkt nach oben und zwingt die Regelung zum Abregeln. Kühlbetrieb funktioniert am besten bei geschlossenen Fenstern – ähnlich wie bei einer Klimaanlage. An diesem Detail entscheidet sich in der Praxis, ob die Kühlung zuverlässig und trocken arbeitet.</p>
+
+          <img src="images/waermepumpe-kuehlen-aktiv-passiv/waermepumpe-kuehlen-aktiv-passiv-3.webp" alt="Fußbodenheizung im Kühlbetrieb mit Taupunktwächter zur Vermeidung von Kondenswasser" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="kosten">Kosten – Aufpreis, Nachrüstung, Stromkosten</h2>
+          <p>Bei den Kosten lohnt es, zwischen drei Positionen zu unterscheiden: dem Aufpreis für die Kühlfunktion beim Neukauf, dem Aufwand einer Nachrüstung im Bestand und den laufenden Stromkosten im Betrieb. Vorweg der wichtigste Hinweis: Die folgenden Zahlen sind grobe Orientierungswerte für ein Einfamilienhaus mit erheblicher Schwankung je nach Anlage, Gebäude und Region – keine festen Zusagen.</p>
+          <p>Der <strong>Aufpreis für die Kühlfunktion</strong> beim Kauf einer neuen Wärmepumpe fällt oft moderat aus, weil viele reversible Geräte die Umschaltung bereits an Bord haben. Je nach Quelle und Ausstattung bewegt er sich grob im Bereich von etwa 1.000 bis 3.000 Euro, unter anderem für das Umschaltventil, die zusätzliche Regelung und den Taupunktwächter. Wer ohnehin eine Erd- oder Luftwärmepumpe anschafft, holt sich den Sommernutzen also vergleichsweise günstig mit ins Haus.</p>
+          <p>Die <strong>Nachrüstung im Bestand</strong> ist die aufwendigere Variante. Fehlt eine reversible Anlage oder eine geeignete Flächenheizung, kann die Ergänzung deutlich teurer werden – im Zweifel bis hin zu baulichen Eingriffen am Verteilsystem. Ob sich das rechnet, ist eine Einzelfallfrage, die von der vorhandenen Technik abhängt. Deshalb ist es sinnvoll, die Kühlfrage schon beim Heizungstausch mitzuentscheiden statt Jahre später nachzubessern.</p>
+          <p>Bei den <strong>Stromkosten</strong> ist der Abstand zwischen den Verfahren groß. Die passive Kühlung liegt fürs Einfamilienhaus je nach Quelle grob bei etwa 50 bis 100 Euro im Jahr, weil nur die Umwälzpumpe arbeitet. Die aktive Kühlung bewegt sich mit laufendem Verdichter grob zwischen 300 und 600 Euro pro Saison. Beides sind Näherungswerte; die reale Rechnung hängt an Nutzung, Strompreis und Sommer. Selbst die aktive Kühlung arbeitet dabei effizienter als ein mobiles Monoblock-Klimagerät, das die warme Abluft über einen Schlauch nach draußen führt und permanent warme Außenluft nachzieht.</p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/waermepumpe/waermepumpe-altbau-kosten-foerderung-berechnen.html">Wärmepumpe im Altbau: Kosten und Förderung berechnen</a> – hier ordnen wir die Gesamtinvestition und die Förderung Schritt für Schritt ein.</p>
+
+          <h2 id="waermepumpe-gegen-klimaanlage">Wärmepumpe gegen Klimaanlage – der ehrliche Vergleich</h2>
+          <p>Die naheliegende Frage lautet: Wenn die Wärmepumpe ohnehin kühlt, warum dann noch über eine Klimaanlage nachdenken? Die ehrliche Antwort ist, dass beide unterschiedliche Aufgaben lösen und keine der beiden in jeder Hinsicht überlegen ist. Wer das versteht, trifft die passende Entscheidung für sein Gebäude – statt der teuersten oder der stärksten.</p>
+          <p>Die <strong>Flächenkühlung über die Wärmepumpe</strong> spielt ihre Stärken beim Grundklima aus. Sie temperiert die Räume gleichmäßig und angenehm, arbeitet nahezu geräuschlos und ohne Zugluft und ist – besonders in der passiven Variante – hocheffizient. Sie nutzt eine ohnehin vorhandene Anlage mit und braucht keine zusätzlichen Innengeräte an der Wand. Ihre Grenzen sind ebenso klar: Sie senkt die Temperatur nur moderat, reagiert träge und entfeuchtet die Luft nicht aktiv. In einer schwülen Tropennacht bringt sie ein Schlafzimmer nicht auf Knopfdruck auf ein niedriges Niveau.</p>
+          <p>Die <strong>Klimaanlage</strong>, insbesondere ein fest installiertes Splitgerät, ist genau dort stark, wo die Flächenkühlung schwächelt. Sie kühlt einzelne Räume schnell und kräftig herunter, entzieht der Luft aktiv Feuchtigkeit und lässt sich gradgenau steuern. Der Preis dafür sind ein höherer Stromverbrauch, sichtbare Innengeräte, eine Außeneinheit an der Fassade – und damit in Mietwohnung oder Eigentümergemeinschaft der Bedarf einer Zustimmung. Ein mobiles Monoblock-Gerät wiederum ist ineffizient, weil es warme Außenluft nachzieht.</p>
+          <p>In vielen gut gedämmten Häusern ist die Reihenfolge deshalb entscheidend: Erst die Wärmepumpe für ein solides Grundklima nutzen, den baulichen Sommerhitzeschutz ausschöpfen – und nur dort, wo es wirklich nötig ist, gezielt mit einem Klimagerät ergänzen. Wer zuerst die Hülle in Ordnung bringt und die Flächenkühlung mitnimmt, braucht am Ende weniger und kleinere Kühltechnik.</p>
+          <p><strong>Unser Tipp:</strong> <a href="/blog/hitzeschutz/wohnung-kuehlen-ohne-klimaanlage.html">Wohnung kühlen ohne Klimaanlage: alle Maßnahmen von 0 Euro bis Förderung</a> – der Leitfaden zeigt, wie Sie die Hitze zuerst baulich draußen halten.</p>
+
+          <h2 id="foerderung-photovoltaik">Förderung und Kombination mit Photovoltaik</h2>
+          <p>Eine eigene Förderung für die Kühlfunktion gibt es nicht – das ist der wichtigste Satz zu diesem Thema. Der Staat bezuschusst die Wärmepumpe als Heizung im Rahmen des Heizungstauschs, nicht ihren Sommernutzen. Ob die geförderte Anlage zusätzlich kühlen kann, ist eine reine Ausstattungsfrage und ändert an der Förderhöhe nichts. Die Kühlfunktion kommt also gewissermaßen als geförderter Nebeneffekt mit, sofern Sie eine reversible Anlage wählen.</p>
+          <p>Gefördert wird die Wärmepumpe über die <strong>KfW-Heizungsförderung (Programm 458)</strong>. Für Förderanträge ab dem 21. Juli 2026 gelten die reformierten Konditionen: 30 Prozent Grundförderung für alle, dazu für Selbstnutzer ein Klimageschwindigkeitsbonus von 16 Prozent und ein einkommensabhängiger Bonus von 40, 30 oder 10 Prozent, gestaffelt nach zu versteuerndem Haushaltseinkommen. Ein Familienzuschlag senkt das anzusetzende Einkommen bei mindestens einem minderjährigen Kind um einmalig 10.000 Euro. Die förderfähigen Kosten sind für die erste Wohneinheit auf 28.000 Euro begrenzt. Die Obergrenze der Förderquote liegt bei 80 Prozent, solange das anzusetzende zu versteuernde Haushaltsjahreseinkommen höchstens 30.000 Euro beträgt (mit mindestens einem minderjährigen Kind bis 40.000 Euro), darüber bei 70 Prozent. Welcher Wert für Ihr Vorhaben gilt, hängt am Antragsdatum – das prüfen wir individuell und tagesaktuell.</p>
+          <p>Besonders wirtschaftlich wird das Kühlen im Zusammenspiel mit einer <strong>Photovoltaikanlage</strong>. Der Grund ist ein glücklicher Zufall der Physik: Der größte Kühlbedarf entsteht an sonnigen, heißen Tagen – also genau dann, wenn die PV-Anlage am meisten Strom liefert. Kühlbedarf und Solarertrag laufen zeitlich zusammen. Damit lässt sich vor allem die stromintensivere aktive Kühlung im Sommer weitgehend mit selbst erzeugtem Solarstrom decken, und die laufenden Kosten sinken spürbar. Wer beides plant, sollte die Kombination von Anfang an mitdenken.</p>
+
+          <img src="images/waermepumpe-kuehlen-aktiv-passiv/waermepumpe-kuehlen-aktiv-passiv-4.webp" alt="Wärmepumpe neben einem Wohnhaus mit Photovoltaikanlage auf dem Dach an einem Sommertag" class="w-full rounded-2xl" loading="lazy" decoding="async">
+
+          <h2 id="fazit">Fazit – für wen sich welche Kühlart lohnt</h2>
+          <p>Ob und wie Ihre Wärmepumpe im Sommer kühlt, ist keine Frage des guten Willens, sondern der Technik. Die passive Kühlung ist die erste Wahl für alle, die ohnehin eine Sole/Wasser- oder Wasser/Wasser-Wärmepumpe planen oder betreiben: Sie liefert ein angenehmes Grundklima zu Betriebskosten, die kaum ins Gewicht fallen, und arbeitet nahezu geräuschlos nebenbei. Ihre Grenze ist die moderate Leistung – für den Hochsommer im schlecht gedämmten Haus reicht sie allein oft nicht.</p>
+          <p>Die aktive Kühlung ist die richtige Wahl, wenn mehr Kühlleistung gefragt ist oder wenn eine Luft/Wasser-Wärmepumpe zum Einsatz kommt, die passiv gar nicht kühlen kann. Sie setzt sich auch an heißen Tagen durch, verlangt dafür aber deutlich mehr Strom – ein Mehrverbrauch, der sich mit einer Photovoltaikanlage im Sommer gut abfedern lässt. In beiden Fällen bleibt die Wärmepumpe eine sanfte Temperierung, kein Entfeuchter und kein Ersatz für die kräftige, schnelle Kühlung eines Klimageräts.</p>
+          <p>Der sinnvolle nächste Schritt ist deshalb nicht die schnelle Kaufentscheidung, sondern die nüchterne Prüfung: Welches Verfahren ist mit Ihrer Anlage möglich, welche Wärmeübergabe ist im Gebäude vorhanden, und wie hoch ist Ihr tatsächlicher Kühlbedarf? Genau das schauen wir uns mit Ihnen an. EffiNova prüft Ihr Angebot vor der Vertragsunterschrift auf Förderfähigkeit und übernimmt bei der Wärmepumpe die raumweise Heizlastberechnung, damit die Anlage sauber ausgelegt ist – im Heiz- wie im Kühlbetrieb. So wird aus der Heizungsentscheidung zugleich eine durchdachte Antwort auf den nächsten heißen Sommer.</p>
+
+          <h2 id="faq">Häufige Fragen</h2>
+
+          <details>
+            <summary>Kann jede Wärmepumpe kühlen?</summary>
+            <p>Nein. Kühlen kann eine Wärmepumpe nur, wenn sie dafür ausgelegt ist. Die passive Kühlung (Natural Cooling) ist ausschließlich mit Sole/Wasser- und Wasser/Wasser-Wärmepumpen möglich, weil sie das kühle Erdreich oder Grundwasser als Wärmesenke nutzen. Die aktive Kühlung über den umgekehrten Kältekreis beherrschen reversible Luft/Wasser-Wärmepumpen ebenso wie Sole/Wasser-Geräte – die verbreitete Aussage, aktive Kühlung sei nur mit Luftwärmepumpen möglich, stimmt nicht. Entscheidend ist, dass die Anlage die Kühlfunktion technisch mitbringt und dass im Gebäude eine geeignete Wärmeübergabe wie eine Flächenheizung vorhanden ist. Reine Heizgeräte ohne Kältekreis-Umkehr lassen sich nicht nachträglich zum Kühlen bewegen.</p>
+          </details>
+
+          <details>
+            <summary>Um wie viel Grad kühlt eine Wärmepumpe?</summary>
+            <p>Das lässt sich nicht pauschal beziffern, weil es an System, Gebäude und Außentemperatur hängt. Hersteller nennen für die sanfte Flächenkühlung häufig eine Absenkung von rund 2 bis 3 Grad, verschiedene Portale sprechen je nach Quelle und Anlage von 3 bis 8 Grad. Wichtig ist die Erwartungshaltung: Eine Wärmepumpe temperiert den Raum angenehm herunter, sie entfeuchtet die Luft aber nicht aktiv wie eine Klimaanlage und erzeugt keinen kühlen Luftzug. Aktive Kühlung liefert dabei mehr und besser regelbare Kühlleistung als passive Kühlung, verbraucht dafür aber deutlich mehr Strom. An extremen Hitzetagen stößt vor allem die passive Kühlung an ihre Grenzen.</p>
+          </details>
+
+          <details>
+            <summary>Was kostet das Kühlen mit der Wärmepumpe im Sommer an Strom?</summary>
+            <p>Die Spannen sind groß und hängen von Anlage, Gebäude, Nutzung und Sommerverlauf ab. Als grobe Orientierung für ein Einfamilienhaus liegen die jährlichen Stromkosten der passiven Kühlung oft im Bereich von etwa 50 bis 100 Euro, weil nur die Umwälzpumpe läuft und der Verdichter weitgehend aus bleibt. Die aktive Kühlung bewegt sich je nach Quelle grob zwischen 300 und 600 Euro pro Saison, weil der Verdichter arbeitet. Das sind Näherungswerte ohne Zusage. Wer eine Photovoltaikanlage betreibt, kann die aktive Kühlung im Sommer weitgehend mit selbst erzeugtem Strom decken, weil Kühlbedarf und Solarertrag zeitlich zusammenfallen.</p>
+          </details>
+
+          <details>
+            <summary>Ersetzt eine Wärmepumpe die Klimaanlage?</summary>
+            <p>In den meisten Fällen nicht vollständig. Eine wassergeführte Flächenkühlung über die Wärmepumpe temperiert die Räume sanft und gleichmäßig, sie entfeuchtet die Luft aber nicht aktiv und erreicht nicht die schnelle, kräftige Kühlung eines Klimageräts. Dafür arbeitet sie leise, ohne Zugluft und deutlich effizienter, und sie nutzt eine ohnehin vorhandene Anlage mit. Für ein angenehmes Grundniveau an heißen Tagen reicht das in gut gedämmten Gebäuden meist aus. Wer dagegen einzelne Räume schnell auf ein niedriges Niveau herunterkühlen oder aktiv entfeuchten möchte, etwa ein Schlafzimmer in Tropennächten, für den bleibt ein Klimagerät die durchsetzungsstärkere, aber stromhungrigere Lösung.</p>
+          </details>
+
+          <details>
+            <summary>Wird die Kühlfunktion der Wärmepumpe gefördert?</summary>
+            <p>Eine eigene Förderung nur für die Kühlfunktion gibt es nicht. Gefördert wird die Wärmepumpe als Heizung im Rahmen des Heizungstauschs über die KfW-Heizungsförderung (Programm 458). Für Anträge ab dem 21. Juli 2026 gelten die reformierten Konditionen: 30 Prozent Grundförderung, für Selbstnutzer ein Klimageschwindigkeitsbonus von 16 Prozent und ein einkommensabhängiger Bonus von 40, 30 oder 10 Prozent, gedeckelt bei 70 beziehungsweise 80 Prozent der förderfähigen Kosten. Ob die geförderte Anlage zusätzlich kühlen kann, ist eine reine Ausstattungsfrage und ändert an der Förderhöhe nichts. Welche Sätze für Ihr Vorhaben gelten, hängt am Antragsdatum – das prüfen wir individuell und tagesaktuell.</p>
+          </details>
+
+          <div class="info-box">
+            <p class="text-effi-green-dark text-sm"><strong><i class="fas fa-circle-info mr-2 text-effi-gold"></i>Stand der Angaben (15. Juli 2026):</strong> Bundestag und Bundesrat haben am 10. Juli 2026 das neue Gebäudemodernisierungsgesetz (GModG) beschlossen, und die reformierten KfW-Förderbedingungen gelten laut BMWE und KfW für neue Anträge ab dem 21. Juli 2026. Das Gesetz ist jedoch noch nicht verkündet und die geänderte Förderrichtlinie noch nicht im Bundesanzeiger veröffentlicht – alle Zahlen geben den aktuellen Stand des Wissens wieder, ohne Gewähr. Die Förderung steht außerdem unter dem Vorbehalt verfügbarer Bundesmittel; ein Rechtsanspruch besteht nicht. Auch die genannten Kosten- und Stromkostenangaben sind grobe Orientierungswerte mit großer Streuung, keine Zusagen. Welche Konditionen und welches Kühlverfahren für Ihr Vorhaben konkret gelten, prüfen wir gern tagesaktuell und individuell für Sie.</p>
+          </div>
+
+        </div>
+
+        <!-- Sidebar (Desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-effi-beige rounded-2xl p-5 text-center">
+              <div class="w-16 h-16 bg-effi-green rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-white font-montserrat font-bold text-lg">HW</span>
+              </div>
+              <p class="font-montserrat text-effi-green-dark text-sm font-bold">Henk Wenner</p>
+              <p class="text-xs text-effi-body mt-1">Zertifizierter Energieberater<br>EffiNova Energieberatung</p>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Teilen</p>
+              <div class="flex gap-2">
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="w-10 h-10 bg-effi-green rounded-lg flex items-center justify-center text-white text-sm hover:bg-effi-green-mid transition-colors"><i class="fas fa-link"></i></a>
+              </div>
+            </div>
+            <div class="bg-effi-beige rounded-2xl p-5">
+              <p class="font-montserrat text-effi-green-dark text-xs font-bold uppercase tracking-wider mb-3">Verwandte Artikel</p>
+              <div class="space-y-3">
+                <a href="/blog/waermepumpe/waermepumpe-altbau-lohnt-sich.html" class="block text-sm text-effi-green hover:underline leading-snug">Wärmepumpe im Altbau: wann sie sich rechnet</a>
+                <a href="/blog/waermepumpe/luft-luft-vs-luft-wasser-waermepumpe-altbau.html" class="block text-sm text-effi-green hover:underline leading-snug">Luft-Luft vs. Luft-Wasser Wärmepumpe</a>
+                <a href="/blog/waermepumpe/waermepumpe-altbau-kosten-foerderung-berechnen.html" class="block text-sm text-effi-green hover:underline leading-snug">Kosten und Förderung berechnen</a>
+                <a href="/blog/hitzeschutz/wohnung-kuehlen-ohne-klimaanlage.html" class="block text-sm text-effi-green hover:underline leading-snug">Wohnung kühlen ohne Klimaanlage</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA AFTER ARTICLE -->
+  <section class="bg-effi-green py-14">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="font-montserrat text-white text-2xl font-bold mb-4">Welche Kühlart passt zu Ihrer Wärmepumpe?</h2>
+      <p class="text-white/70 text-[15px] mb-8">Wir prüfen, welches Verfahren mit Ihrer Anlage möglich ist, übernehmen die raumweise Heizlastberechnung und prüfen Ihr Angebot auf Förderfähigkeit – bevor Sie unterschreiben.</p>
+      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-white text-effi-green rounded-xl px-8 py-4 text-[15px] font-semibold hover:bg-effi-beige transition-colors">
+        <i class="fas fa-phone text-sm"></i>
+        Kostenlose Erstberatung anfragen
+      </a>
+    </div>
+  </section>
+
+  <!-- MORE ARTICLES -->
+  <section class="bg-effi-beige py-14">
+    <div class="max-w-[1440px] mx-auto px-5">
+      <h2 class="font-montserrat text-effi-green-dark text-2xl font-bold mb-8">Weitere Beiträge</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/blog/waermepumpe/waermepumpe-altbau-lohnt-sich.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Wärmepumpe im Altbau: wann sie sich rechnet" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Wärmepumpe im Altbau: wann sie sich rechnet</h3>
+          </div>
+        </a>
+        <a href="/blog/waermepumpe/luft-luft-vs-luft-wasser-waermepumpe-altbau.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Luft-Luft vs. Luft-Wasser Wärmepumpe im Altbau" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Wärmepumpe</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Luft-Luft vs. Luft-Wasser Wärmepumpe</h3>
+          </div>
+        </a>
+        <a href="/blog/hitzeschutz/mobile-klimaanlage-stromkosten.html" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden aspect-[16/10]">
+            <img src="/bilder/referenzen/effi-7.webp" alt="Stromkosten mobiler Klimaanlagen" class="w-full h-full object-cover" loading="lazy" decoding="async">
+          </div>
+          <div class="p-5">
+            <span class="text-effi-green text-xs font-semibold uppercase tracking-wider">Hitzeschutz</span>
+            <h3 class="font-montserrat text-effi-green-dark text-base font-bold mt-1.5 leading-snug">Stromkosten mobiler Klimaanlagen</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (konsistent mit Hauptseite) -->
+  <footer class="bg-effi-green text-white" data-nav-theme="dark">
+    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <img src="/bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Handwerker aus einem Netzwerk</li>
+            <li>Ganzheitliche Energieberatung</li>
+            <li>BAFA Förderservice & Baubegleitung</li>
+            <li>KfW Förderservice & Baubegleitung</li>
+            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
+            <li>GEG-Nachweis, Energieausweis</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
+          <ul class="space-y-2 text-white/80 text-sm">
+            <li>Expertise</li>
+            <li><a href="/impressum.html" class="hover:text-white transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
+          <ul class="space-y-3 text-white/80 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-xs"></i>
+              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-xs"></i>
+              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
+        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Reading progress bar
+    window.addEventListener('scroll', function() {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = Math.min((window.scrollY / docHeight) * 100, 100);
+      document.getElementById('reading-progress').style.width = progress + '%';
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
+    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+  </button>
+  <script defer src="/js/cookieconsent.js"></script>
+  <script defer src="/js/cookie-consent-config.js"></script>
+  <script defer src="/js/gtm-button-tracking.js"></script>
+  <script defer src="/js/cta-link-decorator.js"></script>
+</body>
+</html>

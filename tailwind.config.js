@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./*.html", "./blog/**/*.html"],
+  content: ["./*.html", "./blog/**/*.html", "./energieberatung/**/*.html"],
   theme: {
     extend: {
       colors: {
