@@ -62,8 +62,16 @@
 
     /* ===== Mobile-First-Anpassungen ===== */
     @media (max-width: 680px) {
-      #hero-photo-wrap { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 22px !important; }
+      #hero-photo-wrap { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 12px !important; }
       #hero-photo-box { aspect-ratio: 5/4 !important; }
+      /* Hero kompakter: kleinere Schrift, damit der CTA auf den ersten Screen passt */
+      .hero-inner { padding-top: 78px !important; }
+      .hero-eyebrow-row { margin-bottom: 10px !important; }
+      .hero-accent { min-height: 30px !important; }
+      .hero-eyebrow { font-size: 12.5px !important; }
+      .hero-h1 { font-size: clamp(26px, 6.4vw, 29px) !important; line-height: 1.1 !important; margin-bottom: 12px !important; }
+      .hero-lead { font-size: 14.5px !important; line-height: 1.5 !important; margin-bottom: 16px !important; }
+      .hero-cta { font-size: 16px !important; padding: 15px 26px !important; }
       /* Badge kompakt & flach: Name links, Experten-Score rechts daneben (nebeneinander) */
       #hero-badge { gap: 10px !important; padding: 12px 12px !important; }
       #hero-badge .badge-name { font-size: 18px !important; }
@@ -110,11 +118,11 @@
     <div style="position:absolute; top:-160px; right:-120px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(244,239,217,0.10) 0%, rgba(244,239,217,0) 70%); pointer-events:none;"></div>
 
     <!-- hero stacked: photo top-right, then headline -->
-    <div style="position:relative; z-index:2; max-width:1240px; margin:0 auto; padding:92px 24px 14px;">
+    <div class="hero-inner" style="position:relative; z-index:2; max-width:1240px; margin:0 auto; padding:92px 24px 14px;">
       <div id="hero-photo-wrap" style="position:relative; width:min(52%, 480px); margin-left:auto; margin-bottom:26px;">
         <div style="position:relative;">
         <div id="hero-photo-box" style="position:relative; border-radius:22px; overflow:hidden; aspect-ratio:5/4;">
-          <img src="bilder/startseite/hero-portrait.webp" alt="Henk Wenner, Zimmermeister & Energieeffizienzexperte" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;" />
+          <img src="bilder/startseite/hero-portrait.webp" alt="Henk Wenner, Zimmermeister & Energieeffizienzexperte" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
         </div>
         <div id="hero-badge" style="position:absolute; left:12px; right:12px; bottom:12px; background:rgba(244,239,217,0.97); color:#004225; border-radius:14px; padding:12px 14px; box-shadow:0 10px 26px rgba(1,51,27,0.35); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:nowrap;">
           <div style="display:flex; align-items:center; gap:10px; min-width:0; flex:1 1 auto;">
@@ -132,23 +140,23 @@
       </div>
 
       <div style="max-width:840px;">
-        <div style="display:flex; gap:16px; align-items:flex-start; margin-bottom:16px;">
-          <div style="width:4px; align-self:stretch; min-height:40px; background:#F4EFD9; border-radius:4px;"></div>
-          <p style="margin:0; font-size:15.5px; line-height:1.5; color:rgba(244,239,217,0.82); max-width:520px; letter-spacing:0.2px; text-transform:uppercase; font-weight:600;">
+        <div class="hero-eyebrow-row" style="display:flex; gap:16px; align-items:flex-start; margin-bottom:16px;">
+          <div class="hero-accent" style="width:4px; align-self:stretch; min-height:40px; background:#F4EFD9; border-radius:4px;"></div>
+          <p class="hero-eyebrow" style="margin:0; font-size:15.5px; line-height:1.5; color:rgba(244,239,217,0.82); max-width:520px; letter-spacing:0.2px; text-transform:uppercase; font-weight:600;">
             Unabhängige Energieberatung &amp; Förderservice aus der Praxis
           </p>
         </div>
 
-        <h1 style="margin:0 0 18px; font-family:'Montserrat', sans-serif; font-weight:800; color:#F4EFD9; font-size:clamp(34px, 5.2vw, 62px); line-height:1.04; letter-spacing:0.3px;">
+        <h1 class="hero-h1" style="margin:0 0 18px; font-family:'Montserrat', sans-serif; font-weight:800; color:#F4EFD9; font-size:clamp(34px, 5.2vw, 62px); line-height:1.04; letter-spacing:0.3px;">
           Sie wollen sanieren —<br />aber jeder erzählt Ihnen etwas anderes?
         </h1>
 
-        <p style="margin:0 0 24px; font-size:18px; line-height:1.6; color:rgba(244,239,217,0.85); max-width:640px;">
+        <p class="hero-lead" style="margin:0 0 24px; font-size:18px; line-height:1.6; color:rgba(244,239,217,0.85); max-width:640px;">
           Handwerker, Nachbarn, Internet: alle widersprechen sich. Wir schauen auf Ihr Haus, rechnen ehrlich und sichern Ihnen die Förderung, die Ihnen zusteht. Persönlich betreut von Zimmermeister &amp; Energieeffizienzexperte <strong style="color:#F4EFD9;">Henk Wenner</strong> und seinem Team.
         </p>
 
         <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-bottom:0;">
-          <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:11px; background:#F4EFD9; color:#004225; font-weight:700; font-size:17px; padding:17px 30px; border-radius:999px; box-shadow:0 14px 34px rgba(1,51,27,0.45);">
+          <a class="hero-cta" href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:11px; background:#F4EFD9; color:#004225; font-weight:700; font-size:17px; padding:17px 30px; border-radius:999px; box-shadow:0 14px 34px rgba(1,51,27,0.45);">
             Kostenloses Erstgespräch anfragen <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
           </a>
         </div>
