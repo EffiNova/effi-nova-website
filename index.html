@@ -64,10 +64,11 @@
     @media (max-width: 680px) {
       #hero-photo-wrap { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 22px !important; }
       #hero-photo-box { aspect-ratio: 5/4 !important; }
-      /* Badge stapeln: Name-Block oben, Experten-Score darunter — kein Überlappen auf schmalen Phones */
-      #hero-badge { flex-wrap: wrap !important; justify-content: flex-start !important; row-gap: 12px !important; }
-      #hero-badge > div:first-child { flex: 1 1 100% !important; }
-      #hero-badge > div:last-child img { height: 84px !important; }
+      /* Badge kompakt & flach: Name links, Experten-Score rechts daneben (nebeneinander) */
+      #hero-badge { gap: 10px !important; padding: 12px 12px !important; }
+      #hero-badge .badge-name { font-size: 18px !important; }
+      #hero-badge .badge-sub { font-size: 13px !important; }
+      #score-img { height: auto !important; width: clamp(104px, 27vw, 124px) !important; }
       #ueber-media { position: static !important; top: auto !important; }
       #reviews-track { margin: 0 !important; }
       .rev-nav { display: none !important; }
@@ -115,17 +116,17 @@
         <div id="hero-photo-box" style="position:relative; border-radius:22px; overflow:hidden; aspect-ratio:5/4;">
           <img src="bilder/startseite/hero-portrait.webp" alt="Henk Wenner, Zimmermeister & Energieeffizienzexperte" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;" />
         </div>
-        <div id="hero-badge" style="position:absolute; left:12px; right:12px; bottom:12px; background:rgba(244,239,217,0.97); color:#004225; border-radius:14px; padding:11px 14px; box-shadow:0 10px 26px rgba(1,51,27,0.35); display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:nowrap;">
+        <div id="hero-badge" style="position:absolute; left:12px; right:12px; bottom:12px; background:rgba(244,239,217,0.97); color:#004225; border-radius:14px; padding:12px 14px; box-shadow:0 10px 26px rgba(1,51,27,0.35); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:nowrap;">
           <div style="display:flex; align-items:center; gap:10px; min-width:0; flex:1 1 auto;">
-            <span style="flex:none; width:40px; height:40px; border-radius:11px; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:22px;height:22px;"></span></span>
+            <span class="badge-icon" style="flex:none; width:40px; height:40px; border-radius:11px; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:22px;height:22px;"></span></span>
             <div style="min-width:0;">
-              <div style="font-weight:800; font-size:20px; line-height:1.15; white-space:nowrap;">Henk Wenner</div>
-              <div style="font-size:15.5px; color:#035B2F; margin-top:3px; line-height:1.25;">Zimmermeister &amp;<br />Energieeffizienzexperte</div>
+              <div class="badge-name" style="font-weight:800; font-size:20px; line-height:1.15; white-space:nowrap;">Henk Wenner</div>
+              <div class="badge-sub" style="font-size:15.5px; color:#035B2F; margin-top:3px; line-height:1.25; overflow-wrap:anywhere;">Zimmermeister &amp;<br />Energieeffizienzexperte</div>
             </div>
           </div>
-          <div style="flex:none;">
-            <img src="bilder/startseite/experten-score.png" alt="Experten-Score: 4,8 von 5 aus 27 Bewertungen auf Expertenmarkt.de" style="display:block; height:96px; width:auto;" />
-          </div>
+          <a id="score-static" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener" aria-label="Experten-Score: 4,8 von 5 aus 27 Bewertungen auf Expertenmarkt.de ansehen" style="flex:none; line-height:0;">
+            <img id="score-img" src="bilder/startseite/experten-score.png" alt="Experten-Score: 4,8 von 5 aus 27 Bewertungen auf Expertenmarkt.de" style="display:block; height:92px; width:auto;" />
+          </a>
         </div>
         </div>
       </div>
