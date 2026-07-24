@@ -23,792 +23,724 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5XCJZ369');</script>
   <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EffiNova Energieberatung</title>
-  <meta name="description" content="Schluss mit der Überforderung durch Förderdschungel und Handwerkersuche. EffiNova übernimmt für Sie die komplette Begleitung – von der Analyse nach DIN V 18599 bis zur sicheren Auszahlung der KfW/BAFA-Förderung.">
+  <title>EffiNova – Unabhängige Energieberatung & Förderservice aus der Praxis</title>
+  <meta name="description" content="Sie wollen sanieren, aber jeder erzählt Ihnen etwas anderes? EffiNova schaut auf Ihr Haus, rechnet ehrlich und sichert Ihnen die Förderung, die Ihnen zusteht – persönlich betreut von Zimmermeister & Energieeffizienzexperte Henk Wenner und seinem Team.">
   <link rel="canonical" href="https://effi-nova.de/">
-  <link rel="stylesheet" href="dist/output.css">
+
+  <!-- Cookie-Consent Styles -->
   <link rel="stylesheet" href="css/cookieconsent.css">
   <link rel="stylesheet" href="css/cookie-consent-brand.css">
+  <!-- Icons: Lucide, self-hosted -->
+  <script defer src="js/lucide.min.js"></script>
+  <!-- Brand-Font (self-hosted) -->
   <link rel="preload" href="fonts/Montserrat-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
-    /* ===== Brand Font (self-hosted) ===== */
-    /* Montserrat — Variable Font, Weights 300–700, deckt Display + Body ab */
+    /* ===== Brand Font (self-hosted) — Montserrat Variable, deckt Display + Body ab ===== */
     @font-face {
       font-family: 'Montserrat';
       src: url('fonts/Montserrat-Variable.woff2') format('woff2-variations'),
            url('fonts/Montserrat-Variable.woff2') format('woff2');
-      font-weight: 300 700;
+      font-weight: 300 800;
       font-style: normal;
       font-display: swap;
     }
 
-    * { font-family: 'Montserrat', system-ui, sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; }
-    html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 78px; }
+    body { font-family: 'Montserrat', system-ui, sans-serif; background: #F4EFD9; -webkit-font-smoothing: antialiased; }
+    a { color: #035B2F; text-decoration: none; }
+    a:hover { color: #004225; }
+    ::selection { background: #035B2F; color: #F4EFD9; }
 
-    /* Sticky nav color inversion */
-    .nav-logo { transition: filter 0.3s ease; }
-    .nav-dark .nav-logo { filter: brightness(0) invert(1); }
-    .nav-dark .nav-link { color: #FFFFFF; }
-    .nav-dark .nav-cta { background-color: #F2EFE7; color: #004225; }
-    .nav-light .nav-link { color: #004225; }
-    .nav-light .nav-cta { background-color: #004225; color: #FFFFFF; }
+    /* Font-Awesome-Icons an das Lucide-Sizing angleichen (currentColor erbt vom Badge) */
+    .ic { line-height: 1; display: inline-block; vertical-align: middle; }
 
-    /* Glassmorphism nav styling */
-    .nav-dark { background-color: rgba(0, 66, 37, 0.85) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-    .nav-light { border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-    /* Footer logo: always white on dark green bg */
-    .logo-invert { filter: brightness(0) invert(1); }
-
-    /* Swiper-like horizontal scroll */
-    .scroll-snap-x { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-    .scroll-snap-x > * { scroll-snap-align: start; }
-
-    /* Fade-in animation */
-    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-
-
-    /* Partner logo animation */
-    @keyframes scroll-logos {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .logo-scroll { animation: scroll-logos 20s linear infinite; }
-    .logo-scroll:hover { animation-play-state: paused; }
-
-    /* ===== Fallback fuer Browser ohne backdrop-filter Support ===== */
-    @supports not (backdrop-filter: blur(1px)) {
-      .nav-dark {
-        background-color: rgba(0, 66, 37, 0.95) !important;
-      }
-      .nav-light {
-        background-color: rgba(255, 255, 255, 0.95) !important;
-      }
-      .bg-white/60 {
-        background-color: rgba(255, 255, 255, 0.85);
-      }
-      .bg-white/70 {
-        background-color: rgba(255, 255, 255, 0.90);
-      }
+    /* ===== Mobile-First-Anpassungen ===== */
+    @media (max-width: 680px) {
+      #hero-photo-wrap { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 22px !important; }
+      #hero-photo-box { aspect-ratio: 5/4 !important; }
+      /* Badge stapeln: Name-Block oben, Experten-Score darunter — kein Überlappen auf schmalen Phones */
+      #hero-badge { flex-wrap: wrap !important; justify-content: flex-start !important; row-gap: 12px !important; }
+      #hero-badge > div:first-child { flex: 1 1 100% !important; }
+      #hero-badge > div:last-child img { height: 84px !important; }
+      #ueber-media { position: static !important; top: auto !important; }
+      #reviews-track { margin: 0 !important; }
+      .rev-nav { display: none !important; }
     }
   </style>
 </head>
-<body class="bg-white text-effi-body">
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XCJZ369"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ============================================ -->
-  <!-- NAVIGATION (Sticky)                          -->
-  <!-- ============================================ -->
-  <nav id="main-nav" class="nav-light fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md shadow-md transition-colors duration-300" style="height:77px;">
-    <div class="max-w-[1440px] mx-auto px-5 h-full flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="flex items-center gap-2 shrink-0">
-        <img src="bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="nav-logo h-11 w-auto">
-      </a>
-      <!-- Nav Links (Desktop) -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#Leistungen" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Leistungen</a>
-        <a href="#Prozess" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Prozess</a>
-        <a href="#ubermich" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Über EffiNova</a>
-        <a href="#Contact" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Kontakt</a>
-        <a href="blog/index.html" class="nav-link text-[15px] hover:opacity-70 transition-opacity">Blog</a>
-      </div>
-      <!-- CTA Button -->
-      <a href="https://funnel.effi-nova.de/" class="nav-cta hidden md:inline-flex items-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-colors duration-300">
-        <i class="fas fa-phone text-sm"></i>
-        Beratung anfragen
-      </a>
-      <!-- Mobile Hamburger -->
-      <button id="mobile-menu-btn" class="md:hidden nav-link text-2xl" aria-label="Menü öffnen">
-        <i class="fas fa-bars"></i>
+<div style="width:100%; overflow:hidden; background:#F4EFD9;">
+
+  <!-- ===================== FIXED HEADER ===================== -->
+  <header id="site-header" data-theme="dark" style="position:fixed; top:0; left:0; right:0; z-index:50; background:rgba(1,51,27,0.35); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); transition:background 0.35s ease, box-shadow 0.35s ease;">
+    <div style="max-width:1240px; margin:0 auto; padding:13px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="display:block; line-height:0;"><img id="site-logo" src="bilder/startseite/logo-white.png" alt="EffiNova" style="height:42px; width:auto; display:block;" /></a>
+      <button id="nav-toggle" type="button" aria-label="Menü öffnen" style="display:inline-flex; flex-direction:column; justify-content:center; gap:6px; width:46px; height:46px; align-items:center; background:none; border:none; cursor:pointer; padding:0;">
+        <span class="nav-bar" style="display:block; width:28px; height:3px; border-radius:2px; background:#F4EFD9; transition:background 0.35s ease, transform 0.3s ease, opacity 0.2s ease;"></span>
+        <span class="nav-bar" style="display:block; width:28px; height:3px; border-radius:2px; background:#F4EFD9; transition:background 0.35s ease, transform 0.3s ease, opacity 0.2s ease;"></span>
+        <span class="nav-bar" style="display:block; width:28px; height:3px; border-radius:2px; background:#F4EFD9; transition:background 0.35s ease, transform 0.3s ease, opacity 0.2s ease;"></span>
       </button>
     </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-5 pb-4">
-      <a href="#Leistungen" class="block py-3 text-effi-green text-[15px]">Leistungen</a>
-      <a href="#Prozess" class="block py-3 text-effi-green text-[15px]">Prozess</a>
-      <a href="#ubermich" class="block py-3 text-effi-green text-[15px]">Über EffiNova</a>
-      <a href="#Contact" class="block py-3 text-effi-green text-[15px]">Kontakt</a>
-      <a href="blog/index.html" class="block py-3 text-effi-green text-[15px]">Blog</a>
-      <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 mt-3 bg-effi-green text-white rounded-xl px-6 py-3 text-[15px] font-semibold">
-        <i class="fas fa-phone text-sm"></i> Beratung anfragen
+    <nav id="nav-menu" style="max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
+      <div style="max-width:1240px; margin:0 auto; padding:0 24px 24px; display:flex; flex-direction:column;">
+        <a class="nav-link" href="#angebot" style="padding:16px 0; font-size:19px; font-weight:600; border-top:1px solid rgba(244,239,217,0.15); color:#F4EFD9;">Leistungen</a>
+        <a class="nav-link" href="#ablauf" style="padding:16px 0; font-size:19px; font-weight:600; border-top:1px solid rgba(244,239,217,0.15); color:#F4EFD9;">Prozess</a>
+        <a class="nav-link" href="#ueber" style="padding:16px 0; font-size:19px; font-weight:600; border-top:1px solid rgba(244,239,217,0.15); color:#F4EFD9;">Über EffiNova</a>
+        <a class="nav-link" href="#kontakt" style="padding:16px 0; font-size:19px; font-weight:600; border-top:1px solid rgba(244,239,217,0.15); color:#F4EFD9;">Kontakt</a>
+        <a class="nav-link" href="blog/index.html" style="padding:16px 0; font-size:19px; font-weight:600; border-top:1px solid rgba(244,239,217,0.15); border-bottom:1px solid rgba(244,239,217,0.15); color:#F4EFD9;">Wissen</a>
+        <a class="nav-link nav-cta" href="https://funnel.effi-nova.de/" style="margin-top:24px; display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#F4EFD9; color:#004225; font-weight:700; font-size:17px; padding:16px 28px; border-radius:999px; align-self:flex-start;"><span data-lucide="phone" style="width:17px;height:17px;"></span> Beratung anfragen</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section data-nav-theme="dark" style="position:relative; background:radial-gradient(120% 120% at 85% 0%, #035B2F 0%, #004225 45%, #01331B 100%); color:#F4EFD9;">
+    <div style="position:absolute; top:-160px; right:-120px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(244,239,217,0.10) 0%, rgba(244,239,217,0) 70%); pointer-events:none;"></div>
+
+    <!-- hero stacked: photo top-right, then headline -->
+    <div style="position:relative; z-index:2; max-width:1240px; margin:0 auto; padding:92px 24px 14px;">
+      <div id="hero-photo-wrap" style="position:relative; width:min(52%, 480px); margin-left:auto; margin-bottom:26px;">
+        <div style="position:relative;">
+        <div id="hero-photo-box" style="position:relative; border-radius:22px; overflow:hidden; aspect-ratio:5/4;">
+          <img src="bilder/startseite/hero-portrait.webp" alt="Henk Wenner, Zimmermeister & Energieeffizienzexperte" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;" />
+        </div>
+        <div id="hero-badge" style="position:absolute; left:12px; right:12px; bottom:12px; background:rgba(244,239,217,0.97); color:#004225; border-radius:14px; padding:11px 14px; box-shadow:0 10px 26px rgba(1,51,27,0.35); display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:nowrap;">
+          <div style="display:flex; align-items:center; gap:10px; min-width:0; flex:1 1 auto;">
+            <span style="flex:none; width:40px; height:40px; border-radius:11px; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:22px;height:22px;"></span></span>
+            <div style="min-width:0;">
+              <div style="font-weight:800; font-size:20px; line-height:1.15; white-space:nowrap;">Henk Wenner</div>
+              <div style="font-size:15.5px; color:#035B2F; margin-top:3px; line-height:1.25;">Zimmermeister &amp;<br />Energieeffizienzexperte</div>
+            </div>
+          </div>
+          <div style="flex:none;">
+            <img src="bilder/startseite/experten-score.png" alt="Experten-Score: 4,8 von 5 aus 27 Bewertungen auf Expertenmarkt.de" style="display:block; height:96px; width:auto;" />
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div style="max-width:840px;">
+        <div style="display:flex; gap:16px; align-items:flex-start; margin-bottom:16px;">
+          <div style="width:4px; align-self:stretch; min-height:40px; background:#F4EFD9; border-radius:4px;"></div>
+          <p style="margin:0; font-size:15.5px; line-height:1.5; color:rgba(244,239,217,0.82); max-width:520px; letter-spacing:0.2px; text-transform:uppercase; font-weight:600;">
+            Unabhängige Energieberatung &amp; Förderservice aus der Praxis
+          </p>
+        </div>
+
+        <h1 style="margin:0 0 18px; font-family:'Montserrat', sans-serif; font-weight:800; color:#F4EFD9; font-size:clamp(34px, 5.2vw, 62px); line-height:1.04; letter-spacing:0.3px;">
+          Sie wollen sanieren —<br />aber jeder erzählt Ihnen etwas anderes?
+        </h1>
+
+        <p style="margin:0 0 24px; font-size:18px; line-height:1.6; color:rgba(244,239,217,0.85); max-width:640px;">
+          Handwerker, Nachbarn, Internet: alle widersprechen sich. Wir schauen auf Ihr Haus, rechnen ehrlich und sichern Ihnen die Förderung, die Ihnen zusteht. Persönlich betreut von Zimmermeister &amp; Energieeffizienzexperte <strong style="color:#F4EFD9;">Henk Wenner</strong> und seinem Team.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-bottom:0;">
+          <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:11px; background:#F4EFD9; color:#004225; font-weight:700; font-size:17px; padding:17px 30px; border-radius:999px; box-shadow:0 14px 34px rgba(1,51,27,0.45);">
+            Kostenloses Erstgespräch anfragen <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST-LEISTE ===================== -->
+  <section data-nav-theme="dark" style="background:#01331B; color:rgba(244,239,217,0.92);">
+    <div style="max-width:1240px; margin:0 auto; padding:16px 24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px 34px; font-size:14.5px; font-weight:600;">
+      <span style="display:inline-flex; align-items:center; gap:8px;"><span data-lucide="users" style="width:16px;height:16px;"></span> Über 300 betreute Kunden</span>
+      <span style="display:inline-flex; align-items:center; gap:8px;"><span data-lucide="hammer" style="width:16px;height:16px;"></span> Zimmermeister</span>
+      <span style="display:inline-flex; align-items:center; gap:8px;"><span data-lucide="list-checks" style="width:16px;height:16px;"></span> dena-Expertenliste</span>
+      <span style="display:inline-flex; align-items:center; gap:8px;"><span data-lucide="badge-check" style="width:16px;height:16px;"></span> Zugelassen für BAFA &amp; KfW</span>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM ===================== -->
+  <section data-nav-theme="light" style="background:#F4EFD9; color:#004225;">
+    <div style="max-width:1080px; margin:0 auto; padding:32px 24px 34px;">
+      <div style="text-align:center; max-width:720px; margin:0 auto 38px;">
+        <span style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#035B2F; margin-bottom:16px;">Die Ausgangslage</span>
+        <h2 style="margin:0; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,52px); line-height:1.05; letter-spacing:0.4px;">KOMMT IHNEN DAS BEKANNT VOR?</h2>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:22px;">
+        <div style="flex:1 1 300px; min-width:270px; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:32px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+          <span style="display:inline-flex; width:52px; height:52px; border-radius:14px; background:#004225; color:#F4EFD9; align-items:center; justify-content:center; margin-bottom:22px;"><span data-lucide="messages-square" style="width:24px;height:24px;"></span></span>
+          <h3 style="margin:0 0 12px; font-size:20px; font-weight:800; color:#004225;">Jeder erzählt Ihnen etwas anderes</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:#3a4a42;">Der Heizungsbauer empfiehlt die Wärmepumpe, der Nachbar warnt davor, im Internet widerspricht sich alles — und niemand schaut dabei auf <em>Ihr</em> konkretes Haus.</p>
+        </div>
+        <div style="flex:1 1 300px; min-width:270px; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:32px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+          <span style="display:inline-flex; width:52px; height:52px; border-radius:14px; background:#004225; color:#F4EFD9; align-items:center; justify-content:center; margin-bottom:22px;"><span data-lucide="shuffle" style="width:24px;height:24px;"></span></span>
+          <h3 style="margin:0 0 12px; font-size:20px; font-weight:800; color:#004225;">Der Förder-Dschungel</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:#3a4a42;">Sie ahnen, dass Ihnen Fördergeld zusteht — aber KfW, BAFA, iSFP und GEG sind unübersichtlich. Erst recht, seit sich die Regeln zum 21. Juli 2026 schon wieder geändert haben.</p>
+        </div>
+        <div style="flex:1 1 300px; min-width:270px; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:32px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+          <span style="display:inline-flex; width:52px; height:52px; border-radius:14px; background:#004225; color:#F4EFD9; align-items:center; justify-content:center; margin-bottom:22px;"><span data-lucide="alert-triangle" style="width:24px;height:24px;"></span></span>
+          <h3 style="margin:0 0 12px; font-size:20px; font-weight:800; color:#004225;">Angst vor dem teuren Fehler</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:#3a4a42;">Tausende Euro Zuschuss unwiderruflich zu verlieren — oder durch den falschen Ablauf beim Sanieren unnötige Mehrkosten zu produzieren.</p>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin:44px auto 0; max-width:560px; font-size:19px; font-weight:700; color:#004225;">Genau an diesem Punkt kommen wir ins Spiel.</p>
+    </div>
+  </section>
+
+  <!-- ===================== ANGEBOT ===================== -->
+  <section id="angebot" data-nav-theme="dark" style="background:linear-gradient(180deg, #004225 0%, #01331B 100%); color:#F4EFD9;">
+    <div style="max-width:1080px; margin:0 auto; padding:32px 24px 36px;">
+      <div style="text-align:center; max-width:720px; margin:0 auto 40px;">
+        <span style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(244,239,217,0.6); margin-bottom:16px;">Unser Angebot</span>
+        <h2 style="margin:0; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,52px); line-height:1.05; letter-spacing:0.4px;">WOMIT WIR IHNEN KONKRET HELFEN</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:20px; margin-bottom:44px;">
+        <div style="display:flex; gap:22px; align-items:flex-start; background:rgba(244,239,217,0.04); border:1px solid rgba(244,239,217,0.16); border-radius:20px; padding:30px 30px;">
+          <span style="flex:none; width:54px; height:54px; border-radius:14px; background:#F4EFD9; color:#004225; display:inline-flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:26px;">1</span>
+          <div>
+            <h3 style="margin:0 0 10px; font-size:22px; font-weight:800; color:#F4EFD9;">Klarheit über Ihr Haus</h3>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:rgba(244,239,217,0.82);">Energieberatung vor Ort mit individuellem Sanierungsfahrplan (iSFP): Was bringt wirklich etwas, was kann warten, was rechnet sich? Ehrlich und unabhängig — wir verkaufen keine Heizungen und keine Dämmung, wir beraten.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:22px; align-items:flex-start; background:rgba(244,239,217,0.04); border:1px solid rgba(244,239,217,0.16); border-radius:20px; padding:30px 30px;">
+          <span style="flex:none; width:54px; height:54px; border-radius:14px; background:#F4EFD9; color:#004225; display:inline-flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:26px;">2</span>
+          <div>
+            <h3 style="margin:0 0 10px; font-size:22px; font-weight:800; color:#F4EFD9;">Maximale Förderung — richtig beantragt</h3>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:rgba(244,239,217,0.82);">Wir finden alle passenden Programme (KfW, BAFA, regionale Töpfe), bringen die Anträge in die <strong style="color:#F4EFD9;">richtige Reihenfolge</strong>. Beim Heizungstausch sind aktuell <strong style="color:#F4EFD9;">bis zu 80 % Zuschuss</strong> möglich — bis zu 22.400 € pro Wohneinheit. Und: Die förderfähigen Kosten sinken bis 2030 alle sechs Monate weiter ab. Wer wartet, bekommt weniger.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:22px; align-items:flex-start; background:rgba(244,239,217,0.04); border:1px solid rgba(244,239,217,0.16); border-radius:20px; padding:30px 30px;">
+          <span style="flex:none; width:54px; height:54px; border-radius:14px; background:#F4EFD9; color:#004225; display:inline-flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:26px;">3</span>
+          <div>
+            <h3 style="margin:0 0 10px; font-size:22px; font-weight:800; color:#F4EFD9;">Begleitung bis zum Ergebnis</h3>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:rgba(244,239,217,0.82);">Nach dem Fahrplan lassen wir Sie nicht allein: Wir begleiten Ihr Projekt durch die Umsetzung — richtige Reihenfolge, Nachweise, Auszahlung. Beratung und Begleitung sind unser einziges Geschäft; die Ausführung überlassen wir bewusst Ihren Handwerkern. Und falls Ihnen noch welche fehlen: Wir arbeiten mit einem großen Netzwerk aus Planern und Handwerksbetrieben zusammen.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abgrenzungs-Box -->
+      <div style="background:#F4EFD9; color:#004225; border-radius:22px; padding:38px 36px; box-shadow:0 24px 60px rgba(1,51,27,0.35);">
+        <h3 style="margin:0 0 22px; font-size:21px; font-weight:800; display:flex; align-items:center; gap:12px;"><span data-lucide="shield-check" style="width:22px;height:22px;color:#035B2F;"></span> Ehrlich vorab — damit Sie wissen, woran Sie sind</h3>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:18px;">
+          <li style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:13px;height:13px;"></span></span>
+            <span style="font-size:15.5px; line-height:1.6; color:#2c3a33;"><strong style="color:#004225;">Energieausweise verkaufen wir nicht als Einzelleistung.</strong> Oft ist die Frage nach dem Ausweis aber der erste Schritt zu etwas Größerem: Wenn Sie ohnehin über Sanierung oder Heizungstausch nachdenken, entsteht der Ausweis bei uns als Nebenprodukt der Beratung gleich mit — sprechen Sie uns an.</span>
+          </li>
+          <li style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:13px;height:13px;"></span></span>
+            <span style="font-size:15.5px; line-height:1.6; color:#2c3a33;"><strong style="color:#004225;">Ausführung von Bauleistungen &amp; Materialverkauf:</strong> Wir beraten und begleiten — gebaut und geliefert wird von Ihren Handwerkern. Genau das hält unsere Beratung unabhängig.</span>
+          </li>
+          <li style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:13px;height:13px;"></span></span>
+            <span style="font-size:15.5px; line-height:1.6; color:#2c3a33;"><strong style="color:#004225;">Einzelne Kleinstmaßnahmen unter 5.000 €:</strong> Dafür lohnt sich bezahlte Förderbegleitung meist nicht — das sagen wir Ihnen ehrlich. Häufig ist die kleine Maßnahme aber der Anfang eines größeren Sanierungswegs. Ob in Ihrem Haus mehr steckt, klären wir kostenlos im Erstgespräch.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ÜBER HENK ===================== -->
+  <section id="ueber" data-nav-theme="light" style="background:#F4EFD9; color:#004225;">
+    <div style="max-width:1180px; margin:0 auto; padding:32px 24px 34px; display:flex; flex-wrap:wrap; gap:52px; align-items:flex-start;">
+      <div id="ueber-media" style="flex:1 1 320px; min-width:280px; position:sticky; top:24px;">
+        <div style="position:relative; border-radius:22px; overflow:hidden; aspect-ratio:4/5; box-shadow:0 26px 60px rgba(1,51,27,0.22); border:1px solid rgba(0,66,37,0.12);">
+          <img src="bilder/startseite/henk-thermografie.webp" alt="Henk Wenner bei der Thermografie-Analyse" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+      </div>
+      <div style="flex:1 1 480px; min-width:320px;">
+        <span style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#035B2F; margin-bottom:16px;">Wer hier eigentlich berät</span>
+        <h2 style="margin:0 0 26px; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(28px,3.6vw,44px); line-height:1.06; letter-spacing:0.4px;">ENERGIEBERATUNG VON EINEM, DER SELBST GEBAUT HAT.</h2>
+        <div style="font-size:16px; line-height:1.7; color:#33433b; display:flex; flex-direction:column; gap:16px;">
+          <p style="margin:0;">Ich bin Henk Wenner — Zimmermeister, Energieberater und Gründer von EffiNova. Und ich war nicht immer Energieberater.</p>
+          <p style="margin:0;">Mehr als 15 Jahre stand ich auf der anderen Seite: auf der Baustelle, zuletzt als Zimmermeister. Viele meiner Kunden wollten sanieren und brauchten Beratung und Förderung — und ich habe hautnah miterlebt, was dann passierte. Die Fördervoraussetzungen änderten sich gefühlt alle drei Monate. Die Energieberater meiner Kunden interessierten sich kaum für die Projekte und gingen lieber den einfachsten Weg als den besten. Einen strukturierten Ablauf gab es nicht. Das hat meine Kunden Nerven gekostet — und bares Geld.</p>
+          <p style="margin:0;">Irgendwann war klar: Wenn es keiner richtig macht, mache ich es selbst. Ich habe die Ausbildung zum Energieberater gemacht — und mich später komplett auf das konzentriert, was den größten Unterschied macht: Beratung und Begleitung.</p>
+          <p style="margin:0;">Sie bekommen von mir keinen Theorie-Bericht, der im Ordner verschwindet, sondern einen Plan, der auf der Baustelle funktioniert und beim Fördergeber durchgeht. Ich kenne beide Seiten: Ich weiß, wie Handwerker denken, wie Ämter prüfen — und wie man beides zusammenbringt. Hinter EffiNova steht dafür ein Team aus der Praxis — Zimmermeister, ausgebildeter Elektriker, Bautechniker — und ein großes Netzwerk aus Planern und Handwerksbetrieben. So haben wir bereits über 300 Kunden begleitet, deutschlandweit.</p>
+        </div>
+        <div style="margin-top:26px; padding-top:24px; border-top:1px solid rgba(0,66,37,0.15); display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid rgba(0,66,37,0.12); border-radius:999px; padding:8px 15px; font-size:13.5px; font-weight:600; color:#004225;"><span data-lucide="hammer" style="width:14px;height:14px;"></span> Zimmermeister</span>
+          <span style="display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid rgba(0,66,37,0.12); border-radius:999px; padding:8px 15px; font-size:13.5px; font-weight:600; color:#004225;"><span data-lucide="list-checks" style="width:14px;height:14px;"></span> dena-Expertenliste</span>
+          <span style="display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid rgba(0,66,37,0.12); border-radius:999px; padding:8px 15px; font-size:13.5px; font-weight:600; color:#004225;"><span data-lucide="badge-check" style="width:14px;height:14px;"></span> KfW- &amp; BAFA-Anträge</span>
+          <span style="display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid rgba(0,66,37,0.12); border-radius:999px; padding:8px 15px; font-size:13.5px; font-weight:600; color:#004225;"><span data-lucide="users" style="width:14px;height:14px;"></span> Über 300 betreute Kunden</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABLAUF ===================== -->
+  <section id="ablauf" data-nav-theme="dark" style="background:linear-gradient(180deg, #01331B 0%, #004225 100%); color:#F4EFD9;">
+    <div style="max-width:1080px; margin:0 auto; padding:32px 24px 36px;">
+      <div style="text-align:center; max-width:640px; margin:0 auto 40px;">
+        <span style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(244,239,217,0.6); margin-bottom:16px;">Ihr Weg zur Förderung</span>
+        <h2 style="margin:0; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,52px); line-height:1.05; letter-spacing:0.4px;">SO EINFACH GEHT'S</h2>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:22px;">
+        <div style="flex:1 1 280px; min-width:250px; background:rgba(244,239,217,0.04); border:1px solid rgba(244,239,217,0.16); border-radius:20px; padding:32px 28px;">
+          <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:44px; color:rgba(244,239,217,0.28); line-height:1; margin-bottom:14px;">01</div>
+          <h3 style="margin:0 0 12px; font-size:20px; font-weight:800; color:#F4EFD9;">Kostenloses Erstgespräch</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(244,239,217,0.8);">Ca. 15–20 Minuten. Wir klären, worum es bei Ihnen geht, ob und wie wir helfen können — ehrlich, auch wenn die Antwort mal „brauchen Sie nicht" lautet.</p>
+        </div>
+        <div style="flex:1 1 280px; min-width:250px; background:rgba(244,239,217,0.04); border:1px solid rgba(244,239,217,0.16); border-radius:20px; padding:32px 28px;">
+          <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:44px; color:rgba(244,239,217,0.28); line-height:1; margin-bottom:14px;">02</div>
+          <h3 style="margin:0 0 12px; font-size:20px; font-weight:800; color:#F4EFD9;">Vor-Ort-Termin &amp; Fahrplan</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(244,239,217,0.8);">Rund zwei Stunden bei Ihnen: Rundgang, Fotos und Maße aller relevanten Bauteile, dann das gemeinsame Beratungsgespräch. Daraus entsteht Ihr Fahrplan — schwarz auf weiß, verständlich.</p>
+        </div>
+        <div style="flex:1 1 280px; min-width:250px; background:rgba(244,239,217,0.04); border:1px solid rgba(244,239,217,0.16); border-radius:20px; padding:32px 28px;">
+          <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:44px; color:rgba(244,239,217,0.28); line-height:1; margin-bottom:14px;">03</div>
+          <h3 style="margin:0 0 12px; font-size:20px; font-weight:800; color:#F4EFD9;">Förderung &amp; Umsetzung</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.6; color:rgba(244,239,217,0.8);">Anträge in der richtigen Reihenfolge, Begleitung durch die Umsetzung bis zur Auszahlung Ihrer Fördermittel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KUNDENSTIMMEN ===================== -->
+  <section id="stimmen" data-nav-theme="light" style="background:#F4EFD9; color:#004225;">
+    <div style="max-width:1180px; margin:0 auto; padding:32px 24px 34px;">
+      <div style="text-align:center; max-width:680px; margin:0 auto 34px;">
+        <span style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#035B2F; margin-bottom:16px;">Was Kunden sagen</span>
+        <h2 style="margin:0; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,52px); line-height:1.05; letter-spacing:0.4px;">ERGEBNISSE, DIE SICH RECHNEN</h2>
+      </div>
+      <div style="position:relative;">
+        <button id="rev-prev" class="rev-nav" type="button" aria-label="Vorherige Bewertung" style="position:absolute; left:-8px; top:50%; transform:translateY(-50%); z-index:3; width:48px; height:48px; border:none; border-radius:50%; background:#004225; color:#F4EFD9; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 8px 22px rgba(1,51,27,0.3);">
+          <span data-lucide="chevron-left" style="width:22px;height:22px;"></span>
+        </button>
+        <button id="rev-next" class="rev-nav" type="button" aria-label="Nächste Bewertung" style="position:absolute; right:-8px; top:50%; transform:translateY(-50%); z-index:3; width:48px; height:48px; border:none; border-radius:50%; background:#004225; color:#F4EFD9; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 8px 22px rgba(1,51,27,0.3);">
+          <span data-lucide="chevron-right" style="width:22px;height:22px;"></span>
+        </button>
+        <div id="reviews-track" style="display:flex; gap:22px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; padding:8px 4px 20px; margin:0 34px; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Über die reine Theorie hinaus!</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Endlich eine Energieberatung, die über reine Theorie hinausgeht! Als Zimmermeister versteht Herr Wenner die praktischen Herausforderungen beim Sanieren. Die ganzheitliche Beratung hat mir geholfen, nicht nur Energie zu sparen, sondern auch langfristig kluge Entscheidungen zu treffen. Absolut empfehlenswert!</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">CK</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Christian Kölbl</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Herr Wenner für uns in Falkensee</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Herr Wenner begleitete professionell und routiniert unser Bauvorhaben in Falkensee bei Berlin. Es wurden genau unsere Wände, Dächer und deren Dämmung besprochen — sein praxisnahes Fachwissen machte vieles einfacher. Ebenso wurden verschiedene Wege für Fördermittel definiert und fixiert. Wir sind Henk sehr dankbar und planen bereits unsere Wärmepumpe mit ihm.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">FE</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Florian Exner</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Kompetent, zuverlässig und reaktionsschnell</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Herr Wenner ist kompetent, zuverlässig und reaktionsschnell. Er dreht, wenn nötig, auch nochmal eine Extrarunde bei der Diskussion darum, was für den Kunden die beste Lösung sei.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">MZ</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Dr. Meike Zehlike</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Sehr effektiver und kurzer Kontakt</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Sehr effektiver und kurzer Kontakt. Haben jetzt eine KfW (Wärmepumpe) und BAFA Förderung beantragt (Dämmung und Fenster). Gut vorbereitet sind die Termine schnell erledigt. Der nächste Antrag steht aus…</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">JK</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Jürgen Kreutzberger</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Professionell, zuverlässig und zügig</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Die Unterstützung von Herrn Wenner bei der Heizlastberechnung und insgesamt die Zusammenarbeit war professionell, zuverlässig und zügig. Wir waren sehr zufrieden und freuen uns auf weitere gemeinsame Projekte. Als Energieberater ist er wärmstens zu empfehlen.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">ML</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Marco Lehmann</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Beratung staatliche Förderung für Dämmung</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Sehr gute, ausführliche Erklärung und Beratung. Schnelle Bearbeitung aller Unterlagen, zufriedene Ergebnisse. Werde ich auf jeden Fall weiterempfehlen.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">AC</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Dr. Aneep Jose Chungath</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Professioneller Anbieter bei Energieberatung</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Professioneller Anbieter bei Energieberatung und Unterstützung zu Fördermittelbeantragung.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">KS</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Konrad Schur</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Super und sehr schneller Service</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Super und sehr schneller Service, kann ich nur weiterempfehlen.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">DB</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Dennis Busching</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">prompt und professionell</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">EffiNova hat mir prompt und professionell helfen können — alles eingelöst, wie zugesagt.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">BS</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Bernard Stein</div>
+            </div>
+          </div>
+
+          <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(360px, 82vw); display:flex; flex-direction:column; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; padding:28px 28px; box-shadow:0 10px 30px rgba(1,51,27,0.06);">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;">
+              <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★☆</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#9aa89f;">Expertenmarkt.de</span>
+            </div>
+            <h3 style="margin:0 0 10px; font-size:17px; font-weight:800; color:#004225; line-height:1.25;">Schnelle und kompetente Unterstützung</h3>
+            <p style="margin:0 0 20px; font-size:14.5px; line-height:1.6; color:#41514a; flex:1;">Schnelle und kompetente Unterstützung.</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid rgba(0,66,37,0.12);">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:#004225; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;">GG</span>
+              <div style="font-weight:800; font-size:14.5px; color:#004225;">Gerald Goedel</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FÜR WEN GEEIGNET ===================== -->
+  <section data-nav-theme="light" style="background:#fff; color:#004225;">
+    <div style="max-width:1080px; margin:0 auto; padding:30px 24px 32px; display:flex; flex-wrap:wrap; gap:22px;">
+      <div style="flex:1 1 380px; min-width:300px; background:#F4EFD9; border-radius:20px; padding:36px 32px;">
+        <h3 style="margin:0 0 22px; font-size:22px; font-weight:800; display:flex; align-items:center; gap:12px; color:#004225;"><span data-lucide="circle-check-big" style="width:24px;height:24px;color:#035B2F;"></span> Diese Seite ist für Sie, wenn …</h3>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:15px;">
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:22px;height:22px; border-radius:50%; background:#035B2F; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:15.5px; line-height:1.55; color:#2c3a33;">Sie ein Haus oder eine Wohnung <strong>besitzen</strong> (oder gerade kaufen) und sanieren, dämmen oder die Heizung tauschen wollen.</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:22px;height:22px; border-radius:50%; background:#035B2F; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:15.5px; line-height:1.55; color:#2c3a33;">Sie die verfügbare Förderung <strong>mitnehmen</strong> wollen, statt sie liegenzulassen.</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:22px;height:22px; border-radius:50%; background:#035B2F; color:#F4EFD9; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:15.5px; line-height:1.55; color:#2c3a33;">Sie einen klaren, unabhängigen Plan wollen — keine Verkaufsgespräche.</span></li>
+        </ul>
+      </div>
+      <div style="flex:1 1 380px; min-width:300px; background:#F4EFD9; border-radius:20px; padding:36px 32px;">
+        <h3 style="margin:0 0 22px; font-size:22px; font-weight:800; display:flex; align-items:center; gap:12px; color:#004225;"><span data-lucide="circle-slash" style="width:24px;height:24px;color:#8a6d3b;"></span> Eher nicht richtig hier, wenn …</h3>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:15px;">
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:22px;height:22px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:15.5px; line-height:1.55; color:#2c3a33;">Sie wirklich <strong>nur einen Energieausweis</strong> benötigen und sicher sind, dass sonst nichts ansteht.</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:22px;height:22px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:15.5px; line-height:1.55; color:#2c3a33;">Es bei einer <strong>einzelnen Kleinstmaßnahme unter 1.000 €</strong> bleiben soll — im Zweifel klärt das Erstgespräch, ob mehr in Ihrem Haus steckt.</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:22px;height:22px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:15.5px; line-height:1.55; color:#2c3a33;">Sie Material kaufen oder nur einen Ausführungsbetrieb suchen — wir beraten unabhängig und verkaufen keine Bauleistungen oder Materialien.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEISTUNGEN ===================== -->
+  <section data-nav-theme="light" style="background:#F4EFD9; color:#004225;">
+    <div style="max-width:1180px; margin:0 auto; padding:32px 24px 36px;">
+      <div style="text-align:center; max-width:720px; margin:0 auto 34px;">
+        <span style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#035B2F; margin-bottom:16px;">Was wir für Sie tun</span>
+        <h2 style="margin:0 0 18px; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,52px); line-height:1.05; letter-spacing:0.4px;">UNSERE LEISTUNGEN FÜR SIE</h2>
+        <p style="margin:0; font-size:16.5px; line-height:1.6; color:#3a4a42;">Von der ersten Beratung bis zur Förderauszahlung — EffiNova begleitet Sie persönlich durch alle Schritte. Solide Handwerksarbeit trifft auf fundierte Energieberatung.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+        <div style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; overflow:hidden; box-shadow:0 12px 34px rgba(1,51,27,0.07);">
+          <img src="bilder/startseite/prozess-bestandsaufnahme.webp" alt="Energieberatung vor Ort" loading="lazy" decoding="async" style="display:block; width:100%; aspect-ratio:4/3; object-fit:cover;" />
+          <div style="padding:26px 26px 30px;">
+            <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#004225;">Energieberatung vor Ort</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.6; color:#3a4a42;">Persönliche Beratung bei Ihnen zu Hause. Wir analysieren Ihr Gebäude und erstellen einen individuellen Sanierungsfahrplan (iSFP).</p>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; overflow:hidden; box-shadow:0 12px 34px rgba(1,51,27,0.07);">
+          <img src="bilder/startseite/prozess-foerderung-gutachten.webp" alt="BAFA Förderservice" loading="lazy" decoding="async" style="display:block; width:100%; aspect-ratio:4/3; object-fit:cover;" />
+          <div style="padding:26px 26px 30px;">
+            <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#004225;">BAFA Förderservice</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.6; color:#3a4a42;">Wir kümmern uns um die komplette Abwicklung Ihrer BAFA-Förderung — von der Beantragung bis zur Auszahlung.</p>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; overflow:hidden; box-shadow:0 12px 34px rgba(1,51,27,0.07);">
+          <img src="bilder/startseite/prozess-antragstellung.webp" alt="KfW Förderberatung" loading="lazy" decoding="async" style="display:block; width:100%; aspect-ratio:4/3; object-fit:cover;" />
+          <div style="padding:26px 26px 30px;">
+            <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#004225;">KfW Förderberatung</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.6; color:#3a4a42;">Professionelle Begleitung bei KfW-Förderungen für Heizung und Effizienzhaus-Sanierungen.</p>
+          </div>
+        </div>
+        <div style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:20px; overflow:hidden; box-shadow:0 12px 34px rgba(1,51,27,0.07);">
+          <img src="bilder/startseite/prozess-baubegleitung.webp" alt="Baubegleitung" loading="lazy" decoding="async" style="display:block; width:100%; aspect-ratio:4/3; object-fit:cover;" />
+          <div style="padding:26px 26px 30px;">
+            <h3 style="margin:0 0 12px; font-size:21px; font-weight:800; color:#004225;">Baubegleitung</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.6; color:#3a4a42;">Als Fachteam begleiten wir Ihre Sanierung fachkundig und sorgen für eine ordnungsgemäße Umsetzung.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section data-nav-theme="light" style="background:#F4EFD9; color:#004225;">
+    <div style="max-width:840px; margin:0 auto; padding:30px 24px 34px;">
+      <div style="text-align:center; margin-bottom:34px;">
+        <span style="display:inline-block; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#035B2F; margin-bottom:16px;">Häufige Fragen</span>
+        <h2 style="margin:0; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,52px); line-height:1.05; letter-spacing:0.4px;">GUT ZU WISSEN</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <details style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:4px 24px; box-shadow:0 6px 20px rgba(1,51,27,0.05);">
+          <summary style="cursor:pointer; list-style:none; padding:20px 0; font-size:17px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+            Stellen Sie Energieausweise aus?
+            <span data-lucide="plus" style="width:18px;height:18px;color:#035B2F;"></span>
+          </summary>
+          <p style="margin:0; padding:0 0 22px; font-size:15.5px; line-height:1.65; color:#3a4a42;">Nicht als Einzelleistung — dafür gibt es günstigere Wege. Im Rahmen einer vollständigen Energieberatung entsteht der Ausweis aber als Nebenprodukt mit. Und ehrlich gesagt: Hinter der Frage nach dem Ausweis steckt oft der Anfang von etwas Größerem. Wenn Sie ohnehin über Sanierung oder Heizungstausch nachdenken, ist das kostenlose Erstgespräch der bessere erste Schritt.</p>
+        </details>
+        <details style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:4px 24px; box-shadow:0 6px 20px rgba(1,51,27,0.05);">
+          <summary style="cursor:pointer; list-style:none; padding:20px 0; font-size:17px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+            Was kostet das?
+            <span data-lucide="plus" style="width:18px;height:18px;color:#035B2F;"></span>
+          </summary>
+          <p style="margin:0; padding:0 0 22px; font-size:15.5px; line-height:1.65; color:#3a4a42;">Das Erstgespräch ist kostenlos und unverbindlich. Danach arbeiten wir mit Festpreisen für klar definierte Leistungspakete — keine offenen Stundensätze, keine Überraschungen. Den konkreten Preis für Ihr Gebäude nennen wir Ihnen im Beratungsgespräch. Gut zu wissen: Die Energieberatung selbst wird staatlich bezuschusst.</p>
+        </details>
+        <details style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:4px 24px; box-shadow:0 6px 20px rgba(1,51,27,0.05);">
+          <summary style="cursor:pointer; list-style:none; padding:20px 0; font-size:17px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+            Wie viel Förderung ist bei mir realistisch?
+            <span data-lucide="plus" style="width:18px;height:18px;color:#035B2F;"></span>
+          </summary>
+          <p style="margin:0; padding:0 0 22px; font-size:15.5px; line-height:1.65; color:#3a4a42;">Das hängt von Maßnahme, Gebäude und Ihrem zu versteuernden Haushaltseinkommen ab. Beim Heizungstausch sind seit dem 21. Juli 2026 bis zu 80 % Zuschuss möglich — maximal 22.400 € pro Wohneinheit. Eine seriöse Zahl gibt es erst nach dem Blick auf Ihr Haus — genau dafür ist das Erstgespräch da.</p>
+        </details>
+        <details style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:4px 24px; box-shadow:0 6px 20px rgba(1,51,27,0.05);">
+          <summary style="cursor:pointer; list-style:none; padding:20px 0; font-size:17px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+            Arbeiten Sie nur in Berlin?
+            <span data-lucide="plus" style="width:18px;height:18px;color:#035B2F;"></span>
+          </summary>
+          <p style="margin:0; padding:0 0 22px; font-size:15.5px; line-height:1.65; color:#3a4a42;">Nein, unser Team arbeitet deutschlandweit.</p>
+        </details>
+        <details style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:4px 24px; box-shadow:0 6px 20px rgba(1,51,27,0.05);">
+          <summary style="cursor:pointer; list-style:none; padding:20px 0; font-size:17px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+            Wie läuft der Vor-Ort-Termin ab?
+            <span data-lucide="plus" style="width:18px;height:18px;color:#035B2F;"></span>
+          </summary>
+          <p style="margin:0; padding:0 0 22px; font-size:15.5px; line-height:1.65; color:#3a4a42;">Wir nehmen uns dafür in der Regel rund zwei Stunden Zeit. Zuerst der ausführliche Rundgang: Ihr Gebäude von außen und innen, mit Fotos und Maßen aller energetisch relevanten Bauteile — von der Wandstärke über Fensterleibungen bis zu Heizung und Warmwasserspeicher. Liegen keine Pläne vor, messen oder scannen wir das Gebäude. Danach setzen wir uns zusammen: Welche Maßnahmen interessieren Sie, was empfehlen wir zusätzlich, welche Förderstrategie passt — und wie geht es konkret weiter.</p>
+        </details>
+        <details style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:4px 24px; box-shadow:0 6px 20px rgba(1,51,27,0.05);">
+          <summary style="cursor:pointer; list-style:none; padding:20px 0; font-size:17px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+            Ich habe schon ein Angebot vom Handwerker — ist es zu spät?
+            <span data-lucide="plus" style="width:18px;height:18px;color:#035B2F;"></span>
+          </summary>
+          <p style="margin:0; padding:0 0 22px; font-size:15.5px; line-height:1.65; color:#3a4a42;">Wichtig ist: Förderanträge müssen gestellt sein, bevor die Maßnahme beginnt. Melden Sie sich am besten, bevor Sie unterschreiben. Falls Sie schon weiter sind, klären wir im Erstgespräch ehrlich, was noch geht.</p>
+        </details>
+        <details style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:4px 24px; box-shadow:0 6px 20px rgba(1,51,27,0.05);">
+          <summary style="cursor:pointer; list-style:none; padding:20px 0; font-size:17px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+            Wie schnell melden Sie sich?
+            <span data-lucide="plus" style="width:18px;height:18px;color:#035B2F;"></span>
+          </summary>
+          <p style="margin:0; padding:0 0 22px; font-size:15.5px; line-height:1.65; color:#3a4a42;">Auf neue Anfragen antworten wir innerhalb von einem Werktag.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINALER CTA / KONTAKT ===================== -->
+  <section id="kontakt" data-nav-theme="dark" style="position:relative; background:radial-gradient(120% 120% at 15% 100%, #035B2F 0%, #004225 45%, #01331B 100%); color:#F4EFD9;">
+    <div style="position:absolute; bottom:-160px; left:-120px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(244,239,217,0.10) 0%, rgba(244,239,217,0) 70%); pointer-events:none;"></div>
+    <div style="position:relative; z-index:2; max-width:760px; margin:0 auto; padding:36px 24px 40px; text-align:center;">
+      <img src="bilder/startseite/henk-portrait.webp" alt="Henk Wenner" loading="lazy" decoding="async" style="width:150px; height:150px; border-radius:50%; object-fit:cover; object-position:center 20%; margin:0 auto 24px; display:block; border:3px solid rgba(244,239,217,0.85); box-shadow:0 14px 40px rgba(1,51,27,0.4);" />
+      <h2 style="margin:0 0 20px; font-family:'Montserrat', sans-serif; font-weight:800; font-size:clamp(34px,5vw,60px); line-height:1.03; letter-spacing:0.5px;">LASSEN SIE UNS ÜBER IHR HAUS SPRECHEN.</h2>
+      <p style="margin:0 0 16px; font-size:18px; line-height:1.6; color:rgba(244,239,217,0.85);">15 Minuten, kostenlos, unverbindlich. Danach wissen Sie, ob sich eine Beratung für Sie lohnt — und welche Förderung realistisch ist.</p>
+      <p style="margin:0 auto 34px; max-width:560px; font-size:15px; line-height:1.6; color:rgba(244,239,217,0.68); font-style:italic;">Aus eigener Erfahrung: Aufgeschobene Entscheidungen kosten Zeit und Geld — bei der Förderung sogar messbar, denn die Sätze sinken alle sechs Monate.</p>
+      <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:11px; background:#F4EFD9; color:#004225; font-weight:700; font-size:18px; padding:19px 36px; border-radius:999px; box-shadow:0 14px 34px rgba(1,51,27,0.45);">
+        Kostenloses Erstgespräch anfragen <span data-lucide="arrow-right" style="width:19px;height:19px;"></span>
       </a>
-    </div>
-  </nav>
-
-  <!-- Spacer for fixed nav -->
-  <div style="height:77px;"></div>
-
-  <!-- ============================================ -->
-  <!-- SECTION: HERO                                -->
-  <!-- ============================================ -->
-  <section id="hero" class="bg-effi-beige" data-nav-theme="light">
-    <div class="max-w-[1440px] mx-auto px-5 py-6 lg:py-8">
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-        <!-- Left Column (3/5) -->
-        <div class="lg:col-span-3 fade-in">
-          <h1 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-6">
-            Sanieren in unsicheren Zeiten – mit lokalem Ansprechpartner für Energie &amp; Förderung.
-          </h1>
-          <p class="border-l-2 border-effi-green pl-4 text-effi-body text-lg leading-8 mb-6">
-            <strong class="text-effi-green font-semibold">Absichern gegen die Energiekrise</strong>, Fördergelder mitnehmen solange es sie noch gibt und fundierte Entscheidungen treffen: die lokale Energieberatung für Eigentümer von Ein‑ und Zweifamilienhäusern.
-          </p>
-          <p class="text-effi-body text-lg leading-8 mb-6">
-            Schluss mit der Überforderung durch Förderdschungel und Handwerkersuche. EffiNova übernimmt für Sie die komplette Begleitung – von der Analyse nach <strong class="text-effi-green">DIN V 18599</strong> bis zur sicheren Auszahlung der <strong class="text-effi-green">KfW/BAFA-Förderung</strong>.
-          </p>
-          <ul class="space-y-3 mb-8 text-lg leading-8">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check text-effi-green mt-1.5 text-sm"></i>
-              <span>Analyse, Planung und Begleitung der Umsetzung mit Sachverstand.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check text-effi-green mt-1.5 text-sm"></i>
-              <span class="italic">Klarer Fahrplan statt unsicherer Einzelentscheidungen nach Bauchgefühl.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check text-effi-green mt-1.5 text-sm"></i>
-              <span>Staatliche Fördermittel (bis zu <strong class="text-effi-green">70%</strong>) sichern, bevor sie verfallen.</span>
-            </li>
-          </ul>
-          <!-- CTA Buttons -->
-          <div class="flex flex-wrap gap-4 mb-10">
-            <a href="https://funnel.effi-nova.de/" class="inline-flex items-center gap-2 bg-effi-green text-white rounded-xl px-6 py-3 text-base font-semibold hover:opacity-90 transition-opacity">
-              Erstgespräch zur Sanierungs- und Förderstrategie buchen
-            </a>
-          </div>
-          <!-- Stats Bar (animated counters) + Expertenwidget in einer Zeile -->
-          <div class="flex flex-wrap gap-8 items-center" id="stats-bar">
-            <div class="text-center">
-              <div class="text-effi-green text-3xl font-bold font-montserrat">
-                <span class="counter-prefix">bis zu </span><span class="counter" data-target="50">0</span>%
-              </div>
-              <div class="text-effi-body text-sm mt-1">Energiekosten einsparen</div>
-            </div>
-            <div class="text-center">
-              <div class="text-effi-green text-3xl font-bold font-montserrat">
-                <span class="counter" data-target="98">0</span>%
-              </div>
-              <div class="text-effi-body text-sm mt-1">Kundenzufriedenheit</div>
-            </div>
-            <div class="text-center">
-              <div class="text-effi-green text-3xl font-bold font-montserrat">
-                <span class="counter" data-target="15">0</span>+
-              </div>
-              <div class="text-effi-body text-sm mt-1">Jahre Praxiserfahrung</div>
-            </div>
-          </div>
-        </div>
-        <!-- Right Column (2/5) — Hero Image -->
-        <div class="lg:col-span-2 flex justify-center fade-in lg:mt-3">
-          <img src="bilder/hero/henk-3-3max-verschwommen-entsaettigt.webp" loading="eager" alt="Henk – Ihr Energieberater" class="rounded-2xl w-full h-auto shadow-lg">
-        </div>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 20px; margin-top:26px; font-size:14px; color:rgba(244,239,217,0.78); font-weight:500;">
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span data-lucide="check-circle-2" style="width:14px;height:14px;"></span> Unverbindlich</span>
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span data-lucide="clock" style="width:14px;height:14px;"></span> Antwort in einem Werktag</span>
       </div>
     </div>
+
+    <!-- footer -->
+    <footer style="position:relative; z-index:2; border-top:1px solid rgba(244,239,217,0.14);">
+      <div style="max-width:1180px; margin:0 auto; padding:52px 24px 40px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px 32px;">
+          <div style="grid-column:1 / -1; max-width:340px;">
+            <img src="bilder/startseite/logo-white.png" alt="EffiNova" style="height:46px; width:auto; display:block; margin-bottom:18px;" />
+            <p style="margin:0; font-size:14.5px; line-height:1.65; color:rgba(244,239,217,0.7);">Unabhängige Energieberatung &amp; Förderservice aus der Praxis — persönlich betreut von Zimmermeister &amp; Energieeffizienzexperte Henk Wenner und seinem Team.</p>
+          </div>
+
+          <div>
+            <h3 style="margin:0 0 18px; font-size:16px; font-weight:800; color:#F4EFD9; letter-spacing:0.3px;">Leistungen</h3>
+            <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
+              <li><a href="#angebot" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">Handwerker aus einem Netzwerk</a></li>
+              <li><a href="#angebot" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">Ganzheitliche Energieberatung</a></li>
+              <li><a href="#angebot" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">BAFA Förderservice &amp; Baubegleitung</a></li>
+              <li><a href="#angebot" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">KfW Förderservice &amp; Baubegleitung</a></li>
+              <li><a href="#angebot" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">Raumweise Heizlast &amp; hydraulischer Abgleich</a></li>
+              <li><a href="#angebot" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">GEG-Nachweis, Energieausweis</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 style="margin:0 0 18px; font-size:16px; font-weight:800; color:#F4EFD9; letter-spacing:0.3px;">Unternehmen</h3>
+            <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
+              <li><a href="#ueber" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">Expertise</a></li>
+              <li><a href="impressum.html" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">Impressum</a></li>
+              <li><a href="datenschutz.html" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">Datenschutz</a></li>
+              <li><a href="agb.html" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">AGB</a></li>
+              <li><a href="widerruf.html" style="font-size:14.5px; line-height:1.4; color:rgba(244,239,217,0.72);">Widerruf</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 style="margin:0 0 18px; font-size:16px; font-weight:800; color:#F4EFD9; letter-spacing:0.3px;">Kontakt</h3>
+            <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;">
+              <li><a href="tel:+493022908579" style="display:inline-flex; align-items:center; gap:10px; font-size:14.5px; color:rgba(244,239,217,0.72);"><span data-lucide="phone" style="width:15px;height:15px;"></span> +49 (0) 30 229 085 790</a></li>
+              <li><a href="mailto:mail@effi-nova.de" style="display:inline-flex; align-items:center; gap:10px; font-size:14.5px; color:rgba(244,239,217,0.72);"><span data-lucide="mail" style="width:15px;height:15px;"></span> mail@effi-nova.de</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:44px; padding-top:24px; border-top:1px solid rgba(244,239,217,0.14); text-align:center;">
+          <p style="margin:0; font-size:13px; line-height:1.6; color:rgba(244,239,217,0.55);">© 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.</p>
+        </div>
+      </div>
+    </footer>
   </section>
 
-  <!-- ============================================ -->
-  <!-- SECTION: HERAUSFORDERUNGEN                   -->
-  <!-- ============================================ -->
-  <section class="bg-effi-green" data-nav-theme="dark">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24">
-      <div class="text-center mb-12 fade-in">
-        <h2 class="text-white text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-6">
-          Kennen Sie diese Herausforderungen?
-        </h2>
-        <p class="text-white/80 text-lg leading-8 max-w-2xl mx-auto">
-          Energiekosten, politische Vorgaben und Fördersätze verändern sich laufend. Was gestern noch empfohlen wurde, kann heute schon überholt oder wirtschaftlich fragwürdig sein.
-        </p>
-      </div>
-      <!-- 3 Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 fade-in">
-        <div class="border-2 border-effi-border rounded-lg p-6">
-          <i class="fas fa-circle-question text-white/50 text-2xl mb-4 block"></i>
-          <h3 class="text-white text-xl font-bold mb-3">Unsicherheit bei Entscheidungen</h3>
-          <p class="text-white/80 text-lg leading-8">Sie möchten handeln, sind sich aber unsicher, ob Sie wirklich in die richtigen Maßnahmen investieren.</p>
-        </div>
-        <div class="border-2 border-effi-border rounded-lg p-6">
-          <i class="fas fa-comments text-white/50 text-2xl mb-4 block"></i>
-          <h3 class="text-white text-xl font-bold mb-3">Widersprüchliche Empfehlungen</h3>
-          <p class="text-white/80 text-lg leading-8">Jeder Betrieb schlägt etwas anderes vor. Sie fragen sich, wer Ihre Immobilie als Ganzes betrachtet – und nicht nur das eigene Gewerk.</p>
-        </div>
-        <div class="border-2 border-effi-border rounded-lg p-6">
-          <i class="fas fa-landmark text-white/50 text-2xl mb-4 block"></i>
-          <h3 class="text-white text-xl font-bold mb-3">Unübersichtliche Förderlandschaft</h3>
-          <p class="text-white/80 text-lg leading-8">Programme ändern sich, Bedingungen werden angepasst. Sie möchten keine Förderchance verschenken, aber auch nicht nur nach Förderlogik sanieren.</p>
-        </div>
-      </div>
-      <!-- Closing statement (pull-quote) + CTA -->
-      <div class="max-w-3xl mx-auto text-center fade-in">
-        <p class="text-white text-xl md:text-2xl font-semibold leading-relaxed mb-6">
-          „Die Frage ist nicht, ob Sie sanieren – sondern ob Sie es planlos oder mit einem klaren energetischen Fahrplan tun.“
-        </p>
-        <p class="text-white/80 text-lg leading-8 mb-8">
-          Genau hier setzt EffiNova an: Wir sorgen dafür, dass Sie Ihre Sanierungsentscheidungen auf einer sauberen energetischen Grundlage treffen und Förderchancen sinnvoll nutzen – statt sich auf Zufall und Einzelmeinungen zu verlassen.
-        </p>
-        <a href="https://funnel.effi-nova.de/" class="inline-block bg-effi-beige text-effi-green border-2 border-effi-green rounded-xl px-8 py-3 text-base font-semibold hover:opacity-90 transition-opacity">
-          Jetzt strukturiert planen – Erstgespräch vereinbaren
-        </a>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- ============================================ -->
-  <!-- SECTION: PROZESS                             -->
-  <!-- ============================================ -->
-  <section id="Prozess" class="bg-white" data-nav-theme="light">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24">
-      <div class="text-center mb-10 fade-in">
-        <h2 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-6">
-          Unser Beratungsansatz bei EffiNova
-        </h2>
-        <p class="text-effi-body text-lg leading-8 max-w-3xl mx-auto">
-          Mit EffiNova haben Sie keinen anonymen Berichteschreiber, sondern einen festen Ansprechpartner vor Ort, der Sie fachlich durch alle energetischen und förderrelevanten Fragen begleitet.
-        </p>
-      </div>
-
-      <!-- Ihr Ansprechpartner: 4 Punkte -->
-      <div class="max-w-4xl mx-auto mb-16 fade-in">
-        <p class="text-effi-green font-semibold text-lg text-center mb-6">Ihr EffiNova-Ansprechpartner …</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="flex items-start gap-3 bg-effi-beige rounded-lg p-5">
-            <i class="fas fa-check text-effi-green mt-1"></i>
-            <span class="text-effi-body leading-7">… kennt Ihre Immobilie, Ihre Ziele und Ihre Rahmenbedingungen.</span>
-          </div>
-          <div class="flex items-start gap-3 bg-effi-beige rounded-lg p-5">
-            <i class="fas fa-check text-effi-green mt-1"></i>
-            <span class="text-effi-body leading-7">… hilft Ihnen, Angebote und Maßnahmen aus energetischer Sicht einzuordnen.</span>
-          </div>
-          <div class="flex items-start gap-3 bg-effi-beige rounded-lg p-5">
-            <i class="fas fa-check text-effi-green mt-1"></i>
-            <span class="text-effi-body leading-7">… stimmt sich bei Bedarf zu energetischen Fragestellungen mit beteiligten Betrieben ab.</span>
-          </div>
-          <div class="flex items-start gap-3 bg-effi-beige rounded-lg p-5">
-            <i class="fas fa-check text-effi-green mt-1"></i>
-            <span class="text-effi-body leading-7">… achtet darauf, dass alle energetisch relevanten Nachweise und Unterlagen für die Förderung vorbereitet werden.</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Icon-based Timeline -->
-      <div class="mb-12">
-        <!-- Desktop: Horizontal Timeline -->
-        <div class="hidden md:flex items-start justify-between relative gap-4">
-          <!-- Timeline connector line (centered on circles: circle top at 0, h-16 = 64px, center = 32px → top-8) -->
-          <div class="absolute top-8 left-0 right-0 h-1 bg-[#004225] z-0"></div>
-
-          <!-- Step 1 -->
-          <div class="flex flex-col items-center flex-1 relative z-10 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center shadow-md shrink-0">
-              <i class="fas fa-magnifying-glass text-2xl"></i>
-            </div>
-            <div class="text-center mt-5">
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 1</p>
-              <h3 class="text-effi-green text-lg font-bold mb-3">Bestandsaufnahme</h3>
-              <p class="text-effi-body text-base leading-7 px-2">Wir analysieren Ihre Immobilie tiefgehend nach DIN V 18599 und identifizieren Einsparpotenziale.</p>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="flex flex-col items-center flex-1 relative z-10 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center shadow-md shrink-0">
-              <i class="fas fa-file-lines text-2xl"></i>
-            </div>
-            <div class="text-center mt-5">
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 2</p>
-              <h3 class="text-effi-green text-lg font-bold mb-3">Sanierungskonzept</h3>
-              <p class="text-effi-body text-base leading-7 px-2">Sie erhalten einen klaren, maßgeschneiderten Fahrplan (iSFP) für Ihre Sanierung.</p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="flex flex-col items-center flex-1 relative z-10 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center shadow-md shrink-0">
-              <i class="fas fa-clipboard-check text-2xl"></i>
-            </div>
-            <div class="text-center mt-5">
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 3</p>
-              <h3 class="text-effi-green text-lg font-bold mb-3">Vorbereitung</h3>
-              <p class="text-effi-body text-base leading-7 px-2">Schluss mit dem Behörden-Dschungel. Wir bereiten alles für die Förderanträge vor.</p>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="flex flex-col items-center flex-1 relative z-10 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center shadow-md shrink-0">
-              <i class="fas fa-hard-hat text-2xl"></i>
-            </div>
-            <div class="text-center mt-5">
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 4</p>
-              <h3 class="text-effi-green text-lg font-bold mb-3">Baubegleitung</h3>
-              <p class="text-effi-body text-base leading-7 px-2">Kein Stress auf der Baustelle. Wir begleiten die Umsetzung fachkundig.</p>
-            </div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="flex flex-col items-center flex-1 relative z-10 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center shadow-md shrink-0">
-              <i class="fas fa-stamp text-2xl"></i>
-            </div>
-            <div class="text-center mt-5">
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 5</p>
-              <h3 class="text-effi-green text-lg font-bold mb-3">Förderung & Gutachten</h3>
-              <p class="text-effi-body text-base leading-7 px-2">Wir erstellen alle nötigen Endgutachten und sichern die Förderauszahlung.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile: Vertical Timeline -->
-        <div class="md:hidden space-y-8 relative pl-8">
-          <!-- Timeline connector line (vertical) -->
-          <div class="absolute left-7 top-0 bottom-0 w-1 bg-[#004225]"></div>
-
-          <!-- Step 1 -->
-          <div class="flex items-start gap-4 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center flex-shrink-0 shadow-md relative z-10">
-              <i class="fas fa-magnifying-glass text-xl"></i>
-            </div>
-            <div>
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 1</p>
-              <h3 class="text-effi-green text-lg font-bold mb-2">Bestandsaufnahme</h3>
-              <p class="text-effi-body text-base leading-7">Wir analysieren Ihre Immobilie tiefgehend nach DIN V 18599 und identifizieren Einsparpotenziale.</p>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="flex items-start gap-4 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center flex-shrink-0 shadow-md relative z-10">
-              <i class="fas fa-file-lines text-xl"></i>
-            </div>
-            <div>
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 2</p>
-              <h3 class="text-effi-green text-lg font-bold mb-2">Sanierungskonzept</h3>
-              <p class="text-effi-body text-base leading-7">Sie erhalten einen klaren, maßgeschneiderten Fahrplan (iSFP) für Ihre Sanierung.</p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="flex items-start gap-4 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center flex-shrink-0 shadow-md relative z-10">
-              <i class="fas fa-clipboard-check text-xl"></i>
-            </div>
-            <div>
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 3</p>
-              <h3 class="text-effi-green text-lg font-bold mb-2">Vorbereitung</h3>
-              <p class="text-effi-body text-base leading-7">Schluss mit dem Behörden-Dschungel. Wir bereiten alles für die Förderanträge vor.</p>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="flex items-start gap-4 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center flex-shrink-0 shadow-md relative z-10">
-              <i class="fas fa-hard-hat text-xl"></i>
-            </div>
-            <div>
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 4</p>
-              <h3 class="text-effi-green text-lg font-bold mb-2">Baubegleitung</h3>
-              <p class="text-effi-body text-base leading-7">Kein Stress auf der Baustelle. Wir begleiten die Umsetzung fachkundig.</p>
-            </div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="flex items-start gap-4 fade-in">
-            <div class="w-16 h-16 rounded-full bg-[#004225] text-white flex items-center justify-center flex-shrink-0 shadow-md relative z-10">
-              <i class="fas fa-stamp text-xl"></i>
-            </div>
-            <div>
-              <p class="text-effi-green text-sm font-bold mb-1 uppercase tracking-wide">Schritt 5</p>
-              <h3 class="text-effi-green text-lg font-bold mb-2">Förderung & Gutachten</h3>
-              <p class="text-effi-body text-base leading-7">Wir erstellen alle nötigen Endgutachten und sichern die Förderauszahlung.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- CTA -->
-      <div class="text-center fade-in">
-        <p class="text-effi-body text-lg mb-4">Möchten Sie Ihre Sanierung mit einem klaren Fahrplan angehen?</p>
-        <a href="https://funnel.effi-nova.de/" class="inline-block bg-effi-green text-white rounded-xl px-8 py-3 text-base font-semibold hover:opacity-90 transition-opacity">
-          Jetzt Erstgespräch buchen
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: LEISTUNGEN                          -->
-  <!-- ============================================ -->
-  <section id="Leistungen" class="bg-effi-beige" data-nav-theme="light">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24">
-      <div class="text-center mb-12 fade-in">
-        <h2 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-6">
-          Unsere Leistungen für Sie
-        </h2>
-        <p class="text-effi-body text-lg leading-8 max-w-3xl mx-auto">
-          Von der ersten Beratung bis zur Förderauszahlung – EffiNova begleitet Sie persönlich durch alle Schritte. Solide Handwerksarbeit trifft auf fundierte Energieberatung.
-        </p>
-      </div>
-      <!-- 4 Service Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl shadow-sm hover:bg-white/80 hover:shadow-xl transition-all duration-300 overflow-hidden fade-in">
-          <img src="bilder/prozess/Bestandsaufnahme-Energieberatung-1-scaled.webp" loading="lazy" decoding="async" alt="Energieberatung vor Ort" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-effi-h3 font-bold text-lg mb-3">Energieberatung vor Ort</h3>
-            <p class="text-effi-body text-base leading-7">Persönliche Beratung bei Ihnen zu Hause. Wir analysieren Ihr Gebäude und erstellen einen individuellen Sanierungsfahrplan (iSFP).</p>
-          </div>
-        </div>
-        <div class="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl shadow-sm hover:bg-white/80 hover:shadow-xl transition-all duration-300 overflow-hidden fade-in">
-          <img src="bilder/prozess/5-Foerderung-und-Gutachten-Energieberatung-scaled.webp" loading="lazy" decoding="async" alt="BAFA Förderservice" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-effi-h3 font-bold text-lg mb-3">BAFA Förderservice</h3>
-            <p class="text-effi-body text-base leading-7">Wir kümmern uns um die komplette Abwicklung Ihrer BAFA-Förderung – von der Beantragung bis zur Auszahlung.</p>
-          </div>
-        </div>
-        <div class="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl shadow-sm hover:bg-white/80 hover:shadow-xl transition-all duration-300 overflow-hidden fade-in">
-          <img src="bilder/prozess/3-Vorbereitung-Antragstellung-Energieberatung-scaled.webp" loading="lazy" decoding="async" alt="KfW Förderberatung" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-effi-h3 font-bold text-lg mb-3">KfW Förderberatung</h3>
-            <p class="text-effi-body text-base leading-7">Professionelle Begleitung bei KfW-Förderungen für Heizung und Effizienzhaus-Sanierungen.</p>
-          </div>
-        </div>
-        <div class="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl shadow-sm hover:bg-white/80 hover:shadow-xl transition-all duration-300 overflow-hidden fade-in">
-          <img src="bilder/prozess/4-Baubegleitung-Energieberatung-scaled.webp" loading="lazy" decoding="async" alt="Baubegleitung" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-effi-h3 font-bold text-lg mb-3">Baubegleitung</h3>
-            <p class="text-effi-body text-base leading-7">Als Fachteam begleiten wir Ihre Sanierung fachkundig und sorgen für eine ordnungsgemäße Umsetzung.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: ÜBER MICH                           -->
-  <!-- ============================================ -->
-  <section id="ubermich" class="bg-white" data-nav-theme="light">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left: Text -->
-        <div class="fade-in">
-          <h2 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-6">
-            EffiNova: Ihr zuverlässiger Partner für Energieberatung
-          </h2>
-          <p class="text-effi-body text-lg leading-8 mb-6">
-            EffiNova wurde von Henk Wenner gegründet, Handwerksmeister mit langjähriger Erfahrung auf Baustellen. Er weiß, welche Details bei der energetischen Sanierung in der Praxis den Unterschied machen – und wo typische Fehler entstehen, die später teuer werden.
-          </p>
-          <p class="text-effi-body text-lg leading-8 mb-4">Gemeinsam mit seinem Team verbindet er:</p>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3 text-effi-body text-lg leading-8">
-              <i class="fas fa-check text-effi-green mt-1.5"></i>
-              praktische Erfahrung aus dem Handwerk
-            </li>
-            <li class="flex items-start gap-3 text-effi-body text-lg leading-8">
-              <i class="fas fa-check text-effi-green mt-1.5"></i>
-              fundierte energetische Fachplanung
-            </li>
-            <li class="flex items-start gap-3 text-effi-body text-lg leading-8">
-              <i class="fas fa-check text-effi-green mt-1.5"></i>
-              die Begleitung durch den Förderprozess
-            </li>
-          </ul>
-          <p class="text-effi-body text-lg leading-8">
-            So erhalten Sie nicht nur theoretische Empfehlungen, sondern einen praxisnahen Fahrplan, der sich an Ihrem realen Gebäude und Ihren Möglichkeiten orientiert.
-          </p>
-        </div>
-        <!-- Right: Portrait -->
-        <div class="flex justify-center fade-in">
-          <img src="bilder/ueber-mich/henk-portrait.webp" loading="lazy" decoding="async" alt="Henk Wenner – Gründer und Energieberater von EffiNova" class="rounded-2xl w-full max-w-sm object-cover shadow-lg">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: CTA BANNER (Sanierungsentscheidung) -->
-  <!-- ============================================ -->
-  <section class="bg-effi-beige" data-nav-theme="light">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24 text-center">
-      <h2 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-6 fade-in">
-        Lassen Sie uns über Ihre Sanierungsentscheidung sprechen
-      </h2>
-      <p class="text-effi-body text-lg leading-8 max-w-2xl mx-auto mb-8 fade-in">
-        Ob Sie am Anfang Ihrer Überlegungen stehen oder bereits Angebote und erste Förderideen haben: In einem Erstgespräch klären wir, wo Sie aktuell stehen, welche typischen Fallstricke in Ihrer Situation lauern und ob ein energetischer Sanierungsfahrplan mit fachlicher Begleitung für Sie sinnvoll ist.
-      </p>
-      <a href="https://funnel.effi-nova.de/" class="inline-block bg-effi-green text-white rounded-xl px-8 py-3 text-base font-semibold hover:opacity-90 transition-opacity fade-in">
-        Jetzt Erstgespräch mit EffiNova vereinbaren
-      </a>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: PARTNER LOGOS                       -->
-  <!-- ============================================ -->
-  <section class="bg-effi-green overflow-hidden" data-nav-theme="dark">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-20">
-      <h2 class="text-white text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] text-center mb-12 fade-in">
-        Unsere Partner und Kunden
-      </h2>
-      <div class="relative overflow-hidden">
-        <div class="logo-scroll flex items-center" style="width: max-content;">
-          <!-- First set (pr-12 = Abstand als Uebergang zum naechsten Set, exakt gleich wie interner gap-12) -->
-          <div class="flex items-center gap-12 flex-shrink-0 pr-12">
-            <img src="bilder/partner/1.webp" loading="lazy" decoding="async" alt="Renovaris" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/12.webp" loading="lazy" decoding="async" alt="Lorema Immobilien" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/13.webp" loading="lazy" decoding="async" alt="MS-Plan" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/14.webp" loading="lazy" decoding="async" alt="Walter360" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/15.webp" loading="lazy" decoding="async" alt="Condo Hausverwaltung" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/16.webp" loading="lazy" decoding="async" alt="MAK Baukonzepte" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/17.webp" loading="lazy" decoding="async" alt="Müllers Zimmerei" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/18.webp" loading="lazy" decoding="async" alt="EEE Rösler" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/19.webp" loading="lazy" decoding="async" alt="Marotzke Maler" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/20.webp" loading="lazy" decoding="async" alt="Röbke Solutions" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/21.webp" loading="lazy" decoding="async" alt="Holz Schulz" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/22.webp" loading="lazy" decoding="async" alt="Montagespezis" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/23.webp" loading="lazy" decoding="async" alt="Smalt" class="h-16 object-contain flex-shrink-0">
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="flex items-center gap-12 flex-shrink-0 pr-12" aria-hidden="true">
-            <img src="bilder/partner/1.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/12.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/13.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/14.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/15.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/16.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/17.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/18.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/19.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/20.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/21.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/22.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-            <img src="bilder/partner/23.webp" loading="lazy" decoding="async" alt="" class="h-16 object-contain flex-shrink-0">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: CTA BANNER                          -->
-  <!-- ============================================ -->
-  <section class="bg-effi-green" data-nav-theme="dark">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24 text-center">
-      <h2 class="text-white text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-6 fade-in">
-        Lassen Sie uns sprechen!
-      </h2>
-      <p class="text-white/80 text-lg leading-8 max-w-2xl mx-auto mb-8 fade-in">
-        Rufen Sie uns an oder schreiben Sie uns eine Nachricht. In einem kostenlosen Beratungsgespräch finden wir gemeinsam heraus, wie Sie Ihre Energiekosten nachhaltig senken können. Ehrlich, unkompliziert und auf den Punkt.
-      </p>
-      <a href="https://funnel.effi-nova.de/" class="inline-block bg-effi-beige text-effi-green border-2 border-effi-green rounded-xl px-8 py-3 text-base font-semibold hover:opacity-90 transition-opacity fade-in">
-        Jetzt kostenloses Gespräch vereinbaren
-      </a>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: STATEMENT / CLAIM                   -->
-  <!-- ============================================ -->
-  <section class="bg-effi-beige" data-nav-theme="light">
-    <div class="max-w-[1000px] mx-auto px-5 py-20 lg:py-28 text-center">
-      <p class="text-effi-green text-2xl md:text-4xl font-semibold leading-tight fade-in">
-        Ganzheitliche Energieberatung — weil Ihre Immobilie mehr verdient als halbe Lösungen.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- SECTION: KONTAKT                             -->
-  <!-- ============================================ -->
-  <section id="Contact" class="bg-white" data-nav-theme="light">
-    <div class="max-w-[1440px] mx-auto px-5 py-16 lg:py-24">
-      <div class="text-center mb-12 fade-in">
-        <h2 class="text-effi-green text-3xl md:text-[48px] font-semibold leading-tight md:leading-[64px] mb-4">
-          Kontakt zu EffiNova
-        </h2>
-        <p class="text-effi-body text-lg leading-8 max-w-2xl mx-auto">
-          Persönliche Beratung für Immobilienprojekte jeden Anspruches. Kontaktieren Sie EffiNova für ein unverbindliches Erstgespräch.
-        </p>
-      </div>
-      <!-- 3 Contact Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto fade-in">
-        <a href="tel:+4930229085790" class="backdrop-blur-sm bg-white/70 border border-effi-green/20 rounded-lg p-8 text-center text-effi-green hover:bg-white/80 hover:shadow-lg transition-all duration-300 group">
-          <i class="fas fa-phone text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold text-lg mb-2">Telefon</h3>
-          <p class="text-effi-green/90">+4930 229085790</p>
-        </a>
-        <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="backdrop-blur-sm bg-white/70 border border-effi-green/20 rounded-lg p-8 text-center text-effi-green hover:bg-white/80 hover:shadow-lg transition-all duration-300 group">
-          <i class="fas fa-envelope text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold text-lg mb-2">E-Mail</h3>
-          <p class="text-effi-body/80">mail@effi-nova.de</p>
-        </a>
-        <div class="backdrop-blur-sm bg-white/70 border border-effi-green/20 rounded-lg p-8 text-center text-effi-green">
-          <i class="fas fa-location-dot text-3xl mb-4"></i>
-          <h3 class="font-bold text-lg mb-2">Standort</h3>
-          <p class="text-effi-body/80">Deutschlandweit verfügbar</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- FOOTER                                       -->
-  <!-- ============================================ -->
-  <footer class="bg-effi-green text-white" data-nav-theme="dark">
-    <div class="max-w-[1440px] mx-auto px-5 py-12 lg:py-16">
-      <!-- 4-Column Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Column 1: Logo -->
-        <div>
-          <img src="bilder/logos/EffiNova_Logo_A3.webp" loading="eager" alt="EffiNova – Ihre Effizienz von morgen" class="logo-invert h-14 w-auto mb-4">
-        </div>
-        <!-- Column 2: Leistungen -->
-        <div>
-          <h4 class="font-bold text-lg mb-4">Leistungen</h4>
-          <ul class="space-y-2 text-white/80 text-sm">
-            <li>Handwerker aus einem Netzwerk</li>
-            <li>Ganzheitliche Energieberatung</li>
-            <li>BAFA Förderservice & Baubegleitung</li>
-            <li>KfW Förderservice & Baubegleitung</li>
-            <li>Raumweise Heizlast & hydraulischer Abgleich</li>
-            <li><a href="blog/index.html?cat=energieausweis" class="hover:text-white transition-colors">GEG-Nachweis, Energieausweis</a></li>
-          </ul>
-        </div>
-        <!-- Column 3: Unternehmen -->
-        <div>
-          <h4 class="font-bold text-lg mb-4">Unternehmen</h4>
-          <ul class="space-y-2 text-white/80 text-sm">
-            <li>Expertise</li>
-            <li><a href="/impressum/" class="hover:text-white transition-colors">Impressum</a></li>
-            <li><a href="/datenschutz/" class="hover:text-white transition-colors">Datenschutz</a></li>
-            <li><a href="/agb/" class="hover:text-white transition-colors">AGB</a></li>
-            <li><a href="/widerruf/" class="hover:text-white transition-colors">Widerruf</a></li>
-          </ul>
-        </div>
-        <!-- Column 4: Kontakt -->
-        <div>
-          <h4 class="font-bold text-lg mb-4">Kontakt</h4>
-          <ul class="space-y-3 text-white/80 text-sm">
-            <li class="flex items-center gap-2">
-              <i class="fas fa-phone text-xs"></i>
-              <a href="tel:+4930229085790" class="hover:text-white transition-colors">+49 (0) 30 229 085 790</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fas fa-envelope text-xs"></i>
-              <a href="mailto:mail@effi-nova.de?subject=Anfrage%20Energieberatung&body=Sehr%20geehrte%20Damen%20und%20Herren%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.%0ABitte%20melden%20Sie%20sich%20mit%20weiteren%20Informationen.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen" class="hover:text-white transition-colors">mail@effi-nova.de</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- Copyright -->
-      <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/50 text-sm">
-        &copy; 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.
-      </div>
-    </div>
-  </footer>
-
-  <!-- ============================================ -->
-  <!-- JAVASCRIPT                                   -->
-  <!-- ============================================ -->
+  <!-- ===================== HEADER / CAROUSEL SCRIPT ===================== -->
   <script>
-    // Mobile menu toggle
-    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    });
-    // Close mobile menu on link click
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.add('hidden');
-      });
-    });
-
-    // Sticky nav color change based on section currently under the nav (works both scroll directions)
-    const nav = document.getElementById('main-nav');
-    const sections = Array.from(document.querySelectorAll('[data-nav-theme]'));
-    const NAV_H = 77;
-    function updateNavTheme() {
-      const probe = NAV_H + 1;
-      let current = null;
-      for (const s of sections) {
-        const r = s.getBoundingClientRect();
-        if (r.top <= probe && r.bottom > probe) { current = s; break; }
-      }
-      if (!current) return;
-      const theme = current.getAttribute('data-nav-theme');
-      if (theme === 'dark') {
-        nav.classList.remove('nav-light', 'bg-white/95');
-        nav.classList.add('nav-dark', 'bg-[#004225]/95');
-      } else {
-        nav.classList.remove('nav-dark', 'bg-[#004225]/95');
-        nav.classList.add('nav-light', 'bg-white/95');
+  (function () {
+    function renderIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
       }
     }
-    let navTicking = false;
-    window.addEventListener('scroll', () => {
-      if (navTicking) return;
-      navTicking = true;
-      requestAnimationFrame(() => { updateNavTheme(); navTicking = false; });
-    }, { passive: true });
-    window.addEventListener('resize', updateNavTheme);
-    updateNavTheme();
+    function init() {
+      renderIcons();
+      // Fallback, falls das (deferred) Lucide-Script noch nicht bereit war
+      setTimeout(renderIcons, 200);
+      setTimeout(renderIcons, 800);
+      var header = document.getElementById('site-header');
+      var logo = document.getElementById('site-logo');
+      var toggle = document.getElementById('nav-toggle');
+      var menu = document.getElementById('nav-menu');
+      if (!header) return;
 
-    // Fade-in on scroll
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+      var THEME = {
+        dark:  { bg:'rgba(1,51,27,0.38)',   logo:'bilder/startseite/logo-white.png', bar:'#F4EFD9', menuBg:'rgba(1,51,27,0.96)',    link:'#F4EFD9', border:'rgba(244,239,217,0.15)' },
+        light: { bg:'rgba(244,239,217,0.82)', logo:'bilder/startseite/logo-green.png', bar:'#004225', menuBg:'rgba(244,239,217,0.98)', link:'#004225', border:'rgba(0,66,37,0.12)' }
+      };
+      var sections = Array.prototype.slice.call(document.querySelectorAll('[data-nav-theme]'));
+      var open = false, current = '';
 
-    // Animated counters
-    let countersStarted = false;
-    function animateCounters() {
-      if (countersStarted) return;
-      countersStarted = true;
-      document.querySelectorAll('.counter').forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000; // 2 seconds
-        const startTime = performance.now();
-        function update(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          // Ease-out cubic
-          const eased = 1 - Math.pow(1 - progress, 3);
-          counter.textContent = Math.round(target * eased);
-          if (progress < 1) {
-            requestAnimationFrame(update);
-          } else {
-            counter.textContent = target;
-          }
+      function bars()  { return Array.prototype.slice.call(header.querySelectorAll('.nav-bar')); }
+      function links() { return Array.prototype.slice.call(header.querySelectorAll('.nav-link:not(.nav-cta)')); }
+
+      function apply(t) {
+        if (t === current) return;
+        current = t; var c = THEME[t];
+        header.style.background = open ? c.menuBg : c.bg;
+        header.setAttribute('data-theme', t);
+        if (logo) logo.src = c.logo;
+        bars().forEach(function (b) { b.style.background = c.bar; });
+        links().forEach(function (a) { a.style.color = c.link; a.style.borderTopColor = c.border; });
+      }
+
+      function detect() {
+        var y = header.getBoundingClientRect().height * 0.5 + 4;
+        var theme = 'dark';
+        for (var i = 0; i < sections.length; i++) {
+          var r = sections[i].getBoundingClientRect();
+          if (r.top <= y && r.bottom > y) { theme = sections[i].getAttribute('data-nav-theme'); break; }
         }
-        requestAnimationFrame(update);
+        apply(theme);
+        header.style.boxShadow = window.scrollY > 10 ? '0 6px 24px rgba(1,51,27,0.14)' : 'none';
+      }
+      detect();
+      window.addEventListener('scroll', detect, { passive: true });
+      window.addEventListener('resize', detect);
+
+      function setOpen(v) {
+        open = v;
+        menu.style.maxHeight = v ? menu.scrollHeight + 'px' : '0px';
+        header.style.background = v ? THEME[current].menuBg : THEME[current].bg;
+        var b = bars();
+        if (b.length === 3) {
+          b[0].style.transform = v ? 'translateY(9px) rotate(45deg)'  : 'none';
+          b[1].style.opacity   = v ? '0' : '1';
+          b[2].style.transform = v ? 'translateY(-9px) rotate(-45deg)' : 'none';
+        }
+        toggle.setAttribute('aria-label', v ? 'Menü schließen' : 'Menü öffnen');
+      }
+      toggle.addEventListener('click', function () { setOpen(!open); });
+      header.querySelectorAll('.nav-link').forEach(function (a) {
+        a.addEventListener('click', function () { setOpen(false); });
       });
+
+      // Kundenstimmen-Carousel
+      var track = document.getElementById('reviews-track');
+      function step() {
+        if (!track) return 380;
+        var card = track.querySelector('.review-card');
+        return card ? card.offsetWidth + 22 : 380;
+      }
+      var prev = document.getElementById('rev-prev');
+      var next = document.getElementById('rev-next');
+      if (prev) prev.addEventListener('click', function () { if (track) track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+      if (next) next.addEventListener('click', function () { if (track) track.scrollBy({ left:  step(), behavior: 'smooth' }); });
     }
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounters();
-        }
-      });
-    }, { threshold: 0.3 });
-    const statsBar = document.getElementById('stats-bar');
-    if (statsBar) statsObserver.observe(statsBar);
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })();
   </script>
 
+  <!-- Privatsphäre-Einstellungen erneut öffnen -->
   <button type="button" class="cc-revoke-btn" onclick="openCookiePreferences()" aria-label="Privatsphäre-Einstellungen öffnen">
-    <i class="fas fa-shield-alt"></i><span>Privatsphäre</span>
+    <span data-lucide="shield" style="width:16px;height:16px;"></span><span>Privatsphäre</span>
   </button>
+  <!-- Cookie-Consent + Tracking -->
   <script defer src="js/cookieconsent.js"></script>
   <script defer src="js/cookie-consent-config.js"></script>
   <script defer src="js/gtm-button-tracking.js"></script>
   <script defer src="js/cta-link-decorator.js"></script>
 </body>
 </html>
-<!-- deploy-test 1776374916 -->
