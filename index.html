@@ -83,15 +83,20 @@
       #hero-copy { flex: 1 1 0; max-width: none; margin: 0; }
     }
 
-    /* ===== Über EffiNova: Hochformat-Porträt, einspaltig gestapelt (schmal) -> zweispaltig Bild links (breit) ===== */
+    /* ===== Über EffiNova: Querformat-Foto wechselt Seitenverhältnis je nach Bildschirmbreite (quer → quadrat → hoch), wie enwendo ===== */
     #ueber-inner { flex-direction: column; align-items: center; gap: 26px; }
-    #ueber-foto { width: 100%; max-width: 360px; }
+    #ueber-foto { width: 100%; max-width: 520px; }
     #ueber-text { width: 100%; max-width: 560px; }
-    .ueber-foto-clip { aspect-ratio: 2 / 3; }               /* Hochformat, ungecroppt */
+    .ueber-foto-clip { aspect-ratio: 3 / 2; }               /* schmal: Querformat, volle Breite */
+    @media (min-width: 600px) {
+      #ueber-foto { max-width: 460px; }
+      .ueber-foto-clip { aspect-ratio: 1 / 1; }             /* mittel: Quadrat, zentriert */
+    }
     @media (min-width: 960px) {
       #ueber-inner { flex-direction: row; align-items: center; gap: 44px; }
-      #ueber-foto { width: 34%; max-width: 330px; flex: 0 0 auto; }
+      #ueber-foto { width: 40%; max-width: 400px; flex: 0 0 auto; }
       #ueber-text { width: auto; max-width: none; flex: 1 1 auto; }
+      .ueber-foto-clip { aspect-ratio: 4 / 5; }             /* breit, nebeneinander: Hochformat */
     }
 
     /* ===== Ihr Weg zur Förderung: Beratungsfoto oben (schmal) / rechts vom Text (breit), Höhe = Textblock ===== */
@@ -346,7 +351,7 @@
     <div id="ueber-inner" style="max-width:1080px; margin:0 auto; padding:30px 24px 40px; display:flex;">
       <div id="ueber-foto">
         <div class="ueber-foto-clip" style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 18px 44px rgba(1,51,27,0.16);">
-          <img src="bilder/startseite/henk-ueber.webp" alt="Henk Wenner, Zimmermeister und Gründer von EffiNova" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block;" />
+          <img src="bilder/startseite/henk-ueber.webp" alt="Henk Wenner, Zimmermeister und Gründer von EffiNova" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 42%; display:block;" />
         </div>
       </div>
       <div id="ueber-text">
