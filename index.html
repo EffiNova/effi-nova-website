@@ -83,20 +83,27 @@
       #hero-copy { flex: 1 1 0; max-width: none; margin: 0; }
     }
 
-    /* ===== Über EffiNova: Foto wechselt Seitenverhältnis je nach Bildschirmbreite (quer → quadrat → hoch), wie enwendo ===== */
+    /* ===== Über EffiNova: Hochformat-Porträt, einspaltig gestapelt (schmal) -> zweispaltig Bild links (breit) ===== */
     #ueber-inner { flex-direction: column; align-items: center; gap: 26px; }
-    #ueber-foto { width: 100%; max-width: 520px; }
+    #ueber-foto { width: 100%; max-width: 360px; }
     #ueber-text { width: 100%; max-width: 560px; }
-    .ueber-foto-clip { aspect-ratio: 3 / 2; }               /* schmal: Querformat, volle Breite */
-    @media (min-width: 600px) {
-      #ueber-foto { max-width: 460px; }
-      .ueber-foto-clip { aspect-ratio: 1 / 1; }             /* mittel: Quadrat, zentriert */
-    }
+    .ueber-foto-clip { aspect-ratio: 2 / 3; }               /* Hochformat, ungecroppt */
     @media (min-width: 960px) {
-      #ueber-inner { flex-direction: row; align-items: flex-start; gap: 44px; }
-      #ueber-foto { width: 40%; max-width: 400px; flex: 0 0 auto; }
+      #ueber-inner { flex-direction: row; align-items: center; gap: 44px; }
+      #ueber-foto { width: 34%; max-width: 330px; flex: 0 0 auto; }
       #ueber-text { width: auto; max-width: none; flex: 1 1 auto; }
-      .ueber-foto-clip { aspect-ratio: 4 / 5; }             /* breit, nebeneinander: Hochformat */
+    }
+
+    /* ===== Ihr Weg zur Förderung: Beratungsfoto oben (schmal) / rechts vom Text (breit), Höhe = Textblock ===== */
+    #ablauf-inner { flex-direction: column-reverse; align-items: center; gap: 28px; }
+    #ablauf-text { width: 100%; }
+    #ablauf-foto { width: 100%; max-width: 560px; }
+    .ablauf-foto-clip { aspect-ratio: 3 / 2; }              /* schmal: Querformat, volle Breite */
+    @media (min-width: 960px) {
+      #ablauf-inner { flex-direction: row; align-items: stretch; gap: 44px; }
+      #ablauf-text { flex: 1 1 auto; }
+      #ablauf-foto { flex: 0 0 auto; width: 42%; max-width: 460px; }
+      .ablauf-foto-clip { aspect-ratio: auto; height: 100%; }  /* breit: Höhe = Textblock */
     }
   </style>
 </head>
@@ -187,7 +194,8 @@
 
   <!-- ===================== ABLAUF (Karten-Liste) ===================== -->
   <section id="ablauf" data-nav-theme="light" style="background:#ffffff; color:#004225;">
-    <div style="max-width:1180px; margin:0 auto; padding:56px 24px 30px;">
+    <div id="ablauf-inner" style="max-width:1180px; margin:0 auto; padding:56px 24px 30px; display:flex;">
+      <div id="ablauf-text">
       <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:30px;">
         <h2 style="margin:0; font-weight:800; font-size:clamp(20px,2.4vw,27px); line-height:1.1; letter-spacing:0.3px;">IHR WEG ZUR FÖRDERUNG</h2>
         <span style="font-size:13px; font-weight:600; color:#004225;">in drei Schritten</span>
@@ -214,6 +222,12 @@
             <div style="font-size:15.5px; font-weight:800;">Förderung &amp; Umsetzung</div>
             <div style="font-size:13.5px; color:#5c6c64; margin-top:2px; line-height:1.45;">Anträge in richtiger Reihenfolge, bis zur Auszahlung</div>
           </div>
+        </div>
+      </div>
+      </div>
+      <div id="ablauf-foto">
+        <div class="ablauf-foto-clip" style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 18px 44px rgba(1,51,27,0.16);">
+          <img src="bilder/startseite/henk-beratung.webp" alt="Henk Wenner bei der Energieberatung im Gespräch mit Kunden" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block;" />
         </div>
       </div>
     </div>
@@ -332,7 +346,7 @@
     <div id="ueber-inner" style="max-width:1080px; margin:0 auto; padding:30px 24px 40px; display:flex;">
       <div id="ueber-foto">
         <div class="ueber-foto-clip" style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 18px 44px rgba(1,51,27,0.16);">
-          <img src="bilder/startseite/henk-beratung.webp" alt="Henk Wenner bei der Energieberatung im Gespräch mit Kunden" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block;" />
+          <img src="bilder/startseite/henk-portrait.webp" alt="Henk Wenner, Zimmermeister und Gründer von EffiNova" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block;" />
         </div>
       </div>
       <div id="ueber-text">
@@ -584,8 +598,8 @@
   <!-- ===================== FINALER CTA / KONTAKT ===================== -->
   <section id="kontakt" data-nav-theme="light" style="position:relative; background:#F1F6F2; border-top:1px solid rgba(0,66,37,0.10); color:#004225;">
     <div style="position:relative; z-index:2; max-width:1000px; margin:0 auto; padding:56px 24px 60px; display:flex; flex-wrap:wrap; align-items:center; gap:36px;">
-      <div style="flex:0 1 330px; width:100%; max-width:330px; aspect-ratio:0.72; border-radius:16px; overflow:hidden; margin-right:auto;">
-        <img src="bilder/startseite/henk-portrait.webp" alt="Henk Wenner in Zimmererhose" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover; object-position:50% 40%; display:block;" />
+      <div style="flex:0 1 330px; width:100%; max-width:330px; border-radius:16px; overflow:hidden; margin-right:auto;">
+        <img src="bilder/startseite/henk-hero.webp" alt="Henk Wenner, Zimmermeister und Energieeffizienzexperte" loading="lazy" decoding="async" style="width:100%; height:auto; display:block;" />
       </div>
       <div style="flex:1 1 380px; min-width:280px;">
         <h2 style="margin:0 0 14px; font-weight:800; font-size:clamp(26px,3.4vw,40px); line-height:1.08; letter-spacing:0.4px;">LASSEN SIE UNS ÜBER IHR HAUS SPRECHEN.</h2>
