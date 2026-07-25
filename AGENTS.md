@@ -1,6 +1,6 @@
-# CLAUDE.md — EffiNova Website Agent Guide
+# AGENTS.md — EffiNova Website Agent Guide
 
-Diese Datei wird von Claude Code automatisch beim Start gelesen. Sie erklärt alle Konventionen, den Tech-Stack und den Workflow für das EffiNova-Website-Projekt.
+Diese Datei wird von Codex automatisch beim Start gelesen. Sie erklärt alle Konventionen, den Tech-Stack und den Workflow für das EffiNova-Website-Projekt.
 
 ## Projektübersicht
 
@@ -113,7 +113,7 @@ effi-nova-migration/
 ├── package.json                  — Dependencies (nur tailwindcss)
 ├── package-lock.json
 ├── robots.txt                    — SEO: schließt _archiv_unscharfgeschaltet/ aus
-└── CLAUDE.md                     — Diese Datei
+└── AGENTS.md                     — Diese Datei
 ```
 
 ### Archive-Ordner: `_archiv_unscharfgeschaltet/`
@@ -229,7 +229,7 @@ Diese Regeln sind unverrückbar:
 6. **NICHT** Emojis in Produktions-HTML
    - Es sei denn, explizit gewünscht und briefed
 
-## Before-Commit-Checklist für Claude Code
+## Before-Commit-Checklist für Codex
 
 Vor jedem `git commit`:
 
