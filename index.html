@@ -110,6 +110,26 @@
       #ablauf-foto { flex: 0 0 auto; width: 42%; max-width: 460px; }
       .ablauf-foto-clip { aspect-ratio: auto; height: 100%; }  /* breit: Höhe = Textblock */
     }
+
+    /* ===== Footer: Marke oben (schmal) / links neben den Spalten (breit) ===== */
+    #footer-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px 28px; }
+    #footer-brand { max-width: 340px; }
+    @media (min-width: 640px) {
+      #footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 960px) {
+      #footer-grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr); gap: 30px 48px; align-items: start; }
+      #footer-brand { max-width: 360px; }
+    }
+    /* Unterste Zeile: Copyright + Rechtliches */
+    #footer-bottom { margin-top: 34px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.16); display: flex; flex-direction: column-reverse; align-items: center; gap: 14px; text-align: center; }
+    #footer-bottom > * { max-width: 100%; }
+    #footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 24px; }
+    @media (min-width: 760px) {
+      #footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
+      #footer-legal { justify-content: flex-end; }
+    }
+    .footer-link:hover { color: #ffffff !important; }
   </style>
 </head>
 <body>
@@ -635,41 +655,37 @@
 
     <footer style="position:relative; z-index:2; background:#004225; color:#ffffff;">
       <div style="max-width:1180px; margin:0 auto; padding:40px 24px 30px;">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:30px 28px;">
-          <div style="grid-column:1 / -1; max-width:320px;">
-            <img src="bilder/startseite/logo-white.png" alt="EffiNova" style="height:38px; width:auto; display:block; margin-bottom:14px;" />
+        <div id="footer-grid">
+          <div id="footer-brand">
+            <img src="bilder/startseite/logo-white.png" alt="EffiNova" style="height:38px; width:auto; display:block; margin-bottom:16px;" />
+            <p style="margin:0 0 12px; font-size:15px; line-height:1.55; color:#ffffff; font-weight:600;">Ganzheitliche Energieberatung – weil Ihre Immobilie mehr verdient als halbe Lösungen.</p>
             <p style="margin:0; font-size:13.5px; line-height:1.65; color:rgba(255,255,255,0.72);">Unabhängige Energieberatung &amp; Förderservice aus der Praxis, persönlich von Henk Wenner.</p>
           </div>
           <div>
             <h3 style="margin:0 0 14px; font-size:15px; font-weight:800; color:#ffffff;">Leistungen</h3>
             <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;">
-              <li><a href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Ganzheitliche Energieberatung</a></li>
-              <li><a href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">BAFA Förderservice &amp; Baubegleitung</a></li>
-              <li><a href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">KfW Förderservice &amp; Baubegleitung</a></li>
-              <li><a href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Heizlast &amp; hydraulischer Abgleich</a></li>
-              <li><a href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">GEG-Nachweis, Energieausweis</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 style="margin:0 0 14px; font-size:15px; font-weight:800; color:#ffffff;">Unternehmen</h3>
-            <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;">
-              <li><a href="#ueber" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Expertise</a></li>
-              <li><a href="impressum.html" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Impressum</a></li>
-              <li><a href="datenschutz.html" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Datenschutz</a></li>
-              <li><a href="agb.html" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">AGB</a></li>
-              <li><a href="widerruf.html" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Widerruf</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Individueller Sanierungsfahrplan</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">BAFA Förderservice &amp; Baubegleitung</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">KfW Förderservice &amp; Baubegleitung</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Heizlast &amp; hydraulischer Abgleich</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">GEG-Nachweis, Energieausweis</a></li>
             </ul>
           </div>
           <div>
             <h3 style="margin:0 0 14px; font-size:15px; font-weight:800; color:#ffffff;">Kontakt</h3>
             <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
-              <li><a href="tel:+493022908579" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="phone" style="width:15px;height:15px; flex:none;"></span> +49 (0) 30 229 085 790</a></li>
-              <li><a href="mailto:mail@effi-nova.de" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="mail" style="width:15px;height:15px; flex:none;"></span> mail@effi-nova.de</a></li>
+              <li><a class="footer-link" href="tel:+493022908579" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="phone" style="width:15px;height:15px; flex:none;"></span> +49 (0) 30 229 085 790</a></li>
+              <li><a class="footer-link" href="mailto:mail@effi-nova.de" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="mail" style="width:15px;height:15px; flex:none;"></span> mail@effi-nova.de</a></li>
+              <li><a class="footer-link" href="#ueber" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="user-round" style="width:15px;height:15px; flex:none;"></span> Über EffiNova</a></li>
             </ul>
           </div>
         </div>
-        <div style="margin-top:32px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.16); text-align:center;">
+        <div id="footer-bottom">
           <p style="margin:0; font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.55);">© 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.</p>
+          <nav id="footer-legal" aria-label="Rechtliches">
+            <a class="footer-link" href="impressum.html" style="font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.72);">Impressum</a>
+            <a class="footer-link" href="datenschutz.html" style="font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.72);">Datenschutz</a>
+          </nav>
         </div>
       </div>
     </footer>
