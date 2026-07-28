@@ -12,6 +12,8 @@ module.exports = {
         'effi-h3': '#616161',
         'effi-border': '#E3EBE7',
         'effi-gold': '#C3A87A',
+        'effi-orange': '#C2410C',
+        'effi-orange-dark': '#9A330A',
       },
       fontFamily: {
         'sans': ['Montserrat', 'system-ui', 'sans-serif'],
