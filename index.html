@@ -76,7 +76,7 @@
        Die Bullets wandern per order() unter den CTA-Block. */
     @media (max-width: 899px) {
       #hero-inner { padding-top: 66px !important; padding-bottom: 30px !important; }
-      #hero-photo-wrap { width: 100% !important; max-width: min(360px, 74vw) !important; margin: 0 auto 16px !important; }
+      #hero-photo-wrap { width: 100% !important; max-width: min(432px, 88vw) !important; margin: 0 auto 16px !important; }
       #hero-badge { flex-wrap: nowrap !important; }
       #hero-head { margin-bottom: 18px !important; }
       #hero-copy { margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; }
@@ -87,7 +87,7 @@
     /* Hero: Headline/Subheadline volle Breite oben, darunter Foto links + Bullets rechts */
     @media (min-width: 900px) {
       #hero-main { display: flex; align-items: center; gap: 52px; }
-      #hero-photo-wrap { width: 480px; max-width: 50%; flex: none; margin: 0; }
+      #hero-photo-wrap { width: 576px; max-width: 58%; flex: none; margin: 0; }
       #hero-copy { flex: 1 1 0; max-width: none; margin: 0; }
     }
 
@@ -96,7 +96,7 @@
     @media (min-width: 900px) {
       #header-claim {
         display: block; position: absolute; left: 50%; transform: translateX(-50%);
-        font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+        font-size: 14px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
         color: #004225; white-space: nowrap; pointer-events: none;
         transition: color 0.35s ease;
       }
@@ -104,21 +104,21 @@
     }
 
     /* Experten-Score: eigenständiges Trust-Element neben dem Hero-CTA */
-    #hero-score { display: inline-block; transition: transform 0.2s ease; }
-    #hero-score img { display: block; height: clamp(188px, 20vw, 256px); width: auto; max-width: 100%; }
+    #hero-score { display: block; width: min(100%, 560px); margin: 0 auto; transition: transform 0.2s ease; }
+    #hero-score svg { display: block; width: 100%; height: auto; }
     #hero-score:hover { transform: translateY(-2px); }
     #hero-trustline { border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
     #hero-trustline:hover { border-bottom-color: rgba(0,66,37,0.45); }
     @media (max-width: 620px) {
       #hero-inner { padding-top: 62px !important; }
-      #hero-kicker { font-size: 13px !important; margin-bottom: 5px !important; }
-      #hero-h1 { font-size: 21px !important; line-height: 1.15 !important; margin-bottom: 9px !important; }
-      #hero-sub { font-size: 15px !important; line-height: 1.45 !important; }
+      #hero-kicker { font-size: 15px !important; margin-bottom: 5px !important; }
+      #hero-h1 { font-size: 23px !important; line-height: 1.15 !important; margin-bottom: 9px !important; }
+      #hero-sub { font-size: 17px !important; line-height: 1.45 !important; }
       #hero-head { margin-bottom: 14px !important; }
-      #hero-photo-wrap { max-width: min(288px, 67vw) !important; margin-bottom: 12px !important; }
+      #hero-photo-wrap { max-width: min(346px, 80vw) !important; margin-bottom: 12px !important; }
       #hero-cta-row { gap: 12px !important; }
-      #hero-cta-btn { font-size: 13.5px !important; padding: 13px 18px !important; }
-      #hero-score img { height: 136px; }
+      #hero-cta-btn { font-size: 15.5px !important; padding: 13px 18px !important; }
+      #hero-score { width: min(100%, 420px) !important; }
       #hero-bullets { margin-top: 20px !important; }
     }
 
@@ -129,19 +129,19 @@
       #site-logo { height: 32px !important; }
       #nav-toggle { width: 38px !important; height: 38px !important; }
       #hero-inner { padding-top: 58px !important; padding-bottom: 26px !important; }
-      #hero-kicker { font-size: 12px !important; margin-bottom: 3px !important; }
-      #hero-h1 { font-size: 18px !important; line-height: 1.13 !important; margin-bottom: 7px !important; }
-      #hero-sub { font-size: 13px !important; line-height: 1.4 !important; }
+      #hero-kicker { font-size: 14px !important; margin-bottom: 3px !important; }
+      #hero-h1 { font-size: 20px !important; line-height: 1.13 !important; margin-bottom: 7px !important; }
+      #hero-sub { font-size: 15px !important; line-height: 1.4 !important; }
       #hero-head { margin-bottom: 6px !important; }
-      #hero-photo-wrap { max-width: min(228px, 60vw) !important; margin-bottom: 4px !important; }
+      #hero-photo-wrap { max-width: min(274px, 72vw) !important; margin-bottom: 4px !important; }
       #hero-badge { padding: 8px 9px !important; }
       #hero-badge-icon { width: 26px !important; height: 26px !important; border-radius: 8px !important; }
-      #hero-badge-name { font-size: 14px !important; }
-      #hero-badge-role { font-size: 10px !important; line-height: 1.25 !important; }
+      #hero-badge-name { font-size: 16px !important; }
+      #hero-badge-role { font-size: 12px !important; line-height: 1.25 !important; }
       #hero-cta-row { gap: 8px !important; }
-      #hero-cta-btn { font-size: 12.5px !important; padding: 11px 18px !important; }
-      #hero-score img { height: 112px; }
-      #hero-trustline { font-size: 13.5px !important; margin-top: 14px !important; }
+      #hero-cta-btn { font-size: 14.5px !important; padding: 11px 18px !important; }
+      #hero-score { width: 100% !important; }
+      #hero-trustline { font-size: 15.5px !important; margin-top: 14px !important; }
       #hero-bullets { margin-top: 16px !important; }
     }
 
@@ -215,12 +215,12 @@
     </div>
     <nav id="nav-menu" style="max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
       <div style="max-width:1240px; margin:0 auto; padding:0 24px 22px; display:flex; flex-direction:column;">
-        <a class="nav-link" href="#angebot" style="padding:14px 0; font-size:18px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Leistungen</a>
-        <a class="nav-link" href="#ablauf" style="padding:14px 0; font-size:18px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Prozess</a>
-        <a class="nav-link" href="#ueber" style="padding:14px 0; font-size:18px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Über EffiNova</a>
-        <a class="nav-link" href="#kontakt" style="padding:14px 0; font-size:18px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Kontakt</a>
-        <a class="nav-link" href="blog/index.html" style="padding:14px 0; font-size:18px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); border-bottom:1px solid rgba(0,66,37,0.12); color:#004225;">Wissen</a>
-        <a class="nav-link nav-cta" href="https://funnel.effi-nova.de/" style="margin-top:20px; display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:16px; padding:14px 26px; border-radius:999px; align-self:flex-start;"><span data-lucide="phone" style="width:17px;height:17px;"></span> Kostenlose Erstberatung sichern</a>
+        <a class="nav-link" href="#angebot" style="padding:14px 0; font-size:20px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Leistungen</a>
+        <a class="nav-link" href="#ablauf" style="padding:14px 0; font-size:20px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Prozess</a>
+        <a class="nav-link" href="#ueber" style="padding:14px 0; font-size:20px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Über EffiNova</a>
+        <a class="nav-link" href="#kontakt" style="padding:14px 0; font-size:20px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); color:#004225;">Kontakt</a>
+        <a class="nav-link" href="blog/index.html" style="padding:14px 0; font-size:20px; font-weight:600; border-top:1px solid rgba(0,66,37,0.12); border-bottom:1px solid rgba(0,66,37,0.12); color:#004225;">Wissen</a>
+        <a class="nav-link nav-cta" href="https://funnel.effi-nova.de/" style="margin-top:20px; display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:18px; padding:14px 26px; border-radius:999px; align-self:flex-start;"><span data-lucide="phone" style="width:17px;height:17px;"></span> Kostenlose Erstberatung sichern</a>
       </div>
     </nav>
   </header>
@@ -230,31 +230,31 @@
     <div id="hero-inner" style="position:relative; z-index:2; max-width:1240px; margin:0 auto; padding:76px 24px 38px;">
 
       <div id="hero-head" style="margin:0 0 24px; text-align:center;">
-        <p id="hero-kicker" style="margin:0 0 7px; font-size:14.5px; line-height:1.4; color:#004225; font-weight:700;">
+        <p id="hero-kicker" style="margin:0 0 7px; font-size:16.5px; line-height:1.4; color:#004225; font-weight:700;">
           Für private und inhabergeführte Immobilieneigentümer:
         </p>
 
-        <h1 id="hero-h1" style="margin:0 0 11px; font-weight:800; color:#004225; font-size:clamp(21px, 3vw, 37px); line-height:1.16; letter-spacing:0.2px;">
-          Die 5 fundamentalen Bereiche, die Ihnen aktuell fehlen,<br />um Ihr Gebäude optimal zu sanieren
+        <h1 id="hero-h1" style="margin:0 0 11px; font-weight:800; color:#004225; font-size:clamp(23px, 3vw, 39px); line-height:1.16; letter-spacing:0.2px;">
+          Die 5 fundamentalen Bereiche, die Ihnen aktuell fehlen, um Ihr Gebäude optimal zu sanieren
         </h1>
 
-        <p id="hero-sub" style="margin:0 auto; max-width:760px; font-size:16px; line-height:1.5; color:#3a4a42;">
+        <p id="hero-sub" style="margin:0 auto; max-width:760px; font-size:18px; line-height:1.5; color:#3a4a42;">
           Wie Sie innerhalb von 6 Wochen <a href="#ablauf" style="font-weight:700; color:#004225;">die richtige Sanierungsstrategie</a> für Ihr Gebäude finden, ohne viel zu investieren und ohne verpasste Förderung.
         </p>
       </div>
 
       <div id="hero-main">
 
-      <div id="hero-photo-wrap" style="position:relative; width:min(50%, 446px); margin-left:0; margin-bottom:30px;">
-        <div id="hero-photo-box" style="position:relative; border-radius:18px 18px 0 0; overflow:hidden; aspect-ratio:5/4;">
+      <div id="hero-photo-wrap" style="position:relative; width:min(58%, 535px); margin-left:0; margin-bottom:30px;">
+        <div id="hero-photo-box" style="position:relative; border-radius:18px 18px 0 0; overflow:hidden; aspect-ratio:16/10;">
           <img src="bilder/startseite/henk-hero.webp" alt="Henk Wenner, Zimmermeister und Energieeffizienzexperte" style="width:100%; height:100%; object-fit:cover; object-position:50% 0%; display:block;" />
         </div>
-        <div id="hero-badge" style="background:#ffffff; border:1px solid rgba(0,66,37,0.10); border-top:none; color:#004225; border-radius:0 0 18px 18px; padding:11px 14px; box-shadow:0 18px 44px rgba(1,51,27,0.14); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:nowrap;">
-          <div style="display:flex; align-items:center; gap:9px; min-width:0; flex:1 1 auto;">
-            <span id="hero-badge-icon" style="flex:none; width:34px; height:34px; border-radius:10px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:19px;height:19px;"></span></span>
-            <div style="min-width:0;">
-              <div id="hero-badge-name" style="font-weight:800; font-size:17px; line-height:1.15; white-space:nowrap;">Henk Wenner</div>
-              <div id="hero-badge-role" style="font-size:12.5px; color:#004225; margin-top:2px; line-height:1.3;"><span style="white-space:nowrap;">Zimmermeister &amp;</span><br /><span style="white-space:nowrap;">Energieeffizienzexperte</span></div>
+        <div id="hero-badge" style="background:#ffffff; border:1px solid rgba(0,66,37,0.10); border-top:none; color:#004225; border-radius:0 0 18px 18px; padding:8px 14px; box-shadow:0 18px 44px rgba(1,51,27,0.14); display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:nowrap;">
+          <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+            <span id="hero-badge-icon" style="flex:none; width:30px; height:30px; border-radius:9px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:18px;height:18px;"></span></span>
+            <div style="min-width:0; display:flex; align-items:baseline; gap:9px; flex-wrap:wrap;">
+              <span id="hero-badge-name" style="font-weight:800; font-size:19px; line-height:1.2;">Henk Wenner</span>
+              <span id="hero-badge-role" style="font-size:14.5px; color:#004225; line-height:1.2;">Zimmermeister &amp; Energieeffizienzexperte</span>
             </div>
           </div>
         </div>
@@ -262,22 +262,55 @@
 
       <div id="hero-copy" style="max-width:820px; text-align:center;">
         <ul id="hero-bullets" style="list-style:none; margin:0 auto 30px; padding:0; width:fit-content; text-align:left; display:flex; flex-direction:column; gap:14px;">
-          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:16.5px; line-height:1.45; font-weight:600; color:#004225;">Ein lokaler Ansprechpartner vor Ort</span></li>
-          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:16.5px; line-height:1.45; font-weight:600; color:#004225;">Unabhängige Vor-Ort-Beratung vom Handwerksmeister</span></li>
-          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:16.5px; line-height:1.45; font-weight:600; color:#004225;">Ganzheitlicher Gebäudecheck vom Praktiker</span></li>
-          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:16.5px; line-height:1.45; font-weight:600; color:#004225;">Förderservice &amp; Baubegleitung an Ihrer Seite</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:18.5px; line-height:1.45; font-weight:600; color:#004225;">Ein lokaler Ansprechpartner vor Ort</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:18.5px; line-height:1.45; font-weight:600; color:#004225;">Unabhängige Vor-Ort-Beratung vom Handwerksmeister</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:18.5px; line-height:1.45; font-weight:600; color:#004225;">Ganzheitlicher Gebäudecheck vom Praktiker</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:18.5px; line-height:1.45; font-weight:600; color:#004225;">Förderservice &amp; Baubegleitung an Ihrer Seite</span></li>
         </ul>
 
         <div id="hero-cta-row" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <a id="hero-score" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener" aria-label="Experten-Score: 4,8 von 5 auf Expertenmarkt.de ansehen" style="flex:none; line-height:0;">
-            <img src="bilder/startseite/experten-score.png" width="590" height="318" alt="Experten-Score: 4,8 von 5 auf Expertenmarkt.de" />
+          <a id="hero-score" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener" aria-label="Experten-Score: 4,8 von 5 auf Expertenmarkt.de ansehen">
+            <svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <defs>
+                <symbol id="es-star" viewBox="0 0 100 100">
+                  <path d="M50 4 L63.5 37.8 L100 40.2 L71.8 63.9 L80.9 99 L50 79.4 L19.1 99 L28.2 63.9 L0 40.2 L36.5 37.8 Z" />
+                </symbol>
+                <clipPath id="es-fill80"><rect x="520" y="78" width="38.4" height="48" /></clipPath>
+              </defs>
+
+              <!-- Grosser Stern links -->
+              <use href="#es-star" x="8" y="30" width="150" height="150" fill="#3FAE7A" />
+              <circle cx="46" cy="150" r="27" fill="#ffffff" />
+              <circle cx="46" cy="150" r="22" fill="none" stroke="#2F9E6A" stroke-width="5" />
+              <path d="M36 150 L43.5 157.5 L57 143" fill="none" stroke="#2F9E6A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+
+              <text x="185" y="50" font-family="Montserrat, system-ui, sans-serif" font-size="33" font-weight="800" fill="#10233B">Experten-Score</text>
+              <text x="185" y="122" font-family="Montserrat, system-ui, sans-serif" font-size="52" font-weight="800" fill="#2F9E6A">4,8</text>
+
+              <!-- Vier volle Sterne -->
+              <rect x="292" y="78" width="48" height="48" rx="7" fill="#2F9E6A" />
+              <use href="#es-star" x="299" y="85" width="34" height="34" fill="#ffffff" />
+              <rect x="349" y="78" width="48" height="48" rx="7" fill="#2F9E6A" />
+              <use href="#es-star" x="356" y="85" width="34" height="34" fill="#ffffff" />
+              <rect x="406" y="78" width="48" height="48" rx="7" fill="#2F9E6A" />
+              <use href="#es-star" x="413" y="85" width="34" height="34" fill="#ffffff" />
+              <rect x="463" y="78" width="48" height="48" rx="7" fill="#2F9E6A" />
+              <use href="#es-star" x="470" y="85" width="34" height="34" fill="#ffffff" />
+              <!-- Fuenfter Stern: 80% gefuellt -->
+              <rect x="520" y="78" width="48" height="48" rx="7" fill="#D8E2EA" />
+              <g clip-path="url(#es-fill80)"><rect x="520" y="78" width="48" height="48" rx="7" fill="#2F9E6A" /></g>
+              <use href="#es-star" x="527" y="85" width="34" height="34" fill="#ffffff" />
+
+              <text x="185" y="166" font-family="Montserrat, system-ui, sans-serif" font-size="21" font-weight="800" fill="#10233B">Hervorragend<tspan font-weight="500" fill="#45525E"> | 4,8</tspan></text>
+              <text x="185" y="201" font-family="Montserrat, system-ui, sans-serif" font-size="14" font-weight="500" fill="#8A97A3">powered by <tspan font-weight="800" fill="#1F6FEB">EXPERTENMARKT.DE</tspan></text>
+            </svg>
           </a>
-          <a id="hero-cta-btn" href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:16px; padding:15px 26px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">
+          <a id="hero-cta-btn" href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:18px; padding:15px 26px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">
             Jetzt kostenfreie Erstberatung buchen! <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
           </a>
         </div>
 
-        <a id="hero-trustline" href="#stimmen" style="display:inline-flex; align-items:center; gap:10px; margin-top:22px; font-size:15.5px; font-weight:700; color:#004225;">
+        <a id="hero-trustline" href="#stimmen" style="display:inline-flex; align-items:center; gap:10px; margin-top:22px; font-size:17.5px; font-weight:700; color:#004225;">
           <span data-lucide="users" style="width:19px;height:19px;"></span> Über 300 Eigentümer vertrauen uns
         </a>
 
@@ -288,7 +321,7 @@
 
   <!-- ===================== TRUST-LEISTE ===================== -->
   <section data-nav-theme="dark" style="background:#004225; color:#ffffff;">
-    <div style="max-width:1240px; margin:0 auto; padding:13px 24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 30px; font-size:13.5px; font-weight:600;">
+    <div style="max-width:1240px; margin:0 auto; padding:13px 24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 30px; font-size:15.5px; font-weight:600;">
       <a class="trust-item" href="#usp-lokal" style="display:inline-flex; align-items:center; gap:7px; color:#ffffff; padding:3px 0; border-bottom:1px solid transparent; transition:color 0.2s ease, border-color 0.2s ease;"><span data-lucide="map-pin" style="width:16px;height:16px;"></span> Lokal vor Ort</a>
       <a class="trust-item" href="#usp-praxis" style="display:inline-flex; align-items:center; gap:7px; color:#ffffff; padding:3px 0; border-bottom:1px solid transparent; transition:color 0.2s ease, border-color 0.2s ease;"><span data-lucide="hammer" style="width:16px;height:16px;"></span> Handwerksmeister</a>
       <a class="trust-item" href="#stimmen" style="display:inline-flex; align-items:center; gap:7px; color:#ffffff; padding:3px 0; border-bottom:1px solid transparent; transition:color 0.2s ease, border-color 0.2s ease;"><span data-lucide="users" style="width:16px;height:16px;"></span> 300+ Eigentümer vertrauen uns</a>
@@ -301,29 +334,29 @@
     <div id="ablauf-inner" style="max-width:1180px; margin:0 auto; padding:56px 24px 30px; display:flex;">
       <div id="ablauf-text">
       <div style="display:flex; align-items:baseline; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:30px;">
-        <h2 style="margin:0; font-weight:800; font-size:clamp(20px,2.4vw,27px); line-height:1.1; letter-spacing:0.3px; text-align:center;">IN NUR DREI SCHRITTEN ZUR FÖRDERUNG</h2>
+        <h2 style="margin:0; font-weight:800; font-size:clamp(22px,2.4vw,29px); line-height:1.1; letter-spacing:0.3px; text-align:center;">IN NUR DREI SCHRITTEN ZUR FÖRDERUNG</h2>
       </div>
 
       <div id="ablauf-grid" style="display:flex; flex-direction:column; gap:12px; max-width:640px; margin:0 auto;">
         <div style="display:flex; align-items:center; gap:14px; background:#ffffff; border:1px solid rgba(0,66,37,0.12); border-radius:14px; padding:16px 18px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;"><span data-lucide="phone" style="width:17px;height:17px;"></span></span>
+          <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:17px;"><span data-lucide="phone" style="width:17px;height:17px;"></span></span>
           <div>
-            <div style="font-size:15.5px; font-weight:800;">Kostenfreies Erstgespräch</div>
-            <div style="font-size:13.5px; color:#5c6c64; margin-top:2px; line-height:1.45;">15–20 Minuten mit mir, ehrliche Einschätzung</div>
+            <div style="font-size:17.5px; font-weight:800;">Kostenfreies Erstgespräch</div>
+            <div style="font-size:15.5px; color:#5c6c64; margin-top:2px; line-height:1.45;">15–20 Minuten mit mir, ehrliche Einschätzung</div>
           </div>
         </div>
         <div style="display:flex; align-items:center; gap:14px; background:#ffffff; border:1px solid rgba(0,66,37,0.12); border-radius:14px; padding:16px 18px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;"><span data-lucide="house" style="width:17px;height:17px;"></span></span>
+          <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:17px;"><span data-lucide="house" style="width:17px;height:17px;"></span></span>
           <div>
-            <div style="font-size:15.5px; font-weight:800;">Vor-Ort-Termin &amp; Fahrplan</div>
-            <div style="font-size:13.5px; color:#5c6c64; margin-top:2px; line-height:1.45;">Ich komme vorbei, danach Ihr iSFP schwarz auf weiß</div>
+            <div style="font-size:17.5px; font-weight:800;">Vor-Ort-Termin &amp; Fahrplan</div>
+            <div style="font-size:15.5px; color:#5c6c64; margin-top:2px; line-height:1.45;">Ich komme vorbei, danach Ihr iSFP schwarz auf weiß</div>
           </div>
         </div>
         <div style="display:flex; align-items:center; gap:14px; background:#ffffff; border:1px solid rgba(0,66,37,0.12); border-radius:14px; padding:16px 18px;">
-          <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;"><span data-lucide="hammer" style="width:17px;height:17px;"></span></span>
+          <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:17px;"><span data-lucide="hammer" style="width:17px;height:17px;"></span></span>
           <div>
-            <div style="font-size:15.5px; font-weight:800;">Förderung &amp; Umsetzung</div>
-            <div style="font-size:13.5px; color:#5c6c64; margin-top:2px; line-height:1.45;">Anträge in richtiger Reihenfolge, bis zur Auszahlung</div>
+            <div style="font-size:17.5px; font-weight:800;">Förderung &amp; Umsetzung</div>
+            <div style="font-size:15.5px; color:#5c6c64; margin-top:2px; line-height:1.45;">Anträge in richtiger Reihenfolge, bis zur Auszahlung</div>
           </div>
         </div>
       </div>
@@ -339,27 +372,27 @@
   <!-- ===================== USP-DETAILS ===================== -->
   <section data-nav-theme="light" style="background:#fff; color:#004225;">
     <div style="max-width:1080px; margin:0 auto; padding:30px 24px 60px;">
-      <h2 style="margin:0 0 30px; font-weight:800; font-size:clamp(22px,2.6vw,30px); line-height:1.1; letter-spacing:0.3px; text-align:center;">WARUM EFFINOVA?</h2>
+      <h2 style="margin:0 0 30px; font-weight:800; font-size:clamp(24px,2.6vw,32px); line-height:1.1; letter-spacing:0.3px; text-align:center;">WARUM EFFINOVA?</h2>
       <div style="display:flex; flex-direction:column; gap:26px;">
         <div id="usp-lokal" style="display:flex; gap:18px; align-items:flex-start; scroll-margin-top:90px;">
           <span style="flex:none; width:42px; height:42px; border-radius:12px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="map-pin" style="width:21px;height:21px;"></span></span>
           <div>
-            <h3 style="margin:0 0 7px; font-size:18px; font-weight:800;">Lokal vor Ort</h3>
-            <p style="margin:0; font-size:15px; line-height:1.65; color:#3a4a42; max-width:660px;">Ich komme persönlich zu Ihnen: Rundgang, Maße, Fotos, Gespräch am Küchentisch. Kein Ferngutachten aus dem Rechenmodell, und deutschlandweit erreichbar, mit Schwerpunkt Berlin/Brandenburg.</p>
+            <h3 style="margin:0 0 7px; font-size:20px; font-weight:800;">Lokal vor Ort</h3>
+            <p style="margin:0; font-size:17px; line-height:1.65; color:#3a4a42; max-width:660px;">Ich komme persönlich zu Ihnen: Rundgang, Maße, Fotos, Gespräch am Küchentisch. Kein Ferngutachten aus dem Rechenmodell, und deutschlandweit erreichbar, mit Schwerpunkt Berlin/Brandenburg.</p>
           </div>
         </div>
         <div id="usp-persoenlich" style="display:flex; gap:18px; align-items:flex-start; scroll-margin-top:90px;">
           <span style="flex:none; width:42px; height:42px; border-radius:12px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="user-round-check" style="width:21px;height:21px;"></span></span>
           <div>
-            <h3 style="margin:0 0 7px; font-size:18px; font-weight:800;">Persönlich betreut, ein Ansprechpartner</h3>
-            <p style="margin:0; font-size:15px; line-height:1.65; color:#3a4a42; max-width:660px;">Von der ersten Frage bis zur Auszahlung haben Sie mich als Ansprechpartner, ich kümmere mich um Beratung und Förderung. Kein Callcenter, keine wechselnden Sachbearbeiter, keine Wiederholung Ihrer Geschichte.</p>
+            <h3 style="margin:0 0 7px; font-size:20px; font-weight:800;">Persönlich betreut, ein Ansprechpartner</h3>
+            <p style="margin:0; font-size:17px; line-height:1.65; color:#3a4a42; max-width:660px;">Von der ersten Frage bis zur Auszahlung haben Sie mich als Ansprechpartner, ich kümmere mich um Beratung und Förderung. Kein Callcenter, keine wechselnden Sachbearbeiter, keine Wiederholung Ihrer Geschichte.</p>
           </div>
         </div>
         <div id="usp-praxis" style="display:flex; gap:18px; align-items:flex-start; scroll-margin-top:90px;">
           <span style="flex:none; width:42px; height:42px; border-radius:12px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="hammer" style="width:21px;height:21px;"></span></span>
           <div>
-            <h3 style="margin:0 0 7px; font-size:18px; font-weight:800;">Praxiserfahrung im Handwerk</h3>
-            <p style="margin:0; font-size:15px; line-height:1.65; color:#3a4a42; max-width:660px;">Viele Jahre stand ich selbst auf der Baustelle, zuletzt als Zimmermeister. Sie bekommen von mir keinen Theorie-Bericht, sondern einen Plan, der auf der Baustelle funktioniert und beim Fördergeber durchgeht.</p>
+            <h3 style="margin:0 0 7px; font-size:20px; font-weight:800;">Praxiserfahrung im Handwerk</h3>
+            <p style="margin:0; font-size:17px; line-height:1.65; color:#3a4a42; max-width:660px;">Viele Jahre stand ich selbst auf der Baustelle, zuletzt als Zimmermeister. Sie bekommen von mir keinen Theorie-Bericht, sondern einen Plan, der auf der Baustelle funktioniert und beim Fördergeber durchgeht.</p>
           </div>
         </div>
       </div>
@@ -369,27 +402,27 @@
   <!-- ===================== PROBLEM ===================== -->
   <section data-nav-theme="dark" style="background:#004225; color:#ffffff;">
     <div style="max-width:1080px; margin:0 auto; padding:56px 24px 60px;">
-      <h2 style="margin:0 0 28px; font-weight:800; font-size:clamp(22px,2.6vw,30px); line-height:1.1; letter-spacing:0.3px; color:#ffffff; text-align:center;">KOMMT IHNEN DAS BEKANNT VOR?</h2>
+      <h2 style="margin:0 0 28px; font-weight:800; font-size:clamp(24px,2.6vw,32px); line-height:1.1; letter-spacing:0.3px; color:#ffffff; text-align:center;">KOMMT IHNEN DAS BEKANNT VOR?</h2>
       <div style="display:flex; flex-direction:column; gap:12px; max-width:760px; margin:0 auto;">
         <div style="display:flex; align-items:flex-start; gap:14px; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 22px;">
           <span style="flex:none; display:inline-flex; width:38px; height:38px; border-radius:11px; background:#ffffff; border:1px solid #004225; color:#004225; align-items:center; justify-content:center;"><span data-lucide="messages-square" style="width:20px;height:20px;"></span></span>
           <div>
-            <h3 style="margin:0 0 6px; font-size:16.5px; font-weight:800; color:#004225;">Jeder sagt etwas anderes</h3>
-            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#3a4a42;">Handwerker, Nachbar, Internet, und niemand schaut auf <em>Ihr</em> Haus.</p>
+            <h3 style="margin:0 0 6px; font-size:18.5px; font-weight:800; color:#004225;">Jeder sagt etwas anderes</h3>
+            <p style="margin:0; font-size:16.5px; line-height:1.6; color:#3a4a42;">Handwerker, Nachbar, Internet, und niemand schaut auf <em>Ihr</em> Haus.</p>
           </div>
         </div>
         <div style="display:flex; align-items:flex-start; gap:14px; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 22px;">
           <span style="flex:none; display:inline-flex; width:38px; height:38px; border-radius:11px; background:#ffffff; border:1px solid #004225; color:#004225; align-items:center; justify-content:center;"><span data-lucide="shuffle" style="width:20px;height:20px;"></span></span>
           <div>
-            <h3 style="margin:0 0 6px; font-size:16.5px; font-weight:800; color:#004225;">Der Förder-Dschungel</h3>
-            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#3a4a42;">KfW, BAFA, iSFP, GEG, und die Regeln ändern sich alle sechs Monate.</p>
+            <h3 style="margin:0 0 6px; font-size:18.5px; font-weight:800; color:#004225;">Der Förder-Dschungel</h3>
+            <p style="margin:0; font-size:16.5px; line-height:1.6; color:#3a4a42;">KfW, BAFA, iSFP, GEG, und die Regeln ändern sich alle sechs Monate.</p>
           </div>
         </div>
         <div style="display:flex; align-items:flex-start; gap:14px; background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 22px;">
           <span style="flex:none; display:inline-flex; width:38px; height:38px; border-radius:11px; background:#ffffff; border:1px solid #004225; color:#004225; align-items:center; justify-content:center;"><span data-lucide="alert-triangle" style="width:20px;height:20px;"></span></span>
           <div>
-            <h3 style="margin:0 0 6px; font-size:16.5px; font-weight:800; color:#004225;">Angst vor dem teuren Fehler</h3>
-            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#3a4a42;">Ein falscher Ablauf, und der Zuschuss ist unwiderruflich weg.</p>
+            <h3 style="margin:0 0 6px; font-size:18.5px; font-weight:800; color:#004225;">Angst vor dem teuren Fehler</h3>
+            <p style="margin:0; font-size:16.5px; line-height:1.6; color:#3a4a42;">Ein falscher Ablauf, und der Zuschuss ist unwiderruflich weg.</p>
           </div>
         </div>
       </div>
@@ -401,8 +434,8 @@
     <div style="max-width:1180px; margin:0 auto; padding:56px 24px 30px;">
       <div style="display:flex; flex-direction:column; align-items:center; gap:16px; margin-bottom:24px;">
         <div style="text-align:center;">
-          <h2 style="margin:0 0 8px; font-weight:800; font-size:clamp(22px,2.6vw,30px); line-height:1.1; letter-spacing:0.3px;">ANGEBOT UND LEISTUNGEN</h2>
-          <p style="margin:0 auto; font-size:14.5px; line-height:1.6; color:#3a4a42; max-width:520px;">Ich berate und begleite Sie, von der ersten Frage bis zur Förderauszahlung. Ausführung und Material bleiben bei Ihren Handwerkern, das hält meine Beratung unabhängig.</p>
+          <h2 style="margin:0 0 8px; font-weight:800; font-size:clamp(24px,2.6vw,32px); line-height:1.1; letter-spacing:0.3px;">ANGEBOT UND LEISTUNGEN</h2>
+          <p style="margin:0 auto; font-size:16.5px; line-height:1.6; color:#3a4a42; max-width:520px;">Ich berate und begleite Sie, von der ersten Frage bis zur Förderauszahlung. Ausführung und Material bleiben bei Ihren Handwerkern, das hält meine Beratung unabhängig.</p>
         </div>
         <div style="display:flex; gap:8px;">
           <button id="svc-prev" type="button" aria-label="Zurück" style="width:40px; height:40px; border:1px solid rgba(0,66,37,0.2); border-radius:50%; background:transparent; color:#004225; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="chevron-left" style="width:20px;height:20px;"></span></button>
@@ -414,29 +447,29 @@
         <div style="scroll-snap-align:start; flex:0 0 auto; width:min(276px, 78vw); background:#ffffff; color:#004225; border:1px solid rgba(0,66,37,0.14); border-radius:16px; overflow:hidden;">
           <img src="bilder/startseite/prozess-bestandsaufnahme.webp" alt="Energieberatung vor Ort" loading="lazy" decoding="async" style="display:block; width:100%; height:118px; object-fit:cover;" />
           <div style="padding:16px 18px 20px;">
-            <h3 style="margin:0 0 7px; font-size:16px; font-weight:800; color:#004225;">Energieberatung vor Ort</h3>
-            <p style="margin:0; font-size:14px; line-height:1.55; color:#3a4a42;">Ich komme persönlich vorbei, analysiere Ihr Gebäude und erstelle Ihren Sanierungsfahrplan (iSFP).</p>
+            <h3 style="margin:0 0 7px; font-size:18px; font-weight:800; color:#004225;">Energieberatung vor Ort</h3>
+            <p style="margin:0; font-size:16px; line-height:1.55; color:#3a4a42;">Ich komme persönlich vorbei, analysiere Ihr Gebäude und erstelle Ihren Sanierungsfahrplan (iSFP).</p>
           </div>
         </div>
         <div style="scroll-snap-align:start; flex:0 0 auto; width:min(276px, 78vw); background:#ffffff; color:#004225; border:1px solid rgba(0,66,37,0.14); border-radius:16px; overflow:hidden;">
           <img src="bilder/startseite/prozess-foerderung-gutachten.webp" alt="BAFA Förderservice" loading="lazy" decoding="async" style="display:block; width:100%; height:118px; object-fit:cover;" />
           <div style="padding:16px 18px 20px;">
-            <h3 style="margin:0 0 7px; font-size:16px; font-weight:800; color:#004225;">BAFA Förderservice</h3>
-            <p style="margin:0; font-size:14px; line-height:1.55; color:#3a4a42;">Wir übernehmen die komplette Abwicklung für Sie, von der Beantragung bis zur Auszahlung.</p>
+            <h3 style="margin:0 0 7px; font-size:18px; font-weight:800; color:#004225;">BAFA Förderservice</h3>
+            <p style="margin:0; font-size:16px; line-height:1.55; color:#3a4a42;">Wir übernehmen die komplette Abwicklung für Sie, von der Beantragung bis zur Auszahlung.</p>
           </div>
         </div>
         <div style="scroll-snap-align:start; flex:0 0 auto; width:min(276px, 78vw); background:#ffffff; color:#004225; border:1px solid rgba(0,66,37,0.14); border-radius:16px; overflow:hidden;">
           <img src="bilder/startseite/prozess-antragstellung.webp" alt="KfW Förderberatung" loading="lazy" decoding="async" style="display:block; width:100%; height:118px; object-fit:cover;" />
           <div style="padding:16px 18px 20px;">
-            <h3 style="margin:0 0 7px; font-size:16px; font-weight:800; color:#004225;">KfW Förderberatung</h3>
-            <p style="margin:0; font-size:14px; line-height:1.55; color:#3a4a42;">Wir begleiten Sie bei Heizungstausch und Effizienzhaus-Sanierung.</p>
+            <h3 style="margin:0 0 7px; font-size:18px; font-weight:800; color:#004225;">KfW Förderberatung</h3>
+            <p style="margin:0; font-size:16px; line-height:1.55; color:#3a4a42;">Wir begleiten Sie bei Heizungstausch und Effizienzhaus-Sanierung.</p>
           </div>
         </div>
         <div style="scroll-snap-align:start; flex:0 0 auto; width:min(276px, 78vw); background:#ffffff; color:#004225; border:1px solid rgba(0,66,37,0.14); border-radius:16px; overflow:hidden;">
           <img src="bilder/startseite/prozess-baubegleitung.webp" alt="Baubegleitung" loading="lazy" decoding="async" style="display:block; width:100%; height:118px; object-fit:cover;" />
           <div style="padding:16px 18px 20px;">
-            <h3 style="margin:0 0 7px; font-size:16px; font-weight:800; color:#004225;">Baubegleitung</h3>
-            <p style="margin:0; font-size:14px; line-height:1.55; color:#3a4a42;">Wir begleiten Ihre Sanierung fachkundig bis zum Nachweis.</p>
+            <h3 style="margin:0 0 7px; font-size:18px; font-weight:800; color:#004225;">Baubegleitung</h3>
+            <p style="margin:0; font-size:16px; line-height:1.55; color:#3a4a42;">Wir begleiten Ihre Sanierung fachkundig bis zum Nachweis.</p>
           </div>
         </div>
       </div>
@@ -453,12 +486,12 @@
         </div>
       </div>
       <div id="ueber-text">
-        <h2 style="margin:0 0 18px; font-weight:800; font-size:clamp(22px,2.6vw,30px); line-height:1.15; letter-spacing:0.3px; text-align:center;">ENERGIEBERATUNG VON EINEM, DER SELBST GEBAUT HAT.</h2>
-        <div style="font-size:15px; line-height:1.7; color:#3a4a42; display:flex; flex-direction:column; gap:13px;">
+        <h2 style="margin:0 0 18px; font-weight:800; font-size:clamp(24px,2.6vw,32px); line-height:1.15; letter-spacing:0.3px; text-align:center;">ENERGIEBERATUNG VON EINEM, DER SELBST GEBAUT HAT.</h2>
+        <div style="font-size:17px; line-height:1.7; color:#3a4a42; display:flex; flex-direction:column; gap:13px;">
           <p style="margin:0;">Ich bin Henk Wenner, Zimmermeister, Energieberater und Gründer von EffiNova. Viele Jahre stand ich selbst auf der Baustelle und habe erlebt, wie Kunden an wechselnden Förderregeln und desinteressierten Beratern scheitern.</p>
           <p style="margin:0;">Irgendwann war klar: Wenn es keiner richtig macht, mache ich es selbst. Heute begleiten wir Sanierungen mit einem Team aus der Praxis, Zimmermeister, Elektriker, Bautechniker, und einem Netzwerk aus Planern und Handwerksbetrieben. Über 300 Kunden, deutschlandweit.</p>
         </div>
-        <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; margin-top:22px; background:#C2410C; color:#ffffff; font-weight:700; font-size:16px; padding:15px 26px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">Kostenlose Erstberatung sichern <span data-lucide="arrow-right" style="width:18px;height:18px;"></span></a>
+        <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; margin-top:22px; background:#C2410C; color:#ffffff; font-weight:700; font-size:18px; padding:15px 26px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">Kostenlose Erstberatung sichern <span data-lucide="arrow-right" style="width:18px;height:18px;"></span></a>
       </div>
     </div>
   </section>
@@ -467,7 +500,7 @@
   <section id="stimmen" data-nav-theme="light" style="background:#fff; color:#004225;">
     <div style="max-width:1180px; margin:0 auto; padding:30px 24px 60px;">
       <div style="display:flex; flex-direction:column; align-items:center; gap:16px; margin-bottom:22px;">
-        <h2 style="margin:0; font-weight:800; font-size:clamp(22px,2.6vw,30px); line-height:1.1; letter-spacing:0.3px; text-align:center;">WAS KUNDEN SAGEN</h2>
+        <h2 style="margin:0; font-weight:800; font-size:clamp(24px,2.6vw,32px); line-height:1.1; letter-spacing:0.3px; text-align:center;">WAS KUNDEN SAGEN</h2>
         <div style="display:flex; gap:8px;">
           <button id="rev-prev" type="button" aria-label="Vorherige Bewertung" style="width:40px; height:40px; border:1px solid rgba(0,66,37,0.2); border-radius:50%; background:transparent; color:#004225; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="chevron-left" style="width:20px;height:20px;"></span></button>
           <button id="rev-next" type="button" aria-label="Nächste Bewertung" style="width:40px; height:40px; border:1px solid rgba(0,66,37,0.2); border-radius:50%; background:transparent; color:#004225; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="chevron-right" style="width:20px;height:20px;"></span></button>
@@ -477,155 +510,155 @@
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Nicht mehr nur eine Nummer</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Wir waren erst bei einer großen Firma die deutschlandweit agiert und fühlten uns dort nicht wohl. Zum Glück hat uns eine Kollegin dann EffiNova empfohlen. Jetzt sind wir nicht mehr nur eine Nummer. Jetzt erhalten wir eine individuelle Beratung und es gibt keine versteckten Kosten. Jede Frage wird beantwortet und das so schnell, dass man immer wieder überrascht ist und sich freut. Wir werden voraussichtlich 28.000€ Fördeung vom Staat erhalten und am Ende wird unser kleines Häuschen ein Effizienzklasse A+ Haus sein. Das nur durch die hervorragende Beratung von Herrn Wenner. Wir empfehlen EffiNova mit gutem Gewissen weiter.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Nicht mehr nur eine Nummer</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Wir waren erst bei einer großen Firma die deutschlandweit agiert und fühlten uns dort nicht wohl. Zum Glück hat uns eine Kollegin dann EffiNova empfohlen. Jetzt sind wir nicht mehr nur eine Nummer. Jetzt erhalten wir eine individuelle Beratung und es gibt keine versteckten Kosten. Jede Frage wird beantwortet und das so schnell, dass man immer wieder überrascht ist und sich freut. Wir werden voraussichtlich 28.000€ Fördeung vom Staat erhalten und am Ende wird unser kleines Häuschen ein Effizienzklasse A+ Haus sein. Das nur durch die hervorragende Beratung von Herrn Wenner. Wir empfehlen EffiNova mit gutem Gewissen weiter.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">J</span>
-            <div style="font-weight:800; font-size:13.5px;">Jule</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">J</span>
+            <div style="font-weight:800; font-size:15.5px;">Jule</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Über die reine Theorie hinaus!</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Endlich eine Energieberatung, die über reine Theorie hinausgeht! Als Zimmermeister versteht Herr Wenner die praktischen Herausforderungen beim Sanieren. Die ganzheitliche Beratung hat mir geholfen, nicht nur Energie zu sparen, sondern auch langfristig kluge Entscheidungen zu treffen. Absolut empfehlenswert!</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Über die reine Theorie hinaus!</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Endlich eine Energieberatung, die über reine Theorie hinausgeht! Als Zimmermeister versteht Herr Wenner die praktischen Herausforderungen beim Sanieren. Die ganzheitliche Beratung hat mir geholfen, nicht nur Energie zu sparen, sondern auch langfristig kluge Entscheidungen zu treffen. Absolut empfehlenswert!</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">CK</span>
-            <div style="font-weight:800; font-size:13.5px;">Christian Kölbl</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">CK</span>
+            <div style="font-weight:800; font-size:15.5px;">Christian Kölbl</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★☆</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★☆</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Schnelle und kompetente Unterstützung</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Schnelle und kompetente Unterstützung.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Schnelle und kompetente Unterstützung</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Schnelle und kompetente Unterstützung.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">GG</span>
-            <div style="font-weight:800; font-size:13.5px;">Gerald Goedel</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">GG</span>
+            <div style="font-weight:800; font-size:15.5px;">Gerald Goedel</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Herr Wenner für uns in Falkensee</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Herr Wenner begleitete professionell und routiniert unser Bauvorhaben in Falkensee bei Berlin. Es wurden genau unsere Wände, Dächer und deren Dämmung besprochen — sein praxisnahes Fachwissen machte vieles einfacher. Ebenso wurden verschiedene Wege für Fördermittel definiert und fixiert. Wir sind Henk sehr dankbar und planen bereits unsere Wärmepumpe mit ihm.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Herr Wenner für uns in Falkensee</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Herr Wenner begleitete professionell und routiniert unser Bauvorhaben in Falkensee bei Berlin. Es wurden genau unsere Wände, Dächer und deren Dämmung besprochen — sein praxisnahes Fachwissen machte vieles einfacher. Ebenso wurden verschiedene Wege für Fördermittel definiert und fixiert. Wir sind Henk sehr dankbar und planen bereits unsere Wärmepumpe mit ihm.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">FE</span>
-            <div style="font-weight:800; font-size:13.5px;">Florian Exner</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">FE</span>
+            <div style="font-weight:800; font-size:15.5px;">Florian Exner</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Kompetent, zuverlässig und reaktionsschnell</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Herr Wenner ist kompetent, zuverlässig und reaktionsschnell. Er dreht, wenn nötig, auch nochmal eine Extrarunde bei der Diskussion darum, was für den Kunden die beste Lösung sei.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Kompetent, zuverlässig und reaktionsschnell</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Herr Wenner ist kompetent, zuverlässig und reaktionsschnell. Er dreht, wenn nötig, auch nochmal eine Extrarunde bei der Diskussion darum, was für den Kunden die beste Lösung sei.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">MZ</span>
-            <div style="font-weight:800; font-size:13.5px;">Dr. Meike Zehlike</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">MZ</span>
+            <div style="font-weight:800; font-size:15.5px;">Dr. Meike Zehlike</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Sehr effektiver und kurzer Kontakt</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Sehr effektiver und kurzer Kontakt. Haben jetzt eine KfW (Wärmepumpe) und BAFA Förderung beantragt (Dämmung und Fenster). Gut vorbereitet sind die Termine schnell erledigt. Der nächste Antrag steht aus…</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Sehr effektiver und kurzer Kontakt</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Sehr effektiver und kurzer Kontakt. Haben jetzt eine KfW (Wärmepumpe) und BAFA Förderung beantragt (Dämmung und Fenster). Gut vorbereitet sind die Termine schnell erledigt. Der nächste Antrag steht aus…</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">JK</span>
-            <div style="font-weight:800; font-size:13.5px;">Jürgen Kreutzberger</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">JK</span>
+            <div style="font-weight:800; font-size:15.5px;">Jürgen Kreutzberger</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Professionell, zuverlässig und zügig</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Die Unterstützung von Herrn Wenner bei der Heizlastberechnung und insgesamt die Zusammenarbeit war professionell, zuverlässig und zügig. Wir waren sehr zufrieden und freuen uns auf weitere gemeinsame Projekte. Als Energieberater ist er wärmstens zu empfehlen.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Professionell, zuverlässig und zügig</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Die Unterstützung von Herrn Wenner bei der Heizlastberechnung und insgesamt die Zusammenarbeit war professionell, zuverlässig und zügig. Wir waren sehr zufrieden und freuen uns auf weitere gemeinsame Projekte. Als Energieberater ist er wärmstens zu empfehlen.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">ML</span>
-            <div style="font-weight:800; font-size:13.5px;">Marco Lehmann</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">ML</span>
+            <div style="font-weight:800; font-size:15.5px;">Marco Lehmann</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Beratung staatliche Förderung für Dämmung</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Sehr gute, ausführliche Erklärung und Beratung. Schnelle Bearbeitung aller Unterlagen, zufriedene Ergebnisse. Werde ich auf jeden Fall weiterempfehlen.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Beratung staatliche Förderung für Dämmung</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Sehr gute, ausführliche Erklärung und Beratung. Schnelle Bearbeitung aller Unterlagen, zufriedene Ergebnisse. Werde ich auf jeden Fall weiterempfehlen.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">AC</span>
-            <div style="font-weight:800; font-size:13.5px;">Dr. Aneep Jose Chungath</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">AC</span>
+            <div style="font-weight:800; font-size:15.5px;">Dr. Aneep Jose Chungath</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Professioneller Anbieter bei Energieberatung</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Professioneller Anbieter bei Energieberatung und Unterstützung zu Fördermittelbeantragung.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Professioneller Anbieter bei Energieberatung</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Professioneller Anbieter bei Energieberatung und Unterstützung zu Fördermittelbeantragung.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">KS</span>
-            <div style="font-weight:800; font-size:13.5px;">Konrad Schur</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">KS</span>
+            <div style="font-weight:800; font-size:15.5px;">Konrad Schur</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">Super und sehr schneller Service</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">Super und sehr schneller Service, kann ich nur weiterempfehlen.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">Super und sehr schneller Service</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">Super und sehr schneller Service, kann ich nur weiterempfehlen.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">DB</span>
-            <div style="font-weight:800; font-size:13.5px;">Dennis Busching</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">DB</span>
+            <div style="font-weight:800; font-size:15.5px;">Dennis Busching</div>
           </div>
         </div>
 
         <div class="review-card" style="scroll-snap-align:start; flex:0 0 auto; width:min(310px, 80vw); display:flex; flex-direction:column; background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:20px 20px;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px;">
-            <span style="color:#00b67a; font-size:15px; letter-spacing:2px; line-height:1;">★★★★★</span>
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
+            <span style="color:#00b67a; font-size:17px; letter-spacing:2px; line-height:1;">★★★★★</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; color:#8a998f;">Expertenmarkt.de</span>
           </div>
-          <h3 style="margin:0 0 8px; font-size:15.5px; font-weight:800; line-height:1.3;">prompt und professionell</h3>
-          <p class="rev-text" style="margin:0; font-size:14px; line-height:1.6; color:#41514a;">EffiNova hat mir prompt und professionell helfen können — alles eingelöst, wie zugesagt.</p>
-          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
+          <h3 style="margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.3;">prompt und professionell</h3>
+          <p class="rev-text" style="margin:0; font-size:16px; line-height:1.6; color:#41514a;">EffiNova hat mir prompt und professionell helfen können — alles eingelöst, wie zugesagt.</p>
+          <button type="button" class="rev-toggle" style="margin-top:10px; align-self:flex-start; background:none; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:15px; font-weight:700; color:#004225; text-decoration:underline;">mehr lesen</button>
           <div style="margin-top:auto; display:flex; align-items:center; gap:10px; padding-top:14px;">
-            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;">BS</span>
-            <div style="font-weight:800; font-size:13.5px;">Bernard Stein</div>
+            <span style="flex:none; width:34px; height:34px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:15px;">BS</span>
+            <div style="font-weight:800; font-size:15.5px;">Bernard Stein</div>
           </div>
         </div>
 
@@ -637,19 +670,19 @@
   <section data-nav-theme="light" style="background:#F1F6F2; color:#004225;">
     <div style="max-width:1080px; margin:0 auto; padding:56px 24px 60px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:16px;">
       <div style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:24px 24px;">
-        <h3 style="margin:0 0 16px; font-size:17px; font-weight:800; color:#004225; display:flex; align-items:center; gap:10px;"><span data-lucide="circle-check-big" style="width:20px;height:20px; color:#004225;"></span> Passt, wenn Sie …</h3>
+        <h3 style="margin:0 0 16px; font-size:19px; font-weight:800; color:#004225; display:flex; align-items:center; gap:10px;"><span data-lucide="circle-check-big" style="width:20px;height:20px; color:#004225;"></span> Passt, wenn Sie …</h3>
         <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;">
-          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:14.5px; line-height:1.55; color:#3a4a42;">ein Haus besitzen oder kaufen und sanieren wollen.</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:14.5px; line-height:1.55; color:#3a4a42;">die Förderung mitnehmen wollen, statt sie liegenzulassen.</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:14.5px; line-height:1.55; color:#3a4a42;">einen unabhängigen Plan wollen, kein Verkaufsgespräch.</span></li>
+          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:16.5px; line-height:1.55; color:#3a4a42;">ein Haus besitzen oder kaufen und sanieren wollen.</span></li>
+          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:16.5px; line-height:1.55; color:#3a4a42;">die Förderung mitnehmen wollen, statt sie liegenzulassen.</span></li>
+          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="check" style="width:12px;height:12px;"></span></span><span style="font-size:16.5px; line-height:1.55; color:#3a4a42;">einen unabhängigen Plan wollen, kein Verkaufsgespräch.</span></li>
         </ul>
       </div>
       <div style="background:#fff; border:1px solid rgba(0,66,37,0.10); border-radius:16px; padding:24px 24px;">
-        <h3 style="margin:0 0 16px; font-size:17px; font-weight:800; color:#004225; display:flex; align-items:center; gap:10px;"><span data-lucide="circle-slash" style="width:20px;height:20px; color:#8a6d3b;"></span> Passt eher nicht, wenn …</h3>
+        <h3 style="margin:0 0 16px; font-size:19px; font-weight:800; color:#004225; display:flex; align-items:center; gap:10px;"><span data-lucide="circle-slash" style="width:20px;height:20px; color:#8a6d3b;"></span> Passt eher nicht, wenn …</h3>
         <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;">
-          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:14.5px; line-height:1.55; color:#3a4a42;">Sie wirklich nur einen Energieausweis brauchen.</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:14.5px; line-height:1.55; color:#3a4a42;">es bei einer Kleinstmaßnahme unter 1.000 € bleibt.</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:14.5px; line-height:1.55; color:#3a4a42;">Sie Material kaufen oder einen Ausführungsbetrieb suchen.</span></li>
+          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:16.5px; line-height:1.55; color:#3a4a42;">Sie wirklich nur einen Energieausweis brauchen.</span></li>
+          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:16.5px; line-height:1.55; color:#3a4a42;">es bei einer Kleinstmaßnahme unter 1.000 € bleibt.</span></li>
+          <li style="display:flex; gap:10px; align-items:flex-start;"><span style="flex:none; width:19px;height:19px; border-radius:50%; background:#b9a06a; color:#fff; display:inline-flex; align-items:center; justify-content:center; margin-top:2px;"><span data-lucide="minus" style="width:12px;height:12px;"></span></span><span style="font-size:16.5px; line-height:1.55; color:#3a4a42;">Sie Material kaufen oder einen Ausführungsbetrieb suchen.</span></li>
         </ul>
       </div>
     </div>
@@ -658,56 +691,56 @@
   <!-- ===================== FAQ ===================== -->
   <section data-nav-theme="light" style="background:#fff; color:#004225;">
     <div style="max-width:800px; margin:0 auto; padding:56px 24px 60px;">
-      <h2 style="margin:0 0 24px; font-weight:800; font-size:clamp(22px,2.6vw,30px); line-height:1.1; letter-spacing:0.3px; text-align:center;">HÄUFIG GESTELLTE FRAGEN</h2>
+      <h2 style="margin:0 0 24px; font-weight:800; font-size:clamp(24px,2.6vw,32px); line-height:1.1; letter-spacing:0.3px; text-align:center;">HÄUFIG GESTELLTE FRAGEN</h2>
       <div style="display:flex; flex-direction:column; gap:10px;">
         <details style="background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:13px; padding:2px 20px;">
-          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:15.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:17.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
             Stellen Sie Energieausweise aus?
             <span data-lucide="plus" style="width:18px;height:18px; color:#004225; flex:none;"></span>
           </summary>
-          <p style="margin:0; padding:0 0 18px; font-size:14.5px; line-height:1.65; color:#3a4a42;">Nicht als Einzelleistung, dafür gibt es günstigere Wege. Im Rahmen einer vollständigen Energieberatung entsteht der Ausweis aber als Nebenprodukt mit. Wenn Sie ohnehin über Sanierung oder Heizungstausch nachdenken, ist das kostenlose Erstgespräch der bessere erste Schritt.</p>
+          <p style="margin:0; padding:0 0 18px; font-size:16.5px; line-height:1.65; color:#3a4a42;">Nicht als Einzelleistung, dafür gibt es günstigere Wege. Im Rahmen einer vollständigen Energieberatung entsteht der Ausweis aber als Nebenprodukt mit. Wenn Sie ohnehin über Sanierung oder Heizungstausch nachdenken, ist das kostenlose Erstgespräch der bessere erste Schritt.</p>
         </details>
         <details style="background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:13px; padding:2px 20px;">
-          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:15.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:17.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
             Was kostet das?
             <span data-lucide="plus" style="width:18px;height:18px; color:#004225; flex:none;"></span>
           </summary>
-          <p style="margin:0; padding:0 0 18px; font-size:14.5px; line-height:1.65; color:#3a4a42;">Das Erstgespräch ist kostenlos und unverbindlich. Danach arbeite ich mit Festpreisen für klar definierte Leistungspakete, keine offenen Stundensätze. Gut zu wissen: Die Energieberatung selbst wird staatlich bezuschusst.</p>
+          <p style="margin:0; padding:0 0 18px; font-size:16.5px; line-height:1.65; color:#3a4a42;">Das Erstgespräch ist kostenlos und unverbindlich. Danach arbeite ich mit Festpreisen für klar definierte Leistungspakete, keine offenen Stundensätze. Gut zu wissen: Die Energieberatung selbst wird staatlich bezuschusst.</p>
         </details>
         <details style="background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:13px; padding:2px 20px;">
-          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:15.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:17.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
             Wie viel Förderung ist bei mir realistisch?
             <span data-lucide="plus" style="width:18px;height:18px; color:#004225; flex:none;"></span>
           </summary>
-          <p style="margin:0; padding:0 0 18px; font-size:14.5px; line-height:1.65; color:#3a4a42;">Das hängt von Maßnahme, Gebäude und Haushaltseinkommen ab. Beim Heizungstausch sind bis zu 80 % Zuschuss möglich, maximal 22.400 € pro Wohneinheit. Eine seriöse Zahl gibt es erst nach dem Blick auf Ihr Haus.</p>
+          <p style="margin:0; padding:0 0 18px; font-size:16.5px; line-height:1.65; color:#3a4a42;">Das hängt von Maßnahme, Gebäude und Haushaltseinkommen ab. Beim Heizungstausch sind bis zu 80 % Zuschuss möglich, maximal 22.400 € pro Wohneinheit. Eine seriöse Zahl gibt es erst nach dem Blick auf Ihr Haus.</p>
         </details>
         <details style="background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:13px; padding:2px 20px;">
-          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:15.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:17.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
             Arbeiten Sie nur in Berlin?
             <span data-lucide="plus" style="width:18px;height:18px; color:#004225; flex:none;"></span>
           </summary>
-          <p style="margin:0; padding:0 0 18px; font-size:14.5px; line-height:1.65; color:#3a4a42;">Nein, ich bin deutschlandweit unterwegs, mit einem Team aus der Praxis im Rücken.</p>
+          <p style="margin:0; padding:0 0 18px; font-size:16.5px; line-height:1.65; color:#3a4a42;">Nein, ich bin deutschlandweit unterwegs, mit einem Team aus der Praxis im Rücken.</p>
         </details>
         <details style="background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:13px; padding:2px 20px;">
-          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:15.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:17.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
             Wie läuft der Vor-Ort-Termin ab?
             <span data-lucide="plus" style="width:18px;height:18px; color:#004225; flex:none;"></span>
           </summary>
-          <p style="margin:0; padding:0 0 18px; font-size:14.5px; line-height:1.65; color:#3a4a42;">Rund zwei Stunden: Ich komme zu Ihnen, mache einen ausführlichen Rundgang mit Fotos und Maßen aller energetisch relevanten Bauteile, danach das Beratungsgespräch, welche Maßnahmen sinnvoll sind, welche Förderstrategie passt und wie es weitergeht.</p>
+          <p style="margin:0; padding:0 0 18px; font-size:16.5px; line-height:1.65; color:#3a4a42;">Rund zwei Stunden: Ich komme zu Ihnen, mache einen ausführlichen Rundgang mit Fotos und Maßen aller energetisch relevanten Bauteile, danach das Beratungsgespräch, welche Maßnahmen sinnvoll sind, welche Förderstrategie passt und wie es weitergeht.</p>
         </details>
         <details style="background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:13px; padding:2px 20px;">
-          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:15.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:17.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
             Ich habe schon ein Angebot vom Handwerker, ist es zu spät?
             <span data-lucide="plus" style="width:18px;height:18px; color:#004225; flex:none;"></span>
           </summary>
-          <p style="margin:0; padding:0 0 18px; font-size:14.5px; line-height:1.65; color:#3a4a42;">Förderanträge müssen gestellt sein, bevor die Maßnahme beginnt. Melden Sie sich am besten, bevor Sie unterschreiben. Falls Sie schon weiter sind, kläre ich ehrlich, was noch geht.</p>
+          <p style="margin:0; padding:0 0 18px; font-size:16.5px; line-height:1.65; color:#3a4a42;">Förderanträge müssen gestellt sein, bevor die Maßnahme beginnt. Melden Sie sich am besten, bevor Sie unterschreiben. Falls Sie schon weiter sind, kläre ich ehrlich, was noch geht.</p>
         </details>
         <details style="background:#F4F8F5; border:1px solid rgba(0,66,37,0.10); border-radius:13px; padding:2px 20px;">
-          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:15.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+          <summary style="cursor:pointer; list-style:none; padding:16px 0; font-size:17.5px; font-weight:700; color:#004225; display:flex; align-items:center; justify-content:space-between; gap:14px;">
             Wie schnell melden Sie sich?
             <span data-lucide="plus" style="width:18px;height:18px; color:#004225; flex:none;"></span>
           </summary>
-          <p style="margin:0; padding:0 0 18px; font-size:14.5px; line-height:1.65; color:#3a4a42;">Auf neue Anfragen antworte ich innerhalb von einem Werktag.</p>
+          <p style="margin:0; padding:0 0 18px; font-size:16.5px; line-height:1.65; color:#3a4a42;">Auf neue Anfragen antworte ich innerhalb von einem Werktag.</p>
         </details>
       </div>
     </div>
@@ -720,12 +753,12 @@
         <img src="bilder/startseite/henk-hero.webp" alt="Henk Wenner, Zimmermeister und Energieeffizienzexperte" loading="lazy" decoding="async" style="width:100%; height:auto; display:block;" />
       </div>
       <div style="flex:1 1 380px; min-width:280px; text-align:center;">
-        <h2 style="margin:0 0 14px; font-weight:800; font-size:clamp(26px,3.4vw,40px); line-height:1.08; letter-spacing:0.4px;">LASSEN SIE UNS ÜBER IHRE EFFIZIENZ SPRECHEN.</h2>
-        <p style="margin:0 0 24px; font-size:16px; line-height:1.6; color:#3a4a42;">15 Minuten mit mir, kostenlos und unverbindlich. Danach wissen Sie, welche Förderung realistisch ist.</p>
-        <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:16px; padding:16px 28px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">
+        <h2 style="margin:0 0 14px; font-weight:800; font-size:clamp(28px,3.4vw,42px); line-height:1.08; letter-spacing:0.4px;">LASSEN SIE UNS ÜBER IHRE EFFIZIENZ SPRECHEN.</h2>
+        <p style="margin:0 0 24px; font-size:18px; line-height:1.6; color:#3a4a42;">15 Minuten mit mir, kostenlos und unverbindlich. Danach wissen Sie, welche Förderung realistisch ist.</p>
+        <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:18px; padding:16px 28px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">
           Kostenlose Erstberatung sichern <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
         </a>
-        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px 18px; margin-top:18px; font-size:13.5px; color:#5c6c64; font-weight:500;">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px 18px; margin-top:18px; font-size:15.5px; color:#5c6c64; font-weight:500;">
           <span style="display:inline-flex; align-items:center; gap:7px;"><span data-lucide="check-circle-2" style="width:15px;height:15px;"></span> Unverbindlich</span>
           <span style="display:inline-flex; align-items:center; gap:7px;"><span data-lucide="clock" style="width:15px;height:15px;"></span> Antwort in einem Werktag</span>
         </div>
@@ -737,33 +770,33 @@
         <div id="footer-grid">
           <div id="footer-brand">
             <img src="bilder/startseite/logo-white.png" alt="EffiNova" style="height:38px; width:auto; display:block; margin-bottom:16px;" />
-            <p style="margin:0 0 12px; font-size:15px; line-height:1.55; color:#ffffff; font-weight:600;">Ganzheitliche Energieberatung – weil Ihre Immobilie mehr verdient als halbe Lösungen.</p>
-            <p style="margin:0; font-size:13.5px; line-height:1.65; color:rgba(255,255,255,0.72);">Unabhängige Energieberatung &amp; Förderservice aus der Praxis, persönlich von Henk Wenner.</p>
+            <p style="margin:0 0 12px; font-size:17px; line-height:1.55; color:#ffffff; font-weight:600;">Ganzheitliche Energieberatung – weil Ihre Immobilie mehr verdient als halbe Lösungen.</p>
+            <p style="margin:0; font-size:15.5px; line-height:1.65; color:rgba(255,255,255,0.72);">Unabhängige Energieberatung &amp; Förderservice aus der Praxis, persönlich von Henk Wenner.</p>
           </div>
           <div>
-            <h3 style="margin:0 0 14px; font-size:15px; font-weight:800; color:#ffffff;">Leistungen</h3>
+            <h3 style="margin:0 0 14px; font-size:17px; font-weight:800; color:#ffffff;">Leistungen</h3>
             <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;">
-              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Individueller Sanierungsfahrplan</a></li>
-              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">BAFA Förderservice &amp; Baubegleitung</a></li>
-              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">KfW Förderservice &amp; Baubegleitung</a></li>
-              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Heizlast &amp; hydraulischer Abgleich</a></li>
-              <li><a class="footer-link" href="#angebot" style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.72);">GEG-Nachweis, Energieausweis</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:15.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Individueller Sanierungsfahrplan</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:15.5px; line-height:1.4; color:rgba(255,255,255,0.72);">BAFA Förderservice &amp; Baubegleitung</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:15.5px; line-height:1.4; color:rgba(255,255,255,0.72);">KfW Förderservice &amp; Baubegleitung</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:15.5px; line-height:1.4; color:rgba(255,255,255,0.72);">Heizlast &amp; hydraulischer Abgleich</a></li>
+              <li><a class="footer-link" href="#angebot" style="font-size:15.5px; line-height:1.4; color:rgba(255,255,255,0.72);">GEG-Nachweis, Energieausweis</a></li>
             </ul>
           </div>
           <div>
-            <h3 style="margin:0 0 14px; font-size:15px; font-weight:800; color:#ffffff;">Kontakt</h3>
+            <h3 style="margin:0 0 14px; font-size:17px; font-weight:800; color:#ffffff;">Kontakt</h3>
             <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
-              <li><a class="footer-link" href="tel:+493022908579" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="phone" style="width:15px;height:15px; flex:none;"></span> +49 (0) 30 229 085 790</a></li>
-              <li><a class="footer-link" href="mailto:mail@effi-nova.de" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="mail" style="width:15px;height:15px; flex:none;"></span> mail@effi-nova.de</a></li>
-              <li><a class="footer-link" href="#ueber" style="display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:rgba(255,255,255,0.72);"><span data-lucide="user-round" style="width:15px;height:15px; flex:none;"></span> Über EffiNova</a></li>
+              <li><a class="footer-link" href="tel:+493022908579" style="display:inline-flex; align-items:center; gap:9px; font-size:15.5px; color:rgba(255,255,255,0.72);"><span data-lucide="phone" style="width:15px;height:15px; flex:none;"></span> +49 (0) 30 229 085 790</a></li>
+              <li><a class="footer-link" href="mailto:mail@effi-nova.de" style="display:inline-flex; align-items:center; gap:9px; font-size:15.5px; color:rgba(255,255,255,0.72);"><span data-lucide="mail" style="width:15px;height:15px; flex:none;"></span> mail@effi-nova.de</a></li>
+              <li><a class="footer-link" href="#ueber" style="display:inline-flex; align-items:center; gap:9px; font-size:15.5px; color:rgba(255,255,255,0.72);"><span data-lucide="user-round" style="width:15px;height:15px; flex:none;"></span> Über EffiNova</a></li>
             </ul>
           </div>
         </div>
         <div id="footer-bottom">
-          <p style="margin:0; font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.55);">© 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.</p>
+          <p style="margin:0; font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.55);">© 2026 EffiNova Energieberatung. Alle Rechte vorbehalten.</p>
           <nav id="footer-legal" aria-label="Rechtliches">
-            <a class="footer-link" href="impressum.html" style="font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.72);">Impressum</a>
-            <a class="footer-link" href="datenschutz.html" style="font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.72);">Datenschutz</a>
+            <a class="footer-link" href="impressum.html" style="font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.72);">Impressum</a>
+            <a class="footer-link" href="datenschutz.html" style="font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.72);">Datenschutz</a>
           </nav>
         </div>
       </div>
