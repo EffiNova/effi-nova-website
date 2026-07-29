@@ -1,4 +1,4 @@
-/* EffiNova – Cookie Consent Brand Overrides
+/* EffiNova: Cookie Consent Brand Overrides
    Passt vanilla-cookieconsent v3 an Brand (effi-green/beige/gold, Montserrat, Glassmorphism) an. */
 
 #cc-main {
@@ -81,7 +81,7 @@
   }
 }
 
-/* Sticky Floating-Button „Privatsphäre" — dezent, nur Icon, unten rechts */
+/* Sticky Floating-Button „Privatsphäre": dezent, nur Icon, unten rechts */
 .cc-revoke-btn {
   position: fixed;
   bottom: 16px;

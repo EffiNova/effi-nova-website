@@ -5,7 +5,7 @@
  * an alle CTA-Links Richtung funnel.effi-nova.de an, damit die Attribution
  * über den Subdomain-Wechsel hinweg erhalten bleibt.
  *
- * O-067 / D-067 (effi-nova-funnel-Repo) — Cross-Domain-Marketing-Parameter-Passthrough.
+ * O-067 / D-067 (effi-nova-funnel-Repo): Cross-Domain-Marketing-Parameter-Passthrough.
  * Consent-frei: URL-Parameter sind keine Cookies / kein Browser-Storage.
  */
 (function () {

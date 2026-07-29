@@ -1,5 +1,5 @@
 /**
- * EffiNova – Cookie Consent Konfiguration
+ * EffiNova: Cookie Consent Konfiguration
  * Basis: vanilla-cookieconsent v3
  * Sprache: Deutsch (Sie-Form), konsistent mit der Website
  */
@@ -27,7 +27,7 @@
   }
 
   /**
-   * Google Consent Mode v2 — Update-Funktion
+   * Google Consent Mode v2: Update-Funktion
    * Mappt Cookie-Banner-Kategorien auf Google Consent-Typen
    */
   function updateGoogleConsent() {
@@ -120,7 +120,7 @@
               {
                 title: 'Cookies und ähnliche Technologien',
                 description:
-                  'Wir nutzen Cookies und vergleichbare Technologien, um grundlegende Funktionen bereitzustellen und – mit Ihrer Einwilligung – das Angebot kontinuierlich zu verbessern. Sie können Ihre Einwilligung jederzeit über den Button „Privatsphäre-Einstellungen" unten links anpassen oder widerrufen.'
+                  'Wir nutzen Cookies und vergleichbare Technologien, um grundlegende Funktionen bereitzustellen und, mit Ihrer Einwilligung, das Angebot kontinuierlich zu verbessern. Sie können Ihre Einwilligung jederzeit über den Button „Privatsphäre-Einstellungen" unten links anpassen oder widerrufen.'
               },
               {
                 title: 'Essenziell',
