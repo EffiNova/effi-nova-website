@@ -229,14 +229,14 @@
     #empathie-inner { flex-direction: column; align-items: center; gap: 30px; }
     #empathie-foto { width: 100%; max-width: min(300px, 72vw); }
     #empathie-text { width: 100%; max-width: 620px; }
-    .empathie-foto-clip { aspect-ratio: 4 / 5; }            /* schmal: kompakter Ausschnitt, spart Hoehe */
-    #empathie-img { object-position: 50% 22%; }
+    /* Die Datei ist bereits exakt auf 3:4 beschnitten, Haaransatz oben,
+       Guertel und Reissverschluesse unten. Deshalb ueberall dasselbe
+       Seitenverhaeltnis, damit auf keiner Breite etwas wegfaellt. */
+    .empathie-foto-clip { aspect-ratio: 3 / 4; }
     @media (min-width: 960px) {
       #empathie-inner { flex-direction: row; align-items: flex-start; gap: 48px; }
       #empathie-foto { flex: 0 0 auto; width: 34%; max-width: 360px; }
       #empathie-text { flex: 1 1 auto; max-width: none; }
-      .empathie-foto-clip { aspect-ratio: 2 / 3; }          /* breit: volles Hochformat neben dem Text */
-      #empathie-img { object-position: 50% 45%; }
     }
     @media (max-width: 620px) {
       #empathie-cta { width: 100%; justify-content: center; text-align: center; }
