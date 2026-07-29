@@ -83,12 +83,24 @@
       #hero-cta-row { order: 1; }
       #hero-trustline { order: 2; }
       #hero-bullets { order: 3; margin: 24px auto 0 !important; }
+      #hero-siegel { order: 4; margin: 20px auto 0 !important; }
     }
     /* Hero: Headline/Subheadline volle Breite oben, darunter Foto links + Bullets rechts */
     @media (min-width: 900px) {
       #hero-main { display: flex; align-items: center; gap: 44px; }
       #hero-photo-wrap { width: 640px; max-width: 56%; flex: none; margin: 0; }
       #hero-copy { flex: 1 1 0; max-width: none; margin: 0; }
+    }
+
+    /* Foerder-Siegel unter den Bullets. Fehlt eine Datei, blendet sich das Bild per onerror aus. */
+    #hero-siegel { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 22px 30px; margin: 0 auto 30px; }
+    #hero-siegel img { display: block; width: auto; }
+    #hero-siegel img:first-child { height: 54px; }
+    #hero-siegel img:last-child { height: 62px; }
+    @media (max-width: 620px) {
+      #hero-siegel { gap: 18px 22px; margin-bottom: 22px; }
+      #hero-siegel img:first-child { height: 44px; }
+      #hero-siegel img:last-child { height: 50px; }
     }
 
     /* Namensschild: auf breiten Screens Name und Beruf in einer Zeile,
@@ -273,6 +285,14 @@
           <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:18.5px; line-height:1.45; font-weight:600; color:#004225;">Unabhängige Vor-Ort-Beratung und Ganzheitlicher Gebäudecheck vom Handwerksmeister</span></li>
           <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:18.5px; line-height:1.45; font-weight:600; color:#004225;">für Rückfragen stets an Ihrer Seite von Beratung über Angebots-Check für die Förderung bis hin zu Förderservice &amp; energetische Baubegleitung</span></li>
         </ul>
+
+        <div id="hero-siegel">
+          <img src="bilder/logos/energieeffizienz-experten-bund.svg" alt="Energieeffizienz-Experten für Förderprogramme des Bundes"
+               loading="lazy" decoding="async" onerror="this.style.display='none'" />
+          <img src="bilder/logos/deutschland-machts-effizient.svg" alt="Deutschland macht's effizient"
+               loading="lazy" decoding="async" onerror="this.style.display='none'" />
+        </div>
+
 
         <div id="hero-cta-row" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
           <a id="hero-score" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener"
