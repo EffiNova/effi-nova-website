@@ -76,7 +76,7 @@
        Die Bullets wandern per order() unter den CTA-Block. */
     @media (max-width: 899px) {
       #hero-inner { padding-top: 66px !important; padding-bottom: 30px !important; }
-      #hero-photo-wrap { width: 100% !important; max-width: min(300px, 62vw) !important; margin: 0 auto 16px !important; }
+      #hero-photo-wrap { width: 100% !important; max-width: min(360px, 74vw) !important; margin: 0 auto 16px !important; }
       #hero-badge { flex-wrap: nowrap !important; }
       #hero-head { margin-bottom: 18px !important; }
       #hero-copy { margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; }
@@ -87,7 +87,7 @@
     /* Hero: Headline/Subheadline volle Breite oben, darunter Foto links + Bullets rechts */
     @media (min-width: 900px) {
       #hero-main { display: flex; align-items: center; gap: 52px; }
-      #hero-photo-wrap { width: 400px; max-width: 42%; flex: none; margin: 0; }
+      #hero-photo-wrap { width: 480px; max-width: 50%; flex: none; margin: 0; }
       #hero-copy { flex: 1 1 0; max-width: none; margin: 0; }
     }
 
@@ -105,7 +105,7 @@
 
     /* Experten-Score: eigenständiges Trust-Element neben dem Hero-CTA */
     #hero-score { display: inline-block; transition: transform 0.2s ease; }
-    #hero-score img { display: block; height: clamp(94px, 10vw, 128px); width: auto; }
+    #hero-score img { display: block; height: clamp(188px, 20vw, 256px); width: auto; max-width: 100%; }
     #hero-score:hover { transform: translateY(-2px); }
     #hero-trustline { border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
     #hero-trustline:hover { border-bottom-color: rgba(0,66,37,0.45); }
@@ -115,10 +115,10 @@
       #hero-h1 { font-size: 21px !important; line-height: 1.15 !important; margin-bottom: 9px !important; }
       #hero-sub { font-size: 15px !important; line-height: 1.45 !important; }
       #hero-head { margin-bottom: 14px !important; }
-      #hero-photo-wrap { max-width: min(240px, 56vw) !important; margin-bottom: 12px !important; }
-      #hero-cta-row { gap: 10px !important; }
-      #hero-cta-row > a:first-child { font-size: 13.5px !important; padding: 13px 18px !important; }
-      #hero-score img { height: 68px; }
+      #hero-photo-wrap { max-width: min(288px, 67vw) !important; margin-bottom: 12px !important; }
+      #hero-cta-row { gap: 12px !important; }
+      #hero-cta-btn { font-size: 13.5px !important; padding: 13px 18px !important; }
+      #hero-score img { height: 136px; }
       #hero-bullets { margin-top: 20px !important; }
     }
 
@@ -128,19 +128,19 @@
       #header-bar { padding: 9px 24px !important; }
       #site-logo { height: 32px !important; }
       #nav-toggle { width: 38px !important; height: 38px !important; }
-      #hero-inner { padding-top: 62px !important; padding-bottom: 26px !important; }
-      #hero-kicker { font-size: 12px !important; margin-bottom: 5px !important; }
-      #hero-h1 { font-size: 18.5px !important; line-height: 1.13 !important; margin-bottom: 8px !important; }
-      #hero-sub { font-size: 13.5px !important; line-height: 1.4 !important; }
-      #hero-head { margin-bottom: 10px !important; }
-      #hero-photo-wrap { max-width: min(190px, 50vw) !important; margin-bottom: 8px !important; }
+      #hero-inner { padding-top: 58px !important; padding-bottom: 26px !important; }
+      #hero-kicker { font-size: 12px !important; margin-bottom: 4px !important; }
+      #hero-h1 { font-size: 18px !important; line-height: 1.13 !important; margin-bottom: 7px !important; }
+      #hero-sub { font-size: 13px !important; line-height: 1.4 !important; }
+      #hero-head { margin-bottom: 8px !important; }
+      #hero-photo-wrap { max-width: min(228px, 60vw) !important; margin-bottom: 6px !important; }
       #hero-badge { padding: 8px 9px !important; }
       #hero-badge-icon { width: 26px !important; height: 26px !important; border-radius: 8px !important; }
       #hero-badge-name { font-size: 14px !important; }
       #hero-badge-role { font-size: 10px !important; line-height: 1.25 !important; }
-      #hero-cta-row { gap: 8px !important; }
-      #hero-cta-row > a:first-child { font-size: 12.5px !important; padding: 11px 18px !important; }
-      #hero-score img { height: 56px; }
+      #hero-cta-row { gap: 10px !important; }
+      #hero-cta-btn { font-size: 12.5px !important; padding: 11px 18px !important; }
+      #hero-score img { height: 112px; }
       #hero-trustline { font-size: 13.5px !important; margin-top: 14px !important; }
       #hero-bullets { margin-top: 16px !important; }
     }
@@ -245,7 +245,7 @@
 
       <div id="hero-main">
 
-      <div id="hero-photo-wrap" style="position:relative; width:min(42%, 372px); margin-left:0; margin-bottom:30px;">
+      <div id="hero-photo-wrap" style="position:relative; width:min(50%, 446px); margin-left:0; margin-bottom:30px;">
         <div id="hero-photo-box" style="position:relative; border-radius:18px 18px 0 0; overflow:hidden; aspect-ratio:5/4;">
           <img src="bilder/startseite/henk-hero.webp" alt="Henk Wenner, Zimmermeister und Energieeffizienzexperte" style="width:100%; height:100%; object-fit:cover; object-position:50% 0%; display:block;" />
         </div>
@@ -268,12 +268,12 @@
           <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:1px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:16.5px; line-height:1.45; font-weight:600; color:#004225;">Förderservice &amp; Baubegleitung an Ihrer Seite</span></li>
         </ul>
 
-        <div id="hero-cta-row" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:18px 26px;">
-          <a href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:16px; padding:15px 26px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">
-            Jetzt kostenfreie Erstberatung buchen! <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
-          </a>
+        <div id="hero-cta-row" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
           <a id="hero-score" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener" aria-label="Experten-Score: 4,8 von 5 auf Expertenmarkt.de ansehen" style="flex:none; line-height:0;">
             <img src="bilder/startseite/experten-score.png" width="590" height="318" alt="Experten-Score: 4,8 von 5 auf Expertenmarkt.de" />
+          </a>
+          <a id="hero-cta-btn" href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:16px; padding:15px 26px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">
+            Jetzt kostenfreie Erstberatung buchen! <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
           </a>
         </div>
 
