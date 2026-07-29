@@ -72,11 +72,17 @@
 
     /* ===== Mobile-First-Anpassungen ===== */
     @media (max-width: 620px) { #ablauf-grid { gap: 12px !important; } }
+    /* Schmale Screens: Kopftext, Foto, Score und CTA sollen gemeinsam in den sichtbaren Bereich passen.
+       Die Bullets wandern per order() unter den CTA-Block. */
     @media (max-width: 899px) {
-      #hero-photo-wrap { width: 100% !important; max-width: 460px !important; margin-left: auto !important; margin-right: auto !important; }
+      #hero-inner { padding-top: 66px !important; padding-bottom: 30px !important; }
+      #hero-photo-wrap { width: 100% !important; max-width: min(300px, 62vw) !important; margin: 0 auto 16px !important; }
       #hero-badge { flex-wrap: nowrap !important; }
-      #hero-head { margin-bottom: 30px !important; }
-      #hero-copy { margin-left: auto; margin-right: auto; }
+      #hero-head { margin-bottom: 18px !important; }
+      #hero-copy { margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; }
+      #hero-cta-row { order: 1; }
+      #hero-trustline { order: 2; }
+      #hero-bullets { order: 3; margin: 24px auto 0 !important; }
     }
     /* Hero: Headline/Subheadline volle Breite oben, darunter Foto links + Bullets rechts */
     @media (min-width: 900px) {
@@ -85,15 +91,58 @@
       #hero-copy { flex: 1 1 0; max-width: none; margin: 0; }
     }
 
+    /* Claim zentriert im Header — erst ab 900px, darunter fehlt neben Logo und Burger der Platz */
+    #header-claim { display: none; }
+    @media (min-width: 900px) {
+      #header-claim {
+        display: block; position: absolute; left: 50%; transform: translateX(-50%);
+        font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+        color: #004225; white-space: nowrap; pointer-events: none;
+        transition: color 0.35s ease;
+      }
+      #site-header[data-theme="dark"] #header-claim { color: #ffffff; }
+    }
+
     /* Experten-Score: eigenständiges Trust-Element neben dem Hero-CTA */
     #hero-score { display: inline-block; transition: transform 0.2s ease; }
     #hero-score img { display: block; height: clamp(94px, 10vw, 128px); width: auto; }
     #hero-score:hover { transform: translateY(-2px); }
     #hero-trustline { border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
     #hero-trustline:hover { border-bottom-color: rgba(0,66,37,0.45); }
-    @media (max-width: 520px) {
-      #hero-cta-row { gap: 20px !important; }
-      #hero-score img { height: 96px; }
+    @media (max-width: 620px) {
+      #hero-inner { padding-top: 62px !important; }
+      #hero-kicker { font-size: 13px !important; margin-bottom: 5px !important; }
+      #hero-h1 { font-size: 21px !important; line-height: 1.15 !important; margin-bottom: 9px !important; }
+      #hero-sub { font-size: 15px !important; line-height: 1.45 !important; }
+      #hero-head { margin-bottom: 14px !important; }
+      #hero-photo-wrap { max-width: min(240px, 56vw) !important; margin-bottom: 12px !important; }
+      #hero-cta-row { gap: 10px !important; }
+      #hero-cta-row > a:first-child { font-size: 13.5px !important; padding: 13px 18px !important; }
+      #hero-score img { height: 68px; }
+      #hero-bullets { margin-top: 20px !important; }
+    }
+
+    /* Telefonbreiten: Kopftext, Foto, Experten-Score und CTA muessen gemeinsam sichtbar bleiben.
+       Werte sind gegen die echten Montserrat-Metriken gerechnet (siehe Commit-Message). */
+    @media (max-width: 460px) {
+      #header-bar { padding: 9px 24px !important; }
+      #site-logo { height: 32px !important; }
+      #nav-toggle { width: 38px !important; height: 38px !important; }
+      #hero-inner { padding-top: 62px !important; padding-bottom: 26px !important; }
+      #hero-kicker { font-size: 12px !important; margin-bottom: 5px !important; }
+      #hero-h1 { font-size: 18.5px !important; line-height: 1.13 !important; margin-bottom: 8px !important; }
+      #hero-sub { font-size: 13.5px !important; line-height: 1.4 !important; }
+      #hero-head { margin-bottom: 10px !important; }
+      #hero-photo-wrap { max-width: min(190px, 50vw) !important; margin-bottom: 8px !important; }
+      #hero-badge { padding: 8px 9px !important; }
+      #hero-badge-icon { width: 26px !important; height: 26px !important; border-radius: 8px !important; }
+      #hero-badge-name { font-size: 14px !important; }
+      #hero-badge-role { font-size: 10px !important; line-height: 1.25 !important; }
+      #hero-cta-row { gap: 8px !important; }
+      #hero-cta-row > a:first-child { font-size: 12.5px !important; padding: 11px 18px !important; }
+      #hero-score img { height: 56px; }
+      #hero-trustline { font-size: 13.5px !important; margin-top: 14px !important; }
+      #hero-bullets { margin-top: 16px !important; }
     }
 
     /* ===== Über EffiNova: Querformat-Foto wechselt Seitenverhältnis je nach Bildschirmbreite (quer → quadrat → hoch), wie enwendo ===== */
@@ -155,8 +204,9 @@
 
   <!-- ===================== FIXED HEADER ===================== -->
   <header id="site-header" data-theme="light" style="position:fixed; top:0; left:0; right:0; z-index:50; background:rgba(255,255,255,0.88); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); transition:background 0.35s ease, box-shadow 0.35s ease;">
-    <div style="max-width:1240px; margin:0 auto; padding:11px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+    <div id="header-bar" style="position:relative; max-width:1240px; margin:0 auto; padding:11px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px;">
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="display:block; line-height:0;"><img id="site-logo" src="bilder/startseite/logo-green.png" alt="EffiNova" style="height:36px; width:auto; display:block;" /></a>
+      <span id="header-claim">Unabhängige Energieberatung &amp; Förderservice</span>
       <button id="nav-toggle" type="button" aria-label="Menü öffnen" style="display:inline-flex; flex-direction:column; justify-content:center; gap:6px; width:44px; height:44px; align-items:center; background:none; border:none; cursor:pointer; padding:0;">
         <span class="nav-bar" style="display:block; width:26px; height:3px; border-radius:2px; background:#004225; transition:background 0.35s ease, transform 0.3s ease, opacity 0.2s ease;"></span>
         <span class="nav-bar" style="display:block; width:26px; height:3px; border-radius:2px; background:#004225; transition:background 0.35s ease, transform 0.3s ease, opacity 0.2s ease;"></span>
@@ -177,22 +227,18 @@
 
   <!-- ===================== HERO (hell) ===================== -->
   <section data-nav-theme="light" style="position:relative; background:#ffffff; color:#004225;">
-    <div id="hero-inner" style="position:relative; z-index:2; max-width:1240px; margin:0 auto; padding:82px 24px 44px;">
+    <div id="hero-inner" style="position:relative; z-index:2; max-width:1240px; margin:0 auto; padding:76px 24px 38px;">
 
-      <div id="hero-head" style="margin:0 0 38px; text-align:center;">
-        <p style="margin:0 0 10px; font-size:15.5px; line-height:1.5; color:#004225; font-weight:700;">
+      <div id="hero-head" style="margin:0 0 24px; text-align:center;">
+        <p id="hero-kicker" style="margin:0 0 7px; font-size:14.5px; line-height:1.4; color:#004225; font-weight:700;">
           Für private und inhabergeführte Immobilieneigentümer:
         </p>
 
-        <p style="margin:0 0 16px; font-size:13px; line-height:1.5; color:#004225; letter-spacing:1.6px; text-transform:uppercase; font-weight:700; opacity:0.72;">
-          Unabhängige Energieberatung &amp; Förderservice
-        </p>
-
-        <h1 style="margin:0 0 18px; font-weight:800; color:#004225; font-size:clamp(24px, 2.75vw, 34px); line-height:1.2; letter-spacing:0.2px;">
+        <h1 id="hero-h1" style="margin:0 0 11px; font-weight:800; color:#004225; font-size:clamp(21px, 2.75vw, 34px); line-height:1.16; letter-spacing:0.2px;">
           Die fünf fundamentalen Bereiche, die Ihnen aktuell fehlen,<br />um erfolgreich in der richtigen Reihenfolge mit der optimalen Förderstrategie zu sanieren
         </h1>
 
-        <p style="margin:0 auto; max-width:780px; font-size:17.5px; line-height:1.6; color:#3a4a42;">
+        <p id="hero-sub" style="margin:0 auto; max-width:760px; font-size:16px; line-height:1.5; color:#3a4a42;">
           Wie Sie innerhalb von sechs Wochen <a href="#ablauf" style="font-weight:700; color:#004225;">die richtige Sanierungsstrategie</a> finden, ohne auf widersprüchliche Ratschläge und gefährliches Halbwissen aus Web und TV angewiesen zu sein.
         </p>
       </div>
@@ -205,10 +251,10 @@
         </div>
         <div id="hero-badge" style="background:#ffffff; border:1px solid rgba(0,66,37,0.10); border-top:none; color:#004225; border-radius:0 0 18px 18px; padding:11px 14px; box-shadow:0 18px 44px rgba(1,51,27,0.14); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:nowrap;">
           <div style="display:flex; align-items:center; gap:9px; min-width:0; flex:1 1 auto;">
-            <span style="flex:none; width:34px; height:34px; border-radius:10px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:19px;height:19px;"></span></span>
+            <span id="hero-badge-icon" style="flex:none; width:34px; height:34px; border-radius:10px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:19px;height:19px;"></span></span>
             <div style="min-width:0;">
-              <div style="font-weight:800; font-size:17px; line-height:1.15; white-space:nowrap;">Henk Wenner</div>
-              <div style="font-size:12.5px; color:#004225; margin-top:2px; line-height:1.3;"><span style="white-space:nowrap;">Zimmermeister &amp;</span><br /><span style="white-space:nowrap;">Energieeffizienzexperte</span></div>
+              <div id="hero-badge-name" style="font-weight:800; font-size:17px; line-height:1.15; white-space:nowrap;">Henk Wenner</div>
+              <div id="hero-badge-role" style="font-size:12.5px; color:#004225; margin-top:2px; line-height:1.3;"><span style="white-space:nowrap;">Zimmermeister &amp;</span><br /><span style="white-space:nowrap;">Energieeffizienzexperte</span></div>
             </div>
           </div>
         </div>
