@@ -76,7 +76,7 @@
        Die Bullets wandern per order() unter den CTA-Block. */
     @media (max-width: 899px) {
       #hero-inner { padding-top: 66px !important; padding-bottom: 30px !important; }
-      #hero-photo-wrap { width: 100% !important; max-width: min(432px, 88vw) !important; margin: 0 auto 16px !important; }
+      #hero-photo-wrap { width: 100% !important; max-width: min(480px, 90vw) !important; margin: 0 auto 16px !important; }
       #hero-badge { flex-wrap: nowrap !important; }
       #hero-head { margin-bottom: 18px !important; }
       #hero-copy { margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; }
@@ -89,6 +89,14 @@
       #hero-main { display: flex; align-items: center; gap: 44px; }
       #hero-photo-wrap { width: 640px; max-width: 56%; flex: none; margin: 0; }
       #hero-copy { flex: 1 1 0; max-width: none; margin: 0; }
+    }
+
+    /* Namensschild: auf breiten Screens Name und Beruf in einer Zeile,
+       auf schmalen Screens untereinander — beides ohne Umbruch mitten im Beruf. */
+    #hero-badge-name, #hero-badge-role { display: block; }
+    @media (min-width: 900px) {
+      #hero-badge-name, #hero-badge-role { display: inline; }
+      #hero-badge-role { margin-left: 10px; }
     }
 
     /* Claim zentriert im Header — erst ab 900px, darunter fehlt neben Logo und Burger der Platz */
@@ -104,9 +112,10 @@
     }
 
     /* Experten-Score: eigenständiges Trust-Element neben dem Hero-CTA */
-    #hero-score { display: block; width: min(100%, 560px); margin: 0 auto; transition: transform 0.2s ease; }
-    #hero-score svg { display: block; width: 100%; height: auto; }
-    #hero-score:hover { transform: translateY(-2px); }
+    #hero-score { display: block; width: min(100%, 560px); margin: 0 auto; }
+    #hero-score .trustmarkt-widget { width: 100%; }
+    /* Inline-display wuerde das hidden-Attribut sonst ueberstimmen */
+    #hero-score [hidden] { display: none !important; }
     #hero-trustline { border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
     #hero-trustline:hover { border-bottom-color: rgba(0,66,37,0.45); }
     @media (max-width: 620px) {
@@ -115,7 +124,7 @@
       #hero-h1 { font-size: 23px !important; line-height: 1.15 !important; margin-bottom: 9px !important; }
       #hero-sub { font-size: 17px !important; line-height: 1.45 !important; }
       #hero-head { margin-bottom: 14px !important; }
-      #hero-photo-wrap { max-width: min(346px, 80vw) !important; margin-bottom: 12px !important; }
+      #hero-photo-wrap { max-width: min(430px, 90vw) !important; margin-bottom: 12px !important; }
       #hero-cta-row { gap: 12px !important; }
       #hero-cta-btn { font-size: 15.5px !important; padding: 13px 18px !important; }
       #hero-score { width: min(100%, 420px) !important; }
@@ -133,7 +142,7 @@
       #hero-h1 { font-size: 20px !important; line-height: 1.13 !important; margin-bottom: 7px !important; }
       #hero-sub { font-size: 15px !important; line-height: 1.4 !important; }
       #hero-head { margin-bottom: 6px !important; }
-      #hero-photo-wrap { max-width: min(274px, 72vw) !important; margin-bottom: 4px !important; }
+      #hero-photo-wrap { max-width: min(360px, 90vw) !important; margin-bottom: 4px !important; }
       #hero-badge { padding: 8px 9px !important; }
       #hero-badge-icon { width: 26px !important; height: 26px !important; border-radius: 8px !important; }
       #hero-badge-name { font-size: 16px !important; }
@@ -231,7 +240,7 @@
 
       <div id="hero-head" style="margin:0 0 24px; text-align:center;">
         <p id="hero-kicker" style="margin:0 0 7px; font-size:16.5px; line-height:1.4; color:#004225; font-weight:700;">
-          Für private und inhabergeführte Immobilieneigentümer:
+          Für private und geschäftliche Immobilieneigentümer:
         </p>
 
         <h1 id="hero-h1" style="margin:0 0 11px; font-weight:800; color:#004225; font-size:clamp(23px, 3vw, 39px); line-height:1.16; letter-spacing:0.2px;">
@@ -250,12 +259,10 @@
           <img src="bilder/startseite/henk-hero.webp" alt="Henk Wenner, Zimmermeister und Energieeffizienzexperte" style="width:100%; height:100%; object-fit:cover; object-position:50% 0%; display:block;" />
         </div>
         <div id="hero-badge" style="background:#ffffff; border:1px solid rgba(0,66,37,0.10); border-top:none; color:#004225; border-radius:0 0 18px 18px; padding:8px 14px; box-shadow:0 18px 44px rgba(1,51,27,0.14); display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:nowrap;">
-          <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-            <span id="hero-badge-icon" style="flex:none; width:30px; height:30px; border-radius:9px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:18px;height:18px;"></span></span>
-            <div style="min-width:0; display:flex; align-items:baseline; gap:9px; flex-wrap:wrap;">
-              <span id="hero-badge-name" style="font-weight:800; font-size:19px; line-height:1.2;">Henk Wenner</span>
-              <span id="hero-badge-role" style="font-size:14.5px; color:#004225; line-height:1.2;">Zimmermeister &amp; Energieeffizienzexperte</span>
-            </div>
+          <span id="hero-badge-icon" style="flex:none; width:30px; height:30px; border-radius:9px; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="badge-check" style="width:18px;height:18px;"></span></span>
+          <div id="hero-badge-text" style="min-width:0; text-align:left;">
+            <span id="hero-badge-name" style="font-weight:800; font-size:19px; line-height:1.25;">Henk Wenner</span>
+            <span id="hero-badge-role" style="font-size:14.5px; color:#004225; line-height:1.25;">Zimmermeister &amp; Energieeffizienzexperte</span>
           </div>
         </div>
       </div>
@@ -269,34 +276,21 @@
         </ul>
 
         <div id="hero-cta-row" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <a id="hero-score" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener" aria-label="Experten-Score: 4,8 von 5 auf Expertenmarkt.de ansehen">
-            <svg viewBox="0 0 540 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <defs>
-                <symbol id="es-star" viewBox="0 0 100 100"><path d="M50.0 6.0 L64.1 32.6 L93.7 37.8 L72.7 59.4 L77.0 89.2 L50.0 75.9 L23.0 89.2 L27.3 59.4 L6.3 37.8 L35.9 32.6 Z" stroke-width="9" stroke-linejoin="round"/></symbol>
-                <clipPath id="es-f80"><rect x="470" y="70" width="40" height="50"/></clipPath>
-              </defs>
-              <path d="M66.0 40.0 L81.9 70.1 L115.5 75.9 L91.7 100.4 L96.6 134.1 L66.0 119.0 L35.4 134.1 L40.3 100.4 L16.5 75.9 L50.1 70.1 Z" fill="#3FAE7A" stroke="#3FAE7A" stroke-width="12" stroke-linejoin="round"/>
-              <circle cx="38" cy="132" r="29" fill="#ffffff"/>
-              <circle cx="38" cy="132" r="21" fill="none" stroke="#2F9E6A" stroke-width="5.5"/>
-              <path d="M28 132 L35.5 139.5 L49 125" fill="none" stroke="#2F9E6A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="145" y="42" font-family="Montserrat, system-ui, sans-serif" font-size="29" font-weight="800" fill="#10233B">Experten-Score</text>
-              <text x="530" y="40" text-anchor="end" font-family="Montserrat, system-ui, sans-serif" font-size="16" font-weight="600" fill="#2C7BE5">Mehr erfahren</text>
-              <text x="145" y="112" font-family="Montserrat, system-ui, sans-serif" font-size="46" font-weight="800" fill="#2F9E6A">4,8</text>
-              <rect x="238" y="70" width="50" height="50" rx="8" fill="#2F9E6A"/>
-              <use href="#es-star" x="245" y="77" width="36" height="36" fill="#ffffff" stroke="#ffffff"/>
-              <rect x="296" y="70" width="50" height="50" rx="8" fill="#2F9E6A"/>
-              <use href="#es-star" x="303" y="77" width="36" height="36" fill="#ffffff" stroke="#ffffff"/>
-              <rect x="354" y="70" width="50" height="50" rx="8" fill="#2F9E6A"/>
-              <use href="#es-star" x="361" y="77" width="36" height="36" fill="#ffffff" stroke="#ffffff"/>
-              <rect x="412" y="70" width="50" height="50" rx="8" fill="#2F9E6A"/>
-              <use href="#es-star" x="419" y="77" width="36" height="36" fill="#ffffff" stroke="#ffffff"/>
-              <rect x="470" y="70" width="50" height="50" rx="8" fill="#DCE4EB"/>
-              <g clip-path="url(#es-f80)"><rect x="470" y="70" width="50" height="50" rx="8" fill="#2F9E6A"/></g>
-              <use href="#es-star" x="477" y="77" width="36" height="36" fill="#ffffff" stroke="#ffffff"/>
-              <text x="145" y="155" font-family="Montserrat, system-ui, sans-serif" font-size="19" font-weight="800" fill="#10233B">Hervorragend<tspan font-weight="500" fill="#48555F"> | 4,8</tspan></text>
-              <text x="145" y="184" font-family="Montserrat, system-ui, sans-serif" font-size="13" font-weight="500" fill="#8B98A4">powered by <tspan font-weight="800" fill="#2C7BE5">EXPERTENMARKT.DE</tspan></text>
-            </svg>
-          </a>
+          <div id="hero-score">
+            <!-- Offizielles Trustmarkt-/Expertenmarkt-Widget. Laedt ein Drittanbieter-Script,
+                 deshalb erst nach funktionaler Einwilligung. -->
+            <div id="trustmarkt-live" hidden>
+              <div class="trustmarkt-widget" data-company-id="B681ZqJ0n6Le0jOYv9Xe" data-widget-id="yonPpB3Er4MNvObdXYzN" style="height:168px;"><a rel="dofollow" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" aria-label="Expertenmarkt Profil von EffiNova GmbH"></a></div>
+            </div>
+            <div id="trustmarkt-placeholder" style="display:flex; align-items:center; gap:13px; text-align:left; background:#F4F8F5; border:1px solid #E3EBE7; border-radius:14px; padding:14px 16px;">
+              <span style="flex:none; width:40px; height:40px; border-radius:50%; background:rgba(0,66,37,0.08); color:#C3A87A; display:inline-flex; align-items:center; justify-content:center;"><span data-lucide="star" style="width:20px;height:20px;"></span></span>
+              <div style="flex:1 1 auto; min-width:0;">
+                <div style="font-weight:700; font-size:16px; line-height:1.3; color:#004225;">Bewertungen bei Expertenmarkt</div>
+                <p style="margin:2px 0 0; font-size:14px; line-height:1.4; color:#3a4a42;">Widget von Trustmarkt &mdash; Ihre Einwilligung n&ouml;tig.</p>
+              </div>
+              <button type="button" id="trustmarkt-consent-btn" style="flex:none; font-family:inherit; background:#004225; color:#ffffff; border:none; border-radius:9px; padding:10px 15px; font-size:14px; font-weight:700; cursor:pointer;">Anzeigen</button>
+            </div>
+          </div>
           <a id="hero-cta-btn" href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:#C2410C; color:#ffffff; font-weight:700; font-size:18px; padding:15px 26px; border-radius:999px; box-shadow:0 12px 28px rgba(154,51,10,0.28);">
             Jetzt kostenfreie Erstberatung buchen! <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
           </a>
@@ -903,6 +897,41 @@
     function init() {
       renderIcons();
       initHeader();
+
+      // Trustmarkt-Widget: Drittanbieter-Script erst nach funktionaler Einwilligung laden
+      (function () {
+        var SRC = 'https://widget.trustmarkt.de/embed/v1/embed.js';
+        var loaded = false;
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          var live = document.getElementById('trustmarkt-live');
+          var ph = document.getElementById('trustmarkt-placeholder');
+          if (ph) ph.hidden = true;
+          if (live) live.hidden = false;
+          var sc = document.createElement('script');
+          sc.src = SRC; sc.async = true; sc.defer = true;
+          document.head.appendChild(sc);
+        }
+        window.loadTrustmarktWidget = load;
+        function check() {
+          if (window.CookieConsent && typeof window.CookieConsent.acceptedCategory === 'function'
+              && window.CookieConsent.acceptedCategory('functional')) load();
+        }
+        var btn = document.getElementById('trustmarkt-consent-btn');
+        if (btn) btn.addEventListener('click', function () {
+          if (window.CookieConsent && typeof window.CookieConsent.acceptCategory === 'function') {
+            var cur = window.CookieConsent.getUserPreferences();
+            var acc = (cur && cur.acceptedCategories) || [];
+            if (acc.indexOf('functional') === -1) acc.push('functional');
+            window.CookieConsent.acceptCategory(acc);
+          }
+          load();
+        });
+        window.addEventListener('cc:onConsent', check);
+        window.addEventListener('cc:onChange', check);
+        setTimeout(check, 300);
+      })();
       initCarousel('svc-track', 'svc-prev', 'svc-next');
       initCarousel('reviews-track', 'rev-prev', 'rev-next');
       initReviews();
