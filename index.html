@@ -224,6 +224,121 @@
       #footer-legal { justify-content: flex-end; }
     }
     .footer-link:hover { color: #ffffff !important; }
+
+    /* =====================================================================
+       EXPERIMENT: eigener Mobile-Look
+       Muster nach andreasbaulig.de, dort verifiziert: eine einzige
+       ausgelieferte HTML-Datei fuer alle Geraete, keine Server-Weiche und
+       keine m.-Subdomain. Zwei Utility-Klassen schalten ganze Bausteine,
+       nicht nur Werte. Umschaltpunkt 900px, deckungsgleich mit dem
+       bestehenden Hero-Grid oben.
+       Wichtig: versteckte Bilder immer mit loading="lazy", dann laedt das
+       jeweils andere Geraet sie gar nicht erst.
+       ===================================================================== */
+    .mobile-only { display: none; }
+    @media (max-width: 899px) {
+      .desktop-only { display: none !important; }
+      .mobile-only  { display: block; }
+      .mobile-only.mo-inline { display: inline; }
+      .mobile-only.mo-flex   { display: flex; }
+    }
+
+    /* ---- Mobile-Hero: weniger Bausteine, dafuer groesser und mit einem klaren CTA ---- */
+    @media (max-width: 899px) {
+      /* Das Original ist 800x1000 (Hochformat). Desktop beschneidet auf 16:10,
+         mobil zeigen wir mehr davon, damit Henk praesenter im Bild steht. */
+      #hero-photo-box { aspect-ratio: 4 / 5 !important; }
+      #hero-photo-wrap { max-width: min(320px, 74vw) !important; }
+      #hero-cta-btn { width: 100%; justify-content: center; text-align: center; }
+      #hero-cta-row { width: 100%; }
+      /* Der grosse Experten-Score (540x200) ist auf Telefonbreite kaum lesbar,
+         mobil ersetzt ihn die kompakte Trust-Zeile darunter. */
+      #hero-trust-mobile {
+        display: flex; align-items: center; justify-content: center; gap: 9px;
+        flex-wrap: wrap; margin: 0 auto; padding: 9px 14px;
+        background: #F1F6F2; border: 1px solid #E3EBE7; border-radius: 999px;
+        font-size: 15px; font-weight: 700; color: #004225; line-height: 1.3;
+      }
+      #hero-trust-mobile .stars { color: #C3A87A; letter-spacing: 1px; font-size: 16px; }
+      /* Auf Telefonbreite bricht die Quellenangabe ohnehin um, dann bliebe das
+         Trennzeichen als Waise am Zeilenende stehen. */
+      #hero-trust-mobile .sep { display: none; }
+      #hero-trust-mobile .quelle { flex-basis: 100%; text-align: center; font-weight: 500; color: #3a4a42; font-size: 13.5px; }
+    }
+
+    /* ---- Trust-Leiste: mobil ein wischbarer Streifen statt Umbruch in vier Zeilen ---- */
+    @media (max-width: 899px) {
+      #trust-row {
+        flex-wrap: nowrap !important; justify-content: flex-start !important;
+        overflow-x: auto; scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch; scrollbar-width: none;
+        gap: 22px !important; padding-left: 20px !important; padding-right: 20px !important;
+      }
+      #trust-row::-webkit-scrollbar { display: none; }
+      #trust-row .trust-item { flex: none; scroll-snap-align: start; white-space: nowrap; }
+    }
+
+    /* ---- Wiederholte CTA-Blocks im Lesefluss (nur Mobile) ---- */
+    .mobile-cta-block {
+      background: #004225; color: #ffffff; border-radius: 18px;
+      margin: 0 auto; padding: 24px 20px; text-align: center;
+      box-shadow: 0 18px 44px rgba(1,51,27,0.16);
+    }
+    .mobile-cta-block p { margin: 0 0 16px; font-size: 19px; line-height: 1.4; font-weight: 700; }
+    .mobile-cta-block .mcb-note { margin: 12px 0 0; font-size: 14px; font-weight: 500; opacity: 0.82; }
+    .mobile-cta-block a.mcb-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; background: #C2410C; color: #ffffff; font-weight: 700; font-size: 18px;
+      padding: 14px 20px; border-radius: 999px;
+      box-shadow: 0 3px 6px rgba(120,40,8,0.16), 0 14px 28px -6px rgba(154,51,10,0.42), inset 0 1.5px 0 rgba(255,255,255,0.40);
+    }
+
+    /* ---- Sticky CTA-Leiste am unteren Rand (nur Mobile) ---- */
+    #mobile-cta-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(0,66,37,0.12);
+      box-shadow: 0 -8px 28px rgba(1,51,27,0.12);
+      padding: 9px 16px calc(9px + env(safe-area-inset-bottom));
+      transform: translateY(115%);
+      transition: transform 0.32s ease;
+    }
+    #mobile-cta-bar.is-visible { transform: translateY(0); }
+    #mobile-cta-bar a {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: #C2410C; color: #ffffff; font-weight: 700; font-size: 17.5px;
+      padding: 13px 18px; border-radius: 999px;
+      box-shadow: 0 3px 6px rgba(120,40,8,0.16), 0 12px 24px -6px rgba(154,51,10,0.40), inset 0 1.5px 0 rgba(255,255,255,0.40);
+    }
+    #mobile-cta-bar .bar-note { display: block; margin: 0 0 6px; text-align: center; font-size: 13px; font-weight: 600; color: #3a4a42; }
+    /* Fallback fuer Browser ohne backdrop-filter (siehe Glassmorphism-Regel) */
+    @supports not ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
+      #mobile-cta-bar { background: #ffffff; }
+    }
+    /* Der Privatsphaere-Button sitzt fix unten rechts (z-index 40) und wuerde
+       sonst unter der Leiste verschwinden. */
+    @media (max-width: 899px) {
+      body.has-mobile-cta { padding-bottom: 76px; }
+      body.has-mobile-cta .cc-revoke-btn { bottom: calc(80px + env(safe-area-inset-bottom)); }
+    }
+
+    /* ===== Empathie-Narrativ: Hochkant-Foto ueber dem Text (schmal) / links daneben (breit) ===== */
+    #empathie-inner { flex-direction: column; align-items: center; gap: 30px; }
+    #empathie-foto { width: 100%; max-width: min(300px, 72vw); }
+    #empathie-text { width: 100%; max-width: 660px; }
+    .empathie-foto-clip { aspect-ratio: 4 / 5; }            /* schmal: kompakter Ausschnitt, spart Hoehe */
+    #empathie-img { object-position: 50% 22%; }
+    @media (min-width: 960px) {
+      #empathie-inner { flex-direction: row; align-items: flex-start; gap: 48px; }
+      #empathie-foto { flex: 0 0 auto; width: 34%; max-width: 360px; }
+      #empathie-text { flex: 1 1 auto; max-width: none; }
+      .empathie-foto-clip { aspect-ratio: 2 / 3; }          /* breit: volles Hochformat neben dem Text */
+      #empathie-img { object-position: 50% 45%; }
+    }
+    @media (max-width: 899px) {
+      #empathie-cta { width: 100%; justify-content: center; text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -263,15 +378,17 @@
 
       <div id="hero-head" style="margin:0 0 24px; text-align:center;">
         <p id="hero-kicker" style="margin:0 0 7px; font-size:18.5px; line-height:1.4; color:#004225; font-weight:700;">
-          Für private und geschäftliche Immobilieneigentümer:
+          <span class="desktop-only mo-inline">Für private und geschäftliche Immobilieneigentümer:</span><span class="mobile-only mo-inline">Für Immobilieneigentümer:</span>
         </p>
 
+        <!-- Ein einziges h1 im DOM, nur die Textfassung wechselt. Zwei h1-Elemente
+             (eins je Geraet) waeren ein SEO-Fehler. -->
         <h1 id="hero-h1" style="margin:0 0 11px; font-weight:800; color:#004225; font-size:clamp(25px, calc(3vw + 2px), 41px); line-height:1.16; letter-spacing:0.2px;">
-          Die 5 fundamentalen Bereiche, die Ihnen aktuell fehlen, um Ihr Gebäude optimal zu sanieren
+          <span class="desktop-only mo-inline">Die 5 fundamentalen Bereiche, die Ihnen aktuell fehlen, um Ihr Gebäude optimal zu sanieren</span><span class="mobile-only mo-inline">Die 5 Bereiche, die über Ihre Sanierung entscheiden</span>
         </h1>
 
         <p id="hero-sub" style="margin:0 auto; max-width:1060px; font-size:20px; line-height:1.5; font-weight:700; color:#3a4a42;">
-          Wie Sie innerhalb von sechs Wochen die richtige Sanierungsstrategie finden, ohne Angst in der Durchführung allein gelassen zu werden oder Förderung zu verpassen.
+          <span class="desktop-only mo-inline">Wie Sie innerhalb von sechs Wochen die richtige Sanierungsstrategie finden, ohne Angst in der Durchführung allein gelassen zu werden oder Förderung zu verpassen.</span><span class="mobile-only mo-inline">In sechs Wochen zur richtigen Sanierungsstrategie, ohne Förderung zu verpassen.</span>
         </p>
       </div>
 
@@ -292,13 +409,13 @@
 
       <div id="hero-copy" style="max-width:820px; text-align:center;">
         <ul id="hero-bullets" style="list-style:none; margin:0 auto 30px; padding:0; width:fit-content; text-align:left; display:flex; flex-direction:column; gap:14px;">
-          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:19px; line-height:1.5; font-weight:400; color:#004225;">ein lokaler Ansprechpartner vor Ort, der die Welt der Umsetzung jenseits der theoretischen Möglichkeiten kennt</span></li>
-          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:19px; line-height:1.5; font-weight:400; color:#004225;">Unabhängige Vor-Ort-Beratung und Ganzheitlicher Gebäudecheck vom Handwerksmeister</span></li>
-          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:19px; line-height:1.5; font-weight:400; color:#004225;">für Rückfragen stets an Ihrer Seite von Beratung über Angebots-Check für die Förderung bis hin zu Förderservice &amp; energetische Baubegleitung</span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:19px; line-height:1.5; font-weight:400; color:#004225;"><span class="desktop-only mo-inline">ein lokaler Ansprechpartner vor Ort, der die Welt der Umsetzung jenseits der theoretischen Möglichkeiten kennt</span><span class="mobile-only mo-inline">ein Ansprechpartner vor Ort, der die Umsetzung kennt</span></span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:19px; line-height:1.5; font-weight:400; color:#004225;"><span class="desktop-only mo-inline">Unabhängige Vor-Ort-Beratung und Ganzheitlicher Gebäudecheck vom Handwerksmeister</span><span class="mobile-only mo-inline">unabhängiger Gebäudecheck vom Handwerksmeister</span></span></li>
+          <li style="display:flex; gap:12px; align-items:flex-start;"><span style="flex:none; width:24px; height:24px; border-radius:50%; background:#004225; color:#ffffff; display:inline-flex; align-items:center; justify-content:center; margin-top:3px;"><span data-lucide="check" style="width:14px;height:14px;"></span></span><span style="font-size:19px; line-height:1.5; font-weight:400; color:#004225;"><span class="desktop-only mo-inline">für Rückfragen stets an Ihrer Seite von Beratung über Angebots-Check für die Förderung bis hin zu Förderservice &amp; energetische Baubegleitung</span><span class="mobile-only mo-inline">an Ihrer Seite von der Beratung bis zur Förderauszahlung</span></span></li>
         </ul>
 
         <div id="hero-cta-row" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <a id="hero-score" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener"
+          <a id="hero-score" class="desktop-only" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener"
              aria-label="Experten-Score: Sehr gut 4,8 von 5 bei Expertenmarkt.de, Profil ansehen">
             <svg viewBox="0 0 540 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="Experten-Score: Sehr gut 4,8 von 5 bei Expertenmarkt.de, 28 Bewertungen">
               <defs>
@@ -452,6 +569,15 @@
           <a id="hero-cta-btn" href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:linear-gradient(155deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.10) 40%, rgba(0,0,0,0.14) 100%), #C2410C; color:#ffffff; font-weight:700; font-size:20px; padding:15px 26px; border-radius:999px; box-shadow:0 3px 6px rgba(120,40,8,0.16), 0 14px 28px -6px rgba(154,51,10,0.42), 0 30px 58px -16px rgba(154,51,10,0.46), inset 0 1.5px 0 rgba(255,255,255,0.40);">
             Jetzt kostenfreie Erstberatung sichern! <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
           </a>
+
+          <!-- Mobile-Ersatz fuer den grossen Experten-Score, gleiche Aussage auf ein Drittel der Hoehe -->
+          <a id="hero-trust-mobile" class="mobile-only mo-flex" href="https://expertenmarkt.de/experte/effinova-gmbh-berlin" target="_blank" rel="noopener"
+             aria-label="Experten-Score: Sehr gut 4,8 von 5 bei Expertenmarkt.de, 28 Bewertungen, Profil ansehen">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span>4,8 von 5</span>
+            <span class="sep" aria-hidden="true">|</span>
+            <span class="quelle">28 Bewertungen auf Expertenmarkt.de</span>
+          </a>
         </div>
 
         <a id="hero-trustline" href="#stimmen" style="display:inline-flex; align-items:center; gap:10px; margin-top:22px; font-size:19.5px; font-weight:700; color:#004225;">
@@ -473,11 +599,61 @@
 
   <!-- ===================== TRUST-LEISTE ===================== -->
   <section data-nav-theme="dark" style="background:#004225; color:#ffffff;">
-    <div style="max-width:1240px; margin:0 auto; padding:13px 24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 30px; font-size:15.5px; font-weight:600;">
+    <div id="trust-row" style="max-width:1240px; margin:0 auto; padding:13px 24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 30px; font-size:15.5px; font-weight:600;">
       <a class="trust-item" href="#usp-lokal" style="display:inline-flex; align-items:center; gap:7px; color:#ffffff; padding:3px 0; border-bottom:1px solid transparent; transition:color 0.2s ease, border-color 0.2s ease;"><span data-lucide="map-pin" style="width:16px;height:16px;"></span> Lokal vor Ort</a>
       <a class="trust-item" href="#usp-praxis" style="display:inline-flex; align-items:center; gap:7px; color:#ffffff; padding:3px 0; border-bottom:1px solid transparent; transition:color 0.2s ease, border-color 0.2s ease;"><span data-lucide="hammer" style="width:16px;height:16px;"></span> Handwerksmeister</a>
       <a class="trust-item" href="#stimmen" style="display:inline-flex; align-items:center; gap:7px; color:#ffffff; padding:3px 0; border-bottom:1px solid transparent; transition:color 0.2s ease, border-color 0.2s ease;"><span data-lucide="users" style="width:16px;height:16px;"></span> 300+ Eigentümer vertrauen uns</a>
       <a class="trust-item" href="#angebot" style="display:inline-flex; align-items:center; gap:7px; color:#ffffff; padding:3px 0; border-bottom:1px solid transparent; transition:color 0.2s ease, border-color 0.2s ease;"><span data-lucide="badge-check" style="width:16px;height:16px;"></span> Zugelassen: BAFA &amp; KfW</a>
+    </div>
+  </section>
+
+  <!-- ===================== EMPATHIE-NARRATIV (Es ist nicht Ihre Schuld) ===================== -->
+  <section id="empathie" data-nav-theme="dark" style="background:#004225; color:#ffffff; scroll-margin-top:90px;">
+    <div id="empathie-inner" style="max-width:1080px; margin:0 auto; padding:56px 24px 60px; display:flex;">
+      <div id="empathie-foto">
+        <div class="empathie-foto-clip" style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 18px 44px rgba(1,51,27,0.34);">
+          <img id="empathie-img" src="bilder/startseite/henk-baustelle-portrait.webp" alt="Henk Wenner, Energieberater und Zimmermeister, auf einer Baustelle" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+      </div>
+
+      <div id="empathie-text">
+        <h2 style="margin:0 0 22px; font-weight:800; font-size:clamp(24px,2.6vw,32px); line-height:1.15; letter-spacing:0.3px; color:#ffffff;">ES IST NICHT IHRE SCHULD&thinsp;&hellip;</h2>
+
+        <p style="margin:0 0 18px; font-size:17px; line-height:1.7; color:rgba(255,255,255,0.88);">Es ist nicht Ihre Schuld, dass Sie nicht wissen, wo Sie anfangen sollen. Handwerker sagen das eine, das Internet das andere, die Politik und die Medien noch etwas anderes. Sie wollen die richtige Entscheidung treffen, haben aber keinen Vertrauenspartner für die Sanierung an Ihrer Seite. Und am Ende sind Sie derjenige, der die Rechnung zahlt, wenn es schiefgeht.</p>
+
+        <p style="margin:0 0 16px; font-size:17px; line-height:1.7; font-weight:700; color:#ffffff;">Wie sichern Sie sich ab gegen:</p>
+
+        <ul style="list-style:none; margin:0 0 26px; padding:0; display:flex; flex-direction:column; gap:13px;">
+          <li style="display:flex; align-items:flex-start; gap:12px;">
+            <span style="flex:none; width:18px; height:18px; margin-top:3px; color:#C3A87A;" data-lucide="alert-triangle" aria-hidden="true"></span>
+            <span style="font-size:16.5px; line-height:1.6; color:rgba(255,255,255,0.88);">die unvorhergesehenen Kosten in der Sanierung</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px;">
+            <span style="flex:none; width:18px; height:18px; margin-top:3px; color:#C3A87A;" data-lucide="alert-triangle" aria-hidden="true"></span>
+            <span style="font-size:16.5px; line-height:1.6; color:rgba(255,255,255,0.88);">Fachplaner, die nur ihren Bereich sehen und dadurch Zeit- und Geldverbrennung produzieren</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px;">
+            <span style="flex:none; width:18px; height:18px; margin-top:3px; color:#C3A87A;" data-lucide="alert-triangle" aria-hidden="true"></span>
+            <span style="font-size:16.5px; line-height:1.6; color:rgba(255,255,255,0.88);">Handwerker, die sich den schwarzen Peter gegenseitig zuschieben, anstatt an einer Lösung zu arbeiten</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px;">
+            <span style="flex:none; width:18px; height:18px; margin-top:3px; color:#C3A87A;" data-lucide="alert-triangle" aria-hidden="true"></span>
+            <span style="font-size:16.5px; line-height:1.6; color:rgba(255,255,255,0.88);">Sanierungskosten, die den entstandenen Mehrwert übersteigen</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px;">
+            <span style="flex:none; width:18px; height:18px; margin-top:3px; color:#C3A87A;" data-lucide="alert-triangle" aria-hidden="true"></span>
+            <span style="font-size:16.5px; line-height:1.6; color:rgba(255,255,255,0.88);">die Bauchschmerzen, die Sie bei Untätigkeit ohne Sanierung mit Blick auf steigende Energiekosten und Krisen in der Zukunft bekommen</span>
+          </li>
+        </ul>
+
+        <p style="margin:0 0 18px; padding-left:16px; border-left:3px solid #C3A87A; font-size:17px; line-height:1.7; color:#ffffff;">Sie sind mit dieser Unsicherheit nicht allein: über 300 Eigentümer standen genau an diesem Punkt, bevor wir gemeinsam ihr Projekt strukturiert haben.</p>
+
+        <p style="margin:0 0 18px; font-size:17px; line-height:1.7; color:rgba(255,255,255,0.88);">Sie suchen nach einer Lösung, um wieder das Gefühl zu bekommen, die richtigen Dinge mit Ihrer Immobilie zu tun, die sich auch endlich bezahlt machen. Gewappnet zu sein für die Zukunft.</p>
+
+        <p style="margin:0 0 26px; font-size:clamp(19px,2vw,22px); line-height:1.45; font-weight:800; color:#ffffff;">Herzlichen Glückwunsch. Sie haben uns gefunden.</p>
+
+        <a id="empathie-cta" href="https://funnel.effi-nova.de/" style="display:inline-flex; align-items:center; gap:10px; background:linear-gradient(155deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.10) 40%, rgba(0,0,0,0.14) 100%), #C2410C; color:#ffffff; font-weight:700; font-size:18px; padding:15px 26px; border-radius:999px; box-shadow:0 3px 6px rgba(120,40,8,0.16), 0 14px 28px -6px rgba(154,51,10,0.42), 0 30px 58px -16px rgba(154,51,10,0.46), inset 0 1.5px 0 rgba(255,255,255,0.40);">Jetzt kostenfreie Erstberatung buchen! <span data-lucide="arrow-right" style="width:18px;height:18px;"></span></a>
+      </div>
     </div>
   </section>
 
@@ -517,6 +693,19 @@
         <div class="ablauf-foto-clip" style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 18px 44px rgba(1,51,27,0.16);">
           <img src="bilder/startseite/henk-beratung.webp" alt="Henk Wenner bei der Energieberatung im Gespräch mit Kunden" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block;" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA-Einschub nach dem Ablauf, nur Mobile (Muster: Baulig wiederholt den CTA im Lesefluss) -->
+  <section class="mobile-only" data-nav-theme="light" style="background:#ffffff;">
+    <div style="max-width:1240px; margin:0 auto; padding:6px 20px 30px;">
+      <div class="mobile-cta-block">
+        <p>Klingt nach Ihrer Situation? Dann klären wir sie in 15 Minuten.</p>
+        <a class="mcb-btn" href="https://funnel.effi-nova.de/">
+          Jetzt Erstgespräch sichern <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
+        </a>
+        <p class="mcb-note">Kostenfrei und unverbindlich, Antwort in einem Werktag.</p>
       </div>
     </div>
   </section>
@@ -818,6 +1007,19 @@
     </div>
   </section>
 
+  <!-- CTA-Einschub nach den Kundenstimmen, nur Mobile -->
+  <section class="mobile-only" data-nav-theme="light" style="background:#ffffff;">
+    <div style="max-width:1240px; margin:0 auto; padding:6px 20px 34px;">
+      <div class="mobile-cta-block">
+        <p>Über 300 Eigentümer haben diesen Schritt schon gemacht.</p>
+        <a class="mcb-btn" href="https://funnel.effi-nova.de/">
+          Jetzt Erstgespräch sichern <span data-lucide="arrow-right" style="width:18px;height:18px;"></span>
+        </a>
+        <p class="mcb-note">15 Minuten am Telefon, danach wissen Sie, welche Förderung realistisch ist.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== FÜR WEN GEEIGNET ===================== -->
   <section data-nav-theme="light" style="background:#F1F6F2; color:#004225;">
     <div style="max-width:1080px; margin:0 auto; padding:56px 24px 60px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:16px;">
@@ -957,6 +1159,15 @@
 
 </div>
 
+  <!-- Sticky CTA-Leiste, nur Mobile. Blendet sich ein, sobald der Hero-CTA
+       aus dem Blick gescrollt ist, und wieder aus, wenn er zurueckkommt. -->
+  <div id="mobile-cta-bar" class="mobile-only" aria-hidden="true">
+    <span class="bar-note">Kostenfrei und unverbindlich</span>
+    <a href="https://funnel.effi-nova.de/">
+      Erstberatung sichern <span data-lucide="arrow-right" style="width:17px;height:17px;"></span>
+    </a>
+  </div>
+
   <!-- ===================== INTERAKTION (Vanilla JS) ===================== -->
   <script>
   (function () {
@@ -1060,9 +1271,37 @@
       }, 400);
     }
 
+    // Sticky CTA-Leiste (nur Mobile): einblenden, sobald der Hero-CTA weggescrollt ist.
+    // threshold 0, nicht 0.1 — sonst schaltet der Observer auf langen Seiten unzuverlaessig.
+    function initMobileCtaBar() {
+      var bar    = document.getElementById('mobile-cta-bar');
+      var anchor = document.getElementById('hero-cta-row');
+      if (!bar || !anchor || !('IntersectionObserver' in window)) return;
+
+      var mq = window.matchMedia('(max-width: 899px)');
+      var heroOut = false;
+
+      function render() {
+        var v = mq.matches && heroOut;
+        bar.classList.toggle('is-visible', v);
+        bar.setAttribute('aria-hidden', v ? 'false' : 'true');
+        document.body.classList.toggle('has-mobile-cta', v);
+      }
+
+      new IntersectionObserver(function (entries) {
+        heroOut = !entries[0].isIntersecting;
+        render();
+      }, { threshold: 0 }).observe(anchor);
+
+      // Beim Drehen oder Wechsel auf Desktop-Breite sauber zuruecksetzen
+      if (mq.addEventListener) mq.addEventListener('change', render);
+      else if (mq.addListener) mq.addListener(render);
+    }
+
     function init() {
       renderIcons();
       initHeader();
+      initMobileCtaBar();
       initCarousel('svc-track', 'svc-prev', 'svc-next');
       initCarousel('reviews-track', 'rev-prev', 'rev-next');
       initReviews();
